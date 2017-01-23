@@ -13,7 +13,7 @@ In order for some special styles to work (i.e. accordions) you need to implement
 ### Table of Contents 
 
 At this point, you are able to use all the styles we are using in your tapp as well.<br>
-For more information you can take a look at our [wiki](https://github.com/TobitSoftware/chayns-css/wiki/).<br>
+For more information you can take a look at our [wiki](https://github.com/TobitSoftware/chayns-css/wiki/chayns%C2%AE-styles).<br>
 Here you can find summary of all styles available and how to use them
 * [Container](https://github.com/TobitSoftware/chayns-css/wiki/Container)
 * [Basic Elenents](https://github.com/TobitSoftware/chayns-css/wiki/Basic-Elements)
