@@ -1,5 +1,5 @@
 # chayns® styles
-Here you can find a getting started and a [wiki](https://github.com/TobitSoftware/chayns-css/wiki) of chayns® styles.
+Here you can find a getting started and a [wiki](https://github.com/TobitSoftware/chayns-css/wiki) for our chayns® styles.
 
 Before you start using our API, we recommend you to start with some preparations. The following will help you to set up your index.html in a proper way and allow you an easy start.
 * Include the .css file at the end of your head tag. This allows you to use the styles that are used in our Tapps and provides you with a uniform design on all devices. 
