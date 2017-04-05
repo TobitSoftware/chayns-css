@@ -1,0 +1,9 @@
+@import '../../_color';
+
+.radio {
+  @extend .checkbox;
+
+  & + label:before {
+    border-radius: 100%;
+  }
+}

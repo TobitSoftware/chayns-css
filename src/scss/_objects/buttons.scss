@@ -1,0 +1,63 @@
+@import '../_color';
+@import '../_generic/mixins';
+
+.button,
+.choosebutton {
+  display: inline-block;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  @include vendor(user-select, none);
+  @include vendor(transition, background 150ms ease);
+
+  &:not(.button--disabled) {
+    &:hover,
+    &:active {
+      outline: none;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+}
+
+// Buttons
+.button {
+  padding: 2px 10px;
+  background-color: $button-background-color;
+  color: $button-color;
+}
+
+// Choose Button
+.choosebutton {
+  font-size: .9rem;
+  font-weight: normal;
+  padding: 2px 12px;
+  background-color: $choosebutton-background-color;
+}
+
+// prevents hover on mobile/in app since hover on mobile is triggered by a tap
+:not(.chayns--app) {
+  .button {
+    &:not(.button--disabled) {
+      &:hover,
+      &:active,
+      &.button--active {
+        background-color: $button-hover-background-color;
+      }
+    }
+  }
+
+  .choosebutton,
+  .button--choose {
+    &:not(.button--disabled) {
+      &:hover,
+      &:active,
+      &.button--active {
+        background-color: $choosebutton-hover-background-color;
+      }
+    }
+  }
+}

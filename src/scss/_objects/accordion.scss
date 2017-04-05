@@ -1,0 +1,259 @@
+@import '../_color';
+
+// used for safari mobile (otherwise click event delegation won't work)
+%clickable {
+  cursor: pointer;
+}
+
+.accordion {
+  margin-top: 10px;
+  border-bottom: 1px solid transparent;
+  transition: border 300ms ease-in-out 150ms, background-color 400ms ease, margin-bottom 300ms linear;
+  will-change: border, background-color, margin-bottom;
+
+  &:not(.accordion--wrapped) {
+    border-bottom-color: $accordion-border-bottom-color;
+  }
+
+  &:hover {
+    background-color: $accordion-hover-background-color;
+  }
+}
+
+.accordion--disabled {
+  opacity: 0.6;
+}
+
+.accordion__head,
+.accordion__item {
+  @extend .non-selectable;
+  @extend %clickable;
+  padding: 4px 9px 3px 3px;
+  position: relative;
+  background-color: transparent;
+  transition: border-bottom 300ms ease-in-out 150ms, font-weight 300ms ease-in-out, font-size 300ms ease-in-out;
+  will-change: border-bottom, font-weight, font-size;
+
+  // arrow, is displayed as default
+  .arrow:before,
+  &:before {
+    font-family: FontAwesome, sans-serif;
+    content: "\f105";
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: normal;
+    position: relative;
+    top: 1px;
+    margin: 0 8px;
+    transform: rotate(0deg);
+    transition: transform 300ms;
+    will-change: transform;
+    display: inline-block;
+    color: $accordion-arrow-color;
+  }
+
+  .arrow {
+    display: inline-block;
+    text-align: center;
+    @extend %clickable;
+  }
+
+  // element to place content on head's right-hand side
+  .right {
+    display: inline-block;
+    float: right;
+  }
+
+  // hide the default arrow
+  &.no-arrow {
+    padding-left: 9px;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  // adjust choosebutton
+  .choosebutton {
+    margin-left: 5px;
+    padding: 2px 15px;
+  }
+
+  .badge,
+  .choosebutton {
+    transition: margin-top 0.3s ease;
+    will-change: margin-top;
+  }
+}
+
+.accordion__body {
+  overflow: hidden;
+  position: relative;
+  height: auto !important;
+  max-height: 0;
+  transition: position 300ms ease-in-out;
+  will-change: position;
+  @extend .animation__accordion--close;
+}
+
+.accordion__intro {
+  padding: 0 9px 6px;
+}
+
+.accordion__content {
+  padding: 0 9px 9px;
+}
+
+// multiple items which look like wrapped accordion entries
+.accordion__item {
+  cursor: default;
+  padding: 8px 9px;
+  border-top: 1px solid $accordion-item-border-bottom-color;
+
+  &:before {
+    display: none;
+  }
+}
+
+.accordion.accordion--wrapped .accordion__item {
+  padding-left: 24px;
+}
+
+// if this accordion is in another accordion
+.accordion--wrapped {
+  margin: 0;
+  border-top: 1px solid $accordion-item-border-bottom-color;
+
+  & > .accordion__head {
+    padding: 8px 9px 8px 4px;
+  }
+
+  & > .accordion__body {
+    clear: both;
+  }
+
+  & .accordion__content {
+    padding: 0 0 18px 18px;
+    margin: 0 9px;
+  }
+}
+
+.accordion.accordion--wrapped .accordion--wrapped {
+  padding-left: 14px;
+}
+
+.accordion__body > .accordion__content + .accordion__item,
+.accordion__body > .accordion__intro + .accordion__item,
+.accordion__body > .accordion__content + * > .accordion__item,
+.accordion__body > .accordion__intro + * > .accordion__item,
+.accordion__body > .accordion__item:first-child,
+.accordion__body > *:first-child > .accordion__item,
+.accordion__body > .accordion__content + .accordion--wrapped,
+.accordion__body > .accordion__intro + .accordion--wrapped,
+.accordion__body > .accordion__content + * > .accordion--wrapped,
+.accordion__body > .accordion__intro + * > .accordion--wrapped,
+.accordion__body > .accordion--wrapped:first-child,
+.accordion__body > *:first-child > .accordion--wrapped {
+  border-top: none;
+}
+
+// state open
+.accordion--open {
+  &.accordion:not(.accordion--wrapped) {
+    margin-bottom: 30px;
+    background-color: $accordion-open-background-color;
+    border-color: transparent;
+
+    & > .accordion__head {
+      font-size: 20px;
+
+      .badge {
+        margin-top: 7px;
+      }
+
+      .choosebutton {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &.accordion.accordion--wrapped > .accordion__head {
+    font-weight: 700;
+  }
+
+  & > .accordion__head {
+    &:before,
+    .arrow:before {
+      transform: rotate(90deg);
+    }
+  }
+
+  & > .accordion__body {
+    max-height: 9999px !important;
+    @extend .animation__accordion--open;
+  }
+}
+
+// accordion cannot be closed, no arrows, should be used with --open
+.accordion--fixed {
+  &.accordion:not(.accordion--open):hover {
+    background-color: transparent;
+  }
+
+  & > .accordion__head {
+    padding-left: 9px;
+
+    &:hover {
+      cursor: default;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.accordion.accordion--flex {
+  & > .accordion__head,
+  & > .accordion__body > .accordion__item {
+    display: flex;
+    align-items: center;
+
+    .accordion-badge,
+    .right {
+      float: none;
+      margin-left: auto;
+    }
+
+    .ellipsis {
+      margin-right: 10px;
+    }
+  }
+}
+
+//animations
+.animation__accordion--close {
+  transition: max-height .5s cubic-bezier(0, 1, 0, 1) -.1s;
+  will-change: max-height;
+}
+
+.animation__accordion--open {
+  transition: max-height .5s cubic-bezier(0.5, 0, 1, 0) 0s;
+  will-change: max-height;
+}
+
+// mobile hover rewrite
+.chayns--mobile,
+.chayns--app {
+  .accordion:not(.accordion--open):hover {
+    background-color: transparent;
+  }
+}
+
+//firefox ellipsis work around
+.chayns-browser--firefox {
+  .accordion__head,
+  .accordion__item {
+    white-space: normal;
+  }
+}

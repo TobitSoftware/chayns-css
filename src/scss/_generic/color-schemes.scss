@@ -1,0 +1,17 @@
+@import '../_color';
+
+$step: 5;
+
+@while $step <= 100 {
+  .chayns__color--#{$step} {
+    color: mix($color, white, $step);
+  }
+  .chayns__background-color--#{$step} {
+    background-color: mix($color, white, $step);
+  }
+  .chayns__border-color--#{$step} {
+    border-color: mix($color, white, $step);
+  }
+
+  $step: $step + 5;
+}

@@ -1,0 +1,26 @@
+# Node
+node_modules
+bower_components
+dist
+
+
+# IDE
+.idea
+TODO
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+npm-debug.log
+src/vendor/font-awesome/

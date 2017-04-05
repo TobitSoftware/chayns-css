@@ -1,0 +1,24 @@
+$font-name: 'Roboto' !default;
+$font-factor: 1 !default;
+$font-backup: 'Tahoma' !default;
+
+$base-font-size: 14px * $font-factor !default;
+$base-line-height:  23.1px !default;
+$base-font-family: $font-name, $font-backup !default;
+
+$headline-sizes: (
+  1: 24px * $font-factor,
+  2: 20px * $font-factor,
+  3: 16px * $font-factor,
+  4: 14px * $font-factor,
+  5: 12px * $font-factor
+) !default;
+
+$breakpoints: (
+  "mobile"        "screen and (max-width: 37.438em)", // less than 600px
+  "desktop"       "screen and (min-width: 33.5em)", // more than 600px; could:  and (max-width: 63.9375em)
+//  "portable"      "screen and (max-width: 63.9375em)",
+  "desk"          "screen and (min-width: 53.125em)", // more than 850px
+  "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+) !default;
+

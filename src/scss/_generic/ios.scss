@@ -1,0 +1,7 @@
+// if there is an iOS device
+// will be applied to the `html` tag
+.chayns-os--ios {
+  .input[required] + label[data-placeholder] {
+    margin-top: calc(1px - 1.8em);
+  }
+}

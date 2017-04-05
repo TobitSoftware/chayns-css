@@ -1,0 +1,105 @@
+  $color: #6E6E6E !default;
+
+  //base config colors
+  $base-text-color: #e8e8e8 !default;
+
+  //anchor
+  $anchor-color: #ffffff;
+
+  //accordion
+  $accordion-border-bottom-color: mix($color, #404040, 20%);
+  $accordion-hover-background-color: mix($color, #000000, 20%);
+  $accordion-arrow-color: mix($color, #828282, 20%);
+  $accordion-item-border-bottom-color: mix($color, #404040, 20%);
+  $accordion-open-background-color: mix($color, #000000, 20%);
+  $accordion-open-head-border-bottom-color: mix($color, #404040, 20%);
+
+  //badge
+  $badge-color: #cdcdcd;
+  $badge-background-color: mix($color, #595959, 10);
+
+  //buttons
+  $button-color: #ffffff;
+  $button-background-color: mix($color, #666666, 10%);
+  $button-hover-background-color: mix($color, #8c8c8c, 10%);
+  $choosebutton-background-color: mix($color, #404040, 10%);
+  $choosebutton-hover-background-color: mix($color, #595959, 10%);
+
+  //colors
+  $color--positive: #4c993d;
+  $color--negative: #bf564c;
+
+  //content_card
+  $content-card-background-color: mix($color, #000000,  20%);
+
+  //forms
+  //input / dynamic-input
+  $input-placeholder-color: mix($color, #b5b5b5, 10%);
+  $input-placeholder-required-color: #d23f31;
+  $input-color: #e8e8e8;
+  $input-border-bottom-color: mix($color, #666666, 10%);
+  $input-focus-border-bottom-color: mix($color, #b5b5b5, 10%);
+
+  //switch
+  $switch-background-color: mix($color, #5f5f5f, 10%);
+  $switch-disabled-background-color: #d5d5d5;
+  $switch-button-background-color: mix($color, #ffffff, 10%);
+  $switch-disabled-button-background-color: #bdbdbd;
+  $switch-button-box-shadow-color: rgba(0, 0, 0, 0.35);
+  $switch-checked-background-color: mix($color, #a3a3a3, 10%);
+
+  //radio / checkbox
+  $checkbox-background-color: mix($color, #404040, 10%);
+  $checkbox-checked-background-color: mix($color, #595959, 10%);
+
+//finder
+$finder-result-background-color: mix($color, #000000, 10%);
+$finder-result-border-color: mix($color, #404040, 10%);
+$finder-result-hover-background-color: mix($color, #000000, 20%);
+$finder-person-id-color: #8c8c8c;
+
+//gallery
+$gallery-background-color: rgba(0, 0, 0, 0.4);
+$gallery-color: rgba(255, 255, 255, 0.8);
+
+  //headlines
+  $h1-color: #ffffff ;
+  $h2-color: #ffffff;
+  $h3-color: #ffffff;
+  $h4-color: #ffffff;
+  $h5-color: #808080;
+
+  //image-upload
+  $image-upload-border-color: mix($color, #404040, 10%);
+  $image-upload-remove-color: mix($color, #ffffff, 30%);
+  $image-upload-remove-hover-color: $color;
+  $image-upload-upload-background-color: mix($color, #333333, 10%);
+  $image-upload-upload-hover-background-color: mix($color, #333333, 20%);
+  $image-upload-add-color: #ffffff;
+
+  //mode-switch
+  $mode-switch-background-color: mix($color, #000000, 10%);
+  $mode-switch-border-color: mix($color, #404040, 10%);
+  $mode-switch--arrow-color: #fff;
+  $mode-switch--arrow-color-default: mix($color, #828282, 10%);
+
+//quote
+$quote-border-color: #cccccc;
+$quote-icon-color: #cccccc;
+
+  //selection
+  $selection-color: #1a1a1a;
+  $selection-background-color: mix($color, #aaaaaa, 10);
+
+  //tapp
+  $tapp-background-color: mix($color, #1a1a1a, 10);
+  $tapp-light-background-color: mix($color, #000000, 10);
+  $tapp-hint-color: mix($color, #000000, 10%);
+
+  //tooltip
+  $tooltip-background-color: mix($color, #595959, 10%);
+  $tooltip-trigger-color: mix($color, #c6c6c6, 10%);
+  $tooltip-color: #ffffff;
+
+  //list
+  $list-color: $color;

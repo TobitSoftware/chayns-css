@@ -1,0 +1,10 @@
+@import '../_color';
+
+.content__card {
+  padding: 20px;
+  background-color: $content-card-background-color;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}

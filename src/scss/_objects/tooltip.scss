@@ -1,0 +1,37 @@
+@import '../_color';
+
+.chayns__tooltip--trigger {
+  position: relative;
+  top: -1px;
+  padding: 0 6px;
+  margin-left: 2px;
+
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  transform-origin: 100% 100%;
+  color: $tooltip-trigger-color;
+}
+
+.chayns__tooltip {
+  position: absolute;
+  max-width: 250px;
+  padding: 4px 8px;
+  z-index: 9999;
+
+  font-size: 12px;
+  line-height: 18px;
+  background-color: $tooltip-background-color;
+  color: $tooltip-color;
+}
+
+.chayns__tooltip--animation {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.chayns__tooltip--hidden {
+  opacity: 0;
+}

@@ -1,0 +1,61 @@
+@import '../../_color';
+
+.switch {
+  display: none;
+
+  & + label {
+    background-color: $switch-background-color;
+    width: 28px;
+    height: 13px;
+    border-radius: 8px;
+    display: inline-block;
+
+    &:before {
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      margin-top: -1.5px;
+      margin-left: -3px;
+      background-color: $switch-button-background-color;
+      border-radius: 50%;
+      box-shadow: 0 1px 4px $switch-button-box-shadow-color;
+      content: ' ';
+      transition: transform 200ms linear;
+    }
+  }
+
+  &:checked + label:before {
+    transform: translateX(22px);
+  }
+
+  &:checked:not(:disabled) + label {
+    background-color: $switch-checked-background-color;
+  }
+
+  &:disabled + label {
+    background-color: $switch-disabled-background-color;
+    &:before {
+      background-color: $switch-disabled-button-background-color;
+    }
+  }
+
+  &.switch--large {
+    & + label {
+      width: 36px;
+      height: 16px;
+
+      &:before {
+        width: 22px;
+        height: 22px;
+        margin-top: -3px;
+      }
+    }
+  }
+
+  &:checked.switch--large + label {
+    &:before {
+      transform: translateX(24px);
+    }
+  }
+}

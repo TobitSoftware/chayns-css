@@ -1,0 +1,28 @@
+{
+  "name": "chayns.css",
+  "version": "1.0.0",
+  "jsnext:main": "./server/index.js",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "bower": "^1.8.0",
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "watch": "gulp",
+    "install": "bower install",
+    "deploy:qa": "", //copy files to your server. The server will create the chayns.min.css
+    "deploy:release": "",
+    "deploy:test": ""
+  },
+  "author": "Lucas Engelke & Rico Herwig & Steffen Holtkamp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TobitSoftware/chayns-css.git"
+  }
+}

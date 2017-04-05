@@ -1,0 +1,79 @@
+@import '../_color';
+
+[gallery] {
+  width: 100%;
+  height: 428px;
+
+  .chayns--mobile & {
+    height: 256px;
+  }
+
+  & .gallery__item {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    float: left;
+    cursor: pointer;
+
+    //first and second element
+    &:first-child:nth-last-child(2),
+    &:nth-child(2):nth-last-child(1) {
+      height: 49%;
+    }
+
+    //first element if >= 3
+    &:first-child:nth-last-child(n+3) {
+      height: 64%;
+    }
+
+    //first element if >= 2
+    &:first-child:nth-last-child(n+2) {
+      margin-bottom: 2%;
+    }
+
+    &:nth-child(n+3) {
+      margin-left: 2%;
+    }
+
+    //all elements if >= 3
+    &:nth-last-child(n+3) ~ .gallery__item {
+      height: 34%;
+      width: 49%;
+    }
+
+    //all elements if >= 4
+    &:nth-last-child(n+4) ~ .gallery__item {
+      width: 32%;
+    }
+
+    //all elements if >= 4
+    &:nth-child(n + 4) {
+      display: none !important;
+    }
+
+    &:nth-child(n + 5) {
+
+      &:before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $gallery-background-color;
+        content: '\f0fe';
+        font-size: 35px;
+        color: $gallery-color;
+
+        @extend .icon
+      }
+
+    }
+
+    &:last-child {
+      display: block !important;
+    }
+  }
+
+}

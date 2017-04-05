@@ -1,0 +1,41 @@
+@import '../../_color';
+
+.select {
+  display: inline-block;
+  position: relative;
+  z-index: 9999;
+
+  input {
+    width: 100%;
+  }
+
+  ul {
+    position: absolute;
+    background-color: $finder-result-background-color;
+    border: 1px solid $finder-result-border-color;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 360px;
+    padding: 10px 0;
+    width: 100%;
+    display: none;
+
+    li {
+      padding: 5px 15px 5px 15px;
+      height: 30px;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      display: none;
+
+      &:hover {
+        font-weight: 700;
+        background-color: $finder-result-hover-background-color;
+      }
+    }
+  }
+
+  .show {
+    display: block;
+  }
+}

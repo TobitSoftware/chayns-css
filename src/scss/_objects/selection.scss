@@ -1,0 +1,12 @@
+@import '../_color';
+
+::-moz-selection {
+  color: $selection-color;
+  background: $selection-background-color;
+}
+
+::selection {
+  color: $selection-color;
+  background: $selection-background-color;
+}
+

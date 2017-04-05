@@ -1,0 +1,84 @@
+@import '../../_color';
+
+//input preperation
+@mixin chayns-placeholder() {
+  position: relative;
+  top: 3px;
+  opacity: 1;
+  color: $input-placeholder-color;
+  font-size: 85%;
+  font-weight: normal;
+  transition: opacity 0.35s ease-in-out;
+}
+
+@mixin chayns-placeholder--invalid() {
+  color: $input-placeholder-required-color !important;
+  font-weight: 700;
+}
+
+.input {
+  &::-webkit-input-placeholder { @include chayns-placeholder(); }
+  &:-ms-input-placeholder { @include chayns-placeholder(); }
+  &:-moz-placeholder { @include chayns-placeholder(); }
+  &::-moz-placeholder { @include chayns-placeholder(); }
+
+
+  &[validate]:not(.valid) {
+    @include chayns-placeholder--invalid();
+    &::-webkit-input-placeholder { @include chayns-placeholder--invalid(); }
+    &:-ms-input-placeholder { @include chayns-placeholder--invalid(); }
+    &:-moz-placeholder { @include chayns-placeholder--invalid(); }
+    &::-moz-placeholder { @include chayns-placeholder--invalid(); }
+  }
+
+
+  &::-ms-clear { display: none; }
+  &:focus::-webkit-input-placeholder { opacity: 0; }
+  &:focus:-ms-input-placeholder { opacity: 0; }
+  &:focus:-moz-placeholder { opacity: 0; }
+  &:focus::-moz-placeholder { opacity: 0; }
+}
+
+
+.input[type=number] {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.input {
+  padding: 4px 8px;
+  font-weight: 300;
+  box-shadow: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom-color: $input-border-bottom-color;
+  border-radius: 0;
+  color: $input-color;
+  cursor: text;
+  -webkit-user-modify: read-write-plaintext-only;
+  -webkit-appearance: none;
+  transition: border-color 0.4s;
+
+  &:focus {
+    border-bottom-color: $input-focus-border-bottom-color;
+  }
+}
+
+textarea.input {
+  height: 2.43em;
+  resize: none;
+  overflow-x: hidden;
+}
+
+//checkbox/radio/switch preperation
+input[type=checkbox].disabled,
+input[type=checkbox][disabled],
+input[type=radio].disabled,
+input[type=radio][disabled] {
+  cursor: not-allowed;
+}

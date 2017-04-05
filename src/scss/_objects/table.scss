@@ -1,0 +1,16 @@
+div.table,
+section.table,
+span.table {
+  display: table;
+  width: 100%;
+}
+
+.table__row {
+  display: table-row;
+}
+
+.table__cell {
+  display: table-cell;
+  vertical-align: top;
+  padding: 4px 0;
+}

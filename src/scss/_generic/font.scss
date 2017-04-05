@@ -1,0 +1,32 @@
+@import '../_config';
+@import './replace';
+
+$url: replace($font-name, ' ', '%20');
+
+@font-face {
+  font-family: $font-name;
+  font-style: normal;
+  font-weight: normal;
+  src: url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/Regular.woff) format('woff'), url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/Regular.ttf) format('truetype'), url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/Regular.svg) format('svg');
+}
+
+@font-face {
+  font-family: $font-name;
+  font-style: italic;
+  font-weight: normal;
+  src: url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/Italic.woff) format('woff'), url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/Italic.ttf) format('truetype'), url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/Italic.svg) format('svg');
+}
+
+@font-face {
+  font-family: $font-name;
+  font-style: normal;
+  font-weight: bold;
+  src: url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/Bold.woff) format('woff'), url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/Bold.ttf) format('truetype'), url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/Bold.svg) format('svg');
+}
+
+@font-face {
+  font-family: $font-name;
+  font-style: italic;
+  font-weight: bold;
+  src: url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/ItalicBold.woff) format('woff'), url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/ItalicBold.ttf) format('truetype'), url(//chayns-res.tobit.com/API/Styles/Font/#{$url}/ItalicBold.svg) format('svg');
+}

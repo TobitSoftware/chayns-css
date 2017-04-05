@@ -10,3 +10,15 @@ In order for some special styles to work (i.e. accordions) you need to implement
 <script src="https://chayns-res.tobit.com/API/V3.1/js/chayns.min.js"></script>
 ```
 For more information you can take a look at our [wiki](https://github.com/TobitSoftware/chayns-css/wiki/).
+
+# Installation
+```
+$ npm i
+$ bower install
+```
+
+# Source
+The scss code is located in `src/scss`.
+
+# Dev
+To start browser-sync for the scss use `npm run watch`. font-awesome and font-ts need to be installed beforehand.

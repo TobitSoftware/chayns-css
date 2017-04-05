@@ -1,0 +1,47 @@
+@import '../config';
+@import '../_color';
+@import '../_generic/mixins';
+
+// all heading styles
+@mixin headline($font-size, $bottom-margin:10px) {
+  margin: 0 0 $bottom-margin 0;
+  font-weight: normal;
+  @include font-size($font-size);
+}
+
+@for $i from 1 through 5  {
+  h#{$i},
+  .h#{$i} {
+    $size: map_get($headline-sizes, $i);
+    @include headline($size);
+  }
+}
+
+h1 {
+  line-height: 1.25;
+}
+
+ h1,
+.h1 {
+  color: $h1-color;
+}
+
+h2,
+.h2 {
+  color: $h2-color;
+}
+
+h3,
+.h3 {
+  color: $h3-color;
+}
+
+h4,
+.h4 {
+  color: $h4-color;
+}
+
+h5,
+.h5 {
+  color: $h5-color;
+}

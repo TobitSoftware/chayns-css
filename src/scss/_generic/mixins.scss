@@ -1,0 +1,61 @@
+@import '../_config';
+
+// Calculate responsive font-size + line-height
+//
+// $font-size   - Font Size with px
+// $line-height - If true, the line-height will be added. Default is true
+//
+// Compatible in IE8+, Firefox 2+, Safari 4+.
+@mixin font-size($font-size, $line-height:true) {
+  //font-size: $font-size;
+  font-size: ($font-size / $base-font-size)*1rem;
+  @if $line-height == true {
+    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+  }
+}
+
+// Adds Vendor prefixes
+//
+// $property - CSS Property name
+// $value... - CSS Value
+//
+// Compatible in IE8+, Firefox 2+, Safari 4+.
+@mixin vendor($property, $value...) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+// Media Queries
+//
+// $media-query - Query name (phone, tablet, desktop)
+//
+// Compatible in IE8+, Firefox 2, Safari 4+
+@mixin media-query($mq) {
+
+  $breakpoint-found: false;
+
+  @each $breakpoint in $breakpoints {
+
+    $alias: nth($breakpoint, 1);
+    $condition: nth($breakpoint, 2);
+
+    @if $mq == $alias and $condition {
+
+      $breakpoint-found: true;
+
+      @media #{$condition} {
+        @content;
+      }
+
+    }
+
+  }
+
+  @if $breakpoint-found == false {
+    @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
+  }
+
+}

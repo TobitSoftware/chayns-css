@@ -1,0 +1,25 @@
+@import '../config';
+
+// Main Styles
+html {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height / $base-font-size;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+[chayns-cloak],
+.chayns-cloak {
+  overflow: hidden;
+  visibility: hidden;
+}
+
+// Base Style
+p:not(:last-child),
+.paragraph {
+  margin-bottom: 8px;
+}

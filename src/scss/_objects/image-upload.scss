@@ -1,0 +1,52 @@
+@import '../_color';
+
+.image-upload {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 30px;
+
+  .image-upload__image {
+    flex: 0 0 32%;
+    height: 85px;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    border: 1px solid $image-upload-border-color;
+    background-size: cover;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+  .image-upload__remove {
+    color: $image-upload-remove-color;
+
+    &:after {
+      @extend .icon;
+      content: '\f00d';
+      cursor: pointer;
+      padding: 3%;
+      float: right;
+      transition: color ease-in-out 200ms;
+    }
+
+    &:hover {
+      color: $image-upload-remove-hover-color;
+    }
+  }
+
+  .image-upload__upload {
+    @extend .image-upload__image;
+    background-color: $image-upload-upload-background-color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $image-upload-upload-hover-background-color;
+    }
+  }
+
+  .image-upload__add {
+    line-height: 85px;
+    text-align: center;
+    color: $image-upload-add-color;
+    user-select: none;
+  }
+}

@@ -1,0 +1,17 @@
+.chayns__inactivity {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 10px;
+  background-color: black;
+  z-index: 999;
+
+  .chayns__inactivity-bar {
+    background-color: darken(#636363, 15%);
+    width: 100%;
+    height: 100%;
+    transition: width linear 3s;
+    z-index: 999;
+  }
+}

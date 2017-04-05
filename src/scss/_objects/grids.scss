@@ -1,0 +1,62 @@
+@import '../config';
+@import '../_generic/mixins';
+
+// grid system based on inuit.css
+.grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid__item {
+  margin-right: -4px;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+
+@mixin widths($widths-columns, $widths-breakpoint: null) {
+
+  @each $widths-denominator in $widths-columns {
+
+    @if ($widths-denominator == 1) {
+      .col-1-1#{$widths-breakpoint} {
+        width: 100% !important;
+      }
+    } @else {
+
+      @for $widths-numerator from 1 to $widths-denominator {
+
+        .col-#{$widths-numerator}-#{$widths-denominator}#{$widths-breakpoint} {
+          width: ($widths-numerator / $widths-denominator) * 100% !important;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+$widths-columns-responsive: (
+  1,
+  2,
+  3,
+  4,
+  5,
+);
+
+@each $breakpoint in $breakpoints {
+
+  $mq: nth($breakpoint, 1);
+
+  @include media-query($mq) {
+
+    @each $widths-column in $widths-columns-responsive {
+      @include widths($widths-column, -#{$mq});
+    }
+
+  }
+
+}

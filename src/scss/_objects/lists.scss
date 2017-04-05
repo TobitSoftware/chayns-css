@@ -1,0 +1,23 @@
+@import '../_color';
+
+// Lists
+ul {
+  list-style: none;
+}
+
+.list {
+  margin-bottom: 15px;
+  padding-left: 30px;
+
+  & > li:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.list--square {
+  list-style: square;
+}
+
+ol.list > li {
+  padding-left: 2px;
+}

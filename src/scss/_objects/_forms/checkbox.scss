@@ -1,0 +1,66 @@
+@import '../../_color';
+
+.checkbox {
+  display: none;
+
+  & + label {
+    @extend .non-selectable;
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 20px;
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 15px;
+      height: 15px;
+      z-index: 1;
+    }
+
+    &:before {
+      transition: box-shadow .3s ease-in-out;
+      background-color: $checkbox-background-color;
+      top: 3px;
+      z-index: 0;
+    }
+  }
+
+  &:disabled + label {
+    color: #a6a6a6;
+  }
+
+  &:not(:disabled):not(:checked) + label:hover:after {
+    transform-origin: 100% 100%;
+    top: 5px;
+    left: 1px;
+    width: 5.5px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotateZ(37deg);
+    -moz-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    opacity: 0.5;
+  }
+
+  &:checked + label:after {
+    transform-origin: 100% 100%;
+    top: 5px;
+    left: 1px;
+    width: 5.5px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotateZ(37deg);
+    -moz-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+  }
+
+  &:checked:not(:disabled) + label:before {
+    box-shadow: inset 0 0 0 10px $checkbox-checked-background-color;
+  }
+}

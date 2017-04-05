@@ -1,0 +1,36 @@
+@import '../_color';
+
+blockquote {
+  position: relative;
+  padding: 5px 45px 5px 45px;
+  margin: 20px 0 20px;
+
+  display: block;
+  text-align: center;
+  border-top: 1px solid $quote-border-color;
+  border-bottom: 1px solid $quote-border-color;
+  font-size: large;
+  line-height: 150%;
+
+  &:before,
+  &:after {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: $quote-icon-color;
+    position: absolute;
+    line-height: 0;
+  }
+
+  &:before {
+    content: "\201C";
+    left: 10px;
+    top: 35px;
+  }
+
+  &:after {
+    content: "\201E";
+    right: 10px;
+    bottom: 35px;
+  }
+}
