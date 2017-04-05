@@ -15,7 +15,7 @@
   "scripts": {
     "watch": "gulp",
     "install": "bower install",
-    "deploy:qa": "", //copy files to your server. The server will create the chayns.min.css
+    "deploy:qa": "",
     "deploy:release": "",
     "deploy:test": ""
   },
