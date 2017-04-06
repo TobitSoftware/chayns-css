@@ -150,7 +150,7 @@
 .accordion__body > *:first-child > .accordion__item,
 .accordion__body > .accordion__content + .accordion--wrapped,
 .accordion__body > .accordion__intro + .accordion--wrapped,
-.accordion__body > .accordion__content + * > .accordion--wrapped,
+.accordion__body > .accordion__content + *:not(.accordion--wrapped--root) > .accordion--wrapped,
 .accordion__body > .accordion__intro + * > .accordion--wrapped,
 .accordion__body > .accordion--wrapped:first-child,
 .accordion__body > *:first-child > .accordion--wrapped {
