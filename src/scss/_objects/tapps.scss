@@ -55,6 +55,14 @@
   }
 }
 
+.chayns--mobile{
+  overflow: hidden; // prevents scrolling for chayns Mobileweb
+
+  body {
+    overflow: hidden;
+  }
+}
+
 .chayns--parent {
   overflow: auto;
 
