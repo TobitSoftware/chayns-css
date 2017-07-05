@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'FontTS';
-    src: url('FontTS-1.1.4.1.ttf') format('truetype');
+    src: url('FontTS-1.1.4.2.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -176,4 +176,6 @@
 .ts-event-inverted:before {
   content: "\e921";
 }
-
+.ts-chaynscard:before {
+  content: "\e922";
+}
