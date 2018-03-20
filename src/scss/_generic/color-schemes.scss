@@ -12,6 +12,15 @@ $step: 5;
   .chayns__border-color--#{$step} {
     border-color: mix($color, white, $step);
   }
+  .chayns__color-hover--#{$step}:hover {
+    color: mix($color, white, $step);
+  }
+  .chayns__background-color-hover--#{$step}:hover {
+    background-color: mix($color, white, $step);
+  }
+  .chayns__border-color-hover--#{$step}:hover {
+    border-color: mix($color, white, $step);
+  }
 
   $step: $step + 5;
 }
