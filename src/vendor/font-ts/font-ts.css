@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'FontTS';
-    src: url('FontTS-1.1.5.ttf') format('truetype');
+    src: url('FontTS-1.1.5.1.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -286,4 +286,8 @@
 
 .ts-fingerprint-inverted:before {
     content: "\e930";
+}
+
+.ts-squares:before {
+    content: "\e931";
 }
