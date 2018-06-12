@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'FontTS';
-    src: url('FontTS-1.1.5.1.ttf') format('truetype');
+    src: url('FontTS-1.1.5.2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -290,4 +290,8 @@
 
 .ts-squares:before {
     content: "\e931";
+}
+
+.ts-face:before {
+    content: "\e932";
 }
