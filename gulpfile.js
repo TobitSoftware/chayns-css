@@ -3,6 +3,18 @@ const browserSync = require("browser-sync");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 
+const path = require('path');
+const fs = require('fs');
+
+let ssl;
+try {
+    fs.readFileSync(path.join(__dirname, 'ssl', 'ssl.crt'));
+    fs.readFileSync(path.join(__dirname, 'ssl', 'ssl.key'));
+    ssl = true;
+} catch (err) {
+    ssl = false;
+}
+
 /**
  * Default task
  *
@@ -23,10 +35,10 @@ gulp.task('server', function () {
             baseDir: './'
         },
         port: 9000,
-        https:{
-            cert: './ssl/tobitag.crt',
-            key: './ssl/tobitag.key'
-        },
+        https: ssl ? {
+            cert: './ssl/ssl.crt',
+            key: './ssl/ssl.key'
+        } : false,
         logPrefix: 'chayns',
         browser: []
     })

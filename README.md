@@ -27,7 +27,7 @@ npm i
 ``
 
 Once the dependencies have been installed successfully, you can add your ssl certificate files in webpack/ssl.
-If you don't have one, you need to remove the props `https`, `cert` and `key` from your dev config. 
+If you don't have one, the dev server will be started without https. 
 To use chayns with a non-https tapp, you have to add the url parameter `nrd=1`.
 
 Then, you can start the dev-server:
