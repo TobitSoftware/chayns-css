@@ -1,41 +1,64 @@
 @import '../../_color';
 
 .select {
-  display: inline-block;
+  display: inline-flex;
+  height: 30px;
   position: relative;
-  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  background-color: $select-background-color;
+  transition: box-shadow .12s ease;
+  border-radius: 2px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px $select-border-color inset;
+  overflow: hidden;
 
-  input {
-    width: 100%;
+  &:after {
+    position: absolute;
+    right: 8px;
+    top: 0;
+    content: "\e936";
+    font-family: 'FontTS' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    padding-left: 8px;
+    color: $select-icon-color;
+    transition: color .12s ease;
+    pointer-events: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
-  ul {
-    position: absolute;
-    background-color: $finder-result-background-color;
-    border: 1px solid $finder-result-border-color;
-    overflow-x: hidden;
-    overflow-y: auto;
-    max-height: 360px;
-    padding: 10px 0;
+  select {
+    color: $base-text-color;
+    appearance: none;
+    border: none;
+    background-color: transparent;
     width: 100%;
-    display: none;
+    padding: 2px 24px 2px 12px;
+    line-height: 20px;
+    cursor: pointer;
 
-    li {
-      padding: 5px 15px 5px 15px;
-      height: 30px;
-      width: 100%;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      display: none;
-
-      &:hover {
-        font-weight: 700;
-        background-color: $finder-result-hover-background-color;
-      }
+    option {
+      background-color: $select-background-color;
     }
   }
 
-  .show {
-    display: block;
+  &.select--disabled {
+    opacity: .4;
+  }
+}
+
+// prevents hover on mobile/in app since hover on mobile is triggered by a tap
+.chayns--desktop {
+  .select:not(.select--disabled):hover {
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.09), 0 0 0 1px $select-hover-border-color inset;
+    &:after {
+      color: $select-hover-icon-color;
+    }
   }
 }

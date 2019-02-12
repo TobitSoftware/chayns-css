@@ -1,24 +1,39 @@
-# chayns® styles
+# chayns® CSS API
 
-To get started with chayns® styles you only have to add the stylesheet to your tapp.
+In this section you will find general information about the chayns CSS API. For more detailed information take a look at the [Wiki](https://github.com/TobitSoftware/chayns-css/wiki).
+
+## Getting started
+
+### Usage
+
+If you want to use the chayns API in your own tapp, we suggest using the code below.
+
 ```HTML
-<link rel="stylesheet" href="https://chayns-res.tobit.com/API/V3.1/css/chayns.min.css">
+<!-- To get started, load the chayns API styles and JavaScript from the CDN -->
+
+<!-- css styles -->
+<link rel="stylesheet" href="https://api.chayns.net/css/v4.0/">
+
+<!-- js api -->
+<script src="https://api.chayns-static.space/js/v4.0/chayns.min.js"></script>
 ```
 
-In order for some special styles to work (i.e. accordions) you need to implement the chayns® script as well.
-```HTML
-<script src="https://chayns-res.tobit.com/API/V3.1/js/chayns.min.js"></script>
-```
-For more information you can take a look at our [wiki](https://github.com/TobitSoftware/chayns-css/wiki/).
+### Debugging
 
-# Installation
-```
-$ npm i
-$ bower install
-```
+To work on the chayns CSS API, you need to install the dependencies:
 
-# Source
-The scss code is located in `src/scss`.
+``
+npm i
+``
 
-# Dev
-To start browser-sync for the scss use `npm run watch`. font-awesome and font-ts need to be installed beforehand.
+Once the dependencies have been installed successfully, you can add your ssl certificate files in webpack/ssl.
+If you don't have one, you need to remove the props `https`, `cert` and `key` from your dev config. 
+To use chayns with a non-https tapp, you have to add the url parameter `nrd=1`.
+
+Then, you can start the dev-server:
+
+``
+npm start
+``
+
+The dev page will be available at port 9000.

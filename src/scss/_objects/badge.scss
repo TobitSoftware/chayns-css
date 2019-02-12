@@ -1,15 +1,9 @@
 @import '../_color';
 
 .badge {
-  height: 20px;
-  min-width: 20px;
-  padding: 4px 7px 0;
-  border-radius: 11px;
-  margin-top: 4px;
-
-  line-height: 12px;
-  font-size: 0.85rem;
-  font-weight: 300;
+  padding: 2px 7px;
+  border-radius: 15px;
+  font-size: .8rem;
   text-align: center;
   color: $badge-color;
   background-color: $badge-background-color;

@@ -1,0 +1,76 @@
+@import '../_color';
+
+.cc__file-upload {
+  opacity: 0.6;
+  border-radius: 4px;
+  border: 2px dashed $file-upload-color;
+  cursor: pointer;
+  color:  $file-upload-color;
+
+  &--custom {
+    opacity: 1;
+  }
+
+  &--placeholder {
+    display: flex;
+    height: 60px;
+
+    user-select: none;
+
+    transition: all .2s;
+    justify-content: center;
+  }
+
+  &--hover {
+    .cc__file-upload__icon {
+      animation: cc__file-upload--bounce 1s infinite;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__message {
+  }
+
+  &__icon, &__message {
+    align-self: center;
+    justify-self: center;
+  }
+
+  &:hover, &--hover {
+    opacity: 1;
+    .cc__file-upload__split:not(:hover){
+      opacity: 0.6;
+    }
+  }
+
+  &__split {
+    flex: 1;
+  }
+
+  &__separator {
+    position: absolute;
+    height: 30px;
+    width: 1px;
+    background-color: $file-upload-color;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+@keyframes cc__file-upload--bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -3px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

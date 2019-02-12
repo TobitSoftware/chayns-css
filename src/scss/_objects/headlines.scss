@@ -2,14 +2,22 @@
 @import '../_color';
 @import '../_generic/mixins';
 
+$headline-sizes: (
+        1: 1.7rem,
+        2: 1.4rem,
+        3: 1.1rem,
+        4: 1rem,
+        5: 0.8rem
+) !default;
+
 // all heading styles
 @mixin headline($font-size, $bottom-margin:10px) {
   margin: 0 0 $bottom-margin 0;
   font-weight: normal;
-  @include font-size($font-size);
+  font-size: $font-size;
 }
 
-@for $i from 1 through 5  {
+@for $i from 1 through 5 {
   h#{$i},
   .h#{$i} {
     $size: map_get($headline-sizes, $i);
@@ -17,38 +25,32 @@
   }
 }
 
-h1 {
-  line-height: 1.25;
-}
-
- h1,
+h1,
 .h1 {
   color: $h1-color;
+  line-height: 1.35;
 }
 
 h2,
 .h2 {
   color: $h2-color;
+  line-height: 1.35;
 }
 
 h3,
 .h3 {
   color: $h3-color;
+  line-height: 1.35;
 }
 
 h4,
 .h4 {
   color: $h4-color;
+  line-height: 1.25;
 }
 
 h5,
 .h5 {
   color: $h5-color;
-}
-
-h6,
-.h6 {
-  color: $h6-color;
-  font-size: 93%;
-  font-weight: 100;
+  line-height: 1.25;
 }

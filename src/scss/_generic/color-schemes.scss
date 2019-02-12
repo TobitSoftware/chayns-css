@@ -1,17 +1,125 @@
 @import '../_color';
 
-$step: 5;
+.chayns__background-color {
+  background-color: $color;
+}
 
-@while $step <= 100 {
-  .chayns__color--#{$step} {
-    color: mix($color, white, $step);
-  }
-  .chayns__background-color--#{$step} {
-    background-color: mix($color, white, $step);
-  }
-  .chayns__border-color--#{$step} {
-    border-color: mix($color, white, $step);
+.chayns__color {
+  color: $color;
+}
+
+.chayns__border-color {
+  border-color: $color
+}
+
+@each $key, $color in $colors1 {
+  .chayns__background-color--white-#{$key} {
+    background-color: $color;
   }
 
-  $step: $step + 5;
+  .chayns__color--white-#{$key} {
+    color: $color;
+  }
+
+  .chayns__border-color--white-#{$key} {
+    border-color: $color
+  }
+}
+
+@each $key, $color in $colors2 {
+  .chayns__background-color--light-#{$key} {
+    background-color: $color;
+  }
+
+  .chayns__color--light-#{$key} {
+    color: $color;
+  }
+
+  .chayns__border-color--light-#{$key} {
+    border-color: $color
+  }
+}
+
+@each $key, $color in $colors3 {
+  .chayns__background-color--medium-#{$key} {
+    background-color: $color;
+  }
+
+  .chayns__color--medium-#{$key} {
+    color: $color;
+  }
+
+  .chayns__border-color--medium-#{$key} {
+    border-color: $color
+  }
+}
+
+@each $key, $color in $colors4 {
+  .chayns__background-color--dark-#{$key} {
+    background-color: $color;
+  }
+
+  .chayns__color--dark-#{$key} {
+    color: $color;
+  }
+
+  .chayns__border-color--dark-#{$key} {
+    border-color: $color
+  }
+}
+
+@each $key, $color in $shades {
+  .chayns__background-color--shade-#{$key} {
+    background-color: $color;
+  }
+
+  .chayns__color--shade-#{$key} {
+    color: $color;
+  }
+
+  .chayns__border-color--shade-#{$key} {
+    border-color: $color
+  }
+}
+
+@each $key, $color in $red {
+  .chayns__background-color--red-#{$key} {
+    background-color: $color;
+  }
+
+  .chayns__color--red-#{$key} {
+    color: $color;
+  }
+
+  .chayns__border-color--red-#{$key} {
+    border-color: $color
+  }
+}
+
+@each $key, $color in $yellow {
+  .chayns__background-color--yellow-#{$key} {
+    background-color: $color;
+  }
+
+  .chayns__color--yellow-#{$key} {
+    color: $color;
+  }
+
+  .chayns__border-color--yellow-#{$key} {
+    border-color: $color
+  }
+}
+
+@each $key, $color in $green {
+  .chayns__background-color--green-#{$key} {
+    background-color: $color;
+  }
+
+  .chayns__color--green-#{$key} {
+    color: $color;
+  }
+
+  .chayns__border-color--green-#{$key} {
+    border-color: $color
+  }
 }

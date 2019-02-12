@@ -3,48 +3,58 @@
 .input-group {
   position: relative;
 
+  &__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    opacity: .0;
+    pointer-events: none;
+    cursor: pointer;
+    transition: all .4s;
+  }
+
+  &.labelRight label, input:focus + label {
+    right: 0 !important;
+    left: 0 !important;
+    .chayns--app & {
+      opacity: 0;
+      right: 100%;
+    }
+    &.labelIcon {
+      opacity: 0 !important;
+    }
+  }
+
   input,
   textarea {
     display: inline-block;
+    //padding-right: 25px;
 
-    &.input[required] {
+    &.input {
       width: 100%;
 
       & + label {
         position: absolute;
         text-align: right;
         top: 0;
-        margin: 6px 8px;
+        margin: 5px 1px;
         left: 0;
         right: 100%;
-        font-size: 85%;
         white-space: nowrap;
         color: $input-placeholder-color;
         pointer-events: none;
-        transition: all .3s ease-out;
+        transition: all .4s ease-out;
         opacity: 1;
       }
 
       &[validate]:not(.valid) + label {
         color: $input-placeholder-required-color !important;
         font-weight: 700;
-      }
-
-      &:valid,
-      &:focus,
-      &[readonly] {
-        & + label {
-          right: 0;
-          left: 0;
-        }
-      }
-
-      .chayns--app &:valid + label,
-      .chayns--app &:focus + label,
-      .chayns--app &[readonly] + label {
-        opacity: 0;
-        left: 0;
-        right: 100%;
       }
     }
   }
@@ -53,7 +63,7 @@
 .chayns-browser--edge .input-group {
   input,
   textarea {
-    &.input[required] + label {
+    &.input + label {
       font-size: 100%;
     }
   }

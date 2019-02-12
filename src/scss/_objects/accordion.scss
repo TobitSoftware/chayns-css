@@ -1,10 +1,5 @@
 @import '../_color';
 
-// used for safari mobile (otherwise click event delegation won't work)
-%clickable {
-  cursor: pointer;
-}
-
 .accordion {
   margin-top: 10px;
   border-bottom: 1px solid transparent;
@@ -24,65 +19,84 @@
   opacity: 0.6;
 }
 
+.accordion--trigger {
+  pointer-events: all !important;
+  cursor: pointer !important;
+}
+
 .accordion__head,
 .accordion__item {
-  @extend .non-selectable;
-  @extend %clickable;
-  padding: 4px 9px 3px 3px;
+  cursor: pointer;
+  pointer-events: all;
+  user-select: none;
+  transition: height 300ms;
+  will-change: height;
+  display: flex;
+  height: 32px;
+  align-items: center;
   position: relative;
   background-color: transparent;
-  transition: border-bottom 300ms ease-in-out 150ms, font-weight 300ms ease-in-out, font-size 300ms ease-in-out;
-  will-change: border-bottom, font-weight, font-size;
 
-  // arrow, is displayed as default
-  .arrow:before,
-  &:before {
-    font-family: FontAwesome, sans-serif;
-    content: "\f105";
-    line-height: 24px;
-    font-size: 18px;
-    font-weight: normal;
-    position: relative;
-    top: 1px;
-    margin: 0 8px;
-    transform: rotate(0deg);
-    transition: transform 300ms;
-    will-change: transform;
-    display: inline-block;
+  .accordion__head__title {
+    flex: 1;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+    transition: font-size 300ms, transform 300ms, font-weight 300ms;
+    will-change: font-size, transform, font-weight;
+  }
+  .accordion__head__icon {
     color: $accordion-arrow-color;
-  }
-
-  .arrow {
-    display: inline-block;
-    text-align: center;
-    @extend %clickable;
-  }
-
-  // element to place content on head's right-hand side
-  .right {
-    display: inline-block;
-    float: right;
-  }
-
-  // hide the default arrow
-  &.no-arrow {
-    padding-left: 9px;
-
-    &:before {
-      display: none;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 250ms ease-in-out;
+    will-change: transform;
+    i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before {
+        vertical-align: middle;
+      }
     }
   }
 
-  // adjust choosebutton
-  .choosebutton {
-    margin-left: 5px;
-    padding: 2px 15px;
-  }
-
-  .badge,
-  .choosebutton {
-    transition: margin-top 0.3s ease;
-    will-change: margin-top;
+  .accordion__head__right {
+    margin-right: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .right--search {
+      position: absolute;
+      right: 0;
+      transition: opacity 0.25s ease;
+      will-change: opacity;
+    }
+    &__search {
+      transition: transform 0.5s ease, opacity 0.5s ease, width 0.5s ease;
+      will-change: transfrom, opacity, width;
+      transform: translateX(150%);
+      opacity: 0;
+      &--active {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      .input {
+        line-height: 1;
+      }
+    }
   }
 }
 
@@ -101,13 +115,15 @@
 }
 
 .accordion__content {
-  padding: 0 9px 9px;
+  padding: 0 9px 9px 10px;
 }
 
 // multiple items which look like wrapped accordion entries
 .accordion__item {
   cursor: default;
   padding: 8px 9px;
+  min-height: 38px;
+  height: inherit;
   border-top: 1px solid $accordion-item-border-bottom-color;
 
   &:before {
@@ -116,7 +132,7 @@
 }
 
 .accordion.accordion--wrapped .accordion__item {
-  padding-left: 24px;
+  padding-left: 30px;
 }
 
 // if this accordion is in another accordion
@@ -125,7 +141,7 @@
   border-top: 1px solid $accordion-item-border-bottom-color;
 
   & > .accordion__head {
-    padding: 8px 9px 8px 4px;
+    height: 40px;
   }
 
   & > .accordion__body {
@@ -133,7 +149,7 @@
   }
 
   & .accordion__content {
-    padding: 0 0 18px 18px;
+    padding: 0 0 18px 17px;
     margin: 0 9px;
   }
 }
@@ -163,27 +179,20 @@
     margin-bottom: 30px;
     background-color: $accordion-open-background-color;
     border-color: transparent;
-
     & > .accordion__head {
-      font-size: 20px;
-
-      .badge {
-        margin-top: 7px;
-      }
-
-      .choosebutton {
-        margin-top: 4px;
+      height: 38px;
+      .accordion__head__title {
+        font-size: 1.3rem;
       }
     }
   }
 
-  &.accordion.accordion--wrapped > .accordion__head {
+  &.accordion.accordion--wrapped > .accordion__head > .accordion__head__title {
     font-weight: 700;
   }
 
   & > .accordion__head {
-    &:before,
-    .arrow:before {
+    .accordion__head__icon:not(.accordion__head__icon--no-rotate) {
       transform: rotate(90deg);
     }
   }
@@ -219,8 +228,7 @@
     display: flex;
     align-items: center;
 
-    .accordion-badge,
-    .right {
+    .__head__right {
       float: none;
       margin-left: auto;
     }

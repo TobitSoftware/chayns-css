@@ -3,24 +3,22 @@
 @import '../_generic/mixins';
 
 // Tapps: Main Layout
-
 // Tapp Base Layout to start a new Tapp
 .tapp * {
   &,
   &:before,
   &:after {
-    @include vendor(box-sizing, border-box);
+    box-sizing: border-box;
   }
 }
 
 .tapp {
-  @include vendor(box-sizing, border-box);
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 15px 10px 20px;
   width: 100%;
   max-width: 100vw;
   color: $base-text-color;
-  background-color: $tapp-background-color;
 }
 
 // hint-box used for hints (e.g. "Only visible for admins")
@@ -39,36 +37,14 @@
 .tapp__intro,
 .tapp__content {
   margin-bottom: 12px;
-
-  &.is-dark,
-  &.is-light {
-    padding: 20px; // padding due to different background color
-    background-color: $tapp-light-background-color;
-  }
 }
 
+.chayns--mobile {
+  overflow: hidden;
+}
 .chayns--desktop {
   overflow: hidden; // prevents scrolling for chayns web
 
-  body {
-    overflow: hidden;
-  }
-}
-
-.chayns--mobile{
-  overflow: hidden; // prevents scrolling for chayns Mobileweb
-}
-
-.chayns--parent {
-  overflow: auto;
-
-  body {
-    overflow: auto;
-  }
-}
-
-// TODO: fix mq
-@include media-query(desktop) {
   .tapp {
     padding: 35px 43px 30px;
   }
@@ -76,10 +52,17 @@
   .tapp__intro,
   .tapp__content {
     margin-bottom: 40px;
+  }
 
-    &.is-dark,
-    &.is-light {
-      padding: 25px; // padding due to different background color
-    }
+  body {
+    overflow: hidden;
+  }
+}
+
+.chayns--parent {
+  overflow: auto;
+
+  body {
+    overflow: auto;
   }
 }

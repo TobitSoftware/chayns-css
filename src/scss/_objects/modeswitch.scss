@@ -1,0 +1,67 @@
+@import '../_color';
+
+.cc__modeswitch {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(calc(-100% + 25px));
+  transition: transform 0.25s ease-out;
+  animation: modeSwitchInit 2s 0s 1 ease-out;
+  z-index: 1000;
+  &--open {
+    transform: translateY(0);
+  }
+  &__content {
+    width: 92%;
+    background-color: $modeswitchBackgroundColor;
+    border: 1px solid $modeswitchBorderColor;
+    border-top: none;
+    padding: 20px 30px 25px;
+  }
+  &__trigger {
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: $modeswitchBackgroundColor;
+    border: 1px solid $modeswitchBorderColor;
+    border-top: none;
+    transform: translateY(-1px);
+    cursor: pointer;
+    color: $modeswitchIconColor;
+    svg{
+      animation: modeSwitchTriggerCogInit 1.5s 1.5s 1 ease;
+    }
+    &--red {
+      background-color: red;
+      color: white;
+    }
+  }
+}
+
+@keyframes modeSwitchInit {
+  0% {
+    transform: translateY(-100%);
+  }
+  80% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(calc(-100% + 25px));
+  }
+}
+
+@keyframes modeSwitchTriggerCogInit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

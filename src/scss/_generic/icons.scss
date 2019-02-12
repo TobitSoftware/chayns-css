@@ -1,19 +1,9 @@
-// font awesome icons
-// own config which overrides fa default
-$fa-css-prefix: icon;
-$fa-font-path: "https://chayns-res.tobit.com/API/Fonts/FontAwesome_4_7";
-
-@import "../../vendor/font-awesome/scss/_variables";
-@import "../../vendor/font-awesome/scss/_mixins";
-@import "../../vendor/font-awesome/scss/_path";
-@import "../../vendor/font-awesome/scss/_core";
-@import "../../vendor/font-awesome/scss/_rotated-flipped";
-
 // tobit icons
-@import "../../vendor/font-ts/font-ts";
+@import url('https://api.chayns-static.space/font-ts/font-ts.css');
+
 @font-face {
   font-family: 'FontTS';
-  src: url('https://chayns-res.tobit.com/API/Fonts/fonts/FontTS-1.1.5.2.ttf') format('truetype');
+  src: url('https://api.chayns-static.space/font-ts/FontTS-latest.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

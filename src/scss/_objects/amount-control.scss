@@ -1,0 +1,54 @@
+.cc__amount-control {
+  display: inline-flex;
+  padding: 0;
+  overflow: hidden;
+  width: auto;
+  &:after {
+    z-index: -1;
+  }
+  &__remove, &__add {
+    width: 0;
+    opacity: 0;
+    line-height: 28px;
+    transition: all 0.2s ease-out;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  &__input {
+    width: 55px;
+    line-height: 28px !important;
+    height: 28px !important;
+    text-align: center;
+    padding: 0;
+  }
+  &__button {
+    padding: 0 10px;
+    min-width: 55px;
+    background-color: rgba(0, 0, 0, 0.0);
+    line-height: 28px;
+    vertical-align: middle;
+  }
+  .cc__amount-control--icon {
+    width: 28px;
+    line-height: 28px;
+    height: 28px;
+    opacity: 1;
+  }
+  &--active {
+    .cc__amount-control {
+      &--icon {
+        width: 40px !important;
+        opacity: 1;
+        &:hover:not(.disabled) {
+          background-color: rgba(255, 255, 255, 0.0);
+        }
+      }
+      &__button {
+        &:hover:not(.disabled) {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+  }
+}

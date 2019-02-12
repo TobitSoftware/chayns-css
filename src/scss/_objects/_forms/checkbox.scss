@@ -4,7 +4,7 @@
   display: none;
 
   & + label {
-    @extend .non-selectable;
+    user-select: none;
 
     position: relative;
     display: inline-block;
@@ -16,26 +16,27 @@
       position: absolute;
       left: 0;
       content: '';
-      width: 15px;
-      height: 15px;
+      width: 16px;
+      height: 16px;
       z-index: 1;
     }
 
     &:before {
-      transition: box-shadow .3s ease-in-out;
+      transition: box-shadow 100ms ease-in-out;
       background-color: $checkbox-background-color;
-      top: 3px;
+      top: 5px;
       z-index: 0;
     }
   }
 
   &:disabled + label {
-    color: #a6a6a6;
+    opacity: 0.5;
+    cursor: default;
   }
 
   &:not(:disabled):not(:checked) + label:hover:after {
     transform-origin: 100% 100%;
-    top: 5px;
+    top: 7px;
     left: 1px;
     width: 5.5px;
     height: 10px;
@@ -49,7 +50,7 @@
 
   &:checked + label:after {
     transform-origin: 100% 100%;
-    top: 5px;
+    top: 7px;
     left: 1px;
     width: 5.5px;
     height: 10px;
@@ -65,11 +66,10 @@
   }
 }
 
-
 html.chayns--app,
 html.chayns--tablet,
 html.chayns--mobile{
-  .checkbox:not(:disabled):not(:checked) + label:hover:after{
-    opacity: 0;
+    .checkbox:not(:disabled):not(:checked) + label:hover:after{
+      opacity: 0;
+    }
   }
-}

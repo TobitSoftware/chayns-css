@@ -1,16 +1,10 @@
-footer{
-  font-size: 85%;
+footer {
+  font-size: 0.85rem;
   color: #888;
-  margin: 10px 0 0 ;
-},
-footer a {
-  color: #888 !important;
-  letter-spacing: -0.3px !important;
-  font-size: 12px !important;
-  font-weight: 400 !important;
-  line-height: 18px !important;
-}
+  margin: 10px 0 0;
 
-footer a {
-  text-decoration: underline !important;
+  & a {
+    color: #888;
+    letter-spacing: -0.3px;
+  }
 }

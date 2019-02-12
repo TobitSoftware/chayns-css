@@ -1,106 +1,174 @@
-  $color: #6E6E6E !default;
+$color: #AC0000 !default;
+$brightness: 100% !default;
 
-  //base config colors
-  $base-text-color: #e8e8e8 !default;
+$colors1: (
+        1: mix($color, #FFFFFF, 5%),
+        2: mix($color, #FFFFFF, 20%),
+        3: mix($color, #FFFFFF, 40%),
+        4: mix($color, #FFFFFF, 60%),
+        5: mix($color, #FFFFFF, 80%),
+        6: mix($color, #FFFFFF, 90%),
+);
+$colors2: (
+        1: mix($color, #7D7D7D, 70%),
+        2: mix($color, #7D7D7D, 40%),
+        3: mix($color, #7D7D7D, 15%),
+        4: mix($color, #7D7D7D, 3%),
+);
+$colors3: (
+        1: mix($color, #242424, 70%),
+        2: mix($color, #242424, 40%),
+        3: mix($color, #242424, 15%),
+        4: mix($color, #242424, 3%),
+);
+$colors4: (
+        1: mix($color, #101010, 40%),
+        2: mix($color, #101010, 15%),
+        3: mix($color, #101010, 3%),
+);
 
-  //anchor
-  $anchor-color: #ffffff;
+$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
 
-  //accordion
-  $accordion-border-bottom-color: mix($color, #404040, 20%);
-  $accordion-hover-background-color: mix($color, #000000, 20%);
-  $accordion-arrow-color: mix($color, #828282, 20%);
-  $accordion-item-border-bottom-color: mix($color, #404040, 20%);
-  $accordion-open-background-color: mix($color, #000000, 20%);
-  $accordion-open-head-border-bottom-color: mix($color, #404040, 20%);
+$shades: (
+        1: #ffffff,
+        2: #f1f1f1,
+        3: #dbdbdb,
+        4: #b7b7b7,
+        5: #777777,
+        6: #474747,
+        7: #222222,
+        8: #000000,
+);
 
-  //badge
-  $badge-color: #cdcdcd;
-  $badge-background-color: mix($color, #595959, 10);
+$red: (
+        1: #5a0303,
+        2: #96060b,
+        3: #ca8181,
+        4: #e9cccc,
+);
 
-  //buttons
-  $button-color: #ffffff;
-  $button-background-color: mix($color, #666666, 10%);
-  $button-hover-background-color: mix($color, #8c8c8c, 10%);
-  $choosebutton-background-color: mix($color, #404040, 10%);
-  $choosebutton-hover-background-color: mix($color, #595959, 10%);
+$yellow: (
+        1: #9F5F00,
+        2: #FF9800,
+        3: #FFB74D,
+        4: #FFF3E0,
+);
 
-  //colors
-  $color--positive: #4c993d;
-  $color--negative: #bf564c;
+$green: (
+        1: #074709,
+        2: #0e7710,
+        3: #85ba87,
+        4: #cde3ce,
+);
 
-  //content_card
-  $content-card-background-color: mix($color, #333333,  10%);
+//base config colors
+$base-text-color: map_get($shades, 1);
 
-  //forms
-  //input / dynamic-input
-  $input-placeholder-color: mix($color, #b5b5b5, 10%);
-  $input-placeholder-required-color: #d23f31;
-  $input-color: #e8e8e8;
-  $input-border-bottom-color: mix($color, #666666, 10%);
-  $input-focus-border-bottom-color: mix($color, #b5b5b5, 10%);
+//anchor
+$anchor-color: map_get($shades, 1);
 
-  //switch
-  $switch-background-color: mix($color, #5f5f5f, 10%);
-  $switch-disabled-background-color: #d5d5d5;
-  $switch-button-background-color: mix($color, #ffffff, 10%);
-  $switch-disabled-button-background-color: #bdbdbd;
-  $switch-button-box-shadow-color: rgba(0, 0, 0, 0.35);
-  $switch-checked-background-color: mix($color, #a3a3a3, 10%);
+//accordion
+$accordion-border-bottom-color: map_get($shades, 4);
+$accordion-hover-background-color: map_get($colors3, 3);
+$accordion-arrow-color: map_get($shades, 4);
+$accordion-item-border-bottom-color: map_get($shades, 5);
+$accordion-open-background-color: map_get($colors3, 3);
 
-  //radio / checkbox
-  $checkbox-background-color: mix($color, #404040, 10%);
-  $checkbox-checked-background-color: mix($color, #595959, 10%);
+//badge
+$badge-color: map_get($shades, 3);
+$badge-background-color: map_get($colors2, 2);
 
-//finder
-$finder-result-background-color: mix($color, #000000, 10%);
-$finder-result-border-color: mix($color, #404040, 10%);
-$finder-result-hover-background-color: mix($color, #000000, 20%);
-$finder-person-id-color: #8c8c8c;
+//buttons
+$button-color: map_get($shades, 1);
+$button-background-color: map_get($colors2, 1);
+$button-hover-background-color: map_get($colors2, 2);
 
-//gallery
-$gallery-background-color: rgba(0, 0, 0, 0.4);
-$gallery-color: rgba(255, 255, 255, 0.8);
+//secondary button
+$button2-color: map_get($shades, 1);
+$button2-background-color: map_get($colors2, 3);
+$button2-hover-background-color: map_get($colors2, 2);
 
-  //headlines
-  $h1-color: #ffffff ;
-  $h2-color: #ffffff;
-  $h3-color: #ffffff;
-  $h4-color: #ffffff;
-  $h5-color: #808080;
-  $h6-color: #b6b6b6 ;
+//choosebutton
+$choosebutton-color: map_get($shades, 1);
+$choosebutton-background-color: map_get($colors2, 3);
+$choosebutton-hover-background-color: map_get($colors2, 2);
 
-  //image-upload
-  $image-upload-border-color: mix($color, #404040, 10%);
-  $image-upload-remove-color: mix($color, #ffffff, 30%);
-  $image-upload-remove-hover-color: $color;
-  $image-upload-upload-background-color: mix($color, #333333, 10%);
-  $image-upload-upload-hover-background-color: mix($color, #333333, 20%);
-  $image-upload-add-color: #ffffff;
+//contextmenu
+$contextMenuTriggerColor: map_get($shades, 5);
+$contextMenuIconColor: map_get($colors1, 5);
 
-  //mode-switch
-  $mode-switch-background-color: mix($color, #000000, 10%);
-  $mode-switch-border-color: mix($color, #404040, 10%);
-  $mode-switch--arrow-color: #fff;
-  $mode-switch--arrow-color-default: mix($color, #828282, 10%);
+//select
+$select-background-color: map_get($colors2, 3);
+$select-border-color: transparent;
+$select-icon-color: map_get($shades, 1);
+$select-hover-icon-color: map_get($shades, 1);
+$select-hover-border-color: transparent;
 
-//quote
-$quote-border-color: #cccccc;
-$quote-icon-color: #cccccc;
+//content_card
+$content-card-background-color: map_get($colors3, 3);
 
-  //selection
-  $selection-color: #1a1a1a;
-  $selection-background-color: mix($color, #aaaaaa, 10);
+//forms
+//input / dynamic-input
+$input-placeholder-color: map_get($shades, 5);
+$input-placeholder-required-color: map_get($red, 1);
+$input-border-color: map_get($shades, 4);
+$input-color: $base-text-color;
+$input-focus-border-bottom-color: map_get($shades, 1);
 
-  //tapp
-  $tapp-background-color: mix($color, #1a1a1a, 10);
-  $tapp-light-background-color: mix($color, #000000, 10);
-  $tapp-hint-color: mix($color, #000000, 10%);
+//switch
+$switch-background-color: map_get($colors2, 3);
+$switch-checked-background-color: map_get($colors2, 1);
+$switch-button-background-color: map_get($shades, 1);
 
-  //tooltip
-  $tooltip-background-color: mix($color, #595959, 10%);
-  $tooltip-trigger-color: mix($color, #c6c6c6, 10%);
-  $tooltip-color: #ffffff;
+//radio / checkbox
+$checkbox-background-color: map_get($colors2, 2);
+$checkbox-checked-background-color: map_get($colors2, 1);
 
-  //list
-  $list-color: $color;
+//headlines
+$h1-color: map_get($shades, 1);
+$h2-color: map_get($shades, 1);
+$h3-color: map_get($shades, 1);
+$h4-color: map_get($shades, 1);
+$h5-color: map_get($shades, 1);
+
+//modeswitch
+$modeswitchBackgroundColor: map_get($colors4, 3);
+$modeswitchBorderColor: map_get($colors3, 2);
+$modeswitchIconColor: map_get($shades, 1);
+
+//selection
+$selection-color: map_get($shades, 1);
+$selection-background-color: map_get($colors1, 4);
+
+//wait-cursor
+$wait-cursor-color: $color;
+$wait-cursor-background-color: map_get($shades, 1);
+$wait-cursor-color-no-background: map_get($shades, 1);
+
+//tapp
+$tapp-hint-color: map_get($colors2, 3);
+
+//person finder
+$finder-result-background-color: map_get($colors4, 3);
+$finder-result-border-color: map_get($colors3, 2);
+$finder-result-hover-background-color: map_get($colors4, 2);
+
+//receiver input
+$receiver-popup-group-headline-background-color: map_get($colors3, 4);
+$receiver-popup-chosen-member-background-color: map_get($colors3, 4);
+$receiver-popup-background-color: map_get($colors3, 4);
+$receiver-popup-box-shadow-color: map_get($colors3, 4);
+$receiver-popup-border-color: map_get($colors3, 3);
+$receiver-popup-image-border: map_get($shades, 6);
+$receiver-popup-item-hover: map_get($colors3, 4);
+$receiver-popup-item-even: map_get($colors4, 3);
+$receiver-popup-item-odd: map_get($colors3, 3);
+
+//setup wizard
+$wizard-step-ready-background-color: map_get($colors3, 1);
+$wizard-step-ready-color: map_get($shades, 1);
+$wizard-step-notReady-background-color: map_get($colors3, 2);
+$wizard-step-notReady-color: map_get($shades, 3);
+
+//file upload
+$file-upload-color: map_get($shades, 1);

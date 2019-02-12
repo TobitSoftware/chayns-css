@@ -1,21 +1,18 @@
 @import '../config';
 
-// Main Styles
-html {
+:root {
   font-family: $base-font-family;
   font-size: $base-font-size;
-  line-height: $base-line-height / $base-font-size;
+  line-height: $base-line-height;
+}
+
+// Main Styles
+html {
   min-height: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
-}
-
-[chayns-cloak],
-.chayns-cloak {
-  overflow: hidden;
-  visibility: hidden;
 }
 
 // Base Style

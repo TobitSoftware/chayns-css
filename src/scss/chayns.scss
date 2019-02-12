@@ -5,40 +5,47 @@
 @import './_generic/mixins';
 @import './_generic/normalize';
 @import './_generic/reset';
-@import './_generic/clearfix';
 @import './_generic/helper';
 @import './_generic/font';
 @import './_generic/ios';
 @import './_generic/android';
 @import './_generic/icons';
-@import './_generic/color-schemes';
 @import './_generic/web';
+@import './_generic/color-schemes';
 
 // base: html, body, headings, forms, lists, tables, code, paragraph and other high level elements
 @import './_base/main';
 @import './_base/links';
+@import './_base/selection';
 
 // objects
+@import './_objects/accordion';
+@import './_objects/scrollbar';
 @import './_objects/buttons';
 @import './_objects/headlines';
+@import './_objects/icon';
 @import './_objects/_forms/forms';
 @import './_objects/tapps';
-@import './_objects/colors';
 @import './_objects/grids';
 @import './_objects/content-card';
-@import './_objects/accordion';
-@import './_objects/tooltip';
+@import './_objects/receiverinput';
 @import './_objects/lists';
-@import './_objects/finder';
-@import './_objects/gallery';
-@import './_objects/selection';
-@import './_objects/image-upload';
-@import './_objects/mode-switch';
-@import './_objects/quote';
 @import './_objects/table';
 @import './_objects/badge';
-@import './_objects/slider';
-@import './_objects/inactivity-timeout';
 @import './_objects/footer';
 @import './_objects/wait-cursor';
+@import './_objects/openingTimes';
+@import './_objects/map';
 
+
+@import './_objects/setup-wizard';
+@import './_objects/sharing-bar';
+@import './_objects/tooltip';
+@import './_objects/upload';
+@import './_objects/scroll-view';
+@import './_objects/gallery';
+@import './_objects/grid-calendar';
+@import './_objects/modeswitch';
+@import './_objects/amount-control';
+@import './_objects/calendar';
+@import './_objects/contextmenu';

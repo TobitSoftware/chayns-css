@@ -7,26 +7,26 @@ $url: replace($font-name, ' ', '%20');
   font-family: $font-name;
   font-style: normal;
   font-weight: normal;
-  src: url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/Regular.woff) format('woff'), url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/Regular.ttf) format('truetype'), url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/Regular.svg) format('svg');
+  src: url(https://api.chayns-static.space/font/#{$url}/Regular.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/Regular.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/Regular.svg) format('svg');
 }
 
 @font-face {
   font-family: $font-name;
   font-style: italic;
   font-weight: normal;
-  src: url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/Italic.woff) format('woff'), url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/Italic.ttf) format('truetype'), url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/Italic.svg) format('svg');
+  src: url(https://api.chayns-static.space/font/#{$url}/Italic.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/Italic.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/Italic.svg) format('svg');
 }
 
 @font-face {
   font-family: $font-name;
   font-style: normal;
   font-weight: bold;
-  src: url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/Bold.woff) format('woff'), url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/Bold.ttf) format('truetype'), url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/Bold.svg) format('svg');
+  src: url(https://api.chayns-static.space/font/#{$url}/Bold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/Bold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/Bold.svg) format('svg');
 }
 
 @font-face {
   font-family: $font-name;
   font-style: italic;
   font-weight: bold;
-  src: url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/ItalicBold.woff) format('woff'), url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/ItalicBold.ttf) format('truetype'), url(https://chayns-res.tobit.com/API/Styles/Font/#{$url}/ItalicBold.svg) format('svg');
+  src: url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.svg) format('svg');
 }

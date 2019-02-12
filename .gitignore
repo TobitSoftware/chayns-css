@@ -1,8 +1,7 @@
 # Node
 node_modules
-bower_components
-dist
-
+build
+vendor
 
 # IDE
 .idea
@@ -23,4 +22,5 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 npm-debug.log
-src/vendor/font-awesome/
+
+ssl/

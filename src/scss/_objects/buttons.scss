@@ -3,71 +3,117 @@
 
 .button,
 .choosebutton {
+  position: relative;
   display: inline-block;
   text-align: center;
   border: 0;
-  border-radius: 3px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .2) ;
+  border-radius: 2px;
   cursor: pointer;
-  @include vendor(user-select, none);
-  @include vendor(transition, background 150ms ease);
+  user-select: none;
+  transition: background-color 150ms ease;
+  outline: none;
+  overflow: hidden;
 
   &:not(.button--disabled) {
-    &:hover,
-    &:active {
-      outline: none;
+    &:after {
+      content: "";
+      background-color: rgba(255, 255, 255, 0.5);
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 500ms;
+    }
+
+    &:active:after {
+      opacity: 0.5;
+      transition: opacity 0s;
     }
   }
 
   &--disabled {
-    opacity: 0.6;
+    opacity: 0.5;
     cursor: default;
   }
 
+  &__icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  }
 }
-
 
 // Buttons
 .button {
-  padding: 2px 12px;
-  background-color: $button-background-color;
-  background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 25%), $button-background-color;
-  background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 25%), $button-background-color;
-  background: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 25%), $button-background-color;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 25%), $button-background-color;
+  min-height: 30px;
+  padding: 7px 12px;
   color: $button-color;
+  background-color: $button-background-color;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .2);
+
+  &.button--secondary {
+    color: $button2-color;
+    background-color: $button2-background-color;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  &__icon {
+    width: 30px;
+  }
+
+  &--icon {
+    padding-left: 42px;
+  }
 }
 
 // Choose Button
 .choosebutton {
-  font-size: .9rem;
+  color: $choosebutton-color;
+  min-height: 27px;
+  padding: 6px 10px;
+  font-size: 0.95rem;
   font-weight: normal;
-  padding: 2px 12px;
   background-color: $choosebutton-background-color;
-  background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 25%), $choosebutton-background-color;
-  background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 25%), $choosebutton-background-color;
-  background: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 25%), $choosebutton-background-color;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 25%), $choosebutton-background-color;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.09);
+
+  &__icon {
+    width: 27px;
+  }
+
+  &--icon {
+    padding-left: 39px;
+  }
 }
 
 // prevents hover on mobile/in app since hover on mobile is triggered by a tap
-:not(.chayns--app) {
+.chayns--desktop {
   .button {
     &:not(.button--disabled) {
-      &:hover,
-      &:active,
-      &.button--active {
+      &:hover {
         background-color: $button-hover-background-color;
       }
     }
   }
 
-  .choosebutton,
-  .button--choose {
+  .button.button--secondary {
     &:not(.button--disabled) {
-      &:hover,
-      &:active,
-      &.button--active {
+      &:hover {
+        background-color: $button2-hover-background-color;
+      }
+    }
+  }
+
+  .choosebutton {
+    &:not(.button--disabled) {
+      &:hover {
         background-color: $choosebutton-hover-background-color;
       }
     }

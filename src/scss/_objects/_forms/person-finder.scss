@@ -1,0 +1,62 @@
+@import '../../_color';
+
+.person-finder {
+  position: relative;
+
+  &__message{
+    padding-left: 5px;
+  }
+
+  &__results {
+    position: absolute;
+    margin-top: -1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 360px;
+    background-color: $finder-result-background-color;
+    border: 1px solid $finder-result-border-color;
+    color: $base-text-color;
+    z-index: 3;
+
+    .result {
+      display: table;
+      height: 30px;
+      width: 100%;
+      cursor: pointer;
+      padding: 2px 0 2px 8px;
+      transition: background-color 100ms ease;
+
+      &:hover {
+        background-color: $finder-result-hover-background-color;
+      }
+
+      .img {
+        display: table-cell;
+        width: 20px;
+        text-align: center;
+        vertical-align: middle;
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin-top: 6px;
+        }
+      }
+
+      .text {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 10px;
+
+        .person-id {
+          font-size: 85%;
+          opacity: 0.85;
+        }
+      }
+
+      .placeholder {
+        padding: 4px 8px;
+      }
+    }
+  }
+}
