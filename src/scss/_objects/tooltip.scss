@@ -12,8 +12,12 @@
   &__children {
     display: inline;
     p, span{
-      border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
       display: inline-block;
+    }
+    &--trigger{
+      &>p, &>span{
+        border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+      }
     }
   }
 
