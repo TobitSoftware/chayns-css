@@ -1,0 +1,28 @@
+@import '../../_color';
+
+// Reference: ../_forms/person-finder.scss
+.cc__input-box {
+  &__overlay {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .20);
+
+    &.fade {
+      &-enter, &-appear{
+        opacity: 0;
+      }
+
+      &-enter.fade-enter-active, &-appear.fade-appear-active{
+        opacity: 1;
+        transition: opacity 200ms ease-in;
+      }
+
+      &-exit {
+        opacity: 1;
+      }
+
+      &-exit.fade-exit-active{
+        opacity: 0.01;
+        transition: opacity 200ms ease-in;
+      }
+    }
+  }
+}
