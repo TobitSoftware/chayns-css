@@ -175,3 +175,7 @@ $wizard-step-notReady-color: map_get($colors1, 4);
 
 //file upload
 $file-upload-color: map_get($colors1, 6);
+
+//gallery
+$gallery-deleteIcon-color: $color;
+$gallery-deleteIcon-backgroundColor: map_get($shades, 1);
