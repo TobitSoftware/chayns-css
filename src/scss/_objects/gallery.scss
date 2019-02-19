@@ -20,6 +20,10 @@
         height: 0;
         margin: 1px;
 
+        .gallery_item_inner{
+          top: 0;
+        }
+
         .delete-icon {
           background-color: $gallery-deleteIcon-backgroundColor;
           color: $gallery-deleteIcon-color;
