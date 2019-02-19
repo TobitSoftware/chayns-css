@@ -1,6 +1,6 @@
 {
   "name": "chayns.css",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
