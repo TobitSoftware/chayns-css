@@ -170,5 +170,9 @@ $wizard-step-ready-color: map_get($shades, 1);
 $wizard-step-notReady-background-color: map_get($colors3, 2);
 $wizard-step-notReady-color: map_get($shades, 3);
 
-//file upload
-$file-upload-color: map_get($shades, 1);
+//file input
+$file-input-color: map_get($shades, 1);
+
+//gallery
+$gallery-deleteIcon-color: $color;
+$gallery-deleteIcon-backgroundColor: map_get($shades, 1);

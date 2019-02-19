@@ -1,0 +1,92 @@
+.cc__person-finder {
+  .cc__input-box {
+    display: block !important;
+
+    input {
+      display: block;
+    }
+  }
+
+  &__overlay {
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: #6e6e6e;
+    }
+  }
+
+  &__results {
+    .divider {
+      padding: 3px 10px 3px 8px;
+    }
+
+    .result-item {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      cursor: pointer;
+      padding: 8px 10px 5px 8px;
+
+      &:hover {
+        transition: background-color 0.2s linear;
+      }
+
+      .img {
+        background-position: center;
+        background-size: cover;
+
+        width: 40px;
+        height: 40px;
+
+        flex-shrink: 0;
+
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+
+        min-width: 0;
+
+        padding-left: 10px;
+        line-height: 1.2;
+        vertical-align: text-top;
+
+        .title {
+          display: flex;
+          flex-direction: row;
+
+          .identifier {
+            align-self: center;
+          }
+        }
+
+        .name{
+          padding-right: 7px;
+        }
+
+        .identifier {
+          font-size: 75%;
+          color: #8c8c8c;
+        }
+      }
+      .relation{
+        font-size: 75%;
+        color: #8c8c8c;
+      }
+
+      .placeholder {
+        padding: 4px 8px;
+      }
+    }
+  }
+}

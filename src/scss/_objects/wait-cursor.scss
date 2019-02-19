@@ -28,6 +28,9 @@
       visibility: hidden;
       animation: none;
     }
+    &--inline {
+      display: inline-block;
+    }
   }
   .wait-cursor__spinner {
     border: 3px solid $wait-cursor-color;
