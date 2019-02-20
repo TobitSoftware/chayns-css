@@ -1,28 +1,25 @@
 @import '../../_color';
 
-$border: 1px solid rgba(0, 0, 0, .1);
-$background-color: #fff;
-$color: #545454;
-$hover-background-color: #f3f3f3;
+$contextmenu-border: 1px solid $contextmenu-border-color;
 
 .context-menu {
   position: absolute;
-  background-color: $background-color;
+  background-color: $contextmenu-background-color;
   z-index: 900;
   opacity: 0;
   transition: opacity 0.35s ease-in-out;
   box-shadow: 1px 3px 8px rgba(0, 0, 0, .3);
-  border: $border;
-  color: $color;
+  border: $contextmenu-border;
+  color: $contextmenu-color;
   &:after {
     content: "";
     width: 14px;
     height: 14px;
     position: absolute;
-    background-color: $background-color;
+    background-color: $contextmenu-background-color;
     box-shadow: -2px -2px 5px rgba(0, 0, 0, .05);
-    border-top: $border;
-    border-left: $border;
+    border-top: $contextmenu-border;
+    border-left: $contextmenu-border;
     z-index: -1;
   }
   &__children {
@@ -30,7 +27,7 @@ $hover-background-color: #f3f3f3;
       text-align: center;
       font-size: 18px;
       cursor: pointer;
-      color: $contextMenuTriggerColor;
+      color: $contextmenu-trigger-color;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -41,14 +38,14 @@ $hover-background-color: #f3f3f3;
     cursor: pointer;
     display: flex;
     &:hover {
-      background-color: $hover-background-color;
+      background-color: $contextmenu-hover-background-color;
     }
     &__icon {
       width: 20px;
       margin: 0 8px 0 3px;
       text-align: center;
       flex: 0 0 auto;
-      color: $contextMenuIconColor;
+      color: $contextmenu-icon-color;
     }
     &__text {
       white-space: nowrap;
