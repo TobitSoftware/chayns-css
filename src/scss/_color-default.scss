@@ -179,3 +179,7 @@ $file-input-color: map_get($colors1, 6);
 //gallery
 $gallery-deleteIcon-color: $color;
 $gallery-deleteIcon-backgroundColor: map_get($shades, 1);
+
+//tag input
+$cc__tag-color: map_get($colors1, 3);
+$cc__tag-selected-color: map_get($colors1, 4);
