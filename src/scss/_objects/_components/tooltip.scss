@@ -16,7 +16,7 @@
     }
     &--trigger{
       &>p, &>span{
-        border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+        border-bottom: 1px dotted $tooltip-trigger-underline-color;
       }
     }
   }
@@ -82,10 +82,8 @@
   }
 
   &__overlay {
-    transition: top 500ms ease;
     width: auto;
     height: auto;
-    padding: 12px;
     background-color: #fff;
     box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -140,5 +138,9 @@
 
   &--active {
     opacity: 1;
+  }
+
+  &--hide {
+    display: none;
   }
 }

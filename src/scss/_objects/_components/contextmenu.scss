@@ -105,3 +105,17 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
     }
   }
 }
+
+.image-tool{
+  height: 32px;
+  width: 32px;
+  vertical-align: middle;
+  line-height: 32px;
+  background-color: $image-tool-background-color;
+  color: $image-tool-color !important;
+  cursor: pointer;
+  text-align: center;
+  i{
+    color: $image-tool-color !important;
+  }
+}

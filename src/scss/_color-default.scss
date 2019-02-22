@@ -95,12 +95,14 @@ $choosebutton-background-color: map_get($colors1, 2);
 $choosebutton-hover-background-color: map_get($colors1, 3);
 
 //contextmenu
-$contextmenu-color: #545454;
-$contextmenu-background-color: #FFFFFF;
-$contextmenu-hover-background-color: #F3F3F3;
+$contextmenu-color: map_get($shades, 6);
+$contextmenu-background-color: map_get($shades, 1);
+$contextmenu-hover-background-color: map_get($shades, 2);
 $contextmenu-border-color: rgba(0, 0, 0, .1);
 $contextmenu-trigger-color: map_get($colors1, 5);
 $contextmenu-icon-color: map_get($colors1, 5);
+$image-tool-background-color: map_get($shades, 1);
+$image-tool-color: $color;
 
 //select
 $select-hover-icon-color: map_get($colors1, 4);
@@ -180,10 +182,9 @@ $wizard-step-notReady-color: map_get($colors1, 4);
 //file input
 $file-input-color: map_get($colors1, 6);
 
-//gallery
-$gallery-deleteIcon-color: $color;
-$gallery-deleteIcon-backgroundColor: map_get($shades, 1);
-
 //tag input
 $cc__tag-color: map_get($colors1, 3);
 $cc__tag-selected-color: map_get($colors1, 4);
+
+//tooltip
+$tooltip-trigger-underline-color: map_get($shades, 7);
