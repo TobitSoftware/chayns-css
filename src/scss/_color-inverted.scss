@@ -116,7 +116,7 @@ $content-card-background-color: map_get($colors3, 3);
 //forms
 //input / dynamic-input
 $input-placeholder-color: map_get($shades, 5);
-$input-placeholder-required-color: map_get($red, 1);
+$input-placeholder-required-color: map_get($red, 2);
 $input-border-color: map_get($shades, 4);
 $input-color: $base-text-color;
 $input-focus-border-bottom-color: map_get($shades, 1);

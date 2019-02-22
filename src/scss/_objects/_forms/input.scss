@@ -25,7 +25,7 @@
     @include chayns-placeholder();
   }
 
-  &[validate]:not(.valid) {
+  &[validate]:not(.valid), &--invalid {
     @include chayns-placeholder--invalid();
     &::-webkit-input-placeholder {
       @include chayns-placeholder--invalid();
@@ -87,7 +87,7 @@
   }
 
   &--invalid {
-    color: #d23f31 !important;
+    color: $input-placeholder-required-color !important;
     font-weight: 700 !important;
   }
 }
