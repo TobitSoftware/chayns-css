@@ -12,7 +12,6 @@
 }
 .calendar__content_groups{
   min-width: 33%;
-  width: 33%;
 }
 .calendar__content_columns{
   width: 50%;
@@ -109,7 +108,7 @@
 .calendar__navigator_wrapper{
   font-weight: bold;
   font-size: 96%;
-  width: 33%;
+  margin-right: 5px;
 }
 .calendar__navigator_icon{
   display: inline-block;
@@ -120,16 +119,19 @@
 .calendar__navigator_days{
   display: flex;
   height: 1.5rem;
-  width: 66.6666666667%;
+  width: 100%;
+  flex: 2;
 }
 .calendar__navigator_days_table{
   flex-grow: 1;
   display: flex;
-  width: 45%;
-  margin-right: 5%;
+  width: 50%;
   height: 1.5rem;
   border-collapse: separate;
   border-spacing: 1px;
+  &:not(:last-child){
+    margin-right: 5%;
+  }
 }
 .calendar__navigator_days_item{
   display: inline-block;
