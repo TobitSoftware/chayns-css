@@ -7,7 +7,7 @@
 }
 
 @mixin chayns-placeholder--invalid() {
-  color: #d23f31 !important;
+  color: $input-placeholder-required-color !important;
   font-weight: 700;
 }
 
@@ -87,7 +87,7 @@
   }
 
   &--invalid {
-    color: #d23f31 !important;
+    color: $input-placeholder-required-color !important;
     font-weight: 700 !important;
   }
 }
