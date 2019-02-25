@@ -84,24 +84,19 @@
   &__overlay {
     width: auto;
     height: auto;
-    background-color: #fff;
+    background-color: $tooltip-background-color;
     box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-    color: #222222;
     z-index: 930;
     text-align: left;
-
-    h5 {
-      color: $color;
-    }
 
     &:after {
       position: absolute;
       content: '';
       width: 14px;
       height: 14px;
-      background-color: #fff;
+      background-color: inherit;
       z-index: -1;
       box-shadow: 2px 2px 5px rgba(4, 3, 4, 0.1);
       border-right: 1px solid rgba(0, 0, 0, 0.1);
