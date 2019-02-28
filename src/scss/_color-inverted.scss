@@ -94,12 +94,12 @@ $choosebutton-background-color: map_get($colors2, 3);
 $choosebutton-hover-background-color: map_get($colors2, 2);
 
 //contextmenu
-$contextmenu-color: map_get($shades, 6);
-$contextmenu-background-color: map_get($shades, 1);
-$contextmenu-hover-background-color: map_get($shades, 2);
+$contextmenu-color: map_get($shades, 1);
+$contextmenu-background-color: map_get($colors4, 3);
+$contextmenu-hover-background-color: map_get($colors4, 1);
 $contextmenu-border-color: rgba(0, 0, 0, .1);
 $contextmenu-trigger-color: map_get($shades, 5);
-$contextmenu-icon-color: map_get($colors1, 5);
+$contextmenu-icon-color: map_get($shades, 1);
 $image-tool-background-color: map_get($shades, 1);
 $image-tool-color: $color;
 
@@ -185,3 +185,4 @@ $cc__tag-selected-color: map_get($colors1, 5);
 
 //tooltip
 $tooltip-trigger-underline-color: map_get($shades, 4);
+$tooltip-background-color: map_get($colors4, 3);

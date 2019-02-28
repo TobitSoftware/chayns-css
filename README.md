@@ -12,7 +12,7 @@ If you want to use the chayns API in your own tapp, we suggest using the code be
 <!-- To get started, load the chayns API styles and JavaScript from the CDN -->
 
 <!-- css styles -->
-<link rel="stylesheet" href="https://api.chayns.net/css/v4.0/">
+<link rel="stylesheet" href="https://api.chayns.net/css/v4.1/">
 
 <!-- js api -->
 <script src="https://api.chayns-static.space/js/v4.0/chayns.min.js"></script>
