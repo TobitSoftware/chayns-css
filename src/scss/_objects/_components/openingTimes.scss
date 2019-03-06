@@ -1,6 +1,4 @@
 .cc__opening-times{
-    margin: 10px 25px 15px 25px;
-
     .flex {
         flex-flow: row wrap;
         display: flex;
@@ -9,7 +7,6 @@
             padding: 3px 0 0;
         }
         .flex__right {
-            flex: 1;
             text-align: right;
             max-width: 200px;
             .inline__block {
