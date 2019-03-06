@@ -7,6 +7,10 @@
     border-bottom: 1px solid transparent;
     border-bottom-color: $accordion-border-bottom-color;
 
+    .accordion &, .list-item & {
+      border-bottom-color: $accordion-item-border-bottom-color;
+    }
+
     &--clickable:hover, &--expanded {
       background-color: $accordion-hover-background-color;
     }

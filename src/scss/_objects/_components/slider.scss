@@ -14,7 +14,7 @@
       }
 
       &__bar {
-        margin: 20px 0;
+        margin: 11px 0;
         width: 30px;
         height: 100%;
         flex-direction: row;
@@ -38,7 +38,7 @@
 
   &--disabled {
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 0.5;
   }
 
   &__label {
@@ -51,7 +51,7 @@
 
   &__bar {
     flex: 1;
-    margin: 0 20px;
+    margin: 0 11px;
     position: relative;
     height: 30px;
     display: flex;
