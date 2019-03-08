@@ -187,6 +187,9 @@ $cc__tag-selected-color: map_get($colors1, 5);
 $tooltip-trigger-underline-color: map_get($shades, 4);
 $tooltip-background-color: map_get($colors4, 3);
 
+//bubble
+$bubble-background-color: map_get($colors4, 3);
+
 //slider
 $slider-range-background-color: map_get($colors1, 5);
 $slider-track-background-color: map_get($colors2, 3);
