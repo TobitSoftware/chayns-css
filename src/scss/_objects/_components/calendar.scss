@@ -142,13 +142,14 @@ and (orientation: portrait) {
   opacity: 0.7;
 }
 .is-marked-is-highlighted {
-  background-color: #228b22;
-  border: 0.1em solid #fff;
-  color: #fff;
+  background-color: $calendar-highlighted-background-color;
+  color: $calendar-highlighted-color;
 }
 .is-selected {
   opacity: 1;
   font-weight: bolder;
+  background-color: $calendar-selected-background-color;
+  color: $calendar-selected-color;
 }
 
 .is-deactive {

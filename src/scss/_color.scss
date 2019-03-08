@@ -194,3 +194,10 @@ $slider-range-background-color: map_get($colors1, 5);
 $slider-track-background-color: map_get($shades, 4);
 $slider-dot-background-color: map_get($shades, 1);
 $slider-dot-border-color: map_get($shades, 4);
+
+//calendar
+$calendar-selected-background-color: map_get($colors1, 2);
+$calendar-highlighted-background-color: map_get($colors1, 4);
+$calendar-selected-color: $color;
+$calendar-highlighted-color: map_get($shades, 1);
+
