@@ -29,6 +29,65 @@
   }
 }
 
+.cc__calendar {
+  position: relative;
+
+  &__navigation {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    z-index: 50;
+    width: 100%;
+    user-select: none;
+  }
+
+  &__navigate {
+    cursor: pointer;
+    opacity: 0.8;
+
+    &.left, &.right {
+      cursor: pointer;
+    }
+
+    &.middle {
+      flex-grow: 1;
+    }
+  }
+
+  &__months {
+    &__wrapper {
+      display: flex;
+      width: 200%;
+      transform: translateX(0%);
+
+      &--animate {
+        transition: transform .3s;
+      }
+    }
+  }
+
+  .day__item {
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    .day__item__content {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
 .puffer {
   height: 190px;
 }
@@ -48,6 +107,7 @@
 
   &__table {
     display: table;
+    border-spacing: 2px;
     width: 100%;
   }
 }
@@ -57,7 +117,7 @@
     display: table-row;
   }
 
-  &__item {
+  &__item, &__item--text {
     display: table-cell;
     width: 2rem;
     height: 1rem;
@@ -132,6 +192,16 @@ and (orientation: portrait) {
     width: 400%;
     height: 100%;
   }
+
+  .cc__calendar__months {
+    display: block;
+    left: 0;
+    width: 100%;
+
+    &__wrapper {
+      width: 400%;
+    }
+  }
 }
 
 .is-active {
@@ -143,14 +213,14 @@ and (orientation: portrait) {
   opacity: 0.7;
 }
 .is-marked-is-highlighted {
-  background-color: $calendar-highlighted-background-color;
-  color: $calendar-highlighted-color;
+  background-color: #228b22;
+  border: 0.1em solid #fff;
+  color: #fff;
 }
+
 .is-selected {
   opacity: 1;
   font-weight: bolder;
-  background-color: $calendar-selected-background-color;
-  color: $calendar-selected-color;
 }
 
 .is-deactive {
@@ -164,4 +234,17 @@ and (orientation: portrait) {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.cc__calendar {
+  .is-marked-is-highlighted {
+    border: none;
+    background-color: $calendar-highlighted-background-color;
+    color: $calendar-highlighted-color;
+  }
+
+  .is-selected {
+    background-color: $calendar-selected-background-color;
+    color: $calendar-selected-color;
+  }
 }
