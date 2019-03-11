@@ -29,6 +29,65 @@
   }
 }
 
+.cc__calendar {
+  position: relative;
+
+  &__navigation {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    z-index: 50;
+    width: 100%;
+    user-select: none;
+  }
+
+  &__navigate {
+    cursor: pointer;
+    opacity: 0.8;
+
+    &.left, &.right {
+      cursor: pointer;
+    }
+
+    &.middle {
+      flex-grow: 1;
+    }
+  }
+
+  &__months {
+    &__wrapper {
+      display: flex;
+      width: 200%;
+      transform: translateX(0%);
+
+      &--animate {
+        transition: transform .3s;
+      }
+    }
+  }
+
+  .day__item {
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    .day__item__content {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
 .puffer {
   height: 190px;
 }
@@ -135,9 +194,11 @@ and (orientation: portrait) {
   }
 
   .cc__calendar__months {
+    display: block;
+    left: 0;
+    width: 100%;
+
     &__wrapper {
-      display: block;
-      left: 0;
       width: 400%;
     }
   }
@@ -176,63 +237,6 @@ and (orientation: portrait) {
 }
 
 .cc__calendar {
-  position: relative;
-
-  &__navigation {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    z-index: 50;
-    width: 100%;
-    user-select: none;
-  }
-
-  &__navigate {
-    cursor: pointer;
-    opacity: 0.8;
-
-    &.left, &.right {
-      cursor: pointer;
-    }
-
-    &.middle {
-      flex-grow: 1;
-    }
-  }
-
-  &__months {
-    &__wrapper {
-      display: flex;
-      width: 200%;
-      transform: translateX(0%);
-
-      &--animate {
-        transition: transform .3s;
-      }
-    }
-  }
-
-  .day__item {
-    position: relative;
-
-    &:before{
-      content: "";
-      display: block;
-      padding-top: 100%;
-    }
-
-    .day__item__content {
-      position: absolute;
-
-      top: 50%;
-      left: 50%;
-
-      transform: translate(-50%, -50%);
-    }
-  }
-
   .is-marked-is-highlighted {
     border: none;
     background-color: $calendar-highlighted-background-color;
