@@ -1,5 +1,9 @@
 @import '../../_color';
 
+select::-ms-expand {
+  display: none; // removes ugly ie arrow
+}
+
 .select {
   display: inline-flex;
   height: 30px;

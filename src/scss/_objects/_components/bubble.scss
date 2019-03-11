@@ -1,0 +1,118 @@
+@import '../../_color';
+
+.cc__bubble {
+  position: absolute;
+  display: inline;
+  z-index: 920;
+  will-change: transform, opacity, left, top;
+  transition: transform 500ms ease, opacity 500ms ease, left 500ms ease, top 500ms ease;
+  opacity: 0;
+  height: 10px;
+
+  /** 0 = top right, 1 = bottom right, 2 = bottom left, 3 = top left */
+  &--position0 { // top right
+    transform: translate(calc(-100% + 23px), -30px);
+
+    &.cc__bubble--active {
+      transform: translate(calc(-100% + 23px), -10px);
+    }
+
+    .cc__bubble__overlay {
+      transform: translate(0, -100%);
+      left: 50%;
+
+      &:after {
+        transform: rotate(45deg);
+        bottom: -8px;
+        right: 13px;
+      }
+    }
+  }
+
+  &--position1 { // bottom right
+    transform: translate(calc(-100% + 23px), -20px);
+
+    &.cc__bubble--active {
+      transform: translate(calc(-100% + 23px), 0);
+    }
+
+    .cc__bubble__overlay {
+      transform: translate(0, 10px);
+
+      &:after {
+        transform: rotate(225deg);
+        top: -8px;
+        right: 13px;
+      }
+    }
+  }
+
+  &--position2 { // bottom left
+    transform: translate(-23px, -20px);
+
+    &.cc__bubble--active {
+      transform: translate(-23px, 0);
+    }
+
+    .cc__bubble__overlay {
+      transform: translate(0, 10px);
+
+      &:after {
+        transform: rotate(225deg);
+        top: -8px;
+        left: 13px;
+      }
+    }
+  }
+
+  &--position3 { // top left
+    transform: translate(-23px, -30px);
+
+    &.cc__bubble--active {
+      transform: translate(-23px, -10px);
+    }
+
+    .cc__bubble__overlay {
+      transform: translate(0, -100%);
+      left: 50%;
+
+      &:after {
+        transform: rotate(45deg);
+        bottom: -8px;
+        left: 13px;
+      }
+    }
+  }
+
+  &__overlay {
+    width: auto;
+    height: auto;
+    background-color: $bubble-background-color;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    z-index: 930;
+    text-align: left;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 14px;
+      background-color: inherit;
+      z-index: -1;
+      box-shadow: 2px 2px 5px rgba(4, 3, 4, 0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom-right-radius: 2px;
+    }
+  }
+
+  &--active {
+    opacity: 1;
+  }
+
+  &--hide {
+    display: none;
+  }
+}

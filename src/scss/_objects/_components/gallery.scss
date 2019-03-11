@@ -2,7 +2,8 @@
 
 .chayns-gallery {
   position: relative;
-  width: 100%;
+  width: calc(100% + 2px);
+  transform: translate(-1px, -1px);
 
   .gallery-grid {
     display: flex;
