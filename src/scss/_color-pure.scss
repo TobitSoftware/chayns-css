@@ -71,7 +71,7 @@ $anchor-color: $color;
 $accordion-border-bottom-color: $dependOnBrightnessColor;
 $accordion-hover-background-color: map_get($colors1, 1);
 $accordion-arrow-color: $dependOnBrightnessColor;
-$accordion-item-border-bottom-color: $dependOnBrightnessColor;
+$accordion-item-border-bottom-color: map_get($colors1, 3);
 $accordion-open-background-color: map_get($colors1, 1);
 
 //badge
@@ -188,3 +188,18 @@ $cc__tag-selected-color: map_get($colors1, 4);
 //tooltip
 $tooltip-trigger-underline-color: map_get($shades, 7);
 $tooltip-background-color: map_get($shades, 1);
+
+//bubble
+$bubble-background-color: map_get($shades, 1);
+
+//slider
+$slider-range-background-color: map_get($colors1, 5);
+$slider-track-background-color: map_get($shades, 4);
+$slider-dot-background-color: map_get($shades, 1);
+$slider-dot-border-color: map_get($shades, 4);
+
+//calendar
+$calendar-selected-background-color: map_get($colors1, 2);
+$calendar-highlighted-background-color: map_get($colors1, 4);
+$calendar-selected-color: $color;
+$calendar-highlighted-color: map_get($shades, 1);

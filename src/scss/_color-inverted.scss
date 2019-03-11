@@ -186,3 +186,18 @@ $cc__tag-selected-color: map_get($colors1, 5);
 //tooltip
 $tooltip-trigger-underline-color: map_get($shades, 4);
 $tooltip-background-color: map_get($colors4, 3);
+
+//bubble
+$bubble-background-color: map_get($colors4, 3);
+
+//slider
+$slider-range-background-color: map_get($colors1, 5);
+$slider-track-background-color: map_get($colors2, 3);
+$slider-dot-background-color: map_get($shades, 1);
+$slider-dot-border-color: map_get($shades, 4);
+
+//calendar
+$calendar-selected-background-color: $color;
+$calendar-highlighted-background-color: map_get($colors1, 2);
+$calendar-selected-color:  map_get($shades, 1);
+$calendar-highlighted-color: $color;
