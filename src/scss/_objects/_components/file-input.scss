@@ -5,6 +5,7 @@
   border-radius: 4px;
   border: 2px dashed $file-input-color;
   color:  $file-input-color;
+  overflow: hidden;
 
   &--custom {
     display: flex;
