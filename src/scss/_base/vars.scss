@@ -1,0 +1,5 @@
+@import '../color';
+
+.chayns {
+  --chayns-color-rgb: red($color), green($color), blue($color);
+}
