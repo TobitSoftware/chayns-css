@@ -10,6 +10,7 @@
   &--custom {
     display: flex;
     position: relative;
+    align-items: center;
   }
 
   &--disabled {
@@ -32,8 +33,10 @@
   }
 
   &--hover {
+    height: 70px;
+    background-color: rgba($color, 0.1);
+
     .cc__file-input__icon {
-      animation: cc__file-input--bounce 1s infinite;
     }
   }
 
@@ -83,17 +86,5 @@
     top: 0;
     bottom: 0;
     margin: auto;
-  }
-}
-
-@keyframes cc__file-input--bounce {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -3px, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
   }
 }
