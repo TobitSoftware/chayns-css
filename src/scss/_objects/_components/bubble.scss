@@ -11,10 +11,10 @@
 
   /** 0 = top right, 1 = bottom right, 2 = bottom left, 3 = top left */
   &--position0 { // top right
-    transform: translate(calc(-100% + 23px), -30px);
+    transform: translate(-100%, -30px) translateX(23px);
 
     &.cc__bubble--active {
-      transform: translate(calc(-100% + 23px), -10px);
+      transform: translate(-100%, -10px) translateX(23px);
     }
 
     .cc__bubble__overlay {
@@ -30,10 +30,10 @@
   }
 
   &--position1 { // bottom right
-    transform: translate(calc(-100% + 23px), -20px);
+    transform: translate(-100%, -20px) translateX(23px);
 
     &.cc__bubble--active {
-      transform: translate(calc(-100% + 23px), 0);
+      transform: translate(-100%, 0) translateX(23px);
     }
 
     .cc__bubble__overlay {
@@ -137,11 +137,22 @@
       width: 14px;
       height: 14px;
       background-color: inherit;
-      z-index: -1;
-      box-shadow: 2px 2px 5px rgba(4, 3, 4, 0.1);
+      z-index: -2;
+      box-shadow: 2px 2px 8px rgba(4, 3, 4, 0.1);
       border-right: 1px solid rgba(0, 0, 0, 0.1);
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       border-bottom-right-radius: 2px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+      z-index: -1;
     }
   }
 
