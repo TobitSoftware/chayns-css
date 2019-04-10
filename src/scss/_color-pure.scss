@@ -206,6 +206,12 @@ $calendar-highlighted-background-color: map_get($colors1, 4);
 $calendar-selected-color: $color;
 $calendar-highlighted-color: map_get($shades, 1);
 
+//image accordion
+$image-accordion-arrow-color: map_get($shades, 1);
+$image-accordion-content-show: map_get($shades, 1);
+$image-accordion-hover: map_get($shades, 1);
+$image-accordion-image: map_get($shades, 4);
+
 //chayns editor
 $editor-border-color: map_get($colors1, 6);
 $editor-border-hover-color: map_get($colors1, 6);
