@@ -181,6 +181,8 @@ $wizard-step-notReady-color: map_get($colors1, 4);
 
 //file input
 $file-input-color: map_get($colors1, 6);
+$file-input-border-color: map_get($colors2, 4);
+$file-input-border-hover-color: map_get($colors1, 6);
 
 //tag input
 $cc__tag-color: map_get($colors1, 3);
@@ -204,3 +206,7 @@ $calendar-selected-background-color: map_get($colors1, 2);
 $calendar-highlighted-background-color: map_get($colors1, 4);
 $calendar-selected-color: $color;
 $calendar-highlighted-color: map_get($shades, 1);
+
+//chayns editor
+$editor-border-color: map_get($colors1, 6);
+$editor-border-hover-color: map_get($colors1, 6);

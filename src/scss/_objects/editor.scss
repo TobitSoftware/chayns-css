@@ -1,0 +1,9 @@
+@import '../_color';
+
+// chayns editor colors
+.chayns-editor--enabled [chayns-editor] {
+  border-color: $editor-border-color;
+  &:hover{
+    border-color: $editor-border-hover-color;
+  }
+}
