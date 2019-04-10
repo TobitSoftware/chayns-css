@@ -201,3 +201,9 @@ $calendar-selected-background-color: $color;
 $calendar-highlighted-background-color: map_get($colors1, 2);
 $calendar-selected-color:  map_get($shades, 1);
 $calendar-highlighted-color: $color;
+
+//image accordion
+$image-accordion-arrow-color: map_get($colors4, 1);
+$image-accordion-content-show: map_get($colors4, 1);
+$image-accordion-hover: map_get($colors4, 3);
+$image-accordion-image: map_get($colors4, 1);

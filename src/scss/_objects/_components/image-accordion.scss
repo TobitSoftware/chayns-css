@@ -1,0 +1,112 @@
+
+.cc__image-accordion {
+    .image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 70%;
+        box-sizing: content-box;
+        margin: 0 auto;
+        transition: max-height 1.2s cubic-bezier(0.5, 0, 1, 0) 0s, background-color 0.7s ease;
+        &::after {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+    }
+
+    .noImage {
+        background-color: $image-accordion-image;
+    }
+
+    .image-accordion-container {
+        flex-wrap: wrap;
+        display: flex;
+        .arrow {
+            content: '';
+            display: block;
+            width: 10px;
+            border: 12px solid transparent;
+            border-bottom-color: $image-accordion-arrow-color;
+        }
+        .noArrow {
+            display: none;
+        }
+        &.open {
+            & >.image-accordion-body {
+                max-height: 9999px;
+                transition: max-height 1.2s cubic-bezier(.5,0,1,0) 0s,background-color .7s ease;
+            }
+        }
+        & .image-accordion {
+            cursor: pointer;
+            padding-top: 10px;
+            & .wrapper:hover {
+                background-color: $image-accordion-hover;
+            }
+        }
+        >.image-accordion-body {
+            margin-top: -10px;
+            flex: 0 0 100%;
+            margin-bottom: 10px;
+            max-width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .5s cubic-bezier(0,1,0,1) 0s,background-color .7s ease;
+            & .image-accordion-content {
+                padding: 0 9px;
+                width: 100%;
+                float: left;
+                max-height: 0px;
+                overflow: hidden;
+                &.show {
+                    max-height: 9999px;
+                    background-color: $image-accordion-content-show;
+                }
+            }
+        }
+    }
+
+    .wrapper {
+        padding-top: 10px;  
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+        opacity: 1;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+
+    .name {
+        margin-bottom: -5px
+    }
+
+    .head-line {
+        border-bottom: 0px;
+        margin-bottom: 0px;
+        min-height: 24px;
+    }
+
+    .sub-head-line {
+        margin-bottom: 0px;
+        opacity: 0.6;
+        padding-top: 3px;
+    }
+
+    .person-disabled {
+        filter: opacity(0.55);
+    }
+
+    .person-icon {
+        position: absolute;
+        z-index: 10;
+        padding: 5px;
+        -webkit-transition: top .3s ease-in-out;
+        -o-transition: top .3s ease-in-out;
+        transition: top .3s ease-in-out;
+        will-change: top;
+    }
+}
