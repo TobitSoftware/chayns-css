@@ -15,7 +15,7 @@
         }
     }
 
-    .noImage {
+    .no-image {
         background-color: $image-accordion-image;
     }
 
@@ -29,7 +29,7 @@
             border: 12px solid transparent;
             border-bottom-color: $image-accordion-arrow-color;
         }
-        .noArrow {
+        .no-arrow {
             display: none;
         }
         &.open {
@@ -54,12 +54,12 @@
             overflow: hidden;
             transition: max-height .5s cubic-bezier(0,1,0,1) 0s,background-color .7s ease;
             & .image-accordion-content {
-                padding: 0 9px;
                 width: 100%;
                 float: left;
                 max-height: 0px;
                 overflow: hidden;
                 &.show {
+                    padding: 10px 9px 9px 10px;
                     max-height: 9999px;
                     background-color: $image-accordion-content-show;
                 }
@@ -84,23 +84,23 @@
         margin-bottom: -5px
     }
 
-    .head-line {
+    .headline {
         border-bottom: 0px;
         margin-bottom: 0px;
         min-height: 24px;
     }
 
-    .sub-head-line {
+    .subheadline {
         margin-bottom: 0px;
         opacity: 0.6;
         padding-top: 3px;
     }
 
-    .person-disabled {
+    .disabled {
         filter: opacity(0.55);
     }
 
-    .person-icon {
+    .icon {
         position: absolute;
         z-index: 10;
         padding: 5px;
