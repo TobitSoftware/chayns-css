@@ -180,6 +180,8 @@ $wizard-step-notReady-color: map_get($colors1, 4);
 
 //file input
 $file-input-color: map_get($colors1, 6);
+$file-input-border-color: map_get($colors2, 4);
+$file-input-border-hover-color: map_get($colors1, 6);
 
 //tag input
 $cc__tag-color: map_get($colors1, 3);
@@ -209,3 +211,7 @@ $image-accordion-arrow-color: map_get($shades, 1);
 $image-accordion-content-show: map_get($shades, 1);
 $image-accordion-hover: map_get($shades, 1);
 $image-accordion-image: map_get($shades, 4);
+
+//chayns editor
+$editor-border-color: map_get($colors1, 6);
+$editor-border-hover-color: map_get($colors1, 6);
