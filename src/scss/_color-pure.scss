@@ -1,33 +1,38 @@
 $color: #AC0000 !default;
 $brightness: 100% !default;
 
-$colors1: (
-        1: mix($color, #FFFFFF, 5%),
-        2: mix($color, #FFFFFF, 20%),
-        3: mix($color, #FFFFFF, 40%),
-        4: mix($color, #FFFFFF, 60%),
-        5: mix($color, #FFFFFF, 80%),
-        6: mix($color, #FFFFFF, 90%),
+$colors: (
+        100: mix($color, #FFFFFF, 10%),
+        101: mix($color, #FFFFFF, 10%),
+        102: mix($color, #FFFFFF, 20%),
+        103: mix($color, #FFFFFF, 30%),
+        104: mix($color, #FFFFFF, 40%),
+        105: mix($color, #FFFFFF, 50%),
+        106: mix($color, #FFFFFF, 60%),
+        107: mix($color, #FFFFFF, 70%),
+        108: mix($color, #FFFFFF, 80%),
+        109: mix($color, #FFFFFF, 90%),
+        200: mix($color, #E4E4E4, 0%),
+        201: mix($color, #E4E4E4, 10%),
+        202: mix($color, #E4E4E4, 20%),
+        203: mix($color, #E4E4E4, 30%),
+        204: mix($color, #E4E4E4, 40%),
+        205: mix($color, #E4E4E4, 50%),
+        206: mix($color, #E4E4E4, 60%),
+        207: mix($color, #E4E4E4, 70%),
+        208: mix($color, #E4E4E4, 80%),
+        209: mix($color, #E4E4E4, 90%),
+        300: mix($color, #242424, 0%),
+        301: mix($color, #242424, 10%),
+        302: mix($color, #242424, 20%),
+        303: mix($color, #242424, 30%),
+        304: mix($color, #242424, 40%),
+        305: mix($color, #242424, 50%),
+        306: mix($color, #242424, 60%),
+        307: mix($color, #242424, 70%),
+        308: mix($color, #242424, 80%),
+        309: mix($color, #242424, 90%),
 );
-$colors2: (
-        1: mix($color, #7D7D7D, 70%),
-        2: mix($color, #7D7D7D, 40%),
-        3: mix($color, #7D7D7D, 15%),
-        4: mix($color, #7D7D7D, 3%),
-);
-$colors3: (
-        1: mix($color, #242424, 70%),
-        2: mix($color, #242424, 40%),
-        3: mix($color, #242424, 15%),
-        4: mix($color, #242424, 3%),
-);
-$colors4: (
-        1: mix($color, #101010, 40%),
-        2: mix($color, #101010, 15%),
-        3: mix($color, #101010, 3%),
-);
-
-$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
 
 $shades: (
         1: #ffffff,

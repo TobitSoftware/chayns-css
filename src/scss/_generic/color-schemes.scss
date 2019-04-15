@@ -12,58 +12,16 @@
   border-color: $color
 }
 
-@each $key, $color in $colors1 {
-  .chayns__background-color--white-#{$key} {
+@each $key, $color in $colors {
+  .chayns__background-color--#{$key} {
     background-color: $color;
   }
 
-  .chayns__color--white-#{$key} {
+  .chayns__color--#{$key} {
     color: $color;
   }
 
-  .chayns__border-color--white-#{$key} {
-    border-color: $color
-  }
-}
-
-@each $key, $color in $colors2 {
-  .chayns__background-color--light-#{$key} {
-    background-color: $color;
-  }
-
-  .chayns__color--light-#{$key} {
-    color: $color;
-  }
-
-  .chayns__border-color--light-#{$key} {
-    border-color: $color
-  }
-}
-
-@each $key, $color in $colors3 {
-  .chayns__background-color--medium-#{$key} {
-    background-color: $color;
-  }
-
-  .chayns__color--medium-#{$key} {
-    color: $color;
-  }
-
-  .chayns__border-color--medium-#{$key} {
-    border-color: $color
-  }
-}
-
-@each $key, $color in $colors4 {
-  .chayns__background-color--dark-#{$key} {
-    background-color: $color;
-  }
-
-  .chayns__color--dark-#{$key} {
-    color: $color;
-  }
-
-  .chayns__border-color--dark-#{$key} {
+  .chayns__border-color--#{$key} {
     border-color: $color
   }
 }
