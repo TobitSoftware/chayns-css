@@ -1,3 +1,4 @@
+@import '../../_color';
 
 .cc__image-accordion {
     .image {
@@ -103,10 +104,35 @@
     .icon {
         position: absolute;
         z-index: 10;
-        padding: 5px;
         -webkit-transition: top .3s ease-in-out;
         -o-transition: top .3s ease-in-out;
         transition: top .3s ease-in-out;
         will-change: top;
+    }
+}
+
+// if the image accordion is in an accordion
+.accordion {
+    .cc__image-accordion {
+        .no-image {
+            background-color: $image-accordion-wrapped-image;
+        }
+        .image-accordion-container {
+            .arrow {
+                border-bottom-color: $image-accordion-wrapped-arrow-color;
+            }
+            & .image-accordion {
+                & .wrapper:hover {
+                    background-color: $image-accordion-wrapped-hover;
+                }
+            }
+            >.image-accordion-body {
+                & .image-accordion-content {
+                    &.show {
+                        background-color: $image-accordion-wrapped-content-show;
+                    }
+                }
+            }
+        }
     }
 }
