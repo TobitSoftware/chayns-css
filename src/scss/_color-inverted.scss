@@ -205,10 +205,16 @@ $calendar-selected-color:  map_get($shades, 1);
 $calendar-highlighted-color: $color;
 
 //image accordion
-$image-accordion-arrow-color: map_get($colors4, 1);
-$image-accordion-content-show: map_get($colors4, 1);
-$image-accordion-hover: map_get($colors4, 3);
-$image-accordion-image: map_get($colors4, 1);
+$image-accordion-arrow-color: map_get($colors3, 3);
+$image-accordion-content-show: map_get($colors3, 3);
+$image-accordion-hover: map_get($colors3, 3);
+$image-accordion-image: map_get($colors3, 2);
+
+//image accordion in accordion
+$image-accordion-wrapped-arrow-color: map_get($colors3, 2);
+$image-accordion-wrapped-content-show: map_get($colors3, 2);
+$image-accordion-wrapped-hover: map_get($colors3, 2);
+$image-accordion-wrapped-image: map_get($colors3, 1);
 
 //chayns editor
 $editor-border-color: map_get($shades, 5);
