@@ -34,6 +34,35 @@ $colors: (
         309: mix($color, #242424, 90%),
 );
 
+$colors1: (
+        1: mix($color, #FFFFFF, 5%),
+        2: mix($color, #FFFFFF, 20%),
+        3: mix($color, #FFFFFF, 40%),
+        4: mix($color, #FFFFFF, 60%),
+        5: mix($color, #FFFFFF, 80%),
+        6: mix($color, #FFFFFF, 90%),
+);
+$colors2: (
+        1: mix($color, #7D7D7D, 70%),
+        2: mix($color, #7D7D7D, 40%),
+        3: mix($color, #7D7D7D, 15%),
+        4: mix($color, #7D7D7D, 3%),
+);
+$colors3: (
+        1: mix($color, #242424, 70%),
+        2: mix($color, #242424, 40%),
+        3: mix($color, #242424, 15%),
+        4: mix($color, #242424, 3%),
+);
+$colors4: (
+        1: mix($color, #101010, 40%),
+        2: mix($color, #101010, 15%),
+        3: mix($color, #101010, 3%),
+);
+
+$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
+
+
 $shades: (
         1: #ffffff,
         2: #f1f1f1,
