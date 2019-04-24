@@ -13,6 +13,7 @@
   transition: background-color 150ms ease;
   outline: none;
   overflow: hidden;
+  line-height: 1.15;
 
   &:not(.button--disabled) {
     &:after {
