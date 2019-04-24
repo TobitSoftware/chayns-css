@@ -9,9 +9,38 @@
 }
 
 .chayns__border-color {
-  border-color: $color
+  border-color: $color;
 }
 
+@each $key, $color in $colors {
+  .chayns__background-color--#{$key} {
+    background-color: $color;
+  }
+
+  .chayns__color--#{$key} {
+    color: $color;
+  }
+
+  .chayns__border-color--#{$key} {
+    border-color: $color;
+  }
+}
+
+@each $key, $color in $colors {
+  .chayns__background-color--#{$key}i {
+    background-color: $color !important;
+  }
+
+  .chayns__color--#{$key}i {
+    color: $color !important;
+  }
+
+  .chayns__border-color--#{$key}i {
+    border-color: $color !important;;
+  }
+}
+
+// @deprecated
 @each $key, $color in $colors1 {
   .chayns__background-color--white-#{$key} {
     background-color: $color;
@@ -26,6 +55,7 @@
   }
 }
 
+// @deprecated
 @each $key, $color in $colors2 {
   .chayns__background-color--light-#{$key} {
     background-color: $color;
@@ -40,6 +70,7 @@
   }
 }
 
+// @deprecated
 @each $key, $color in $colors3 {
   .chayns__background-color--medium-#{$key} {
     background-color: $color;
@@ -54,6 +85,7 @@
   }
 }
 
+// @deprecated
 @each $key, $color in $colors4 {
   .chayns__background-color--dark-#{$key} {
     background-color: $color;
@@ -68,6 +100,7 @@
   }
 }
 
+// @deprecated
 @each $key, $color in $shades {
   .chayns__background-color--shade-#{$key} {
     background-color: $color;
