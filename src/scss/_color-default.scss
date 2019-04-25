@@ -33,6 +33,10 @@ $colors: (
         307: mix($color, #242424, 70%),
         308: mix($color, #242424, 80%),
         309: mix($color, #242424, 90%),
+        primary: $color,
+        headline: $color,
+        text: #222,
+        grey: #888,
 );
 
 $colors1: (
