@@ -1,5 +1,6 @@
 @import '../../_color';
 
+// @deprecated
 .cc__list {
   .list-item {
     padding: 0 9px;
@@ -88,7 +89,7 @@
     }
 
     &__content {
-      padding: 9px 9px 9px 29px;
+      padding: 9px 9px 9px 20px;
     }
 
     &--expanded {
