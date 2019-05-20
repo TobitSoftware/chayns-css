@@ -1,11 +1,22 @@
+@import '../../_color';
+@import '../../_config';
+
 // @deprecated
 .react-chayns-icon {
-    &--clickable {
-        cursor: pointer;
-    }
+  font-size: round($base-font-size);
+  color: map_get($colors, headline);
 
-    &--disabled {
-        pointer-events: none;
-        opacity: .4;
-    }
+  &--clickable {
+    cursor: pointer;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: .4;
+  }
+}
+
+.chayns__icon {
+  color: map_get($colors, headline);
+  font-size: round($base-font-size);
 }
