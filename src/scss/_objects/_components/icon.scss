@@ -2,7 +2,7 @@
 @import '../../_config';
 
 // @deprecated
-.react-chayns-icon {
+.react-chayns-icon:not(.button &) {
   font-size: round($base-font-size);
   color: map_get($colors, headline);
 
@@ -16,7 +16,7 @@
   }
 }
 
-.chayns__icon {
+.chayns__icon:not(.button &) {
   color: map_get($colors, headline);
   font-size: round($base-font-size);
 }
