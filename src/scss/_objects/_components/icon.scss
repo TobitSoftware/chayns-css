@@ -1,10 +1,10 @@
-@import '../../config';
 @import '../../color';
+@import '../../config';
 
 // @deprecated
 .react-chayns-icon {
   font-size: round($base-font-size);
-  color: map_get($colors, 'headline');
+  color: map_get($colors, headline);
 
   &--clickable {
     cursor: pointer;
@@ -17,6 +17,6 @@
 }
 
 .chayns__icon {
-  color: map_get($colors, 'headline');
+  color: map_get($colors, headline);
   font-size: round($base-font-size);
 }
