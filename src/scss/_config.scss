@@ -2,7 +2,7 @@ $font-name: 'Roboto' !default;
 $font-factor: 1 !default;
 $font-backup: 'Tahoma' !default;
 
-$base-font-size: 15px * $font-factor !default;
+$base-font-size: round(15px * $font-factor) !default;
 $base-line-height:  1.65 !default;
 $base-font-family: $font-name, $font-backup !default;
 
