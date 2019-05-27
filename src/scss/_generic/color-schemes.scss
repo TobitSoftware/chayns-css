@@ -51,7 +51,7 @@
   }
 
   .chayns__border-color--white-#{$key} {
-    border-color: $color
+    border-color: $color;
   }
 }
 
@@ -66,7 +66,7 @@
   }
 
   .chayns__border-color--light-#{$key} {
-    border-color: $color
+    border-color: $color;
   }
 }
 
@@ -81,7 +81,7 @@
   }
 
   .chayns__border-color--medium-#{$key} {
-    border-color: $color
+    border-color: $color;
   }
 }
 
@@ -96,7 +96,7 @@
   }
 
   .chayns__border-color--dark-#{$key} {
-    border-color: $color
+    border-color: $color;
   }
 }
 
@@ -111,7 +111,7 @@
   }
 
   .chayns__border-color--shade-#{$key} {
-    border-color: $color
+    border-color: $color;
   }
 }
 
@@ -125,7 +125,7 @@
   }
 
   .chayns__border-color--red-#{$key} {
-    border-color: $color
+    border-color: $color;
   }
 }
 
@@ -139,7 +139,7 @@
   }
 
   .chayns__border-color--yellow-#{$key} {
-    border-color: $color
+    border-color: $color;
   }
 }
 
@@ -153,6 +153,48 @@
   }
 
   .chayns__border-color--green-#{$key} {
-    border-color: $color
+    border-color: $color;
+  }
+}
+
+@each $key, $color in $red {
+  .chayns__background-color--red-#{$key}i {
+    background-color: $color !important;
+  }
+
+  .chayns__color--red-#{$key}i {
+    color: $color !important;
+  }
+
+  .chayns__border-color--red-#{$key}i {
+    border-color: $color !important;
+  }
+}
+
+@each $key, $color in $yellow {
+  .chayns__background-color--yellow-#{$key}i {
+    background-color: $color !important;
+  }
+
+  .chayns__color--yellow-#{$key}i {
+    color: $color !important;
+  }
+
+  .chayns__border-color--yellow-#{$key}i {
+    border-color: $color !important;
+  }
+}
+
+@each $key, $color in $green {
+  .chayns__background-color--green-#{$key}i {
+    background-color: $color !important;
+  }
+
+  .chayns__color--green-#{$key}i {
+    color: $color !important;
+  }
+
+  .chayns__border-color--green-#{$key}i {
+    border-color: $color !important;
   }
 }
