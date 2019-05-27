@@ -41,6 +41,20 @@
       flex-shrink: 0;
     }
 
+    &__icon {
+      width: 40px;
+      height: 40px;
+
+      margin-right: 10px;
+
+      flex-shrink: 0;
+
+      line-height: 30px;
+      font-size: 30px;
+
+      padding: 5px;
+    }
+
     &__titles {
       display: flex;
       flex-direction: column;
