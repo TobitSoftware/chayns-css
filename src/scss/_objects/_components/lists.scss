@@ -3,8 +3,6 @@
 // @deprecated
 .cc__list {
   .list-item {
-    padding: 0 9px;
-
     border-bottom: 1px solid transparent;
     border-bottom-color: $accordion-border-bottom-color;
 
@@ -24,7 +22,7 @@
       display: flex;
       flex-direction: row;
       height: 64px;
-      padding: 12px 0;
+      padding: 12px 9px;
     }
 
     &__image {
@@ -103,7 +101,7 @@
     }
 
     &__content {
-      padding: 9px 9px 9px 20px;
+      padding: 9px 18px 9px 29px;
     }
 
     &--expanded {
