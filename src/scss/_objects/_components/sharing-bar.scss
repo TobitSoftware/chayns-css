@@ -1,9 +1,11 @@
+@import '../../_config';
+
 // @deprecated
 .sharing-bar__item-list {
   text-align: right;
 
   .sharing-bar__item {
-    width: 35px;
+    width: calc(#{$base-font-size} + 24px);
     margin-left: 5px;
   }
 }
