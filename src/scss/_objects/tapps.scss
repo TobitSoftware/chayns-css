@@ -59,7 +59,7 @@
   }
 }
 
-.chayns--parent {
+.chayns--parent:not(.chayns--net_runtime) {
   overflow: auto;
 
   body {
