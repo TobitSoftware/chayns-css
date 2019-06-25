@@ -42,7 +42,8 @@
 .chayns--mobile {
   overflow: hidden;
 }
-.chayns--desktop {
+
+.chayns--desktop:not(.chayns--net_runtime) {
   overflow: hidden; // prevents scrolling for chayns web
 
   .tapp {
