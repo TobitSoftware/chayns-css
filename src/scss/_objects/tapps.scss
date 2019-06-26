@@ -43,7 +43,7 @@
   overflow: hidden;
 }
 
-.chayns--desktop:not(.chayns--net_runtime):not(.chayns--parent), .chayns--desktop.chayns--net_runtime:not(.chayns--parent) {
+.chayns--desktop:not(.chayns--net_runtime):not(.chayns--parent), .chayns--desktop.chayns--net_runtime:not(.chayns--parent), .chayns--desktop.chayns--parent:not(.chayns--net_runtime) {
   overflow: hidden; // prevents scrolling for chayns web
 
   .tapp {
