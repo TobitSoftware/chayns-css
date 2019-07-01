@@ -47,6 +47,8 @@ $colors: (
         text: #222,
 );
 
+$chaynsWebBackgroundColor: mix($color, #FFFFFF, 5%);
+
 $colors1: (
         1: mix($color, #FFFFFF, 5%),
         2: mix($color, #FFFFFF, 20%),
