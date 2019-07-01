@@ -137,7 +137,6 @@ $accordion-open-background-color: map_get($colors, '100');
 
 //badge
 $badge-color: map_get($colors, '006');
->>>>>>> componentColors
 $badge-background-color: map_get($colors, '103');
 
 //buttons
@@ -160,17 +159,10 @@ $contextmenu-color: map_get($colors, 'text');
 $contextmenu-background-color: map_get($colors, '100');
 $contextmenu-hover-background-color: map_get($colors, '102');
 $contextmenu-border-color: rgba(0, 0, 0, .1);
-<<<<<<< HEAD
 $contextmenu-trigger-color: map_get($colors, 'headline');
 $contextmenu-icon-color: map_get($colors, 'headline');
 $image-tool-background-color: map_get($colors, '100');
 $image-tool-color: map_get($colors, 'headline');
-=======
-$contextmenu-trigger-color: map_get($colors, headline);
-$contextmenu-icon-color: map_get($colors, headline);
-$image-tool-background-color: map_get($colors, '100');
-$image-tool-color: map_get($colors, headline);
->>>>>>> componentColors
 
 //select
 $select-hover-icon-color: map_get($colors1, 4);
@@ -207,19 +199,11 @@ $checkbox-background-color: map_get($colors1, 2);
 $checkbox-checked-background-color: map_get($colors1, 5);
 
 //headlines
-<<<<<<< HEAD
 $h1-color: map_get($colors, 'headline');
 $h2-color: map_get($colors, 'headline');
 $h3-color: map_get($colors, 'headline');
 $h4-color: map_get($colors, 'headline');
 $h5-color: map_get($colors, 'headline');
-=======
-$h1-color: map_get($colors, headline);
-$h2-color: map_get($colors, headline);
-$h3-color: map_get($colors, headline);
-$h4-color: map_get($colors, headline);
-$h5-color: map_get($colors, headline);
->>>>>>> componentColors
 
 //selection
 $selection-color: #ffffff;
@@ -266,11 +250,7 @@ $cc__tag-selected-color: map_get($colors1, 4);
 
 //tooltip
 $tooltip-trigger-underline-color: map_get($shades, 7);
-<<<<<<< HEAD
 $tooltip-background-color: map_get($colors, 'headline');
-=======
-$tooltip-background-color: map_get($colors, headline);
->>>>>>> componentColors
 
 //bubble
 $bubble-background-color: map_get($shades, 1);
