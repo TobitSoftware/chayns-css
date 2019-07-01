@@ -1,7 +1,8 @@
 $color: #AC0000 !default;
-$brightness: 100% !default;
+//$brightness: 100% !default;
 
 $colors: (
+  // Grey
         '000': mix(#000000, #FFFFFF, 0%),
         '001': mix(#000000, #FFFFFF, 3%),
         '002': mix(#000000, #FFFFFF, 10%),
@@ -12,6 +13,7 @@ $colors: (
         '007': mix(#000000, #FFFFFF, 75%),
         '008': mix(#000000, #FFFFFF, 90%),
         '009': mix(#000000, #FFFFFF, 100%),
+  // -----------------------------------------
         '100': mix($color, #FFFFFF, 10%),
         '101': mix($color, #FFFFFF, 10%),
         '102': mix($color, #FFFFFF, 20%),
@@ -22,6 +24,7 @@ $colors: (
         '107': mix($color, #FFFFFF, 70%),
         '108': mix($color, #FFFFFF, 80%),
         '109': mix($color, #FFFFFF, 90%),
+  // -----------------------------------------
         '200': mix($color, #E4E4E4, 0%),
         '201': mix($color, #E4E4E4, 10%),
         '202': mix($color, #E4E4E4, 20%),
@@ -32,6 +35,7 @@ $colors: (
         '207': mix($color, #E4E4E4, 70%),
         '208': mix($color, #E4E4E4, 80%),
         '209': mix($color, #E4E4E4, 90%),
+  // -----------------------------------------
         '300': mix($color, #242424, 0%),
         '301': mix($color, #242424, 10%),
         '302': mix($color, #242424, 20%),
@@ -42,6 +46,7 @@ $colors: (
         '307': mix($color, #242424, 70%),
         '308': mix($color, #242424, 80%),
         '309': mix($color, #242424, 90%),
+  // -----------------------------------------
         primary: $color,
         headline: $color,
         text: #222,
@@ -72,8 +77,6 @@ $colors4: (
         2: mix($color, #101010, 15%),
         3: mix($color, #101010, 3%),
 );
-
-$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
 
 $shades: (
         1: #ffffff,
@@ -108,46 +111,46 @@ $green: (
 );
 
 //base config colors
-$base-text-color: #222222;
+$base-text-color: map_get($colors, 'text');
 
 //anchor
-$anchor-color: $color;
+$anchor-color: map_get($colors, 'headline');
 
 //accordion
-$accordion-border-bottom-color: $dependOnBrightnessColor;
-$accordion-hover-background-color: map_get($colors1, 1);
-$accordion-arrow-color: $dependOnBrightnessColor;
-$accordion-item-border-bottom-color: map_get($colors1, 3);
-$accordion-open-background-color: map_get($colors1, 1);
+$accordion-border-bottom-color: map_get($colors, '108');
+$accordion-hover-background-color: map_get($colors, '100');
+$accordion-arrow-color: map_get($colors, '108');
+$accordion-item-border-bottom-color: map_get($colors, '103');
+$accordion-open-background-color: map_get($colors, '100');
 
 //badge
-$badge-color: #545454;
-$badge-background-color: map_get($colors1, 2);
+$badge-color: map_get($colors, '006');
+$badge-background-color: map_get($colors, '103');
 
 //buttons
-$button-color: #fff;
-$button-background-color: map_get($colors1, 5);
-$button-hover-background-color: $color;
+$button-color: #ffffff;
+$button-background-color: map_get($colors, '109');
+$button-hover-background-color: map_get($colors, '108');
 
 //secondary button
-$button2-color: map_get($shades, 7);
-$button2-background-color: map_get($colors1, 2);
-$button2-hover-background-color: map_get($colors1, 3);
+$button2-color: map_get($colors, text);
+$button2-background-color: map_get($colors, '202');
+$button2-hover-background-color: map_get($colors, '201');
 
 //choosebutton
-$choosebutton-color: map_get($shades, 7);
-$choosebutton-background-color: map_get($colors1, 2);
-$choosebutton-hover-background-color: map_get($colors1, 3);
+$choosebutton-color: map_get($colors, text);
+$choosebutton-background-color: map_get($colors, '202');
+$choosebutton-hover-background-color: map_get($colors, '201');
 
 //contextmenu
-$contextmenu-color: map_get($shades, 6);
-$contextmenu-background-color: map_get($shades, 1);
-$contextmenu-hover-background-color: map_get($shades, 2);
+$contextmenu-color: map_get($colors, 'text');
+$contextmenu-background-color: map_get($colors, '100');
+$contextmenu-hover-background-color: map_get($colors, '102');
 $contextmenu-border-color: rgba(0, 0, 0, .1);
-$contextmenu-trigger-color: map_get($colors1, 5);
-$contextmenu-icon-color: map_get($colors1, 5);
-$image-tool-background-color: map_get($shades, 1);
-$image-tool-color: $color;
+$contextmenu-trigger-color: map_get($colors, headline);
+$contextmenu-icon-color: map_get($colors, headline);
+$image-tool-background-color: map_get($colors, '100');
+$image-tool-color: map_get($colors, headline);
 
 //select
 $select-hover-icon-color: map_get($colors1, 4);
@@ -157,7 +160,7 @@ $select-border-color: map_get($colors1, 3);
 $select-hover-border-color: map_get($colors1, 4);
 
 //content_card
-$content-card-background-color: map_get($colors1, 1);
+$content-card-background-color: map_get($colors, '100');
 
 //forms
 //input / dynamic-input
@@ -184,11 +187,11 @@ $checkbox-background-color: map_get($colors1, 2);
 $checkbox-checked-background-color: map_get($colors1, 5);
 
 //headlines
-$h1-color: $color;
-$h2-color: $color;
-$h3-color: $color;
-$h4-color: $color;
-$h5-color: $color;
+$h1-color: map_get($colors, headline);
+$h2-color: map_get($colors, headline);
+$h3-color: map_get($colors, headline);
+$h4-color: map_get($colors, headline);
+$h5-color: map_get($colors, headline);
 
 //selection
 $selection-color: #ffffff;
@@ -235,7 +238,7 @@ $cc__tag-selected-color: map_get($colors1, 4);
 
 //tooltip
 $tooltip-trigger-underline-color: map_get($shades, 7);
-$tooltip-background-color: map_get($shades, 1);
+$tooltip-background-color: map_get($colors, headline);
 
 //bubble
 $bubble-background-color: map_get($shades, 1);

@@ -2,7 +2,7 @@ $color: #AC0000 !default;
 // $brightness: 100% !default;
 
 $colors: (
-        // Grey
+  // Grey
         '000': mix(#000000, #FFFFFF, 0%),
         '001': mix(#000000, #FFFFFF, 3%),
         '002': mix(#000000, #FFFFFF, 10%),
@@ -13,7 +13,7 @@ $colors: (
         '007': mix(#000000, #FFFFFF, 75%),
         '008': mix(#000000, #FFFFFF, 90%),
         '009': mix(#000000, #FFFFFF, 100%),
-        // -----------------------------------------
+  // -----------------------------------------
         '100': mix($color, #FFFFFF, 0%),
         '101': mix($color, #FFFFFF, 10%),
         '102': mix($color, #FFFFFF, 20%),
@@ -24,7 +24,7 @@ $colors: (
         '107': mix($color, #FFFFFF, 70%),
         '108': mix($color, #FFFFFF, 80%),
         '109': mix($color, #FFFFFF, 90%),
-        // -----------------------------------------
+  // -----------------------------------------
         '200': mix($color, #E4E4E4, 0%),
         '201': mix($color, #E4E4E4, 10%),
         '202': mix($color, #E4E4E4, 20%),
@@ -35,7 +35,7 @@ $colors: (
         '207': mix($color, #E4E4E4, 70%),
         '208': mix($color, #E4E4E4, 80%),
         '209': mix($color, #E4E4E4, 90%),
-        // -----------------------------------------
+  // -----------------------------------------
         '300': mix($color, #242424, 0%),
         '301': mix($color, #242424, 10%),
         '302': mix($color, #242424, 20%),
@@ -46,7 +46,7 @@ $colors: (
         '307': mix($color, #242424, 70%),
         '308': mix($color, #242424, 80%),
         '309': mix($color, #242424, 90%),
-        // -----------------------------------------
+  // -----------------------------------------
         primary: $color,
         headline: $color,
         text: #222,
@@ -66,20 +66,17 @@ $colors2: (
         3: mix($color, #7D7D7D, 15%),
         4: mix($color, #7D7D7D, 3%),
 );
-// $colors3: (
-//         1: mix($color, #242424, 70%),
-//         2: mix($color, #242424, 40%),
-//         3: mix($color, #242424, 15%),
-//         4: mix($color, #242424, 3%),
-// );
-// $colors4: (
-//         1: mix($color, #101010, 40%),
-//         2: mix($color, #101010, 15%),
-//         3: mix($color, #101010, 3%),
-// );
-
-// $dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
-
+ $colors3: (
+         1: mix($color, #242424, 70%),
+         2: mix($color, #242424, 40%),
+         3: mix($color, #242424, 15%),
+         4: mix($color, #242424, 3%),
+ );
+ $colors4: (
+         1: mix($color, #101010, 40%),
+         2: mix($color, #101010, 15%),
+         3: mix($color, #101010, 3%),
+ );
 
 $shades: (
         1: #ffffff,
@@ -114,10 +111,10 @@ $green: (
 );
 
 //base config colors
-$base-text-color: map_get($colors, text);
+$base-text-color: map_get($colors, 'text');
 
 //anchor
-$anchor-color: $color;
+$anchor-color: map_get($colors, 'headline');
 
 //accordion
 $accordion-border-bottom-color: map_get($colors, '108');
