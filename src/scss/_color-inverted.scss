@@ -14,8 +14,8 @@ $colors: (
         '008': mix(#000000, #FFFFFF, 10%),
         '009': mix(#000000, #FFFFFF, 0%),
   // -----------------------------------------
-        '100': mix($color, #2F2F2F, 20%),
-        '101': mix($color, #2F2F2F, 20%),
+        '100': mix($color, #2F2F2F, 25%),
+        '101': mix($color, #2F2F2F, 25%),
         '102': mix($color, #2F2F2F, 30%),
         '103': mix($color, #2F2F2F, 40%),
         '104': mix($color, #2F2F2F, 50%),
@@ -51,6 +51,8 @@ $colors: (
         headline: #fff,
         text: #fff,
 );
+
+$chaynsWebBackgroundColor: mix($color, #222222, 10%);
 
 $colors1: (
         1: mix($color, #FFFFFF, 5%),
