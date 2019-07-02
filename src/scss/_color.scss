@@ -74,7 +74,7 @@ $colors4: (
 );
 
 $dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
-$cwBackgroundColor: mix($color, #ffffff, 5%);
+$cwBackgroundColor: mix($color, #FFFFFF, 10%);
 
 $shades: (
         1: #ffffff,
