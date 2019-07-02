@@ -75,6 +75,7 @@ $colors4: (
 );
 
 $dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
+$cwBackgroundColor: mix($color, #ffffff, 5%);
 
 $shades: (
         1: #ffffff,
@@ -116,10 +117,10 @@ $anchor-color: $color;
 
 //accordion
 $accordion-border-bottom-color: $dependOnBrightnessColor;
-$accordion-hover-background-color: map_get($shades, 1);
+$accordion-hover-background-color: map_get($colors, '100');
 $accordion-arrow-color: $dependOnBrightnessColor;
 $accordion-item-border-bottom-color: map_get($colors1, 3);
-$accordion-open-background-color: map_get($shades, 1);
+$accordion-open-background-color: map_get($colors, '100');
 
 //badge
 $badge-color: map_get($shades, 5);
