@@ -115,10 +115,10 @@ $anchor-color: map_get($shades, 1);
 
 //accordion
 $accordion-border-bottom-color: map_get($shades, 4);
-$accordion-hover-background-color: map_get($colors, 'headline');
+$accordion-hover-background-color: map_get($colors, '100');
 $accordion-arrow-color: map_get($shades, 4);
 $accordion-item-border-bottom-color: map_get($shades, 5);
-$accordion-open-background-color: map_get($colors, 'headline');
+$accordion-open-background-color: map_get($colors, '100');
 
 //badge
 $badge-color: map_get($shades, 3);
