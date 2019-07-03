@@ -3,7 +3,14 @@
 .accordion {
   margin-top: 10px;
   border-bottom: 1px solid transparent;
-  transition: border 300ms ease-in-out 150ms, background-color 400ms ease, margin-bottom 300ms linear;
+  
+  transition: 
+    border 200ms ease-in-out 150ms, 
+    background-color 100ms ease, 
+    margin-bottom 200ms linear, 
+    border-radius 200ms, 
+    box-shadow 200ms;
+
   will-change: border, background-color, margin-bottom;
 
   &:not(.accordion--wrapped) {
@@ -85,7 +92,8 @@
       will-change: opacity;
     }
     &__search {
-      transition: transform 0.5s ease, opacity 0.5s ease, width 0.5s ease;
+      // transition: transform 0.5s ease, opacity 0.5s ease, width 0.5s ease;
+      transition: transform 200ms ease, opacity 200ms ease, width 200ms ease;
       will-change: transfrom, opacity, width;
       transform: translateX(150%);
       opacity: 0;
@@ -278,7 +286,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      transition: opacity 0.5s ease;
+      transition: opacity 400ms ease;
       will-change: opacity;
     }
 
@@ -306,7 +314,7 @@
 
   .right--foreground {
     &-appear, &-enter, &-exit {
-      transition: transform 0.5s, opacity 0.5s ease;
+      transition: transform 400ms, opacity 400ms ease;
       will-change: opacity;
     }
 
