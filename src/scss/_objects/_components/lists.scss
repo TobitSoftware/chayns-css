@@ -52,9 +52,13 @@
       flex-shrink: 0;
 
       line-height: 30px;
-      font-size: 30px;
+      font-size: 22px;
 
-      padding: 5px;
+      padding: 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     &__titles {

@@ -75,7 +75,7 @@ $colors4: (
 );
 
 $dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
-$cwBackgroundColor: mix($color, #ffffff, 5%);
+$cwBackgroundColor: mix($color, #FFFFFF, 10%);
 
 $shades: (
         1: #ffffff,
@@ -159,7 +159,7 @@ $select-border-color: map_get($colors1, 3);
 $select-hover-border-color: map_get($colors1, 4);
 
 //content_card
-$content-card-background-color: map_get($shades, 1);
+$content-card-background-color: map_get($colors, '100');
 
 //forms
 //input / dynamic-input
