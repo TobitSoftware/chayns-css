@@ -1,4 +1,5 @@
 $color: #AC0000 !default;
+$headerBarColor: #AC0000 !default;
 $brightness: 100% !default;
 
 $colors: (
@@ -42,9 +43,10 @@ $colors: (
         '307': mix($color, #242424, 70%),
         '308': mix($color, #242424, 80%),
         '309': mix($color, #242424, 90%),
-        primary: $color,
-        headline: $color,
-        text: #222,
+        'primary': $color,
+        'headline': $color,
+        'text': #222222,
+        'header-bar': $headerBarColor
 );
 
 $colors1: (
