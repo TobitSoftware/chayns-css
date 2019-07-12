@@ -1,8 +1,16 @@
+// The css api will replace this file with _color-default.scss, _color-inverted.scss or _color-pure.scss
+
+// -- This colors will be replaced by the css api --
 $color: #AC0000 !default;
 $headerBarColor: #AC0000 !default;
-$cwBackgroundColor: mix($color, #FFFFFF, 10%) !default;
+$cwBackgroundColor: mix($color, #FFFFFF, 10%) !default; // 101
 $brightness: 100% !default;
+// -------------------------------------------------
 
+$cwBodyBackgroundColor: mix($color, #FFFFFF, 10%) !default;
+$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
+
+// main color palette
 $colors: (
         '000': mix(#000000, #FFFFFF, 0%),
         '001': mix(#000000, #FFFFFF, 3%),
@@ -51,6 +59,7 @@ $colors: (
         'cw-background': $cwBackgroundColor
 );
 
+// deprecated color palettes. Will be removed in next minor or major version
 $colors1: (
         1: mix($color, #FFFFFF, 5%),
         2: mix($color, #FFFFFF, 20%),
@@ -76,9 +85,6 @@ $colors4: (
         2: mix($color, #101010, 15%),
         3: mix($color, #101010, 3%),
 );
-
-$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
-
 $shades: (
         1: #ffffff,
         2: #f1f1f1,
@@ -90,20 +96,19 @@ $shades: (
         8: #000000,
 );
 
+//special color palettes
 $red: (
         1: #5a0303,
         2: #96060b,
         3: #ca8181,
         4: #e9cccc,
 );
-
 $yellow: (
         1: #9F5F00,
         2: #FF9800,
         3: #FFB74D,
         4: #FFF3E0,
 );
-
 $green: (
         1: #074709,
         2: #0e7710,
