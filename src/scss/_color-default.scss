@@ -1,6 +1,7 @@
 //@import './color-inverted';
 $color: #AC0000 !default;
 $headerBarColor: #AC0000 !default;
+$cwBackgroundColor: mix($color, #FFFFFF, 10%) !default;
 $brightness: 100% !default;
 
 $colors: (
@@ -47,7 +48,8 @@ $colors: (
         'primary': $color,
         'headline': $color,
         'text': #222222,
-        'header-bar': $headerBarColor
+        'header-bar': $headerBarColor,
+        'cw-background': $cwBackgroundColor
 );
 
 $colors1: (
@@ -77,7 +79,6 @@ $colors4: (
 );
 
 $dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
-$cwBackgroundColor: mix($color, #FFFFFF, 10%);
 
 $shades: (
         1: #ffffff,
