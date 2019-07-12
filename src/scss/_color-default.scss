@@ -1,8 +1,12 @@
-//@import './color-inverted';
+// -- This colors will be replaced by the css api --
 $color: #AC0000 !default;
 $headerBarColor: #AC0000 !default;
-$cwBackgroundColor: mix($color, #FFFFFF, 10%) !default;
+$cwBackgroundColor: mix($color, #FFFFFF, 10%) !default; // 101
 $brightness: 100% !default;
+// -------------------------------------------------
+
+$cwBodyBackgroundColor: mix($color, #FFFFFF, 10%) !default;
+$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
 
 $colors: (
         '000': mix(#000000, #FFFFFF, 0%),
@@ -77,8 +81,6 @@ $colors4: (
         2: mix($color, #101010, 15%),
         3: mix($color, #101010, 3%),
 );
-
-$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
 
 $shades: (
         1: #ffffff,
