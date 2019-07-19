@@ -1,5 +1,12 @@
+// -- This colors will be replaced by the css api --
 $color: #AC0000 !default;
+$headerBarColor: #AC0000 !default;
+$cwBackgroundColor: mix($color, #2F2F2F, 20%) !default; // 101
 $brightness: 100% !default;
+// -------------------------------------------------
+
+$cwBodyBackgroundColor: mix($color, #222222, 10%) !default;
+$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
 
 $colors: (
         '000': mix(#000000, #FFFFFF, 100%),
@@ -42,9 +49,11 @@ $colors: (
         '307': mix($color, #242424, 20%),
         '308': mix($color, #242424, 10%),
         '309': mix($color, #242424, 0%),
-        primary: $color,
-        headline: #fff,
-        text: #fff,
+        'primary': $color,
+        'headline': #FFFFFF,
+        'text': #FFFFFF,
+        'header-bar': $headerBarColor,
+        'cw-background': $cwBackgroundColor
 );
 
 $colors1: (
@@ -72,9 +81,6 @@ $colors4: (
         2: mix($color, #101010, 15%),
         3: mix($color, #101010, 3%),
 );
-
-$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
-$cwBackgroundColor: mix($color, #222222,10%);
 
 $shades: (
         1: #ffffff,
@@ -240,15 +246,14 @@ $tooltip-background-color: map_get($colors4, 3);
 $bubble-background-color: map_get($colors4, 3);
 
 //slider
-$slider-range-background-color: map_get($colors1, 5);
-$slider-track-background-color: map_get($colors2, 3);
-$slider-dot-background-color: map_get($shades, 1);
-$slider-dot-border-color: map_get($shades, 4);
+$slider-range-background-color: map_get($colors, 'primary');
+$slider-track-background-color: map_get($colors, '003');
+$slider-dot-background-color: #ffffff;
 
 //calendar
 $calendar-selected-background-color: $color;
 $calendar-highlighted-background-color: map_get($colors1, 2);
-$calendar-selected-color:  map_get($shades, 1);
+$calendar-selected-color: map_get($shades, 1);
 $calendar-highlighted-color: $color;
 
 //image accordion
