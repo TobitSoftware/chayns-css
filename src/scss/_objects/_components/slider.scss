@@ -23,7 +23,7 @@
         &__track {
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 8px;
+          width: 10px;
           height: 100%;
 
           &__inner {
@@ -67,7 +67,7 @@
       position: absolute;
       overflow: hidden;
       border-radius: 20px;
-      height: 8px;
+      height: 10px;
       width: 100%;
       transform: translateY(-50%);
       background-color: $slider-track-background-color;
