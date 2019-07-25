@@ -274,3 +274,8 @@ $image-accordion-wrapped-image: map_get($colors1, 4);
 //chayns editor
 $editor-border-color: map_get($colors1, 6);
 $editor-border-hover-color: map_get($colors1, 6);
+
+//progress-bar
+$progress-bar-track: map_get($colors, '100');
+$progress-bar-indicator: map_get($colors, 'primary');
+$progress-bar-text: map_get($colors, 'headline');
