@@ -118,6 +118,21 @@ $person-finder-subtitle-color: map_get($colors, 'text');
       .placeholder {
         padding: 4px 8px;
       }
+
+      .friends {
+        display: flex;
+        align-items: center;
+        margin-top: -2px;
+      }
+    }
+
+    &--friends {
+      .result-item {
+        .img {
+          width: $image-size-small;
+          height: $image-size-small;
+        }
+      }
     }
   }
 }
