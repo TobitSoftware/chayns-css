@@ -1,5 +1,21 @@
+@import '../../_color';
+
 // @deprecated
+$image-size: 50px;
+$image-size-small: 40px;
+
+$person-finder-result-background-color: map_get($colors, '101');
+$person-finder-result-background-2-color: map_get($colors, '102');
+$person-finder-result-border-color: map_get($colors, '104');
+$person-finder-result-hover-background-color: map_get($colors, '103');
+$person-finder-subtitle-color: map_get($colors, 'text');
+
 .cc__person-finder {
+  &__overlay {
+    background-color: $person-finder-result-background-color;
+    border: 1px solid $person-finder-result-border-color;
+  }
+
   .cc__input-box {
     display: block !important;
 
@@ -28,23 +44,32 @@
       padding: 3px 10px 3px 8px;
     }
 
+    > div.cc__person-finder__results-list > :nth-child(2n) {
+      background-color: $person-finder-result-background-2-color;
+    }
+
+    .load-more, .divider {
+      background-color: $person-finder-result-background-color !important;
+    }
+
     .result-item {
       display: flex;
       flex-direction: row;
       width: 100%;
       cursor: pointer;
       padding: 8px 10px 5px 8px;
+      transition: background-color 0.2s linear;
 
       &:hover {
-        transition: background-color 0.2s linear;
+        background-color: $person-finder-result-hover-background-color !important;
       }
 
       .img {
         background-position: center;
         background-size: cover;
 
-        width: 40px;
-        height: 40px;
+        width: $image-size;
+        height: $image-size;
 
         flex-shrink: 0;
 
@@ -78,12 +103,16 @@
 
         .identifier {
           font-size: 75%;
-          color: #8c8c8c;
+          color: $person-finder-subtitle-color;
+          opacity: 0.6;
         }
       }
       .relation{
         font-size: 75%;
-        color: #8c8c8c;
+        color: $person-finder-subtitle-color;
+        opacity: 0.6;
+        line-height: 1.5;
+        padding-top: 4px;
       }
 
       .placeholder {
