@@ -28,29 +28,48 @@ $headline-sizes: (
 h1,
 .h1 {
   color: $h1-color;
+  margin: 1.2rem 0 5px 0;
   line-height: 1.35;
 }
 
 h2,
 .h2 {
   color: $h2-color;
+  margin: 1.2rem 0 5px 0;
   line-height: 1.35;
 }
 
 h3,
 .h3 {
   color: $h3-color;
+  margin: 1.2rem 0 5px 0;
   line-height: 1.35;
 }
 
 h4,
 .h4 {
   color: $h4-color;
+  margin: 1.1rem 0 5px 0;
   line-height: 1.25;
 }
 
 h5,
 .h5 {
   color: $h5-color;
+  margin: 1.1rem 0 5px 0;
   line-height: 1.25;
+}
+
+.tapp {
+  &, :first-child {
+    & > h1, & > .h1,
+    & > h2, & > .h2,
+    & > h3, & > .h3,
+    & > h4, & > .h4,
+    & > h5, & > .h5 {
+      &:first-of-type:first-child {
+        margin-top: 0;
+      }
+    }
+  }
 }
