@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    z-index: 50;
+    z-index: 1;
   }
 
   &__navigate {
@@ -40,7 +40,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    z-index: 50;
+    z-index: 1;
     width: 100%;
     user-select: none;
   }
