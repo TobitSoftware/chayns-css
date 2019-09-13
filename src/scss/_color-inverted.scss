@@ -180,10 +180,8 @@ $switch-checked-background-color: map_get($colors2, 1);
 $switch-button-background-color: map_get($shades, 1);
 
 //radio / checkbox
-// $checkbox-background-color: map_get($colors1, 2);
-$checkbox-background-color: map_get($colors, '103');
-// $checkbox-checked-background-color: map_get($colors1, 5);
-$checkbox-checked-background-color: map_get($colors, '108');
+$checkbox-background-color: map_get($colors2, 2);
+$checkbox-checked-background-color: map_get($colors2, 1);
 
 //headlines
 $h1-color: map_get($shades, 1);
