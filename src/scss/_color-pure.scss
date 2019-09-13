@@ -187,10 +187,8 @@ $switch-disabled-button-background-color: #bdbdbd;
 $switch-checked-background-color: map_get($colors1, 5);
 
 //radio / checkbox
-// $checkbox-background-color: map_get($colors1, 2);
-$checkbox-background-color: map_get($colors, '103');
-// $checkbox-checked-background-color: map_get($colors1, 5);
-$checkbox-checked-background-color: map_get($colors, '108');
+$checkbox-background-color: map_get($colors1, 2);
+$checkbox-checked-background-color: map_get($colors1, 5);
 
 //headlines
 $h1-color: $color;
