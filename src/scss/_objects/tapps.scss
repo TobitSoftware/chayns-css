@@ -61,11 +61,11 @@
 }
 
 .chayns--parent:not(.chayns--net_runtime) {
-  overflow: auto;
-
-  body {
+  &:not(.chayns--mobile) body {
     overflow: auto;
   }
+
+    overflow: auto;
 }
 
 // Chayns Web Body Background

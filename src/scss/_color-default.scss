@@ -182,8 +182,10 @@ $switch-disabled-button-background-color: map_get($shades, 3);
 $switch-checked-background-color: map_get($colors1, 5);
 
 //radio / checkbox
-$checkbox-background-color: map_get($colors1, 2);
-$checkbox-checked-background-color: map_get($colors1, 5);
+// $checkbox-background-color: map_get($colors1, 2);
+$checkbox-background-color: map_get($colors, '103');
+// $checkbox-checked-background-color: map_get($colors1, 5);
+$checkbox-checked-background-color: map_get($colors, '108');
 
 //headlines
 $h1-color: $color;
@@ -248,10 +250,9 @@ $tooltip-background-color: map_get($shades, 1);
 $bubble-background-color: map_get($shades, 1);
 
 //slider
-$slider-range-background-color: map_get($colors1, 5);
-$slider-track-background-color: map_get($shades, 4);
-$slider-dot-background-color: map_get($shades, 1);
-$slider-dot-border-color: map_get($shades, 4);
+$slider-range-background-color: map_get($colors, 'primary');
+$slider-track-background-color: map_get($colors, '003');
+$slider-dot-background-color: #ffffff;
 
 //calendar
 $calendar-selected-background-color: map_get($colors1, 2);
