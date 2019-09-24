@@ -62,7 +62,7 @@ h5,
 }
 
 .tapp {
-  &, :first-child {
+  &, :first-child:not(td) {
     & > h1, & > .h1,
     & > h2, & > .h2,
     & > h3, & > .h3,
