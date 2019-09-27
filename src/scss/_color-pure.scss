@@ -165,6 +165,12 @@ $select-hover-border-color: map_get($colors1, 4);
 
 //content_card
 $content-card-background-color: map_get($colors, '100');
+$content-card-success-border-color: map_get($green, 1);
+$content-card-success-background-color: map_get($green, 4);
+$content-card-warning-border-color: map_get($yellow, 1);
+$content-card-warning-background-color: map_get($yellow, 4);
+$content-card-danger-border-color: map_get($red, 1);
+$content-card-danger-background-color: map_get($red, 4);
 
 //forms
 //input / dynamic-input

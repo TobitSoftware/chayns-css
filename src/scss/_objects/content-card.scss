@@ -7,4 +7,25 @@
   &:not(:last-child) {
     margin-bottom: 8px;
   }
+
+  &.content__card--success {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $content-card-success-border-color;
+    background-color: $content-card-success-background-color;
+  }
+
+  &.content__card--warning {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $content-card-warning-border-color;
+    background-color: $content-card-warning-background-color;
+  }
+
+  &.content__card--danger {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $content-card-danger-border-color;
+    background-color: $content-card-danger-background-color;
+  }
 }
