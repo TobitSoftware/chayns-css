@@ -13,6 +13,7 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
   box-shadow: 1px 3px 8px rgba(0, 0, 0, .3);
   border: $contextmenu-border;
   color: $contextmenu-color;
+
   &:after {
     content: "";
     width: 14px;
@@ -24,24 +25,28 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
     border-left: $contextmenu-border;
     z-index: -1;
   }
+
   &__children {
     .ts-ellipsis_v {
       text-align: center;
       font-size: 18px;
       cursor: pointer;
-      color: $contextmenu-trigger-color;
+      color: map_get($colors, 'headline');
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
   }
+
   &__item {
     padding: 5px 8px 5px 5px;
     cursor: pointer;
     display: flex;
+
     &:hover {
       background-color: $contextmenu-hover-background-color;
     }
+
     &__icon {
       width: 20px;
       margin: 0 8px 0 3px;
@@ -49,45 +54,56 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
       flex: 0 0 auto;
       color: $contextmenu-icon-color;
     }
+
     &__text {
       white-space: nowrap;
     }
   }
+
   &--active {
     opacity: 1;
   }
+
   &--position0 {
     transform: translate(calc(-100% + 22px), calc(-100% - 9px));
+
     &:after {
       bottom: -8px;
       right: 14px;
       transform: rotate(225deg);
     }
   }
+
   &--position1 {
     transform: translate(calc(-100% + 22px), 11px);
+
     &:after {
       top: -8px;
       right: 14px;
       transform: rotate(45deg);
     }
   }
+
   &--position2 {
     transform: translate(-21px, 11px);
+
     &:after {
       top: -8px;
       left: 14px;
       transform: rotate(45deg);
     }
   }
+
   &--position3 {
     transform: translate(-21px, calc(-100% - 9px));
+
     &:after {
       bottom: -8px;
       left: 14px;
       transform: rotate(225deg);
     }
   }
+
   &-overlay {
     position: absolute;
     top: 0;
@@ -99,16 +115,18 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
     z-index: 899;
     transition: transform 0.35s ease-in-out;
     transform: translateY(20px);
+
     &--active {
       transform: translateY(0);
     }
+
     &--hide {
       display: none;
     }
   }
 }
 
-.image-tool{
+.image-tool {
   height: 32px;
   width: 32px;
   background-color: $image-tool-background-color;
@@ -118,7 +136,8 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  i{
+
+  i {
     color: $image-tool-color !important;
   }
 }
