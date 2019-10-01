@@ -98,10 +98,8 @@
 // prevents hover on mobile/in app since hover on mobile is triggered by a tap
 .chayns--desktop {
   .button {
-    &:not(.button--disabled) {
-      &:hover {
-        background-color: $button-hover-background-color;
-      }
+    &:not(.button--disabled):hover, &--show-focus:focus {
+      background-color: $button-hover-background-color;
     }
   }
 
