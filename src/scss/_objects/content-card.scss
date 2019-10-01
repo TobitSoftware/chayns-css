@@ -13,6 +13,7 @@
     border-style: solid;
     border-color: $content-card-success-border-color;
     background-color: $content-card-success-background-color;
+    color: $content-card-success-color;
   }
 
   &.content__card--warning {
@@ -20,6 +21,7 @@
     border-style: solid;
     border-color: $content-card-warning-border-color;
     background-color: $content-card-warning-background-color;
+    color: $content-card-warning-color;
   }
 
   &.content__card--danger {
@@ -27,5 +29,6 @@
     border-style: solid;
     border-color: $content-card-danger-border-color;
     background-color: $content-card-danger-background-color;
+    color: $content-card-danger-color;
   }
 }
