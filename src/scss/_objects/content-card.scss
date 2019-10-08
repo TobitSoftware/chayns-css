@@ -14,6 +14,18 @@
     border-color: $content-card-success-border-color;
     background-color: $content-card-success-background-color;
     color: $content-card-success-color;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span {
+      color: $content-card-success-color;
+    }
   }
 
   &.content__card--warning {
@@ -22,6 +34,18 @@
     border-color: $content-card-warning-border-color;
     background-color: $content-card-warning-background-color;
     color: $content-card-warning-color;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span {
+      color: $content-card-warning-color;
+    }
   }
 
   &.content__card--danger {
@@ -30,5 +54,17 @@
     border-color: $content-card-danger-border-color;
     background-color: $content-card-danger-background-color;
     color: $content-card-danger-color;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span {
+      color: $content-card-danger-color;
+    }
   }
 }
