@@ -198,6 +198,9 @@ $h3-color: map_get($shades, 1);
 $h4-color: map_get($shades, 1);
 $h5-color: map_get($shades, 1);
 
+//footer
+$footer-color: rgba(255, 255, 255, 0.4);
+
 //modeswitch
 $modeswitchBackgroundColor: map_get($colors4, 3);
 $modeswitchBorderColor: map_get($colors3, 2);
