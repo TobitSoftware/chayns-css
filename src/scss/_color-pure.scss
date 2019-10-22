@@ -205,6 +205,9 @@ $h3-color: $color;
 $h4-color: $color;
 $h5-color: $color;
 
+//footer
+$footer-color: map_get($colors, '005');
+
 //selection
 $selection-color: #ffffff;
 $selection-background-color: map_get($colors1, 4);
