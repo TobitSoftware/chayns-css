@@ -3,9 +3,12 @@
 
 // @deprecated
 .react-chayns-icon {
-  &:not(.button) {
-    font-size: round($base-font-size);
-    color: map_get($colors, headline);
+  font-size: round($base-font-size);
+  color: map_get($colors, headline);
+  
+  .button & {
+    font-size: inherit;
+    color: inherit;
   }
 
   &--clickable {
@@ -18,7 +21,12 @@
   }
 }
 
-.chayns__icon:not(.button) {
+.chayns__icon {
   color: map_get($colors, headline);
   font-size: round($base-font-size);
+  
+  .button & {
+    font-size: inherit;
+    color: inherit;
+  }
 }
