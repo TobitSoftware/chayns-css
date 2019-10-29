@@ -23,6 +23,9 @@
         opacity: 0.01;
         transition: opacity 200ms ease-in;
       }
+      &-exit-done {
+        display: none;
+      }
     }
   }
 }
