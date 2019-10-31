@@ -17,7 +17,9 @@ $tag-height: 24px;
 
     height: $tag-height;
 
-    flex-grow: 1;
+    flex: 0 1 100%;
+
+    overflow: hidden;
   }
 
   .cc__tag-input__input input {
@@ -36,6 +38,11 @@ $tag-height: 24px;
   user-select: none;
 
   transition: background-color 300ms;
+
+  max-width: 100%;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 
   &--selected {
     background-color: $cc__tag-selected-color;
