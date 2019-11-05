@@ -4,6 +4,7 @@
   display: none;
 
   & + label {
+    opacity: 0.3;
     background-color: $switch-background-color;
     width: 28px;
     height: 13px;
@@ -31,7 +32,8 @@
   }
 
   &:checked + label {
-    background-color: $switch-checked-background-color;
+    opacity: 0.7;
+    // background-color: $switch-checked-background-color;
   }
 
   &:disabled + label {

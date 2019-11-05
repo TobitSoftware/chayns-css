@@ -183,11 +183,11 @@ $input-color: map_get($shades, 7);
 $input-focus-border-bottom-color: $color;
 
 //switch
-$switch-background-color: map_get($shades, 4);
-$switch-disabled-background-color: map_get($shades, 4);
-$switch-button-background-color: map_get($shades, 1);
-$switch-disabled-button-background-color: map_get($shades, 3);
-$switch-checked-background-color: map_get($colors1, 5);
+$switch-background-color: map_get($colors, 'headline');
+// $switch-disabled-background-color: map_get($shades, 4);
+$switch-button-background-color: #ffffff;
+// $switch-disabled-button-background-color: map_get($shades, 3);
+// $switch-checked-background-color: map_get($colors1, 5);
 
 //radio / checkbox
 $checkbox-background-color: map_get($colors1, 2);
