@@ -17,6 +17,8 @@ $tag-height: 24px;
 
     height: $tag-height;
 
+    flex-grow: 1;
+
     overflow: hidden;
   }
 
