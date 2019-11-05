@@ -52,21 +52,19 @@
     user-select: none;
   }
 
-  &--hidden {
-    .cc__scroll-view__content {
-      overflow: hidden !important;
-      width: 100% !important;
-    }
+  .cc__scroll-view--hidden {
+    overflow: hidden !important;
+    width: 100% !important;
   }
 
-  &--hidden, &--hide {
+  &--hide {
     .cc__scroll-view__scrollbar {
       display: none;
     }
   }
 
   &:hover, &:active {
-    .cc__scroll-view__scrollbar {
+    > .cc__scroll-view__scrollbar {
       opacity: 1;
     }
   }
