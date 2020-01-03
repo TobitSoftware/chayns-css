@@ -34,7 +34,7 @@
       cursor: pointer;
       padding: 8px 10px 5px 8px;
 
-      &:hover {
+      &:hover, &:focus {
         transition: background-color 0.2s linear;
       }
 
