@@ -60,7 +60,7 @@ $person-finder-subtitle-color: map_get($colors, 'text');
       padding: 8px 10px 5px 8px;
       transition: background-color 0.2s linear;
 
-      &:hover {
+      &:hover, &:focus {
         background-color: $person-finder-result-hover-background-color !important;
       }
 
