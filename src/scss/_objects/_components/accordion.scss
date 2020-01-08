@@ -3,12 +3,12 @@
 .accordion {
   margin-top: 10px;
   border-bottom: 1px solid transparent;
-  
-  transition: 
-    border 200ms ease-in-out 150ms, 
-    background-color 100ms ease, 
-    margin-bottom 200ms linear, 
-    border-radius 200ms, 
+
+  transition:
+    border 200ms ease-in-out 150ms,
+    background-color 100ms ease,
+    margin-bottom 200ms linear,
+    border-radius 200ms,
     box-shadow 200ms;
 
   will-change: border, background-color, margin-bottom;
@@ -52,7 +52,7 @@
     text-overflow: ellipsis;
     padding-right: 10px;
     transition: font-size 300ms, transform 300ms, font-weight 300ms;
-    will-change: font-size, transform, font-weight;
+    will-change: font-size, font-weight;
   }
   .accordion__head__icon {
     color: $accordion-arrow-color;
