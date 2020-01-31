@@ -111,6 +111,7 @@
     display: table;
     border-spacing: 2px;
     width: 100%;
+    table-layout: fixed;
   }
 }
 
@@ -121,7 +122,6 @@
 
   &__item, &__item--text {
     display: table-cell;
-    width: 2rem;
     height: 1rem;
     margin: 5em;
     flex-grow: 1;
