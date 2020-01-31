@@ -18,7 +18,7 @@
       background-color: $accordion-hover-background-color;
     }
 
-    &--clickable .list-item__header {
+    &--clickable > .list-item__header {
       cursor: pointer;
     }
 
@@ -113,7 +113,7 @@
       padding: 9px 18px 9px 29px;
     }
 
-    &--expanded {
+    &--expanded > .list-item__header {
       .list-item__titles {
         font-weight: bolder;
       }
