@@ -58,7 +58,8 @@
         white-space: nowrap;
         color: $input-placeholder-color;
         pointer-events: none;
-        transition: all .4s ease-out;
+        transition: left 0.4s ease-out, right 0.4s ease-out,
+          opacity 0.4s ease-out;
         opacity: 1;
       }
 
