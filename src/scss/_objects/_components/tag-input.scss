@@ -1,7 +1,9 @@
 @import '../../_color.scss';
 
-// @deprecated
 $tag-height: 24px;
+$tag-color: map_get($colors, '203');
+$tag-selected-color: mix($tag-color, map_get($colors, 'headline'), 80%);
+$tag-icon-color: map_get($colors, 'text');
 
 .cc__tag-input {
   display: flex;
@@ -10,7 +12,7 @@ $tag-height: 24px;
   -webkit-user-modify: read-only;
   -webkit-appearance: none;
 
-  align-items: center;
+  align-items: baseline;
 
   .cc__tag-input__input {
     margin: 5px 0 0;
@@ -29,11 +31,11 @@ $tag-height: 24px;
 
 .cc__tag {
   display: inline-block;
-  background-color: $cc__tag-color;
+  background-color: $tag-color;
 
-  padding: 0 6px;
+  padding-left: 10px;
 
-  margin: 5px 5px 0;
+  margin: 5px 5px 0 0;
 
   user-select: none;
 
@@ -43,17 +45,23 @@ $tag-height: 24px;
 
   word-wrap: break-word;
   overflow-wrap: break-word;
+  position: relative;
+  border-radius: 100px;
+  overflow: hidden;
 
   &--selected {
-    background-color: $cc__tag-selected-color;
+    background-color: $tag-selected-color;
   }
 
   .icon {
-    color: $color;
 
-    padding-left: 6px;
+    color: $tag-icon-color;
 
-    opacity: 0.6;
+    padding: 4px 10px;
+
+    opacity: 0.4;
+
+    font-size: 14px;
 
     &:hover {
       opacity: 0.8;
