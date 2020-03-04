@@ -52,7 +52,7 @@
         position: absolute;
         text-align: right;
         top: 0;
-        margin: 5px 1px;
+        margin: 6px 1px;
         left: 0;
         right: 100%;
         white-space: nowrap;
@@ -61,6 +61,9 @@
         transition: left 0.4s ease-out, right 0.4s ease-out,
           opacity 0.4s ease-out;
         opacity: 1;
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
       }
 
       &[validate]:not(.valid) + label {
