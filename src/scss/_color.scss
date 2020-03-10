@@ -249,10 +249,6 @@ $file-input-color: map_get($colors1, 6);
 $file-input-border-color: map_get($colors2, 4);
 $file-input-border-hover-color: map_get($colors1, 6);
 
-//tag input
-$cc__tag-color: map_get($colors1, 3);
-$cc__tag-selected-color: map_get($colors1, 4);
-
 //tooltip
 $tooltip-trigger-underline-color: map_get($shades, 7);
 $tooltip-background-color: map_get($shades, 1);
