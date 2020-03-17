@@ -11,9 +11,16 @@ $person-finder-result-hover-background-color: map_get($colors, '103');
 $person-finder-subtitle-color: map_get($colors, 'text');
 
 .cc__person-finder {
+  &__results-list--noTransition {
+    .result-item {
+      transition: none !important;
+    }
+  }
+
   &__overlay {
     background-color: $person-finder-result-background-color;
     border: 1px solid $person-finder-result-border-color;
+    //scroll-behavior: smooth;
   }
 
   .cc__input-box {
@@ -60,7 +67,7 @@ $person-finder-subtitle-color: map_get($colors, 'text');
       padding: 8px 10px 5px 8px;
       transition: background-color 0.2s linear;
 
-      &:hover, &:focus {
+      &--focused, &:hover, &:focus {
         background-color: $person-finder-result-hover-background-color !important;
       }
 
@@ -97,7 +104,7 @@ $person-finder-subtitle-color: map_get($colors, 'text');
           }
         }
 
-        .name{
+        .name {
           padding-right: 7px;
         }
 
@@ -107,7 +114,8 @@ $person-finder-subtitle-color: map_get($colors, 'text');
           opacity: 0.6;
         }
       }
-      .relation{
+
+      .relation {
         font-size: 75%;
         color: $person-finder-subtitle-color;
         opacity: 0.6;
