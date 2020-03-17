@@ -31,7 +31,7 @@
       background-color: $checkbox-background-color;
       top: 5px;
       z-index: 0;
-      border: 1px solid $checkbox-checked-background-color;
+      border: 1px solid rgba($checkbox-checked-background-color, 0.5);
       will-change: background-color;
     }
   }
