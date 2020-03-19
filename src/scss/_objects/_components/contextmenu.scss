@@ -126,6 +126,13 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
   }
 }
 
+.cc__bubble__overlay {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .image-tool {
   height: 32px;
   width: 32px;
