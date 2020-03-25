@@ -1,9 +1,13 @@
 @import '../config';
 
+// Font styles
 :root {
   font-family: $base-font-family;
+  // IE
   font-size: $base-font-size;
   line-height: $base-line-height;
+  // Other browsers
+  font-size: calc(#{$base-font-size} - 2px + (0.2 * var(--width) / 100));
 }
 
 // Main Styles
