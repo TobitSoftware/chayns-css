@@ -27,10 +27,12 @@
     }
 
     &:before {
-      transition: box-shadow 100ms ease-in-out;
+      transition: box-shadow 100ms ease-in-out, background-color 50ms 50ms cubic-bezier(1,0,0,1);
       background-color: $checkbox-background-color;
       top: 5px;
       z-index: 0;
+      border: 1px solid rgba($checkbox-checked-background-color, 0.5);
+      will-change: background-color;
     }
   }
 
@@ -66,8 +68,11 @@
     transform: rotateZ(37deg);
   }
 
-  &:checked:not(:disabled) + label:before {
-    box-shadow: inset 0 0 0 10px $checkbox-checked-background-color;
+  &:checked:not(:disabled) + label {
+    &:before{
+      box-shadow: inset 0 0 0 10px $checkbox-checked-background-color;
+      background-color: $checkbox-checked-background-color;
+    }
   }
 }
 
