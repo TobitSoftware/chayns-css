@@ -3,11 +3,12 @@
 // Font styles
 :root {
   font-family: $base-font-family;
+  line-height: $base-line-height;
   // IE
   font-size: $base-font-size;
-  line-height: $base-line-height;
   // Other browsers
-  font-size: calc(#{$base-font-size} - 2px + (0.2 * var(--width) / 100));
+  --base-font-size:  calc(#{$base-font-size} - 2px + (0.2 * var(--width) / 100));
+  font-size: var(--base-font-size, $base-font-size);
 }
 
 // Main Styles
