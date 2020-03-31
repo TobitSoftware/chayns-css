@@ -2,9 +2,10 @@
 
 // Lists
 ul {
-  list-style: none;
+  list-style: disc;
 }
 
+//@deprecated - remove following styles in next minor or major version
 .list {
   margin-bottom: 15px;
   padding-left: 30px;
