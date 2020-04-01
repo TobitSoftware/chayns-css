@@ -1,8 +1,76 @@
 @import '../_color';
 
+@mixin customListItem {
+  color: map_get($colors, headline);
+  min-width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateX(-100%);
+}
+
 // Lists
 ul {
   list-style: disc;
+
+  & > li[class*='fa-'], li[class*='ts-'] {
+    list-style: none;
+
+    &:before {
+      line-height: inherit;
+      @include customListItem;
+    }
+  }
+
+  &.custom-list {
+    list-style: none;
+
+    & > li:before {
+      font-family: "Font Awesome 5 Pro";
+      @include customListItem;
+    }
+  }
+
+  &.dot > li:before {
+    content: '\f111';
+    font-size: 8px;
+    line-height: 3;
+  }
+
+  &.square > li:before {
+    content: '\f45c';
+    font-size: 7px;
+    line-height: 3.3;
+  }
+
+  &.check > li:before {
+    content: '\f00c';
+  }
+
+  &.times > li:before {
+    content: '\f00d';
+  }
+
+  &.chevron > li:before {
+    content: '\f054';
+  }
+
+  &.plus > li:before {
+    content: '\f067';
+  }
+
+  &.caret > li:before {
+    content: '\f0da';
+  }
+
+  &.arrow > li:before {
+    content: '\f178';
+  }
+
+  &.chevron-double > li:before {
+    content: '\f101';
+  }
 }
 
 //@deprecated - remove following styles in next minor or major version
