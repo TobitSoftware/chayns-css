@@ -42,7 +42,7 @@
 .chayns--mobile {
   overflow: hidden;
 
-  &:not(.chayns--net_runtime):not(.chayns--parent), &.chayns--net_runtime:not(.chayns--parent), &.chayns--parent:not(.chayns--net_runtime){
+  &:not(.chayns--net_runtime):not(.chayns--parent), &.chayns--net_runtime:not(.chayns--parent), &.chayns--parent:not(.chayns--net_runtime) {
     body {
       overflow: hidden;
     }
@@ -71,7 +71,7 @@
     overflow: auto;
   }
 
-    overflow: auto;
+  overflow: auto;
 }
 
 // Chayns Web Body Background
