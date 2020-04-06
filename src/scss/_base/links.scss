@@ -14,4 +14,11 @@ a {
   &:focus {
     opacity: 0.75;
   }
+
+  // can be used if a-tags should not get the typical link style
+  &.no-link-style{
+    line-height: inherit;
+    display: initial;
+    border-bottom: none;
+  }
 }
