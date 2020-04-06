@@ -5,9 +5,11 @@ a {
   color: currentColor;
   cursor: pointer;
   text-decoration: none;
-  display: inline-block;
-  border-bottom: solid 1px rgba(34, 34, 34, 0.3);
-  line-height: 1;
+  &:not(.no-link-style){
+    display: inline-block;
+    border-bottom: solid 1px rgba(34, 34, 34, 0.3);
+    line-height: 1;
+  }
 
   &:hover,
   &:active,
