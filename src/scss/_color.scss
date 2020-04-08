@@ -121,6 +121,7 @@ $base-text-color: map_get($shades, 7);
 
 //anchor
 $anchor-color: $color;
+$anchor-border-color: rgba(34, 34, 34, 0.3);
 
 //accordion
 $accordion-border-bottom-color: $dependOnBrightnessColor;
