@@ -1,11 +1,13 @@
+@import '../config';
+
 // font awesome icons
-@if ($icon-style == 'fad') {
-  @import url("https://api.chayns-static.space/font-awesome/v5/css/all-duotone.min.css");
+@if ($icon-style == 3) { // 3 = duotone
+  @import url('https://api.chayns-static.space/font-awesome/v5/css/all-duotone.min.css');
 } @else {
-  @import url("https://api.chayns-static.space/font-awesome/v5/css/all.min.css");
+  @import url('https://api.chayns-static.space/font-awesome/v5/css/all.min.css');
 }
 
 // fix for font ts and font awesome 4.7 -o icons
-.fa[class$="-o"]::before, [class*="ts-"]::before{
+.fa[class$='-o']::before, [class*='ts-']::before {
   position: initial;
 }
