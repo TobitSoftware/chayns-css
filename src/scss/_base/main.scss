@@ -11,6 +11,10 @@
   font-size: var(--base-font-size, $base-font-size);
 }
 
+.default-font-size{
+  font-size: 15px * $font-factor;
+}
+
 // Main Styles
 html {
   min-height: 100%;
