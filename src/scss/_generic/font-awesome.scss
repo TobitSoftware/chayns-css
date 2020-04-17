@@ -5,14 +5,19 @@
   @import url('https://api.chayns-static.space/font-awesome/v5/css/all-duotone.min.css');
 
   // fix for font ts and font awesome 4.7 -o icons
-  .fa[class$='-o']::before, [class*='ts-']::before {
-    position: initial;
+  .fa[class$='-o'], [class*='ts-'] {
+    &::before{
+      position: initial;
+    }
+
+    &::after{
+      font-family: "Font Awesome 5 Duotone";
+    }
   }
 
   // styles for default accordion icon
   .accordion__head > .accordion__head__icon > .ts-angle-right {
     -webkit-font-smoothing: antialiased;
-    display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
