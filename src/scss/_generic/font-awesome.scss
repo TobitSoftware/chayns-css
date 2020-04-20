@@ -1,39 +1,41 @@
+@import '../config';
+
 // font awesome icons
-@import url("https://api.chayns-static.space/font-awesome/v5/css/all.min.css");
+@if ($icon-style == 3) { // 3 = duotone
+  @import url('https://api.chayns-static.space/font-awesome/v5/css/all-duotone.min.css');
 
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-brands-400.eot);
-  src: url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-brands-400.woff2) format("woff2"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-brands-400.woff) format("woff"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-brands-400.ttf) format("truetype"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-brands-400.svg#fontawesome) format("svg")
+  // fix for font ts and font awesome 4.7 -o icons
+  .fa[class$='-o'], [class*='ts-'] {
+    &::before{
+      position: initial;
+    }
+
+    &::after{
+      font-family: "Font Awesome 5 Duotone";
+    }
+  }
+
+  // styles for default accordion icon
+  .accordion__head > .accordion__head__icon > .ts-angle-right {
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-weight: 900;
+
+    &::before {
+      position: absolute;
+      color: var(--fa-primary-color, inherit);
+      opacity: 1;
+      opacity: var(--fa-primary-opacity, 1);
+    }
+
+    &::after {
+      opacity: .4;
+      opacity: var(--fa-secondary-opacity, .4);
+    }
+  }
+} @else {
+  @import url('https://api.chayns-static.space/font-awesome/v5/css/all.min.css');
 }
-
-@font-face {
-  font-family: "Font Awesome 5 Pro";
-  font-style: normal;
-  font-weight: 300;
-  font-display: auto;
-  src: url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-light-300.eot);
-  src: url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-light-300.eot?#iefix) format("embedded-opentype"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-light-300.woff2) format("woff2"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-light-300.woff) format("woff"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-light-300.ttf) format("truetype"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-light-300.svg#fontawesome) format("svg")
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-display: auto;
-  src: url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-regular-400.eot);
-  src: url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-regular-400.woff2) format("woff2"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-regular-400.woff) format("woff"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-regular-400.ttf) format("truetype"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-regular-400.svg#fontawesome) format("svg")
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Pro";
-  font-style: normal;
-  font-weight: 900;
-  font-display: auto;
-  src: url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-solid-900.eot);
-  src: url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-solid-900.woff2) format("woff2"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-solid-900.woff) format("woff"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-solid-900.ttf) format("truetype"), url(//api.chayns-static.space/font-awesome/v5/webfonts/fa-solid-900.svg#fontawesome) format("svg")
-}
-
