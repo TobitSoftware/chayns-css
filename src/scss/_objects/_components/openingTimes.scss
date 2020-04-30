@@ -111,6 +111,8 @@
         .flex__middle--wrapper {
             flex-grow: 1;
             align-items: flex-end;
+            flex-direction: column;
+            display: flex;
 
             .flex__middle__wrapper {
                 white-space: nowrap;
