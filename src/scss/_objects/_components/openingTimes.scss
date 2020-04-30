@@ -73,6 +73,16 @@
         }
     }
 
+    &__hint {
+        &--top {
+            margin-bottom: 15px;
+        }
+
+        &--bottom {
+            margin-top: 15px;
+        }
+    }
+
     @media screen and(max-width: 340px) {
         .flex__right .time .time__input {
             width: 55px;
