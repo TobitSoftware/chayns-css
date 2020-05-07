@@ -3,6 +3,7 @@ $color: #AC0000 !default;
 $headerBarColor: #AC0000 !default;
 $cwBackgroundColor: mix($color, #FFFFFF, 10%) !default; // 101
 $brightness: 100% !default;
+$newBrightness: 100% !default;
 // -------------------------------------------------
 
 $cwBodyBackgroundColor: mix($color, #FFFFFF, 10%) !default;
@@ -187,7 +188,7 @@ $switch-background-color: rgba(map_get($colors, 'headline'), .3);
 // $switch-disabled-background-color: map_get($shades, 4);
 $switch-button-background-color: #ffffff;
 // $switch-disabled-button-background-color: map_get($shades, 3);
-// $switch-checked-background-color: map_get($colors1, 5);
+$switch-checked-background-color: rgba(map_get($colors, 'headline'), .7);
 
 //radio / checkbox
 $checkbox-background-color: map_get($colors1, 2);
