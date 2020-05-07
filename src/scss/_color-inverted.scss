@@ -3,10 +3,11 @@ $color: #AC0000 !default;
 $headerBarColor: #AC0000 !default;
 $cwBackgroundColor: mix($color, #2F2F2F, 20%) !default; // 101
 $brightness: 100% !default;
+$newBrightness: 100% !default;
 // -------------------------------------------------
 
 $cwBodyBackgroundColor: mix($color, #222222, 10%) !default;
-$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
+$dependOnBrightnessColor: mix($color, #FFFFFF, $newBrightness);
 
 $colors: (
         '000': mix(#000000, #FFFFFF, 100%),
@@ -208,7 +209,7 @@ $modeswitchIconColor: map_get($shades, 1);
 
 //selection
 $selection-color: map_get($shades, 1);
-$selection-background-color: map_get($colors1, 4);
+$selection-background-color: $dependOnBrightnessColor;
 
 //wait-cursor
 $wait-cursor-color: $color;
