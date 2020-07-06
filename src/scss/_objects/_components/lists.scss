@@ -69,6 +69,10 @@
       line-height: normal;
     }
 
+    &__title {
+      flex: 1 0 auto;
+    }
+
     &__subtitle {
       font-size: 85%;
       opacity: 0.75;
