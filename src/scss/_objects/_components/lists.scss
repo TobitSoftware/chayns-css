@@ -69,7 +69,12 @@
       line-height: normal;
     }
 
+    &__title {
+      flex: 0 0 auto;
+    }
+
     &__subtitle {
+      margin-top: 2px;
       font-size: 85%;
       opacity: 0.75;
     }
@@ -90,10 +95,11 @@
       width: 20px;
       height: 26px;
 
+      margin: 0 2px 0 4px;
+
       line-height: 26px;
 
       padding-right: 5px;
-      padding-left: -5px;
 
       align-self: center;
 
@@ -110,7 +116,7 @@
     }
 
     &__content {
-      padding: 9px 18px 9px 29px;
+      padding: 9px 18px 9px 35px;
     }
 
     &--expanded > .list-item__header {
