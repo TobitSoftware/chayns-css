@@ -189,11 +189,11 @@ $modeswitchBorderColor: map_get($colors1, 2);
 $modeswitchIconColor: $color;
 
 //switch
-$switch-background-color: rgba(map_get($colors, 'headline'), .3);
+$switch-background-color: #976464;
 // $switch-disabled-background-color: #d5d5d5;
 $switch-button-background-color: #ffffff;
 // $switch-disabled-button-background-color: #bdbdbd;
-$switch-checked-background-color: rgba(map_get($colors, 'headline'), .7);
+$switch-checked-background-color: #349044;
 
 //radio / checkbox
 $checkbox-background-color: map_get($colors1, 2);
