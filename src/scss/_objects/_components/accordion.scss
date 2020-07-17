@@ -40,7 +40,7 @@
   max-height: 32px;
   align-self: flex-start;
 
-  .accordion>&>.accordion__head__title, .accordion>&>.accordion__head__right {
+  .accordion.accordion--open>&>.accordion__head__right {
     align-self: flex-start;
   }
 
@@ -55,7 +55,7 @@
     }
   }
 
-  .accordion.accordion--wrapped.accordion--open>& {
+  .accordion.accordion--wrapped>& {
     min-height: 40px;
   }
 
