@@ -1,6 +1,5 @@
 @import '../../_color';
 
-// @deprecated
 .cc__list {
   .list-item {
     border-bottom: 1px solid transparent;
@@ -25,7 +24,8 @@
     &__header {
       display: flex;
       flex-direction: row;
-      height: 64px;
+      align-items: center;
+      min-height: 64px;
       padding: 12px 9px;
     }
 
