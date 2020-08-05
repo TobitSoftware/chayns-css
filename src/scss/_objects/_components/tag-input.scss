@@ -1,9 +1,6 @@
 @import '../../_color.scss';
 
 $tag-height: 24px;
-$tag-color: map_get($colors, '203');
-$tag-selected-color: mix($tag-color, map_get($colors, 'headline'), 80%);
-$tag-icon-color: map_get($colors, 'text');
 
 .cc__tag-input {
   display: flex;
@@ -31,7 +28,8 @@ $tag-icon-color: map_get($colors, 'text');
 
 .cc__tag {
   display: inline-block;
-  background-color: $tag-color;
+  background-color: map_get($colors, '203');
+  background-color: var(--chayns-color--203);
 
   padding-left: 10px;
 
@@ -50,12 +48,13 @@ $tag-icon-color: map_get($colors, 'text');
   overflow: hidden;
 
   &--selected {
-    background-color: $tag-selected-color;
+    background-color: mix(map_get($colors, '203'), map_get($colors, 'headline'), 80%);
   }
 
   .icon {
 
-    color: $tag-icon-color;
+    color: map_get($colors, 'text');
+    color: var(--chayns-color--text);
 
     padding: 4px 10px;
 

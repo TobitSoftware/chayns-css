@@ -52,7 +52,7 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
       margin: 0 8px 0 3px;
       text-align: center;
       flex: 0 0 auto;
-      color: $contextmenu-icon-color;
+      color: map_get($colors, headline);
     }
 
     &__text {

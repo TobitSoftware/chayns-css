@@ -2,11 +2,13 @@
 
 footer {
   font-size: 0.85rem;
-  color: $footer-color;
+  color: map_get($colors, '005');
+  color: var(--chayns-color--005);
   margin: 10px 0 0;
 
   & a {
-    color: $footer-color;
+    color: map_get($colors, '005');
+    color: var(--chayns-color--005);
     letter-spacing: -0.3px;
   }
 }

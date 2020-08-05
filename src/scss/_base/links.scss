@@ -7,7 +7,10 @@ a {
   text-decoration: none;
 
   &:not(.no-link-style) {
-    border-bottom: solid 1px rgba(map_get($colors, text), 0.4);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(map_get($colors, text), 0.4);
+    border-bottom-color: rgba(var(--chayns-color-rgb--text), 0.4);
   }
 
   &:hover,

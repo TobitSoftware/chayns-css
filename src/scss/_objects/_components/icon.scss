@@ -5,7 +5,8 @@
 .react-chayns-icon {
   font-size: round($base-font-size);
   color: map_get($colors, headline);
-  
+  color: var(--chayns-color-headline);
+
   .button & {
     font-size: inherit;
     color: inherit;
@@ -23,8 +24,9 @@
 
 .chayns__icon {
   color: map_get($colors, headline);
+  color: var(--chayns-color-headline);
   font-size: round($base-font-size);
-  
+
   .button & {
     font-size: inherit;
     color: inherit;

@@ -2,41 +2,50 @@
 
 .chayns__background-color {
   background-color: $color;
+  background-color: var(--chayns-color-primary);
 }
 
 .chayns__color {
   color: $color;
+  color: var(--chayns-color-primary);
 }
 
 .chayns__border-color {
   border-color: $color;
+  border-color: var(--chayns-color-primary);
 }
 
 @each $key, $color in $colors {
   .chayns__background-color--#{$key} {
     background-color: $color;
+    background-color: var(--chayns-color-#{$key});
   }
 
   .chayns__color--#{$key} {
     color: $color;
+    color: var(--chayns-color-#{$key});
   }
 
   .chayns__border-color--#{$key} {
     border-color: $color;
+    border-color: var(--chayns-color-#{$key});
   }
 }
 
 @each $key, $color in $colors {
   .chayns__background-color--#{$key}i {
     background-color: $color !important;
+    background-color: var(--chayns-color-#{$key}) !important;
   }
 
   .chayns__color--#{$key}i {
     color: $color !important;
+    color: var(--chayns-color-#{$key}) !important;
   }
 
   .chayns__border-color--#{$key}i {
     border-color: $color !important;;
+    border-color: var(--chayns-color-#{$key}) !important;;
   }
 }
 

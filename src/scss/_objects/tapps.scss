@@ -18,7 +18,8 @@
   padding: 15px 10px 20px;
   width: 100%;
   max-width: 100vw;
-  color: $base-text-color;
+  color: map_get($colors, text);
+  color: var(--chayns-color--text);
 }
 
 // hint-box used for hints (e.g. "Only visible for admins")
