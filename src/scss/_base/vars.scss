@@ -8,4 +8,19 @@
     --chayns-color--#{$name}: #{$color};
     --chayns-color-rgb--#{$name}: #{red($color), green($color), blue($color)};
   }
+
+  @each $name, $color in $red {
+    --chayns-color--red-#{$name}: #{$color};
+    --chayns-color-rgb--red-#{$name}: #{red($color), green($color), blue($color)};
+  }
+
+  @each $name, $color in $yellow {
+    --chayns-color--yellow-#{$name}: #{$color};
+    --chayns-color-rgb--yellow-#{$name}: #{red($color), green($color), blue($color)};
+  }
+
+  @each $name, $color in $green {
+    --chayns-color--green-#{$name}: #{$color};
+    --chayns-color-rgb--green-#{$name}: #{red($color), green($color), blue($color)};
+  }
 }
