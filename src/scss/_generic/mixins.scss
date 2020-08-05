@@ -31,3 +31,13 @@
   }
 
 }
+
+@mixin chayns-color($property-name, $color-name){
+  #{$property-name}: map_get($colors, #{$color-name});
+  #{$property-name}: var(--chayns-color--#{$color-name});
+}
+
+@mixin chayns-color-important($property-name, $color-name){
+  #{$property-name}: map_get($colors, #{$color-name})!important;
+  #{$property-name}: var(--chayns-color--#{$color-name})!important;
+}

@@ -1,4 +1,5 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 .accordion {
   margin-top: 10px;
@@ -14,11 +15,11 @@
   will-change: border, background-color, margin-bottom;
 
   &:not(.accordion--wrapped) {
-    border-bottom-color: $accordion-border-bottom-color;
+    @include chayns-color(border-bottom-color, 'headline');
   }
 
   &:hover {
-    background-color: $accordion-hover-background-color;
+    @include chayns-color(background-color, '100');
   }
 }
 
@@ -85,7 +86,7 @@
     will-change: font-size, font-weight;
   }
   .accordion__head__icon {
-    color: $accordion-arrow-color;
+    @include chayns-color(color, 'headline');
     width: 25px;
     height: 25px;
     display: flex;

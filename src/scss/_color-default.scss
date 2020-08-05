@@ -54,7 +54,8 @@ $colors: (
         'headline': $color,
         'text': #222222,
         'header-bar': $headerBarColor,
-        'cw-background': $cwBackgroundColor
+        'cw-background': $cwBackgroundColor,
+        'dependOnBrightness': $dependOnBrightnessColor,
 );
 
 $colors1: (

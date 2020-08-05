@@ -1,13 +1,17 @@
 @import '../_color';
+@import '../_generic/mixins';
 
-::-moz-selection {
-  color: $selection-color;
-  background: $selection-background-color;
+@mixin selection{
+  color: #FFFFFF;
+  @include chayns-color(background-color, 'dependOnBrightness')
 }
 
 ::selection {
-  color: $selection-color;
-  background: $selection-background-color;
+  @include selection;
+}
+
+::-moz-selection {
+  @include selection;
 }
 
 .chayns--noSelection {
