@@ -16,8 +16,7 @@ $headline-sizes: (
   font-weight: normal;
   font-size: $font-size;
   font-family: $headline-font-family;
-  color: map_get($colors, headline);
-  color: var(--chayns-color--headline);
+  @include chayns-color(color, 'headline');
 }
 
 @for $i from 1 through 5 {

@@ -109,7 +109,7 @@
   .button.button--secondary {
     &:not(.button--disabled) {
       &:hover {
-        @include chayns-color(background-color, '104');
+        @include chayns-color(background-color, '203');
       }
     }
   }

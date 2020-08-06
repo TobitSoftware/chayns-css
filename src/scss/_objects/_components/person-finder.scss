@@ -1,4 +1,5 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 // @deprecated
 $image-size: 50px;
@@ -12,11 +13,10 @@ $image-size-small: 40px;
   }
 
   &__overlay {
-    background-color: map_get($colors, '101');
-    background-color: var(--chayns-color--101);
-    border: 1px solid map_get($colors, '104');
-    border: 1px solid var(--chayns-color--104);
-    //scroll-behavior: smooth;
+    @include chayns-color(background-color, '101');
+    @include chayns-color(border-color, '104');
+    border-width: 1px;
+    border-style: solid;
   }
 
   .cc__input-box {
@@ -48,13 +48,11 @@ $image-size-small: 40px;
     }
 
     > div.cc__person-finder__results-list > :nth-child(2n) {
-      background-color: map_get($colors, '102');
-      background-color: var(--chayns-color--102);
+      @include chayns-color(background-color, '102');
     }
 
     .load-more, .divider {
-      background-color: map_get($colors, '101') !important;
-      background-color: var(--chayns-color--101) !important;
+      @include chayns-color-important(background-color, '101');
     }
 
     .result-item {
@@ -66,8 +64,7 @@ $image-size-small: 40px;
       transition: background-color 0.2s linear;
 
       &--focused, &:hover, &:focus {
-        background-color: map_get($colors, '103') !important;
-        background-color: var(--chayns-color--103) !important;
+        @include chayns-color-important(background-color, '103');
       }
 
       .img {
@@ -109,16 +106,14 @@ $image-size-small: 40px;
 
         .identifier {
           font-size: 75%;
-          color: map_get($colors, 'text');
-          color: var(--chayns-color--text);
+          @include chayns-color(color, 'text');
           opacity: 0.6;
         }
       }
 
       .relation {
         font-size: 75%;
-        color: map_get($colors, 'text');
-        color: var(--chayns-color--text);
+        @include chayns-color(color, 'text');
         opacity: 0.6;
         line-height: 1.5;
         padding-top: 4px;

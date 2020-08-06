@@ -76,5 +76,5 @@
 
 // Chayns Web Body Background
 .cw-body-background-color {
-  background-color: $cwBodyBackgroundColor;
+  @include chayns-color(background-color, 'cw-body-background');
 }

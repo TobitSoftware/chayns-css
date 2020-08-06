@@ -3,7 +3,7 @@
 
 @mixin selection{
   color: #FFFFFF;
-  @include chayns-color(background-color, 'dependOnBrightness')
+  @include chayns-color(background-color, 'depend-on-brightness')
 }
 
 ::selection {

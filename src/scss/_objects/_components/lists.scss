@@ -5,14 +5,14 @@
   .list-item {
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    @include chayns-color(border-bottom-color, 'headline');
+    @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
 
     &:last-child{
       border-bottom: none;
     }
 
     .accordion &, .list-item & {
-      @include chayns-color-opacity(border-bottom-color, 'headline', 0.5);
+      @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
     }
 
     &--clickable:hover, &--expanded {

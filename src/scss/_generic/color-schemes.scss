@@ -1,51 +1,43 @@
 @import '../_color';
+@import '../_generic/mixins';
 
 .chayns__background-color {
-  background-color: $color;
-  background-color: var(--chayns-color--primary);
+  @include chayns-color(background-color, 'primary');
 }
 
 .chayns__color {
-  color: $color;
-  color: var(--chayns-color--primary);
+  @include chayns-color(color, 'primary');
 }
 
 .chayns__border-color {
-  border-color: $color;
-  border-color: var(--chayns-color--primary);
+  @include chayns-color(border-color, 'primary');
 }
 
 @each $key, $color in $colors {
   .chayns__background-color--#{$key} {
-    background-color: $color;
-    background-color: var(--chayns-color--#{$key});
+    @include chayns-color(background-color, #{$key});
   }
 
   .chayns__color--#{$key} {
-    color: $color;
-    color: var(--chayns-color--#{$key});
+    @include chayns-color(color, #{$key});
   }
 
   .chayns__border-color--#{$key} {
-    border-color: $color;
-    border-color: var(--chayns-color--#{$key});
+    @include chayns-color(border-color, #{$key});
   }
 }
 
 @each $key, $color in $colors {
   .chayns__background-color--#{$key}i {
-    background-color: $color !important;
-    background-color: var(--chayns-color--#{$key}) !important;
+    @include chayns-color-important(background-color, #{$key});
   }
 
   .chayns__color--#{$key}i {
-    color: $color !important;
-    color: var(--chayns-color--#{$key}) !important;
+    @include chayns-color-important(color, #{$key});
   }
 
   .chayns__border-color--#{$key}i {
-    border-color: $color !important;;
-    border-color: var(--chayns-color--#{$key}) !important;;
+    @include chayns-color-important(border-color, #{$key});
   }
 }
 

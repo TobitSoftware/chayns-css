@@ -8,12 +8,9 @@
 }
 
 @mixin chayns-placeholder--invalid() {
-  @include chayns-color-important(color, 'red-2');
+  @include chayns-color-important(color, 'wrong');
   font-weight: 700;
 }
-
-$input-border-color: '104';
-$input-border-focus-color: '109';
 
 .input {
   &::-webkit-input-placeholder {
@@ -78,7 +75,7 @@ $input-border-focus-color: '109';
   box-shadow: none;
   background-color: transparent;
   border: 1px solid transparent;
-  @include chayns-color(border-bottom-color, $input-border-color);
+  @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
   border-radius: 0;
   color: $input-color;
   cursor: text;
@@ -87,7 +84,7 @@ $input-border-focus-color: '109';
   transition: border-color 0.4s, color 0.4s, font-weight 0.4s;
 
   &:focus {
-    @include chayns-color(border-bottom-color, $input-border-focus-color);
+    @include chayns-color-opacity(border-bottom-color, 'headline', 0.9);
   }
 
   &--disabled{

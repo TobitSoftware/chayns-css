@@ -5,7 +5,7 @@
   display: none;
 
   & + label {
-    @include chayns-color(background-color, 'red-2');
+    @include chayns-color(background-color, 'red');
     width: 28px;
     height: 13px;
     border-radius: 8px;
@@ -32,7 +32,7 @@
   }
 
   &:checked + label {
-    @include chayns-color(background-color, 'green-2');
+    @include chayns-color(background-color, 'green');
   }
 
   &:disabled + label {

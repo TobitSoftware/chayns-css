@@ -1,3 +1,5 @@
+@import '../../_generic/mixins';
+
 // @deprecated: this styles have been moved to chayns components, remove it here in next minor version
 .cc__slider {
   width: 100%;
@@ -69,16 +71,13 @@
       height: 10px;
       width: 100%;
       transform: translateY(-50%);
-      background-color:  map_get($colors, '102');
-      background-color:  map_get($colors, '102');
-      background-color:  var(--chayns-color--102);
+      @include chayns-color(background-color, '102');
       cursor: pointer;
 
       &__inner {
         height: 100%;
         position: absolute;
-        background-color: map_get($colors, 'primary');
-        background-color: var(--chayns-color--primary);
+        @include chayns-color(background-color, 'primary');
       }
     }
 

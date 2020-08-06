@@ -1,4 +1,5 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 $progress-bar-track: map_get($colors, '100');
 $progress-bar-indicator: map_get($colors, 'primary');
@@ -11,15 +12,13 @@ $progress-bar-text: map_get($colors, 'headline');
     border-radius: 2px;
     height: 10px;
     overflow: hidden;
-    background-color: map_get($colors, '100');
-    background-color: var(--chayns-color--100);
+    @include chayns-color(background-color, '100');
   }
 
   .cc__progress-bar__indicator {
     position: absolute;
 
-    background-color: map_get($colors, 'primary');
-    background-color: var(--chayns-color--primary);
+    @include chayns-color(background-color, 'primary');
 
     height: 100%;
     left: 0;
@@ -27,8 +26,7 @@ $progress-bar-text: map_get($colors, 'headline');
   }
 
   .cc__progress-bar__text {
-    color: map_get($colors, 'headline');
-    color: var(--chayns-color--headline);
+    @include chayns-color(color, 'headline');
     font-size: 85%;
   }
 
