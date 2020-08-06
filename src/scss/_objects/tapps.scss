@@ -18,15 +18,14 @@
   padding: 15px 10px 20px;
   width: 100%;
   max-width: 100vw;
-  color: map_get($colors, text);
-  color: var(--chayns-color--text);
+  @include chayns-color(color, 'text');
 }
 
 // hint-box used for hints (e.g. "Only visible for admins")
 .tapp__hint {
   padding: 4px 8px;
-  background-color: $tapp-hint-color;
   margin-bottom: 15px;
+  @include chayns-color(background-color, '102');
 }
 
 // Tapp Intro used for intro text

@@ -1,11 +1,11 @@
 @import '../../_color';
 @import '../../_config';
+@import '../../_generic/mixins';
 
 // @deprecated
 .react-chayns-icon {
   font-size: round($base-font-size);
-  color: map_get($colors, headline);
-  color: var(--chayns-color-headline);
+  @include chayns-color(color, 'headline');
 
   .button & {
     font-size: inherit;
@@ -23,8 +23,7 @@
 }
 
 .chayns__icon {
-  color: map_get($colors, headline);
-  color: var(--chayns-color-headline);
+  @include chayns-color(color, 'headline');
   font-size: round($base-font-size);
 
   .button & {

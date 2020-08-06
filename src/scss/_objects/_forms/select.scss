@@ -1,4 +1,5 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 select::-ms-expand {
   display: none; // removes ugly ie arrow
@@ -10,10 +11,10 @@ select::-ms-expand {
   position: relative;
   justify-content: center;
   align-items: center;
-  background-color: $select-background-color;
+  @include chayns-color(background-color, '202');
   transition: box-shadow .12s ease;
   border-radius: 2px;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px $select-border-color inset;
+  //box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px $select-border-color inset;
   overflow: hidden;
 
   &:after {
@@ -29,7 +30,7 @@ select::-ms-expand {
     text-transform: none;
     line-height: 1;
     padding-left: 8px;
-    color: $select-icon-color;
+    @include chayns-color(color, 'text');
     transition: color .12s ease;
     pointer-events: none;
     height: 100%;
@@ -38,7 +39,7 @@ select::-ms-expand {
   }
 
   select {
-    color: $base-text-color;
+    @include chayns-color(color, 'text');
     appearance: none;
     border: none;
     background-color: transparent;
@@ -48,7 +49,8 @@ select::-ms-expand {
     cursor: pointer;
 
     option {
-      background-color: $select-background-color;
+      @include chayns-color(background-color, '202');
+      @include chayns-color(color, 'text');
     }
   }
 
@@ -60,9 +62,9 @@ select::-ms-expand {
 // prevents hover on mobile/in app since hover on mobile is triggered by a tap
 .chayns--desktop {
   .select:not(.select--disabled):hover {
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.09), 0 0 0 1px $select-hover-border-color inset;
+    //box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.09), 0 0 0 1px $select-hover-border-color inset;
     &:after {
-      color: $select-hover-icon-color;
+      //color: $select-hover-icon-color;
     }
   }
 }
