@@ -1,10 +1,11 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 .badge {
   padding: 2px 7px;
   border-radius: 15px;
   font-size: .8rem;
   text-align: center;
-  color: $badge-color;
-  background-color: $badge-background-color;
+  @include chayns-color(color, '007');
+  @include chayns-color(background-color, '202')
 }

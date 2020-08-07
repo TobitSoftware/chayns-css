@@ -54,7 +54,12 @@ $colors: (
         'headline': #FFFFFF,
         'text': #FFFFFF,
         'header-bar': $headerBarColor,
-        'cw-background': $cwBackgroundColor
+        'cw-background': $cwBackgroundColor,
+        'cw-body-background': $cwBodyBackgroundColor,
+        'depend-on-brightness': $dependOnBrightnessColor,
+        'red': #723F3F,
+        'green': #198B2C,
+        'wrong': #CA8181,
 );
 
 $colors1: (

@@ -1,5 +1,6 @@
 @import '../../_color';
 @import '../../_config';
+@import '../../_generic/mixins';
 
 .checkbox {
   display: none;
@@ -28,10 +29,12 @@
 
     &:before {
       transition: box-shadow 100ms ease-in-out, background-color 50ms 50ms cubic-bezier(1,0,0,1);
-      background-color: $checkbox-background-color;
+      @include chayns-color(background-color, '103');
       top: 5px;
       z-index: 0;
-      border: 1px solid rgba($checkbox-checked-background-color, 0.5);
+      border-width: 1px;
+      border-style: solid;
+      @include chayns-color-opacity(border-color, '109', 0.5);
       will-change: background-color;
     }
   }
@@ -70,8 +73,9 @@
 
   &:checked:not(:disabled) + label {
     &:before{
-      box-shadow: inset 0 0 0 10px $checkbox-checked-background-color;
-      background-color: $checkbox-checked-background-color;
+      box-shadow: inset 0 0 0 10px map_get($colors, '108');
+      box-shadow: inset 0 0 0 10px var(--chayns-color--108);
+      @include chayns-color(background-color, '108');
     }
   }
 }

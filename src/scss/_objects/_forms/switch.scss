@@ -1,10 +1,11 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 .switch {
   display: none;
 
   & + label {
-    background-color: $switch-background-color;
+    @include chayns-color(background-color, 'red');
     width: 28px;
     height: 13px;
     border-radius: 8px;
@@ -18,7 +19,7 @@
       height: 16px;
       margin-top: -1.5px;
       margin-left: -3px;
-      background-color: $switch-button-background-color;
+      background-color: #FFFFFF;
       border-radius: 50%;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
       content: ' ';
@@ -31,7 +32,7 @@
   }
 
   &:checked + label {
-    background-color: $switch-checked-background-color;
+    @include chayns-color(background-color, 'green');
   }
 
   &:disabled + label {

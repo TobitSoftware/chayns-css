@@ -1,10 +1,10 @@
 @import '../_color';
+@import '../_generic/mixins';
 
-// @deprecated
 // chayns editor colors
 .chayns-editor--enabled [chayns-editor] {
-  border-color: $editor-border-color;
+  @include chayns-color(border-color, '104');
   &:hover{
-    border-color: $editor-border-hover-color;
+    @include chayns-color(border-color, '107');
   }
 }

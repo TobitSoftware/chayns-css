@@ -1,9 +1,15 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
-// @deprecated
+$file-input-color: 'headline';
+$file-input-border-color: '005';
+$file-input-border-hover-color: 'headline';
+
 .cc__file-input {
-  border: 1px dashed $file-input-border-color;
-  color: $file-input-color;
+  border-width: 1px;
+  border-style: dashed;
+  @include chayns-color(border-color, $file-input-border-color);
+  @include chayns-color(color, $file-input-color);
   overflow: hidden;
   transition: border .1s;
 
@@ -34,7 +40,7 @@
 
   &--hover {
     height: 70px;
-    background-color: rgba($color, 0.1);
+    @include chayns-color-opacity(background-color, 'primary', 0.1);
 
     .cc__file-input__icon {
     }
@@ -63,11 +69,15 @@
   }
 
   &:hover, &--hover {
-    border: 1px dashed $file-input-border-hover-color;
+    border-width: 1px;
+    border-style: dashed;
+    @include chayns-color(border-color, $file-input-border-hover-color);
 
     .cc__file-input__split {
       &:not(:last-child) {
-        border-right: 1px dashed $file-input-border-hover-color;
+        border-right-width: 1px;
+        border-right-style: dashed;
+        @include chayns-color(border-right-color, $file-input-border-hover-color);
       }
 
       &:not(:hover) {
@@ -88,7 +98,9 @@
     }
 
     &:not(:last-child) {
-      border-right: 1px dashed $file-input-border-color;
+      border-right-width: 1px;
+      border-right-style: dashed;
+      @include chayns-color(border-right-color, $file-input-border-color);
     }
   }
 }

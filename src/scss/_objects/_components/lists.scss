@@ -1,20 +1,22 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 .cc__list {
   .list-item {
-    border-bottom: 1px solid transparent;
-    border-bottom-color: $accordion-border-bottom-color;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
 
     &:last-child{
       border-bottom: none;
     }
 
     .accordion &, .list-item & {
-      border-bottom-color: $accordion-item-border-bottom-color;
+      @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
     }
 
     &--clickable:hover, &--expanded {
-      background-color: $accordion-hover-background-color;
+      @include chayns-color(background-color, '100');
     }
 
     &--clickable > .list-item__header {
@@ -109,7 +111,7 @@
         transition: transform .3s;
 
         .ts-icon {
-          color: $accordion-arrow-color;
+          @include chayns-color(color, 'headline');
           font-size: 20px;
         }
       }

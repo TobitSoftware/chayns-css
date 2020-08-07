@@ -1,25 +1,26 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 // @deprecated
 
-$contextmenu-border: 1px solid $contextmenu-border-color;
+$contextmenu-border: 1px solid rgba(0, 0, 0, .1);;
 
 .context-menu {
   position: absolute;
-  background-color: $contextmenu-background-color;
+  @include chayns-color(background-color, '100');
   z-index: 900;
   opacity: 0;
   transition: opacity 0.35s ease-in-out;
   box-shadow: 1px 3px 8px rgba(0, 0, 0, .3);
   border: $contextmenu-border;
-  color: $contextmenu-color;
+  @include chayns-color(color, '102');
 
   &:after {
     content: "";
     width: 14px;
     height: 14px;
     position: absolute;
-    background-color: $contextmenu-background-color;
+    @include chayns-color(background-color, '100');
     box-shadow: -2px -2px 5px rgba(0, 0, 0, .05);
     border-top: $contextmenu-border;
     border-left: $contextmenu-border;
@@ -31,7 +32,7 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
       text-align: center;
       font-size: 18px;
       cursor: pointer;
-      color: map_get($colors, 'headline');
+      @include chayns-color(color, 'headline');
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -44,7 +45,7 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
     display: flex;
 
     &:hover {
-      background-color: $contextmenu-hover-background-color;
+      @include chayns-color(background-color, '103');
     }
 
     &__icon {
@@ -52,7 +53,7 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
       margin: 0 8px 0 3px;
       text-align: center;
       flex: 0 0 auto;
-      color: $contextmenu-icon-color;
+      @include chayns-color(color, 'headline');
     }
 
     &__text {
@@ -137,8 +138,8 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
 .image-tool {
   height: 32px;
   width: 32px;
-  background-color: $image-tool-background-color;
-  color: $image-tool-color !important;
+  background-color: #FFFFFF;
+  @include chayns-color-important(color, 'primary');
   cursor: pointer;
   text-align: center;
   display: flex;
@@ -146,6 +147,6 @@ $contextmenu-border: 1px solid $contextmenu-border-color;
   flex-direction: column;
 
   i {
-    color: $image-tool-color !important;
+    @include chayns-color-important(color, 'primary');
   }
 }

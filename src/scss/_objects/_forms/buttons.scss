@@ -60,13 +60,13 @@
 .button {
   min-height: 30px;
   padding: 7px 12px;
-  color: $button-color;
-  background-color: $button-background-color;
+  color: #FFFFFF;
+  @include chayns-color(background-color, '108');
   box-shadow: 1px 2px 3px rgba(0, 0, 0, .2);
 
   &.button--secondary {
-    color: $button2-color;
-    background-color: $button2-background-color;
+    @include chayns-color(color, 'text');
+    @include chayns-color(background-color, '202');
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
   }
 
@@ -81,12 +81,12 @@
 
 // Choose Button
 .choosebutton {
-  color: $choosebutton-color;
+  @include chayns-color(color, 'text');
   min-height: 27px;
   padding: 6px 10px;
   font-size: 0.95rem;
   font-weight: normal;
-  background-color: $choosebutton-background-color;
+  @include chayns-color(background-color, '202');
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.09);
 
   &__icon {
@@ -102,14 +102,14 @@
 .chayns--desktop {
   .button {
     &:not(.button--disabled):hover, &--show-focus:focus {
-      background-color: $button-hover-background-color;
+      @include chayns-color(background-color, '109');
     }
   }
 
   .button.button--secondary {
     &:not(.button--disabled) {
       &:hover {
-        background-color: $button2-hover-background-color;
+        @include chayns-color(background-color, '203');
       }
     }
   }
@@ -117,7 +117,7 @@
   .choosebutton {
     &:not(.button--disabled) {
       &:hover {
-        background-color: $choosebutton-hover-background-color;
+        @include chayns-color(background-color, '203');
       }
     }
   }

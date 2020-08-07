@@ -1,4 +1,5 @@
 @import "../../_color";
+@import '../../_generic/mixins';
 
 // @deprecated
 .calendar {
@@ -12,7 +13,7 @@
   }
 
   &__navigate {
-    position:absolute;
+    position: absolute;
     cursor: pointer;
     opacity: 0.8;
 
@@ -184,9 +185,7 @@
   }
 }
 
-@media screen
-and (max-width: 450px)
-and (orientation: portrait) {
+@media screen and (max-width: 450px) and (orientation: portrait) {
   .calendar__months {
     position: relative;
     display: flex;
@@ -214,6 +213,7 @@ and (orientation: portrait) {
 .is-marked {
   opacity: 0.7;
 }
+
 .is-marked-is-highlighted {
   background-color: #228b22;
   border: 0.1em solid #fff;
@@ -241,12 +241,12 @@ and (orientation: portrait) {
 .cc__calendar {
   .is-marked-is-highlighted {
     border: none;
-    background-color: $calendar-highlighted-background-color;
-    color: $calendar-highlighted-color;
+    @include chayns-color(background-color, '203');
+    @include chayns-color(color, 'headline');
   }
 
   .is-selected {
-    background-color: $calendar-selected-background-color;
-    color: $calendar-selected-color;
+    @include chayns-color(background-color, '104');
+    @include chayns-color(color, 'headline');
   }
 }
