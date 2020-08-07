@@ -13,7 +13,7 @@
   border-width: 1px;
   border-style: solid;
   @include chayns-color(border-color, '102');
-  color: $base-text-color;
+  @include chayns-color(color, 'text');
   z-index: 3;
 }
 
