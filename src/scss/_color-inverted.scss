@@ -120,56 +120,7 @@ $green: (
         4: #cde3ce,
 );
 
-//base config colors
-$base-text-color: map_get($shades, 1);
-
-//anchor
-$anchor-color: map_get($shades, 1);
-
-//accordion
-$accordion-border-bottom-color: map_get($shades, 4);
-$accordion-hover-background-color: map_get($colors, '100');
-$accordion-arrow-color: map_get($shades, 4);
-$accordion-item-border-bottom-color: map_get($shades, 5);
-$accordion-open-background-color: map_get($colors, '100');
-
-//badge
-$badge-color: map_get($shades, 3);
-$badge-background-color: map_get($colors2, 2);
-
-//buttons
-$button-color: map_get($shades, 1);
-$button-background-color: map_get($colors2, 1);
-$button-hover-background-color: map_get($colors2, 2);
-
-//secondary button
-$button2-color: map_get($shades, 1);
-$button2-background-color: map_get($colors2, 3);
-$button2-hover-background-color: map_get($colors2, 2);
-
-//choosebutton
-$choosebutton-color: map_get($shades, 1);
-$choosebutton-background-color: map_get($colors2, 3);
-$choosebutton-hover-background-color: map_get($colors2, 2);
-
-//contextmenu
-$contextmenu-color: map_get($shades, 1);
-$contextmenu-background-color: map_get($colors4, 3);
-$contextmenu-hover-background-color: map_get($colors4, 1);
-$contextmenu-border-color: rgba(0, 0, 0, .1);
-$contextmenu-icon-color: map_get($shades, 1);
-$image-tool-background-color: map_get($shades, 1);
-$image-tool-color: $color;
-
-//select
-$select-background-color: map_get($colors2, 3);
-$select-border-color: transparent;
-$select-icon-color: map_get($shades, 1);
-$select-hover-icon-color: map_get($shades, 1);
-$select-hover-border-color: transparent;
-
 //content_card
-$content-card-background-color: map_get($colors, '100');
 $content-card-success-border-color: map_get($green, 1);
 $content-card-success-background-color: map_get($green, 4);
 $content-card-success-color: #222222;
@@ -180,55 +131,7 @@ $content-card-danger-border-color: map_get($red, 1);
 $content-card-danger-background-color: map_get($red, 4);
 $content-card-danger-color: #222222;
 
-//forms
-//input / dynamic-input
-$input-placeholder-color: map_get($shades, 5);
-$input-placeholder-required-color: map_get($red, 3);
-$input-border-color: map_get($shades, 4);
-$input-color: $base-text-color;
-$input-focus-border-bottom-color: map_get($shades, 1);
-
-//switch
-$switch-background-color: #723F3F;
-$switch-checked-background-color: #198B2C;
-$switch-button-background-color: #ffffff;
-
-//radio / checkbox
-$checkbox-background-color: map_get($colors2, 2);
-$checkbox-checked-background-color: map_get($colors2, 1);
-
-//headlines
-$h1-color: map_get($shades, 1);
-$h2-color: map_get($shades, 1);
-$h3-color: map_get($shades, 1);
-$h4-color: map_get($shades, 1);
-$h5-color: map_get($shades, 1);
-
-//footer
-$footer-color: rgba(255, 255, 255, 0.4);
-
-//modeswitch
-$modeswitchBackgroundColor: map_get($colors4, 3);
-$modeswitchBorderColor: map_get($colors3, 2);
-$modeswitchIconColor: map_get($shades, 1);
-
-//selection
-$selection-color: map_get($shades, 1);
-$selection-background-color: $dependOnBrightnessColor;
-
-//wait-cursor
-$wait-cursor-color: $color;
-$wait-cursor-background-color: map_get($shades, 1);
-$wait-cursor-color-no-background: map_get($shades, 1);
-
-//tapp
-$tapp-hint-color: map_get($colors2, 3);
-
-//person finder
-$finder-result-background-color: map_get($colors4, 3);
-$finder-result-border-color: map_get($colors3, 2);
-$finder-result-hover-background-color: map_get($colors4, 2);
-
+// @deprecated: will be removed in next minor version
 //receiver input
 $receiver-popup-group-headline-background-color: map_get($colors3, 4);
 $receiver-popup-chosen-member-background-color: map_get($colors3, 4);
@@ -239,53 +142,9 @@ $receiver-popup-image-border: map_get($shades, 6);
 $receiver-popup-item-hover: map_get($colors3, 4);
 $receiver-popup-item-even: map_get($colors4, 3);
 $receiver-popup-item-odd: map_get($colors3, 3);
-
+$input-border-color: map_get($shades, 4);
 //setup wizard
 $wizard-step-ready-background-color: map_get($colors3, 1);
 $wizard-step-ready-color: map_get($shades, 1);
 $wizard-step-notReady-background-color: map_get($colors3, 2);
 $wizard-step-notReady-color: map_get($shades, 3);
-
-//file input
-$file-input-color: map_get($shades, 1);
-$file-input-border-color: map_get($shades, 5);
-$file-input-border-hover-color: map_get($shades, 3);
-
-//tooltip
-$tooltip-trigger-underline-color: map_get($shades, 4);
-$tooltip-background-color: map_get($colors4, 3);
-
-//bubble
-$bubble-background-color: map_get($colors4, 3);
-
-//slider
-$slider-range-background-color: map_get($colors, 'primary');
-$slider-track-background-color: map_get($colors, '102');
-$slider-dot-background-color: #ffffff;
-
-//calendar
-$calendar-selected-background-color: $color;
-$calendar-highlighted-background-color: map_get($colors1, 2);
-$calendar-selected-color: map_get($shades, 1);
-$calendar-highlighted-color: $color;
-
-//image accordion
-$image-accordion-arrow-color: map_get($colors3, 3);
-$image-accordion-content-show: map_get($colors3, 3);
-$image-accordion-hover: map_get($colors3, 3);
-$image-accordion-image: map_get($colors3, 2);
-
-//image accordion in accordion
-$image-accordion-wrapped-arrow-color: map_get($colors3, 2);
-$image-accordion-wrapped-content-show: map_get($colors3, 2);
-$image-accordion-wrapped-hover: map_get($colors3, 2);
-$image-accordion-wrapped-image: map_get($colors3, 1);
-
-//chayns editor
-$editor-border-color: map_get($shades, 5);
-$editor-border-hover-color: map_get($shades, 3);
-
-//progress-bar
-$progress-bar-track: map_get($colors, '100');
-$progress-bar-indicator: map_get($colors, 'primary');
-$progress-bar-text: map_get($colors, 'headline');
