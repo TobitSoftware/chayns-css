@@ -77,7 +77,7 @@
   border: 1px solid transparent;
   @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
   border-radius: 0;
-  color: $input-color;
+  @include chayns-color(color, 'text');
   cursor: text;
   -webkit-user-modify: read-write-plaintext-only;
   -webkit-appearance: none;
