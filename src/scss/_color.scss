@@ -57,7 +57,12 @@ $colors: (
         'headline': $color,
         'text': #222222,
         'header-bar': $headerBarColor,
-        'cw-background': $cwBackgroundColor
+        'cw-background': $cwBackgroundColor,
+        'cw-body-background': $cwBodyBackgroundColor,
+        'depend-on-brightness': $dependOnBrightnessColor,
+        'red': #976464,
+        'green': #349044,
+        'wrong': #96060B,
 );
 
 // deprecated color palettes. Will be removed in next minor or major version
@@ -202,9 +207,6 @@ $h2-color: $color;
 $h3-color: $color;
 $h4-color: $color;
 $h5-color: $color;
-
-//footer
-$footer-color: map_get($colors, '005');
 
 //modeswitch
 $modeswitchBackgroundColor: map_get($colors1, 1);

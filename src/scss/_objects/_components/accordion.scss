@@ -1,4 +1,5 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 .accordion {
   margin-top: 10px;
@@ -14,11 +15,11 @@
   will-change: border, background-color, margin-bottom;
 
   &:not(.accordion--wrapped) {
-    border-bottom-color: $accordion-border-bottom-color;
+    @include chayns-color(border-bottom-color, 'headline');
   }
 
   &:hover {
-    background-color: $accordion-hover-background-color;
+    @include chayns-color(background-color, '100');
   }
 }
 
@@ -85,7 +86,7 @@
     will-change: font-size, font-weight;
   }
   .accordion__head__icon {
-    color: $accordion-arrow-color;
+    @include chayns-color(color, 'headline');
     width: 25px;
     height: 25px;
     display: flex;
@@ -165,7 +166,9 @@
   padding: 8px 9px;
   min-height: 38px;
   height: inherit;
-  border-top: 1px solid $accordion-item-border-bottom-color;
+  border-top-width: 1px;
+  border-top-style: solid;
+  @include chayns-color-opacity(border-top-color, 'headline', 0.5);
 
   &:before {
     display: none;
@@ -179,7 +182,9 @@
 // if this accordion is in another accordion
 .accordion--wrapped {
   margin: 0;
-  border-top: 1px solid $accordion-item-border-bottom-color;
+  border-top-width: 1px;
+  border-top-style: solid;
+  @include chayns-color-opacity(border-top-color, 'headline', 0.5);
 
   & > .accordion__head {
     height: 40px;
@@ -218,7 +223,7 @@
 .accordion--open {
   &.accordion:not(.accordion--wrapped) {
     margin-bottom: 30px;
-    background-color: $accordion-open-background-color;
+    @include chayns-color(background-color, '100');
     border-color: transparent;
     & > .accordion__head {
       height: 38px;

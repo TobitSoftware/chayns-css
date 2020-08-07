@@ -1,13 +1,14 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 //input preperation
 @mixin chayns-placeholder() {
-  color: $input-placeholder-color;
+  @include chayns-color-opacity(color, 'text', 0.45);
   transition: opacity 150ms ease-in-out;
 }
 
 @mixin chayns-placeholder--invalid() {
-  color: $input-placeholder-required-color !important;
+  @include chayns-color-important(color, 'wrong');
   font-weight: 700;
 }
 
@@ -74,7 +75,7 @@
   box-shadow: none;
   background-color: transparent;
   border: 1px solid transparent;
-  border-bottom-color: $input-border-color;
+  @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
   border-radius: 0;
   color: $input-color;
   cursor: text;
@@ -83,7 +84,7 @@
   transition: border-color 0.4s, color 0.4s, font-weight 0.4s;
 
   &:focus {
-    border-bottom-color: $input-focus-border-bottom-color;
+    @include chayns-color-opacity(border-bottom-color, 'headline', 0.9);
   }
 
   &--disabled{
@@ -96,8 +97,7 @@
   }
 
   &--invalid {
-    color: $input-placeholder-required-color !important;
-    font-weight: 700 !important;
+    @include chayns-placeholder--invalid
   }
 }
 

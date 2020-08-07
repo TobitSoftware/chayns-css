@@ -1,8 +1,9 @@
 @import '../_color';
+@import '../_generic/mixins';
 
 .content__card {
   padding: 8px 12px;
-  background-color: $content-card-background-color;
+  @include chayns-color(background-color, '100');
 
   &:not(:last-child) {
     margin-bottom: 8px;

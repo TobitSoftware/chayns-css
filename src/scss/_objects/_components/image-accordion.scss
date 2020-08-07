@@ -1,4 +1,5 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 // @deprecated
 .cc__image-accordion {
@@ -18,7 +19,7 @@
     }
 
     .no-image {
-        background-color: $image-accordion-image;
+        @include chayns-color(background-color, '102');
     }
 
     .image-accordion-container {
@@ -29,7 +30,7 @@
             display: block;
             width: 10px;
             border: 12px solid transparent;
-            border-bottom-color: $image-accordion-arrow-color;
+            @include chayns-color(border-bottom-color, '100');
         }
         .no-arrow {
             display: none;
@@ -44,7 +45,7 @@
             cursor: pointer;
             padding-top: 10px;
             & .wrapper:hover {
-                background-color: $image-accordion-hover;
+                @include chayns-color(background-color, '100');
             }
         }
         >.image-accordion-body {
@@ -58,12 +59,12 @@
             & .image-accordion-content {
                 width: 100%;
                 float: left;
-                max-height: 0px;
+                max-height: 0;
                 overflow: hidden;
                 &.show {
                     padding: 10px 9px 9px 10px;
                     max-height: 9999px;
-                    background-color: $image-accordion-content-show;
+                    @include chayns-color(background-color, '100');
                 }
             }
         }
@@ -87,8 +88,8 @@
     }
 
     .headline {
-        border-bottom: 0px;
-        margin-bottom: 0px;
+        border-bottom: 0;
+        margin-bottom: 0;
         min-height: 24px;
     }
 
@@ -116,21 +117,21 @@
 .accordion {
     .cc__image-accordion {
         .no-image {
-            background-color: $image-accordion-wrapped-image;
+            @include chayns-color(background-color, '103');
         }
         .image-accordion-container {
             .arrow {
-                border-bottom-color: $image-accordion-wrapped-arrow-color;
+                @include chayns-color(border-bottom-color, '101');
             }
             & .image-accordion {
                 & .wrapper:hover {
-                    background-color: $image-accordion-wrapped-hover;
+                    @include chayns-color(background-color, '101');
                 }
             }
             >.image-accordion-body {
                 & .image-accordion-content {
                     &.show {
-                        background-color: $image-accordion-wrapped-content-show;
+                        @include chayns-color(background-color, '101');
                     }
                 }
             }
