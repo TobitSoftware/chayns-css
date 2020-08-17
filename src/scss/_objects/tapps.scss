@@ -18,14 +18,14 @@
   padding: 15px 10px 20px;
   width: 100%;
   max-width: 100vw;
-  color: $base-text-color;
+  @include chayns-color(color, 'text');
 }
 
 // hint-box used for hints (e.g. "Only visible for admins")
 .tapp__hint {
   padding: 4px 8px;
-  background-color: $tapp-hint-color;
   margin-bottom: 15px;
+  @include chayns-color(background-color, '102');
 }
 
 // Tapp Intro used for intro text
@@ -76,5 +76,5 @@
 
 // Chayns Web Body Background
 .cw-body-background-color {
-  background-color: $cwBodyBackgroundColor;
+  @include chayns-color(background-color, 'cw-body-background');
 }

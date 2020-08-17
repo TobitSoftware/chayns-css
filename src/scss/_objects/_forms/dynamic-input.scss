@@ -1,6 +1,6 @@
 @import '../../_color';
+@import './input';
 
-// @deprecated
 .input-group {
   position: relative;
 
@@ -43,7 +43,6 @@
   input,
   textarea {
     display: inline-block;
-    //padding-right: 25px;
 
     &.input {
       width: 100%;
@@ -56,7 +55,7 @@
         left: 0;
         right: 100%;
         white-space: nowrap;
-        color: $input-placeholder-color;
+        @include chayns-placeholder;
         pointer-events: none;
         transition: left 0.4s ease-out, right 0.4s ease-out,
           opacity 0.4s ease-out;
@@ -67,8 +66,7 @@
       }
 
       &[validate]:not(.valid) + label {
-        color: $input-placeholder-required-color !important;
-        font-weight: 700;
+        @include chayns-placeholder--invalid;
       }
     }
   }

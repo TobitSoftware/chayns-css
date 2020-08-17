@@ -1,26 +1,19 @@
 @import '../../_color.scss';
+@import '../../_generic/mixins';
 
 $tag-height: 24px;
-$tag-color: map_get($colors, '203');
-$tag-selected-color: mix($tag-color, map_get($colors, 'headline'), 80%);
-$tag-icon-color: map_get($colors, 'text');
 
 .cc__tag-input {
   display: flex;
   flex-wrap: wrap;
-
   -webkit-user-modify: read-only;
   -webkit-appearance: none;
-
   align-items: baseline;
 
   .cc__tag-input__input {
     margin: 5px 0 0;
-
     height: $tag-height;
-
     flex-grow: 1;
-
     overflow: hidden;
   }
 
@@ -31,18 +24,12 @@ $tag-icon-color: map_get($colors, 'text');
 
 .cc__tag {
   display: inline-block;
-  background-color: $tag-color;
-
+  @include chayns-color(background-color, '203');
   padding-left: 10px;
-
   margin: 5px 5px 0 0;
-
   user-select: none;
-
   transition: background-color 300ms;
-
   max-width: 100%;
-
   word-wrap: break-word;
   overflow-wrap: break-word;
   position: relative;
@@ -50,17 +37,14 @@ $tag-icon-color: map_get($colors, 'text');
   overflow: hidden;
 
   &--selected {
-    background-color: $tag-selected-color;
+    @include chayns-color(background-color, '206');
+
   }
 
   .icon {
-
-    color: $tag-icon-color;
-
+    @include chayns-color(color, 'text');
     padding: 4px 10px;
-
     opacity: 0.4;
-
     font-size: 14px;
 
     &:hover {

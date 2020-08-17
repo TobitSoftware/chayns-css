@@ -1,7 +1,10 @@
 @import '../../_color';
+@import '../../_generic/mixins';
 
 // @deprecated
 .cc__modeswitch {
+  $modeswitch-background-color: '100';
+  $modeswitch-border-color: '102';
   width: 100%;
   position: absolute;
   display: flex;
@@ -14,31 +17,40 @@
   transition: transform 0.25s ease-out;
   animation: modeSwitchInit 2s 0s 1 ease-out;
   z-index: 1000;
+
   &--open {
     transform: translateY(0);
   }
+
   &__content {
     width: 92%;
-    background-color: $modeswitchBackgroundColor;
-    border: 1px solid $modeswitchBorderColor;
+    @include chayns-color(background-color, $modeswitch-background-color);
+    @include chayns-color(border-color, $modeswitch-border-color);
+    border-width: 1px;
+    border-style: solid;
     border-top: none;
     padding: 20px 30px 25px;
   }
+
   &__trigger {
     width: 60px;
     height: 25px;
     line-height: 25px;
     vertical-align: middle;
     text-align: center;
-    background-color: $modeswitchBackgroundColor;
-    border: 1px solid $modeswitchBorderColor;
+    @include chayns-color(background-color, $modeswitch-background-color);
+    @include chayns-color(border-color, $modeswitch-border-color);
+    border-width: 1px;
+    border-style: solid;
     border-top: none;
     transform: translateY(-1px);
     cursor: pointer;
-    color: $modeswitchIconColor;
-    svg{
+    @include chayns-color(color, 'headline');
+
+    svg {
       animation: modeSwitchTriggerCogInit 1.5s 1.5s 1 ease;
     }
+
     &--red {
       background-color: red;
       color: white;

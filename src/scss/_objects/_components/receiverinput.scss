@@ -65,7 +65,7 @@
     border: 1px solid $receiver-popup-border-color;
     position: absolute !important;
     margin-bottom: 0 !important;
-    color: $base-text-color;
+    color: map_get($colors, 'text');
     padding: 0 !important;
     max-height: 250px;
     max-width: 650px;

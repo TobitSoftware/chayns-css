@@ -1,4 +1,5 @@
 @import '../_color';
+@import '../_generic/mixins';
 
 // Links
 a {
@@ -7,7 +8,9 @@ a {
   text-decoration: none;
 
   &:not(.no-link-style) {
-    border-bottom: solid 1px rgba(map_get($colors, text), 0.4);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    @include chayns-color-opacity(border-bottom-color, 'text', 0.4);
   }
 
   &:hover,
