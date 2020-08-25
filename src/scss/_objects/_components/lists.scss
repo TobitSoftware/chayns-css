@@ -7,7 +7,7 @@
     border-bottom-style: solid;
     @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
 
-    &:last-child{
+    &:last-child {
       border-bottom: none;
     }
 
@@ -43,6 +43,12 @@
       margin-right: 10px;
 
       flex-shrink: 0;
+
+      &--circle {
+        border-radius: 100px;
+        outline: none;
+        @include chayns-color(background-color, '102');
+      }
     }
 
     &__icon {
@@ -61,6 +67,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &--circle {
+        border-radius: 100px;
+      }
     }
 
     &__titles {
