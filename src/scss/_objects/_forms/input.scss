@@ -130,6 +130,10 @@
 
     .input__icon-right {
       margin-left: 8px;
+
+      &[class*="ts-"] {
+        font-size: 1.25em;
+      }
     }
 
     &--invalid {
