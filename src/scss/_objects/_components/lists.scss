@@ -99,6 +99,19 @@
       min-width: 0;
       flex-shrink: 0;
       align-self: center;
+
+      &--column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 85%;
+        justify-content: flex-start;
+        align-self: stretch;
+
+        &__text {
+          opacity: 0.75;
+        }
+      }
     }
 
     &__indicator {
