@@ -121,7 +121,7 @@
     @include chayns-color(background-color, '000');
     padding: 8px 10px;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
 
     .input__icon-left {
