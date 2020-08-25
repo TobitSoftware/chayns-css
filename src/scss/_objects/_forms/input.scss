@@ -2,8 +2,8 @@
 @import '../../_generic/mixins';
 
 //input preperation
-@mixin chayns-placeholder() {
-  @include chayns-color-opacity(color, 'text', 0.45);
+@mixin chayns-placeholder($color: 'text', $opacity: 0.45) {
+  @include chayns-color-opacity(color, $color, $opacity);
   transition: opacity 150ms ease-in-out;
 }
 
@@ -12,51 +12,66 @@
   font-weight: 700;
 }
 
-.input {
+@mixin input-defaults($color: 'text', $opacity: 0.45) {
   &::-webkit-input-placeholder {
-    @include chayns-placeholder();
+    @include chayns-placeholder($color, $opacity);
   }
+
   &:-ms-input-placeholder {
-    @include chayns-placeholder();
+    @include chayns-placeholder($color, $opacity);
   }
+
   &:-moz-placeholder {
-    @include chayns-placeholder();
+    @include chayns-placeholder($color, $opacity);
   }
+
   &::-moz-placeholder {
-    @include chayns-placeholder();
+    @include chayns-placeholder($color, $opacity);
   }
 
   &[validate]:not(.valid), &--invalid {
     @include chayns-placeholder--invalid();
+
     &::-webkit-input-placeholder {
       @include chayns-placeholder--invalid();
     }
+
     &:-ms-input-placeholder {
       @include chayns-placeholder--invalid();
     }
+
     &:-moz-placeholder {
       @include chayns-placeholder--invalid();
     }
+
     &::-moz-placeholder {
       @include chayns-placeholder--invalid();
     }
   }
 
-  &::-ms-clear {
-    display: none;
-  }
   &:focus::-webkit-input-placeholder {
     opacity: 0;
   }
+
   &:focus:-ms-input-placeholder {
     opacity: 0;
   }
+
   &:focus:-moz-placeholder {
     opacity: 0;
   }
+
   &:focus::-moz-placeholder {
     opacity: 0;
   }
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  cursor: text;
+  -webkit-user-modify: read-write-plaintext-only;
+  -webkit-appearance: none;
 }
 
 .input[type=number] {
@@ -70,24 +85,22 @@
 }
 
 .input {
+  @include input-defaults;
   padding: 5px 1px;
   font-weight: 300;
   box-shadow: none;
+  border-radius: 0;
   background-color: transparent;
   border: 1px solid transparent;
   @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
-  border-radius: 0;
   @include chayns-color(color, 'text');
-  cursor: text;
-  -webkit-user-modify: read-write-plaintext-only;
-  -webkit-appearance: none;
   transition: border-color 0.4s, color 0.4s, font-weight 0.4s;
 
   &:focus {
     @include chayns-color-opacity(border-bottom-color, 'headline', 0.9);
   }
 
-  &--disabled{
+  &--disabled {
     opacity: 0.6;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -98,6 +111,69 @@
 
   &--invalid {
     @include chayns-placeholder--invalid
+  }
+
+  &--border-design {
+    border-width: 1px;
+    border-style: solid;
+    @include chayns-color-opacity(border-color, 'text', 0.25);
+    border-color: rgba(160, 160, 160, 0.3);
+    @include chayns-color(background-color, '000');
+    padding: 8px 10px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    .input__icon-left {
+      margin-right: 8px;
+    }
+
+    .input__icon-right {
+      margin-left: 8px;
+    }
+
+    &--invalid {
+      @include chayns-color(border-color, 'wrong');
+
+      input {
+        @include chayns-placeholder--invalid();
+
+        &::-webkit-input-placeholder {
+          @include chayns-placeholder--invalid();
+        }
+
+        &:-ms-input-placeholder {
+          @include chayns-placeholder--invalid();
+        }
+
+        &:-moz-placeholder {
+          @include chayns-placeholder--invalid();
+        }
+
+        &::-moz-placeholder {
+          @include chayns-placeholder--invalid();
+        }
+      }
+
+      i {
+        @include chayns-color-important(color, 'wrong');
+      }
+    }
+
+    input {
+      border: none;
+      width: 100%;
+      background: none;
+      @include input-defaults('004', 1);
+      @include chayns-color(color, 'text');
+      line-height: 1;
+    }
+
+    i {
+      height: 100%;
+      display: flex;
+      @include chayns-color(color, '004');
+    }
   }
 }
 
