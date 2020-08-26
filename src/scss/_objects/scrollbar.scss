@@ -1,4 +1,7 @@
 .scrollbar {
+  scrollbar-color: #80808080 transparent;
+  scrollbar-width: thin;
+
   &::-webkit-scrollbar {
     width: 5px;
   }
