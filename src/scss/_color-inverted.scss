@@ -9,6 +9,13 @@ $newBrightness: 100% !default;
 $cwBodyBackgroundColor: mix($color, #222222, 10%) !default;
 $dependOnBrightnessColor: mix($color, #FFFFFF, $newBrightness);
 
+$base400Color: $color;
+$second400Color: #2F2F2F;
+@if ($brightness<50%) {
+  $base400Color: lighten($color, ($brightness * -1 + 100%)*0.5);
+  $second400Color: darken($second400Color, ($brightness * -1 + 100%)*0.1);
+}
+
 $colors: (
         '000': mix(#000000, #FFFFFF, 100%),
         '001': mix(#000000, #FFFFFF, 97%),
@@ -50,6 +57,16 @@ $colors: (
         '307': mix($color, #242424, 20%),
         '308': mix($color, #242424, 10%),
         '309': mix($color, #242424, 0%),
+        '400': mix($base400Color, $second400Color, 20%),
+        '401': mix($base400Color, $second400Color, 20%),
+        '402': mix($base400Color, $second400Color, 30%),
+        '403': mix($base400Color, $second400Color, 40%),
+        '404': mix($base400Color, $second400Color, 50%),
+        '405': mix($base400Color, $second400Color, 60%),
+        '406': mix($base400Color, $second400Color, 70%),
+        '407': mix($base400Color, $second400Color, 80%),
+        '408': mix($base400Color, $second400Color, 90%),
+        '409': mix($base400Color, $second400Color, 100%),
         'primary': $color,
         'headline': #FFFFFF,
         'text': #FFFFFF,
