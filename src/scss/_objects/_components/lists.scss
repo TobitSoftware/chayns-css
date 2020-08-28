@@ -114,6 +114,30 @@
       }
     }
 
+    &__hover-item {
+      max-width: 0;
+      opacity: 0;
+      transition: opacity 0.2s ease, max-width 0.3s ease-out;
+      display: flex;
+
+      &:focus {
+        max-width: 100px;
+        opacity: 1;
+      }
+
+      &::before {
+        content: " ";
+        width: 5px;
+      }
+    }
+
+    &:hover {
+      .list-item__hover-item {
+        max-width: 100px;
+        opacity: 1;
+      }
+    }
+
     &__indicator {
       flex-shrink: 0;
 
