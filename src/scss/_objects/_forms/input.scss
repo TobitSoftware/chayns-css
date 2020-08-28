@@ -123,6 +123,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     .input__icon-left {
       margin-right: 8px;
@@ -134,6 +135,24 @@
       &[class*="ts-"] {
         font-size: 1.25em;
       }
+    }
+
+    label {
+      position: absolute;
+      text-align: right;
+      transition: left 0.4s ease-out, right 0.4s ease-out;
+      left: 0;
+      right: 100%;
+      white-space: nowrap;
+      user-select: none;
+      pointer-events: none;
+      padding: 8px 10px;
+      @include chayns-color(color, '004');
+    }
+
+    &.input--label-right label, input:focus + label {
+      right: 0 !important;
+      left: 0 !important;
     }
 
     &--invalid {
@@ -161,6 +180,10 @@
 
       i {
         @include chayns-color-important(color, 'wrong');
+      }
+
+      label {
+        @include chayns-placeholder--invalid
       }
     }
 
