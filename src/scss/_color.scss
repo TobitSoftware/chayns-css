@@ -11,6 +11,11 @@ $newBrightness: 100% !default;
 $cwBodyBackgroundColor: mix($color, #FFFFFF, 10%) !default;
 $dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
 
+$base400Color: $color;
+@if($brightness==100% && saturation($color)<15%){
+  $base400Color: #a8a8a8;
+}
+
 // main color palette
 $colors: (
         '000': mix(#000000, #FFFFFF, 0%),
@@ -53,16 +58,16 @@ $colors: (
         '307': mix($color, #242424, 70%),
         '308': mix($color, #242424, 80%),
         '309': mix($color, #242424, 90%),
-        '400': mix($color, #FFFFFF, 0%),
-        '401': mix($color, #FFFFFF, 10%),
-        '402': mix($color, #FFFFFF, 20%),
-        '403': mix($color, #FFFFFF, 30%),
-        '404': mix($color, #FFFFFF, 40%),
-        '405': mix($color, #FFFFFF, 50%),
-        '406': mix($color, #FFFFFF, 60%),
-        '407': mix($color, #FFFFFF, 70%),
-        '408': mix($color, #FFFFFF, 80%),
-        '409': mix($color, #FFFFFF, 90%),
+        '400': mix($base400Color, #FFFFFF, 0%),
+        '401': mix($base400Color, #FFFFFF, 10%),
+        '402': mix($base400Color, #FFFFFF, 20%),
+        '403': mix($base400Color, #FFFFFF, 30%),
+        '404': mix($base400Color, #FFFFFF, 40%),
+        '405': mix($base400Color, #FFFFFF, 50%),
+        '406': mix($base400Color, #FFFFFF, 60%),
+        '407': mix($base400Color, #FFFFFF, 70%),
+        '408': mix($base400Color, #FFFFFF, 80%),
+        '409': mix($base400Color, #FFFFFF, 90%),
         'primary': $color,
         'headline': $color,
         'text': #222222,
