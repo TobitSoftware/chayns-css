@@ -10,7 +10,7 @@ $cwBodyBackgroundColor: #ffffff !default;
 $dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
 
 $base400Color: $color;
-@if($brightness==100% && saturation($color)<15%){
+@if ($brightness==100% and saturation($color)<0.15) {
   $base400Color: #a8a8a8;
 }
 
