@@ -14,7 +14,7 @@ $second400Color: #2F2F2F;
 @if ($brightness<50%) {
   $base400Color: lighten($color, ($brightness * -1 + 100%)*0.5);
   $second400Color: darken($second400Color, ($brightness * -1 + 100%)*0.1);
-}@else if($brightness==100% && saturation($color)<15%){
+} @else if ($brightness==100% and saturation($color)<0.15) {
   $base400Color: #a8a8a8;
 }
 
