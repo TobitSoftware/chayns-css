@@ -18,7 +18,7 @@ $base400Color: $color;
   $base400Color: #a8a8a8;
 }
 
-$secondaryBase400Color: $color;
+$secondaryBase400Color: $secondaryColor;
 @if ($secondaryBrightness==100% and saturation($secondaryColor)<0.15) {
   $secondaryBase400Color: #a8a8a8;
 }

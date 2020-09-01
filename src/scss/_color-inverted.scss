@@ -20,7 +20,7 @@ $accent400Color: #2F2F2F;
   $base400Color: #a8a8a8;
 }
 
-$secondaryBase400Color: $color;
+$secondaryBase400Color: $secondaryColor;
 $secondaryAccent400Color: #2F2F2F;
 @if ($secondaryBrightness<50%) {
   $secondaryBase400Color: lighten($secondaryColor, ($secondaryBrightness * -1 + 100%)*0.5);
