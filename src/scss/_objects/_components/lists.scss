@@ -16,7 +16,7 @@
     }
 
     &--clickable:hover, &--expanded {
-      @include chayns-color(background-color, '100');
+      @include chayns-color(background-color, 'secondary-100');
     }
 
     &--clickable > .list-item__header {
@@ -47,7 +47,7 @@
       &--circle {
         border-radius: 100px;
         outline: none;
-        @include chayns-color(background-color, '102');
+        @include chayns-color(background-color, 'secondary-102');
       }
     }
 

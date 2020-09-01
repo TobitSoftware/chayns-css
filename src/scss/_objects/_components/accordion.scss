@@ -19,7 +19,7 @@
   }
 
   &:hover {
-    @include chayns-color(background-color, '100');
+    @include chayns-color(background-color, 'secondary-100');
   }
 }
 
@@ -223,7 +223,7 @@
 .accordion--open {
   &.accordion:not(.accordion--wrapped) {
     margin-bottom: 30px;
-    @include chayns-color(background-color, '100');
+    @include chayns-color(background-color, 'secondary-100');
     border-color: transparent;
     & > .accordion__head {
       height: 38px;
