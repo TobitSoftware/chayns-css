@@ -6,6 +6,7 @@ $secondaryColor: $color !default;
 $headerBarColor: #AC0000 !default;
 $cwBackgroundColor: mix($color, #FFFFFF, 10%) !default; // 101
 $brightness: 100% !default;
+$secondaryBrightness: 100% !default;
 $newBrightness: 100% !default;
 // -------------------------------------------------
 
@@ -18,7 +19,7 @@ $base400Color: $color;
 }
 
 $secondaryBase400Color: $color;
-@if (lightness($secondaryColor)>0.9 and saturation($secondaryColor)<0.15) {
+@if ($secondaryBrightness==100% and saturation($secondaryColor)<0.15) {
   $secondaryBase400Color: #a8a8a8;
 }
 

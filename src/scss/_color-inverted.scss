@@ -4,6 +4,7 @@ $secondaryColor: $color !default;
 $headerBarColor: #AC0000 !default;
 $cwBackgroundColor: mix($color, #2F2F2F, 20%) !default; // 101
 $brightness: 100% !default;
+$secondaryBrightness: 100% !default;
 $newBrightness: 100% !default;
 // -------------------------------------------------
 
@@ -21,10 +22,10 @@ $accent400Color: #2F2F2F;
 
 $secondaryBase400Color: $color;
 $secondaryAccent400Color: #2F2F2F;
-@if (lightness($secondaryColor)<50%) {
-  $secondaryBase400Color: lighten($secondaryColor, (lightness($secondaryColor) * -1 + 100%)*0.5);
-  $secondaryAccent400Color: darken($secondaryAccent400Color, (lightness($secondaryColor) * -1 + 100%)*0.1);
-} @else if (lightness($secondaryColor)>0.9 and saturation($secondaryColor)<0.15) {
+@if ($secondaryBrightness<50%) {
+  $secondaryBase400Color: lighten($secondaryColor, ($secondaryBrightness * -1 + 100%)*0.5);
+  $secondaryAccent400Color: darken($secondaryAccent400Color, ($secondaryBrightness * -1 + 100%)*0.1);
+} @else if ($secondaryBrightness==100% and saturation($secondaryColor)<0.15) {
   $secondaryBase400Color: #a8a8a8;
 }
 
