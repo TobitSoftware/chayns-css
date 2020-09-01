@@ -1,8 +1,10 @@
 // -- This colors will be replaced by the css api --
 $color: #AC0000 !default;
+$secondaryColor: $color !default;
 $headerBarColor: #AC0000 !default;
 $cwBackgroundColor: mix($color, #FFFFFF, 10%) !default; // 101
 $brightness: 100% !default;
+$secondaryBrightness: 100% !default;
 $newBrightness: 100% !default;
 // -------------------------------------------------
 
@@ -14,6 +16,12 @@ $base400Color: $color;
   $base400Color: #a8a8a8;
 }
 
+$secondaryBase400Color: $secondaryColor;
+@if ($secondaryBrightness==100% and saturation($secondaryColor)<0.15) {
+  $secondaryBase400Color: #a8a8a8;
+}
+
+// main color palette
 $colors: (
         '000': mix(#000000, #FFFFFF, 0%),
         '001': mix(#000000, #FFFFFF, 3%),
@@ -65,8 +73,49 @@ $colors: (
         '407': mix($base400Color, #FFFFFF, 70%),
         '408': mix($base400Color, #FFFFFF, 80%),
         '409': mix($base400Color, #FFFFFF, 90%),
+        'secondary-100': mix($secondaryColor, #FFFFFF, 0%),
+        'secondary-101': mix($secondaryColor, #FFFFFF, 10%),
+        'secondary-102': mix($secondaryColor, #FFFFFF, 20%),
+        'secondary-103': mix($secondaryColor, #FFFFFF, 30%),
+        'secondary-104': mix($secondaryColor, #FFFFFF, 40%),
+        'secondary-105': mix($secondaryColor, #FFFFFF, 50%),
+        'secondary-106': mix($secondaryColor, #FFFFFF, 60%),
+        'secondary-107': mix($secondaryColor, #FFFFFF, 70%),
+        'secondary-108': mix($secondaryColor, #FFFFFF, 80%),
+        'secondary-109': mix($secondaryColor, #FFFFFF, 90%),
+        'secondary-200': mix($secondaryColor, #E4E4E4, 0%),
+        'secondary-201': mix($secondaryColor, #E4E4E4, 10%),
+        'secondary-202': mix($secondaryColor, #E4E4E4, 20%),
+        'secondary-203': mix($secondaryColor, #E4E4E4, 30%),
+        'secondary-204': mix($secondaryColor, #E4E4E4, 40%),
+        'secondary-205': mix($secondaryColor, #E4E4E4, 50%),
+        'secondary-206': mix($secondaryColor, #E4E4E4, 60%),
+        'secondary-207': mix($secondaryColor, #E4E4E4, 70%),
+        'secondary-208': mix($secondaryColor, #E4E4E4, 80%),
+        'secondary-209': mix($secondaryColor, #E4E4E4, 90%),
+        'secondary-300': mix($secondaryColor, #242424, 0%),
+        'secondary-301': mix($secondaryColor, #242424, 10%),
+        'secondary-302': mix($secondaryColor, #242424, 20%),
+        'secondary-303': mix($secondaryColor, #242424, 30%),
+        'secondary-304': mix($secondaryColor, #242424, 40%),
+        'secondary-305': mix($secondaryColor, #242424, 50%),
+        'secondary-306': mix($secondaryColor, #242424, 60%),
+        'secondary-307': mix($secondaryColor, #242424, 70%),
+        'secondary-308': mix($secondaryColor, #242424, 80%),
+        'secondary-309': mix($secondaryColor, #242424, 90%),
+        'secondary-400': mix($secondaryBase400Color, #FFFFFF, 0%),
+        'secondary-401': mix($secondaryBase400Color, #FFFFFF, 10%),
+        'secondary-402': mix($secondaryBase400Color, #FFFFFF, 20%),
+        'secondary-403': mix($secondaryBase400Color, #FFFFFF, 30%),
+        'secondary-404': mix($secondaryBase400Color, #FFFFFF, 40%),
+        'secondary-405': mix($secondaryBase400Color, #FFFFFF, 50%),
+        'secondary-406': mix($secondaryBase400Color, #FFFFFF, 60%),
+        'secondary-407': mix($secondaryBase400Color, #FFFFFF, 70%),
+        'secondary-408': mix($secondaryBase400Color, #FFFFFF, 80%),
+        'secondary-409': mix($secondaryBase400Color, #FFFFFF, 90%),
         'primary': $color,
-        'headline': $color,
+        'secondary': $secondaryColor,
+        'headline': $secondaryColor,
         'text': #222222,
         'header-bar': $headerBarColor,
         'cw-background': $cwBackgroundColor,

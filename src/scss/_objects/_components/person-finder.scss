@@ -13,8 +13,8 @@ $image-size-small: 40px;
   }
 
   &__overlay {
-    @include chayns-color(background-color, '101');
-    @include chayns-color(border-color, '104');
+    @include chayns-color(background-color, 'secondary-101');
+    @include chayns-color(border-color, 'secondary-104');
     border-width: 1px;
     border-style: solid;
   }
@@ -48,11 +48,11 @@ $image-size-small: 40px;
     }
 
     > div.cc__person-finder__results-list > :nth-child(2n) {
-      @include chayns-color(background-color, '102');
+      @include chayns-color(background-color, 'secondary-102');
     }
 
     .load-more, .divider {
-      @include chayns-color-important(background-color, '101');
+      @include chayns-color-important(background-color, 'secondary-101');
     }
 
     .result-item {
@@ -64,7 +64,7 @@ $image-size-small: 40px;
       transition: background-color 0.2s linear;
 
       &--focused, &:hover, &:focus {
-        @include chayns-color-important(background-color, '103');
+        @include chayns-color-important(background-color, 'secondary-103');
       }
 
       .img {

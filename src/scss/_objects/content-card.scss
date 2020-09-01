@@ -3,7 +3,7 @@
 
 .content__card {
   padding: 8px 12px;
-  @include chayns-color(background-color, '100');
+  @include chayns-color(background-color, 'secondary-100');
 
   &:not(:last-child) {
     margin-bottom: 8px;

@@ -9,10 +9,10 @@
   overflow-x: hidden;
   overflow-y: auto;
   max-height: 360px;
-  @include chayns-color(background-color, '101');
+  @include chayns-color(background-color, 'secondary-101');
   border-width: 1px;
   border-style: solid;
-  @include chayns-color(border-color, '102');
+  @include chayns-color(border-color, 'secondary-102');
   @include chayns-color(color, 'text');
   z-index: 3;
 }
@@ -34,7 +34,7 @@
       transition: background-color 100ms ease;
 
       &:hover {
-        @include chayns-color(background-color, '102');
+        @include chayns-color(background-color, 'secondary-102');
       }
 
       .img {

@@ -1,8 +1,10 @@
 // -- This colors will be replaced by the css api --
 $color: #AC0000 !default;
+$secondaryColor: $color !default;
 $headerBarColor: #AC0000 !default;
 $cwBackgroundColor: mix($color, #2F2F2F, 20%) !default; // 101
 $brightness: 100% !default;
+$secondaryBrightness: 100% !default;
 $newBrightness: 100% !default;
 // -------------------------------------------------
 
@@ -10,12 +12,21 @@ $cwBodyBackgroundColor: mix($color, #222222, 10%) !default;
 $dependOnBrightnessColor: mix($color, #FFFFFF, $newBrightness);
 
 $base400Color: $color;
-$second400Color: #2F2F2F;
+$accent400Color: #2F2F2F;
 @if ($brightness<50%) {
   $base400Color: lighten($color, ($brightness * -1 + 100%)*0.5);
-  $second400Color: darken($second400Color, ($brightness * -1 + 100%)*0.1);
+  $accent400Color: darken($accent400Color, ($brightness * -1 + 100%)*0.1);
 } @else if ($brightness==100% and saturation($color)<0.15) {
   $base400Color: #a8a8a8;
+}
+
+$secondaryBase400Color: $secondaryColor;
+$secondaryAccent400Color: #2F2F2F;
+@if ($secondaryBrightness<50%) {
+  $secondaryBase400Color: lighten($secondaryColor, ($secondaryBrightness * -1 + 100%)*0.5);
+  $secondaryAccent400Color: darken($secondaryAccent400Color, ($secondaryBrightness * -1 + 100%)*0.1);
+} @else if ($secondaryBrightness==100% and saturation($secondaryColor)<0.15) {
+  $secondaryBase400Color: #a8a8a8;
 }
 
 $colors: (
@@ -59,17 +70,58 @@ $colors: (
         '307': mix($color, #242424, 20%),
         '308': mix($color, #242424, 10%),
         '309': mix($color, #242424, 0%),
-        '400': mix($base400Color, $second400Color, 20%),
-        '401': mix($base400Color, $second400Color, 20%),
-        '402': mix($base400Color, $second400Color, 30%),
-        '403': mix($base400Color, $second400Color, 40%),
-        '404': mix($base400Color, $second400Color, 50%),
-        '405': mix($base400Color, $second400Color, 60%),
-        '406': mix($base400Color, $second400Color, 70%),
-        '407': mix($base400Color, $second400Color, 80%),
-        '408': mix($base400Color, $second400Color, 90%),
-        '409': mix($base400Color, $second400Color, 100%),
+        '400': mix($base400Color, $accent400Color, 20%),
+        '401': mix($base400Color, $accent400Color, 20%),
+        '402': mix($base400Color, $accent400Color, 30%),
+        '403': mix($base400Color, $accent400Color, 40%),
+        '404': mix($base400Color, $accent400Color, 50%),
+        '405': mix($base400Color, $accent400Color, 60%),
+        '406': mix($base400Color, $accent400Color, 70%),
+        '407': mix($base400Color, $accent400Color, 80%),
+        '408': mix($base400Color, $accent400Color, 90%),
+        '409': mix($base400Color, $accent400Color, 100%),
+        'secondary-100': mix($secondaryColor, #2F2F2F, 20%),
+        'secondary-101': mix($secondaryColor, #2F2F2F, 20%),
+        'secondary-102': mix($secondaryColor, #2F2F2F, 30%),
+        'secondary-103': mix($secondaryColor, #2F2F2F, 40%),
+        'secondary-104': mix($secondaryColor, #2F2F2F, 50%),
+        'secondary-105': mix($secondaryColor, #2F2F2F, 60%),
+        'secondary-106': mix($secondaryColor, #2F2F2F, 70%),
+        'secondary-107': mix($secondaryColor, #2F2F2F, 80%),
+        'secondary-108': mix($secondaryColor, #2F2F2F, 90%),
+        'secondary-109': mix($secondaryColor, #2F2F2F, 100%),
+        'secondary-200': mix($secondaryColor, #777777, 0%),
+        'secondary-201': mix($secondaryColor, #777777, 10%),
+        'secondary-202': mix($secondaryColor, #777777, 20%),
+        'secondary-203': mix($secondaryColor, #777777, 30%),
+        'secondary-204': mix($secondaryColor, #777777, 40%),
+        'secondary-205': mix($secondaryColor, #777777, 50%),
+        'secondary-206': mix($secondaryColor, #777777, 60%),
+        'secondary-207': mix($secondaryColor, #777777, 70%),
+        'secondary-208': mix($secondaryColor, #777777, 80%),
+        'secondary-209': mix($secondaryColor, #777777, 90%),
+        'secondary-300': mix($secondaryColor, #242424, 90%),
+        'secondary-301': mix($secondaryColor, #242424, 80%),
+        'secondary-302': mix($secondaryColor, #242424, 70%),
+        'secondary-303': mix($secondaryColor, #242424, 60%),
+        'secondary-304': mix($secondaryColor, #242424, 50%),
+        'secondary-305': mix($secondaryColor, #242424, 40%),
+        'secondary-306': mix($secondaryColor, #242424, 30%),
+        'secondary-307': mix($secondaryColor, #242424, 20%),
+        'secondary-308': mix($secondaryColor, #242424, 10%),
+        'secondary-309': mix($secondaryColor, #242424, 0%),
+        'secondary-400': mix($secondaryBase400Color, $secondaryAccent400Color, 20%),
+        'secondary-401': mix($secondaryBase400Color, $secondaryAccent400Color, 20%),
+        'secondary-402': mix($secondaryBase400Color, $secondaryAccent400Color, 30%),
+        'secondary-403': mix($secondaryBase400Color, $secondaryAccent400Color, 40%),
+        'secondary-404': mix($secondaryBase400Color, $secondaryAccent400Color, 50%),
+        'secondary-405': mix($secondaryBase400Color, $secondaryAccent400Color, 60%),
+        'secondary-406': mix($secondaryBase400Color, $secondaryAccent400Color, 70%),
+        'secondary-407': mix($secondaryBase400Color, $secondaryAccent400Color, 80%),
+        'secondary-408': mix($secondaryBase400Color, $secondaryAccent400Color, 90%),
+        'secondary-409': mix($secondaryBase400Color, $secondaryAccent400Color, 100%),
         'primary': $color,
+        'secondary': $secondaryColor,
         'headline': #FFFFFF,
         'text': #FFFFFF,
         'header-bar': $headerBarColor,

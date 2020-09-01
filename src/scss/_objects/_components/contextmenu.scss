@@ -7,20 +7,20 @@ $contextmenu-border: 1px solid rgba(0, 0, 0, .1);;
 
 .context-menu {
   position: absolute;
-  @include chayns-color(background-color, '100');
+  @include chayns-color(background-color, 'secondary-100');
   z-index: 900;
   opacity: 0;
   transition: opacity 0.35s ease-in-out;
   box-shadow: 1px 3px 8px rgba(0, 0, 0, .3);
   border: $contextmenu-border;
-  @include chayns-color(color, '102');
+  @include chayns-color(color, 'secondary-102');
 
   &:after {
     content: "";
     width: 14px;
     height: 14px;
     position: absolute;
-    @include chayns-color(background-color, '100');
+    @include chayns-color(background-color, 'secondary-100');
     box-shadow: -2px -2px 5px rgba(0, 0, 0, .05);
     border-top: $contextmenu-border;
     border-left: $contextmenu-border;
@@ -45,7 +45,7 @@ $contextmenu-border: 1px solid rgba(0, 0, 0, .1);;
     display: flex;
 
     &:hover {
-      @include chayns-color(background-color, '103');
+      @include chayns-color(background-color, 'secondary-103');
     }
 
     &__icon {
@@ -139,7 +139,7 @@ $contextmenu-border: 1px solid rgba(0, 0, 0, .1);;
   height: 32px;
   width: 32px;
   background-color: #FFFFFF;
-  @include chayns-color-important(color, 'primary');
+  @include chayns-color-important(color, 'secondary');
   cursor: pointer;
   text-align: center;
   display: flex;
@@ -147,6 +147,6 @@ $contextmenu-border: 1px solid rgba(0, 0, 0, .1);;
   flex-direction: column;
 
   i {
-    @include chayns-color-important(color, 'primary');
+    @include chayns-color-important(color, 'secondary');
   }
 }
