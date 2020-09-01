@@ -40,7 +40,7 @@ $file-input-border-hover-color: 'headline';
 
   &--hover {
     height: 70px;
-    @include chayns-color-opacity(background-color, 'primary', 0.1);
+    @include chayns-color-opacity(background-color, 'secondary', 0.1);
 
     .cc__file-input__icon {
     }

@@ -241,12 +241,12 @@
 .cc__calendar {
   .is-marked-is-highlighted {
     border: none;
-    @include chayns-color(background-color, '203');
+    @include chayns-color(background-color, 'secondary-203');
     @include chayns-color(color, 'headline');
   }
 
   .is-selected {
-    @include chayns-color(background-color, '104');
+    @include chayns-color(background-color, 'secondary-104');
     @include chayns-color(color, 'headline');
   }
 }

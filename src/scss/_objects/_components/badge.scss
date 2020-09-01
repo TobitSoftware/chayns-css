@@ -7,5 +7,5 @@
   font-size: .8rem;
   text-align: center;
   @include chayns-color(color, '007');
-  @include chayns-color(background-color, '202')
+  @include chayns-color(background-color, 'secondary-202')
 }

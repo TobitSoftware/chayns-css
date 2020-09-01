@@ -3,8 +3,8 @@
 
 // chayns editor colors
 .chayns-editor--enabled [chayns-editor] {
-  @include chayns-color(border-color, '104');
+  @include chayns-color(border-color, 'secondary-104');
   &:hover{
-    @include chayns-color(border-color, '107');
+    @include chayns-color(border-color, 'secondary-107');
   }
 }

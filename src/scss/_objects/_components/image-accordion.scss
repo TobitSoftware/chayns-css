@@ -19,7 +19,7 @@
     }
 
     .no-image {
-        @include chayns-color(background-color, '102');
+        @include chayns-color(background-color, 'secondary-102');
     }
 
     .image-accordion-container {
@@ -30,7 +30,7 @@
             display: block;
             width: 10px;
             border: 12px solid transparent;
-            @include chayns-color(border-bottom-color, '100');
+            @include chayns-color(border-bottom-color, 'secondary-100');
         }
         .no-arrow {
             display: none;
@@ -45,7 +45,7 @@
             cursor: pointer;
             padding-top: 10px;
             & .wrapper:hover {
-                @include chayns-color(background-color, '100');
+                @include chayns-color(background-color, 'secondary-100');
             }
         }
         >.image-accordion-body {
@@ -64,7 +64,7 @@
                 &.show {
                     padding: 10px 9px 9px 10px;
                     max-height: 9999px;
-                    @include chayns-color(background-color, '100');
+                    @include chayns-color(background-color, 'secondary-100');
                 }
             }
         }
@@ -117,21 +117,21 @@
 .accordion {
     .cc__image-accordion {
         .no-image {
-            @include chayns-color(background-color, '103');
+            @include chayns-color(background-color, 'secondary-103');
         }
         .image-accordion-container {
             .arrow {
-                @include chayns-color(border-bottom-color, '101');
+                @include chayns-color(border-bottom-color, 'secondary-101');
             }
             & .image-accordion {
                 & .wrapper:hover {
-                    @include chayns-color(background-color, '101');
+                    @include chayns-color(background-color, 'secondary-101');
                 }
             }
             >.image-accordion-body {
                 & .image-accordion-content {
                     &.show {
-                        @include chayns-color(background-color, '101');
+                        @include chayns-color(background-color, 'secondary-101');
                     }
                 }
             }
