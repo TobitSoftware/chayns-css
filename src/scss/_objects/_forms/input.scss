@@ -1,7 +1,7 @@
 @import '../../_color';
 @import '../../_generic/mixins';
 
-.input[type=number] {
+input[type=number] {
   -moz-appearance: textfield;
 
   &::-webkit-inner-spin-button,
