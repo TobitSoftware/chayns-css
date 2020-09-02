@@ -1,79 +1,6 @@
 @import '../../_color';
 @import '../../_generic/mixins';
 
-//input preperation
-@mixin chayns-placeholder($color: 'text', $opacity: 0.45) {
-  @include chayns-color-opacity(color, $color, $opacity);
-  transition: opacity 150ms ease-in-out;
-}
-
-@mixin chayns-placeholder--invalid() {
-  @include chayns-color-important(color, 'wrong');
-  font-weight: 700;
-}
-
-@mixin input-defaults($color: 'text', $opacity: 0.45) {
-  &::-webkit-input-placeholder {
-    @include chayns-placeholder($color, $opacity);
-  }
-
-  &:-ms-input-placeholder {
-    @include chayns-placeholder($color, $opacity);
-  }
-
-  &:-moz-placeholder {
-    @include chayns-placeholder($color, $opacity);
-  }
-
-  &::-moz-placeholder {
-    @include chayns-placeholder($color, $opacity);
-  }
-
-  &[validate]:not(.valid), &--invalid {
-    @include chayns-placeholder--invalid();
-
-    &::-webkit-input-placeholder {
-      @include chayns-placeholder--invalid();
-    }
-
-    &:-ms-input-placeholder {
-      @include chayns-placeholder--invalid();
-    }
-
-    &:-moz-placeholder {
-      @include chayns-placeholder--invalid();
-    }
-
-    &::-moz-placeholder {
-      @include chayns-placeholder--invalid();
-    }
-  }
-
-  &:focus::-webkit-input-placeholder {
-    opacity: 0;
-  }
-
-  &:focus:-ms-input-placeholder {
-    opacity: 0;
-  }
-
-  &:focus:-moz-placeholder {
-    opacity: 0;
-  }
-
-  &:focus::-moz-placeholder {
-    opacity: 0;
-  }
-
-  &::-ms-clear {
-    display: none;
-  }
-
-  cursor: text;
-  -webkit-user-modify: read-write-plaintext-only;
-  -webkit-appearance: none;
-}
-
 .input[type=number] {
   -moz-appearance: textfield;
 
@@ -197,7 +124,6 @@
     }
 
     i {
-      height: 100%;
       display: flex;
       @include chayns-color(color, '004');
     }
