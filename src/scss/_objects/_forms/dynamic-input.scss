@@ -4,7 +4,7 @@
 .input-group {
   position: relative;
 
-  &--disabled{
+  &--disabled {
     opacity: 0.6;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -31,12 +31,18 @@
   &.labelRight label, input:focus + label {
     right: 0 !important;
     left: 0 !important;
+
     .chayns--app & {
       opacity: 0;
       right: 100%;
     }
+
     &.labelIcon {
       opacity: 0 !important;
+    }
+
+    div {
+      max-width: 150px;
     }
   }
 
@@ -58,11 +64,15 @@
         @include chayns-placeholder;
         pointer-events: none;
         transition: left 0.4s ease-out, right 0.4s ease-out,
-          opacity 0.4s ease-out;
+        opacity 0.4s ease-out;
         opacity: 1;
         font-family: inherit;
         font-size: 100%;
         line-height: 1.15;
+
+        div {
+          display: inline-block;
+        }
       }
 
       &[validate]:not(.valid) + label {
