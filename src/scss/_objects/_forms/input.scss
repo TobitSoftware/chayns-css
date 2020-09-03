@@ -147,6 +147,7 @@ input[type=number] {
       @include input-defaults('004', 1);
       @include chayns-color(color, 'text');
       line-height: 1;
+      padding: 0;
     }
 
     i {
