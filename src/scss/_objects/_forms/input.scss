@@ -45,7 +45,7 @@ input[type=number] {
     width: 100%;
   }
 
-  &--dynamic{
+  &--dynamic {
     &.input--label-right label, input:focus + label {
       right: 0 !important;
       left: 0 !important;
@@ -75,13 +75,17 @@ input[type=number] {
 
     .input__icon-right {
       margin-left: 8px;
+      font-size: 1.2em;
+      display: flex;
+      justify-content: center;
+      min-width: 24px;
 
       &[class*="ts-"] {
-        font-size: 1.65em;
+        font-size: 1.6em;
       }
     }
 
-    &:not(.input--dynamic){
+    &:not(.input--dynamic) {
       &.input--label-right label, input:focus + label {
         visibility: hidden;
       }
