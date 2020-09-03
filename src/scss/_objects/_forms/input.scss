@@ -40,6 +40,23 @@ input[type=number] {
     @include chayns-placeholder--invalid
   }
 
+  &__input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  &--dynamic{
+    &.input--label-right label, input:focus + label {
+      right: 0 !important;
+      left: 0 !important;
+      visibility: visible;
+
+      div {
+        max-width: 150px;
+      }
+    }
+  }
+
   &--border-design {
     border-width: 1px;
     border-style: solid;
@@ -64,22 +81,27 @@ input[type=number] {
       }
     }
 
+    &:not(.input--dynamic){
+      &.input--label-right label, input:focus + label {
+        visibility: hidden;
+      }
+    }
+
     label {
       position: absolute;
       text-align: right;
       transition: left 0.4s ease-out, right 0.4s ease-out;
       left: 0;
       right: 100%;
+      top: 0;
       white-space: nowrap;
       user-select: none;
       pointer-events: none;
-      padding: 8px 10px;
       @include chayns-color(color, '004');
-    }
 
-    &.input--label-right label, input:focus + label {
-      right: 0 !important;
-      left: 0 !important;
+      div {
+        display: inline-block;
+      }
     }
 
     &--invalid {
