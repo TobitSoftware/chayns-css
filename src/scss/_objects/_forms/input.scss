@@ -40,6 +40,23 @@ input[type=number] {
     @include chayns-placeholder--invalid
   }
 
+  &__input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  &--dynamic {
+    &.input--label-right label, input:focus + label {
+      right: 0 !important;
+      left: 0 !important;
+      visibility: visible;
+
+      div {
+        max-width: 150px;
+      }
+    }
+  }
+
   &--border-design {
     border-width: 1px;
     border-style: solid;
@@ -58,9 +75,19 @@ input[type=number] {
 
     .input__icon-right {
       margin-left: 8px;
+      font-size: 1.2em;
+      display: flex;
+      justify-content: center;
+      min-width: 24px;
 
       &[class*="ts-"] {
-        font-size: 1.25em;
+        font-size: 1.6em;
+      }
+    }
+
+    &:not(.input--dynamic) {
+      &.input--label-right label, input:focus + label {
+        visibility: hidden;
       }
     }
 
@@ -70,16 +97,15 @@ input[type=number] {
       transition: left 0.4s ease-out, right 0.4s ease-out;
       left: 0;
       right: 100%;
+      top: 0;
       white-space: nowrap;
       user-select: none;
       pointer-events: none;
-      padding: 8px 10px;
       @include chayns-color(color, '004');
-    }
 
-    &.input--label-right label, input:focus + label {
-      right: 0 !important;
-      left: 0 !important;
+      div {
+        display: inline-block;
+      }
     }
 
     &--invalid {
@@ -121,6 +147,7 @@ input[type=number] {
       @include input-defaults('004', 1);
       @include chayns-color(color, 'text');
       line-height: 1;
+      padding: 0;
     }
 
     i {
