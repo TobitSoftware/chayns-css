@@ -47,6 +47,12 @@
             & .wrapper:hover {
                 @include chayns-color(background-color, 'secondary-100');
             }
+
+            &.open {
+                & >.wrapper {
+                    @include chayns-color(background-color, 'secondary-100');
+                }
+            }
         }
         >.image-accordion-body {
             margin-top: -10px;
