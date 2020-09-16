@@ -60,7 +60,7 @@ input[type=number] {
   &--border-design {
     border-width: 1px;
     border-style: solid;
-    @include chayns-color-opacity(border-color, 'text', 0.25);
+    @include chayns-color-opacity(color, '006', 1);
     border-color: rgba(160, 160, 160, 0.3);
     @include chayns-color(background-color, '000');
     padding: 8px 10px;
@@ -68,6 +68,27 @@ input[type=number] {
     align-items: center;
     justify-content: space-between;
     position: relative;
+
+    &.input--border_has-icon {
+      padding: 0 0 0 10px;
+
+      .input__icon-right {
+        margin: auto;
+      }
+
+      .button {
+        border-radius: 0;
+        padding: 7px 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+        margin-left: 8px;
+        .react-chayns-icon{
+          color: #fff !important;
+        }
+      }
+    }
 
     .input__icon-left {
       margin-right: 8px;
@@ -101,7 +122,7 @@ input[type=number] {
       white-space: nowrap;
       user-select: none;
       pointer-events: none;
-      @include chayns-color(color, '004');
+      @include chayns-color(color, '006');
 
       div {
         display: inline-block;
@@ -144,7 +165,7 @@ input[type=number] {
       border: none;
       width: 100%;
       background: none;
-      @include input-defaults('004', 1);
+      @include input-defaults('006', 1);
       @include chayns-color(color, 'text');
       line-height: 1;
       padding: 0;
@@ -152,7 +173,7 @@ input[type=number] {
 
     i {
       display: flex;
-      @include chayns-color(color, '004');
+      @include chayns-color(color, '006');
     }
   }
 }
