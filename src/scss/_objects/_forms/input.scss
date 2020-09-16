@@ -60,7 +60,7 @@ input[type=number] {
   &--border-design {
     border-width: 1px;
     border-style: solid;
-    @include chayns-color-opacity(border-color, 'text', 0.25);
+    @include chayns-color-opacity(color, '006', 1);
     border-color: rgba(160, 160, 160, 0.3);
     @include chayns-color(background-color, '000');
     padding: 8px 10px;
@@ -121,7 +121,7 @@ input[type=number] {
       white-space: nowrap;
       user-select: none;
       pointer-events: none;
-      @include chayns-color(color, '004');
+      @include chayns-color(color, '006');
 
       div {
         display: inline-block;
@@ -164,7 +164,7 @@ input[type=number] {
       border: none;
       width: 100%;
       background: none;
-      @include input-defaults('004', 1);
+      @include input-defaults('006', 1);
       @include chayns-color(color, 'text');
       line-height: 1;
       padding: 0;
@@ -172,7 +172,7 @@ input[type=number] {
 
     i {
       display: flex;
-      @include chayns-color(color, '004');
+      @include chayns-color(color, '006');
     }
   }
 }
