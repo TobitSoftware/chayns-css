@@ -69,6 +69,26 @@ input[type=number] {
     justify-content: space-between;
     position: relative;
 
+    &.input--border_has-icon {
+      padding: 0 0 0 10px;
+
+      .input__icon-right {
+        margin: auto;
+      }
+
+      .button {
+        border-radius: 0;
+        padding: 7px 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+        .react-chayns-icon{
+          color: #fff !important;
+        }
+      }
+    }
+
     .input__icon-left {
       margin-right: 8px;
     }
