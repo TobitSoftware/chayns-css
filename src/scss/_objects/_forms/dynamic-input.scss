@@ -31,6 +31,13 @@
   &.labelRight label, input:focus + label {
     right: 0 !important;
     left: 0 !important;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: flex-end;
+
+    .space {
+      margin-right: 10px;
+    }
 
     .chayns--app & {
       opacity: 0;
@@ -40,10 +47,11 @@
     &.labelIcon {
       opacity: 0 !important;
     }
+  }
 
-    div {
-      max-width: 150px;
-    }
+  .space {
+    visibility: hidden;
+    white-space: pre;
   }
 
   input,

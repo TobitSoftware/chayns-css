@@ -50,10 +50,18 @@ input[type=number] {
       right: 0 !important;
       left: 0 !important;
       visibility: visible;
+      overflow: hidden;
+      display: inline-flex;
+      justify-content: flex-end;
 
-      div {
-        max-width: 150px;
+      .space {
+        margin-right: 10px;
       }
+    }
+
+    .space {
+      visibility: hidden;
+      white-space: pre;
     }
   }
 
