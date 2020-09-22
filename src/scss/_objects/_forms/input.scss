@@ -47,15 +47,17 @@ input[type=number] {
 
   &--dynamic {
     &.input--label-right label, input:focus + label {
-      right: 0 !important;
-      left: 0 !important;
+      //right: 0 !important;
+      //left: 0 !important;
       visibility: visible;
       overflow: hidden;
-      display: inline-flex;
-      justify-content: flex-end;
+      &::after{
+        width: 0;
+      }
 
       .space {
         margin-right: 10px;
+        transition: margin-right 0ms 500ms;
       }
     }
 
@@ -130,15 +132,25 @@ input[type=number] {
       text-align: right;
       transition: left 0.4s ease-out, right 0.4s ease-out;
       left: 0;
-      right: 100%;
+      right: 0;
       top: 0;
       white-space: nowrap;
       user-select: none;
       pointer-events: none;
       @include chayns-color(color, '006');
+      display: inline-flex;
+      justify-content: flex-end;
 
       div {
         display: inline-block;
+      }
+
+
+      &::after{
+        content: " ";
+        width: 100%;
+        flex-shrink: 100000;
+        transition: width 0.4s ease-out;
       }
     }
 
