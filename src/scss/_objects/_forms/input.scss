@@ -43,6 +43,7 @@ input[type=number] {
   &__input-wrapper {
     position: relative;
     width: 100%;
+    flex: 1 0;
   }
 
   &--dynamic {
@@ -86,7 +87,7 @@ input[type=number] {
       padding: 0 0 0 10px;
 
       .button {
-        padding: 7px 9px;
+        padding: 7px;
 
         .input__icon-right {
           margin: auto;
