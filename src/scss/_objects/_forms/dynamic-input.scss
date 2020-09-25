@@ -29,21 +29,29 @@
   }
 
   &.labelRight label, input:focus + label {
-    right: 0 !important;
-    left: 0 !important;
+    overflow: hidden;
+
+    &::after {
+      width: 0 !important;
+    }
+
+    .space {
+      margin-right: 10px;
+      transition: margin-right 0ms 500ms;
+    }
 
     .chayns--app & {
       opacity: 0;
-      right: 100%;
     }
 
     &.labelIcon {
       opacity: 0 !important;
     }
+  }
 
-    div {
-      max-width: 150px;
-    }
+  .space {
+    visibility: hidden;
+    white-space: pre;
   }
 
   input,
@@ -59,7 +67,7 @@
         top: 0;
         margin: 6px 1px;
         left: 0;
-        right: 100%;
+        right: 0;
         white-space: nowrap;
         @include chayns-placeholder;
         pointer-events: none;
@@ -69,6 +77,15 @@
         font-family: inherit;
         font-size: 100%;
         line-height: 1.15;
+        display: inline-flex;
+        justify-content: flex-end;
+
+        &::after {
+          content: " ";
+          width: 100%;
+          flex-shrink: 100000;
+          transition: width 0.4s ease-out;
+        }
 
         div {
           display: inline-block;

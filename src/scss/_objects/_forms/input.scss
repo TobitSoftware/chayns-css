@@ -47,13 +47,24 @@ input[type=number] {
 
   &--dynamic {
     &.input--label-right label, input:focus + label {
-      right: 0 !important;
-      left: 0 !important;
+      //right: 0 !important;
+      //left: 0 !important;
       visibility: visible;
+      overflow: hidden;
 
-      div {
-        max-width: 150px;
+      &::after {
+        width: 0;
       }
+
+      .space {
+        margin-right: 10px;
+        transition: margin-right 0ms 500ms;
+      }
+    }
+
+    .space {
+      visibility: hidden;
+      white-space: pre;
     }
   }
 
@@ -69,29 +80,37 @@ input[type=number] {
     justify-content: space-between;
     position: relative;
     border-radius: 3px;
+    min-height: 42px;
 
     &.input--border_has-icon {
       padding: 0 0 0 10px;
 
-      .input__icon-right {
-        margin: auto;
-      }
-
       .button {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
         padding: 7px 9px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: none;
-        margin: -1px -1px -1px 8px;
-        min-height: 42px;
-        min-width: 42px;
 
-        .react-chayns-icon {
-          color: #fff !important;
+        .input__icon-right {
+          margin: auto;
         }
+      }
+    }
+
+    &.input--border_has-right {
+      padding: 0 0 0 10px;
+    }
+
+    .button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: none;
+      margin: -1px -1px -1px 8px;
+      min-height: 42px;
+      min-width: 42px;
+
+      .react-chayns-icon {
+        color: #fff !important;
       }
     }
 
@@ -122,15 +141,25 @@ input[type=number] {
       text-align: right;
       transition: left 0.4s ease-out, right 0.4s ease-out;
       left: 0;
-      right: 100%;
+      right: 0;
       top: 0;
       white-space: nowrap;
       user-select: none;
       pointer-events: none;
       @include chayns-color(color, '006');
+      display: inline-flex;
+      justify-content: flex-end;
 
       div {
         display: inline-block;
+      }
+
+
+      &::after {
+        content: " ";
+        width: 100%;
+        flex-shrink: 100000;
+        transition: width 0.4s ease-out;
       }
     }
 
