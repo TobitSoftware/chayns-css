@@ -70,10 +70,8 @@ input[type=number] {
   }
 
   &--border-design {
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid rgba(160, 160, 160, 0.3);
     @include chayns-color-opacity(color, '006', 1);
-    border-color: rgba(160, 160, 160, 0.3);
     @include chayns-color(background-color, '000');
     padding: 8px 10px;
     display: flex;
@@ -97,6 +95,20 @@ input[type=number] {
 
     &.input--border_has-right {
       padding: 0 0 0 10px;
+    }
+
+    &.cc-scanner {
+      overflow: hidden;
+
+      .button {
+        margin: 0 0 0 8px;
+        background-color: #FFFFFF;
+        border-left: 1px solid rgba(160, 160, 160, 0.3);
+
+        .react-chayns-icon {
+          @include chayns-color-important(color, 'primary');
+        }
+      }
     }
 
     .button {
