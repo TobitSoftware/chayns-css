@@ -105,6 +105,10 @@ input[type=number] {
         background-color: #FFFFFF;
         border-left: 1px solid rgba(160, 160, 160, 0.3);
 
+        &:hover{
+          background-color:  #D4D4D4;
+        }
+
         .react-chayns-icon {
           @include chayns-color-important(color, 'primary');
         }
