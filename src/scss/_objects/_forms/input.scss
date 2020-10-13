@@ -178,7 +178,7 @@ input[type=number] {
       }
     }
 
-    &:not(.input--dynamic) &:not(.input--bottom-dynamic) {
+    &:not(.input--dynamic):not(.input--bottom-dynamic) {
       &.input--label-right label, input:focus + label {
         visibility: hidden;
       }
