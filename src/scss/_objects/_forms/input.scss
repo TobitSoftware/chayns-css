@@ -69,6 +69,37 @@ input[type=number] {
     }
   }
 
+  &--bottom-dynamic {
+    &.input--label-right label {
+      visibility: visible;
+      overflow: hidden;
+      left: auto;
+      top: auto;
+      bottom: -7px;
+      right: -6px;
+      font-size: 9px;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    label {
+      transition: none !important;
+    }
+
+    &.input--border-design--invalid {
+      input {
+        @include chayns-color-important(color, "text");
+        font-weight: normal;
+      }
+    }
+
+    .space {
+      display: none;
+    }
+  }
+
   &--border-design {
     border: 1px solid rgba(160, 160, 160, 0.3);
     @include chayns-color-opacity(color, '006', 1);
@@ -105,8 +136,8 @@ input[type=number] {
         background-color: #FFFFFF;
         border-left: 1px solid rgba(160, 160, 160, 0.3);
 
-        &:hover{
-          background-color: #D4D4D4!important;
+        &:hover {
+          background-color: #D4D4D4 !important;
         }
 
         .react-chayns-icon {
@@ -147,7 +178,7 @@ input[type=number] {
       }
     }
 
-    &:not(.input--dynamic) {
+    &:not(.input--dynamic) &:not(.input--bottom-dynamic) {
       &.input--label-right label, input:focus + label {
         visibility: hidden;
       }
@@ -178,6 +209,10 @@ input[type=number] {
         flex-shrink: 100000;
         transition: width 0.4s ease-out;
       }
+    }
+
+    &--required {
+      @include chayns-color(border-color, 106);
     }
 
     &--invalid {
