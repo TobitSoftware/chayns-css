@@ -1,0 +1,63 @@
+
+@font-face {
+  font-family: 'Verified-chaynsID';
+  // TODO: upload file and update url
+  src: url('https://api.chayns-static.space/font-vcid/Font-VcID.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="vcid-"], [class*=" vcid-"] {
+  font-family: 'Verified-chaynsID' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vcid-check:before {
+  content: "\e906";
+}
+.vcid-check--gray {
+  &>:first-child:before {
+    content: "\e900";
+    color: rgb(51, 51, 51);
+  }
+
+  &>:nth-child(2):before {
+    content: "\e901";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+
+  &>:nth-child(3):before {
+    content: "\e902";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+}
+
+.vcid-check--blue {
+  &>:first-child:before {
+    content: "\e903";
+    color: rgb(88, 144, 255);
+  }
+
+  &>:nth-child(2):before {
+    content: "\e904";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+
+  &>:nth-child(3):before {
+    content: "\e905";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+}
