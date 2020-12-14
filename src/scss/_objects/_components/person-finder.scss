@@ -62,6 +62,7 @@ $image-size-small: 40px;
       cursor: pointer;
       padding: 8px 10px 5px 8px;
       transition: background-color 0.2s linear;
+      box-sizing: border-box;
 
       &--focused, &:hover, &:focus {
         @include chayns-color-important(background-color, 'secondary-103');
