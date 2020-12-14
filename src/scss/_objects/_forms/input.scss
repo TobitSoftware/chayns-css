@@ -103,7 +103,7 @@ input[type=number] {
   &--border-design {
     border: 1px solid rgba(160, 160, 160, 0.3);
     @include chayns-color-opacity(color, '006', 1);
-    @include chayns-color(background-color, '000');
+    @include chayns-color(background-color, '100');
     padding: 8px 10px;
     display: flex;
     align-items: center;
