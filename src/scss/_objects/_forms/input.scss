@@ -212,7 +212,7 @@ input[type=number] {
     }
 
     &--required {
-      @include chayns-color(border-color, 106);
+      @include chayns-color(border-color, $input-border-design-required-border-color-name);
     }
 
     &--invalid {
