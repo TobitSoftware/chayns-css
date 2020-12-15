@@ -103,7 +103,7 @@ input[type=number] {
   &--border-design {
     border: 1px solid rgba(160, 160, 160, 0.3);
     @include chayns-color-opacity(color, '006', 1);
-    @include chayns-color(background-color, '000');
+    @include chayns-color(background-color, $input-border-design-background-color-name);
     padding: 8px 10px;
     display: flex;
     align-items: center;
@@ -212,7 +212,7 @@ input[type=number] {
     }
 
     &--required {
-      @include chayns-color(border-color, 106);
+      @include chayns-color(border-color, $input-border-design-required-border-color-name);
     }
 
     &--invalid {
