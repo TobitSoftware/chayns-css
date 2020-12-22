@@ -6,8 +6,8 @@
   position: absolute;
   display: inline;
   z-index: 920;
-  will-change: transform, opacity, left, top;
-  transition: transform 500ms ease, opacity 500ms ease, left 500ms ease, top 500ms ease;
+  will-change: transform, opacity;
+  transition: transform 500ms ease, opacity 500ms ease;
   opacity: 0;
   height: 10px;
 
