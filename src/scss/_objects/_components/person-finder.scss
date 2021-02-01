@@ -27,7 +27,7 @@ $image-size-small: 40px;
     }
   }
 
-  &__overlay {
+  &__overlay, & .cc__input-box--inline-wrapper {
     &::-webkit-scrollbar-track {
       background-color: transparent;
     }
@@ -40,6 +40,7 @@ $image-size-small: 40px;
       border-radius: 5px;
       background-color: #6e6e6e;
     }
+    scrollbar-width: thin;
   }
 
   &__results {
