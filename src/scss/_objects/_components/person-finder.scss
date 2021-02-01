@@ -47,12 +47,14 @@ $image-size-small: 40px;
       padding: 3px 10px 3px 8px;
     }
 
-    > div.cc__person-finder__results-list > :nth-child(2n) {
-      @include chayns-color(background-color, 'secondary-102');
-    }
+    &:not(.no-background) {
+      > div.cc__person-finder__results-list > :nth-child(2n) {
+        @include chayns-color(background-color, 'secondary-102');
+      }
 
-    .load-more, .divider {
-      @include chayns-color-important(background-color, 'secondary-101');
+      .load-more, .divider {
+        @include chayns-color-important(background-color, 'secondary-101');
+      }
     }
 
     .result-item {
@@ -79,6 +81,10 @@ $image-size-small: 40px;
 
         text-align: center;
         vertical-align: middle;
+
+        &.circle {
+          border-radius: 50%;
+        }
       }
 
       .text {
