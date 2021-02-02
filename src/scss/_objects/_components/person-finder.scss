@@ -27,7 +27,7 @@ $image-size-small: 40px;
     }
   }
 
-  &__overlay, & .cc__input-box--inline-wrapper {
+  &__overlay {
     &::-webkit-scrollbar-track {
       background-color: transparent;
     }
@@ -67,7 +67,7 @@ $image-size-small: 40px;
       transition: background-color 0.2s linear;
       box-sizing: border-box;
 
-      &--focused, &:hover, &:focus {
+      &--focused, .chayns--desktop &:hover, .chayns--desktop &:focus {
         @include chayns-color-important(background-color, 'secondary-103');
       }
 
