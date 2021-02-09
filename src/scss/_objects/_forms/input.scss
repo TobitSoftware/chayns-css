@@ -73,11 +73,14 @@ input[type=number] {
     &.input--label-right label {
       visibility: visible;
       overflow: hidden;
-      left: auto;
       top: auto;
       bottom: -7px;
       right: -6px;
       font-size: 9px;
+
+      &:after {
+        width: 0;
+      }
     }
 
     &::after {
