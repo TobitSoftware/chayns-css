@@ -87,10 +87,6 @@ input[type=number] {
       display: none;
     }
 
-    label {
-      transition: none !important;
-    }
-
     &.input--border-design--invalid {
       input {
         @include chayns-color-important(color, "text");
