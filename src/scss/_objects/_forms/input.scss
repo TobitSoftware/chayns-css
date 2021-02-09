@@ -189,7 +189,7 @@ input[type=number] {
     label {
       position: absolute;
       text-align: right;
-      transition: left 0.4s ease-out, right 0.4s ease-out;
+      transition: left 0.4s ease-out, right 0.4s ease-out, font-size 0.4s ease-out;
       left: 0;
       right: 0;
       top: 0;
