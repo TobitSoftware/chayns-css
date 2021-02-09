@@ -73,7 +73,8 @@ input[type=number] {
     &.input--label-right label {
       visibility: visible;
       overflow: hidden;
-      top: auto;
+      // required for the animation, results in fixed height of 14px
+      top: calc(100% - 7px);
       bottom: -7px;
       right: -6px;
       font-size: 9px;
@@ -185,7 +186,7 @@ input[type=number] {
     label {
       position: absolute;
       text-align: right;
-      transition: left 0.4s ease-out, right 0.4s ease-out, font-size 0.4s ease-out;
+      transition: left 0.4s ease-out, right 0.4s ease-out, font-size 0.4s ease-out, top 0.4s ease-out;
       left: 0;
       right: 0;
       top: 0;
