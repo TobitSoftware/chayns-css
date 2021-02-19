@@ -47,7 +47,7 @@ input[type=number] {
   }
 
   &--dynamic {
-    &.input--label-right label, input:focus + label {
+    &.input--label-right label, input:focus + label, input:not(:placeholder-shown) + label {
       //right: 0 !important;
       //left: 0 !important;
       visibility: visible;
@@ -70,7 +70,7 @@ input[type=number] {
   }
 
   &--bottom-dynamic {
-    &.input--label-right label {
+    &.input--label-right label, input:not(:placeholder-shown) + label {
       visibility: visible;
       overflow: hidden;
       // required for the animation, results in fixed height of 14px
@@ -178,7 +178,7 @@ input[type=number] {
     }
 
     &:not(.input--dynamic):not(.input--bottom-dynamic) {
-      &.input--label-right label, input:focus + label {
+      &.input--label-right label, input:focus + label, input:not(:placeholder-shown) + label {
         visibility: hidden;
       }
     }
