@@ -254,6 +254,11 @@ input[type=number] {
       @include chayns-color(color, 'text');
       line-height: 1;
       padding: 0;
+
+      &:-webkit-autofill {
+        -webkit-text-fill-color: var(--chayns-color--text);
+        box-shadow: 0 0 0 100px var(--chayns-color--#{$input-border-design-background-color-name}) inset;
+      }
     }
 
     i {
