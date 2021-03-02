@@ -11,6 +11,11 @@ input[type=number] {
   }
 }
 
+input.input:-webkit-autofill {
+  -webkit-text-fill-color: var(--chayns-color--text);
+  -webkit-background-clip: text;
+}
+
 .input {
   @include input-defaults;
   padding: 5px 1px;
@@ -257,7 +262,6 @@ input[type=number] {
 
       &:-webkit-autofill {
         -webkit-text-fill-color: var(--chayns-color--text);
-        box-shadow: 0 0 0 100px var(--chayns-color--#{$input-border-design-background-color-name}) inset;
         -webkit-background-clip: text;
       }
     }
