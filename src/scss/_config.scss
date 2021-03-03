@@ -1,11 +1,13 @@
 // -- This values will be replaced by the css api --
 $font-name: 'Roboto' !default;
+$font-bold: true;
 $font-factor: 1 !default;
 $font-backup: 'Tahoma' !default;
 
 $font-size: 15px !default;
 
 $headline-font-name: $font-name !default;
+$headline-font-bold: $font-bold;
 $headline-font-backup: $font-backup !default;
 
 $icon-style: 0 !default;

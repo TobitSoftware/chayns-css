@@ -29,20 +29,22 @@ $minus: '';
   unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
 }
 
-@font-face {
-  font-family: $font-name;
-  font-style: normal;
-  font-weight: bold;
-  src: local($font-name +' '+ Bold), local($font-name +'-'+ Bold), url(https://api.chayns-static.space/font/#{$url}/Bold.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/Bold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/Bold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/Bold.svg) format('svg');
-  unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
-}
+@if ($font-bold) {
+  @font-face {
+    font-family: $font-name;
+    font-style: normal;
+    font-weight: bold;
+    src: local($font-name +' '+ Bold), local($font-name +'-'+ Bold), url(https://api.chayns-static.space/font/#{$url}/Bold.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/Bold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/Bold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/Bold.svg) format('svg');
+    unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
+  }
 
-@font-face {
-  font-family: $font-name;
-  font-style: italic;
-  font-weight: bold;
-  src: local($font-name +' '+ Bold + ' '+ Italic), local($font-name +'-'+ Bold + Italic), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.svg) format('svg');
-  unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
+  @font-face {
+    font-family: $font-name;
+    font-style: italic;
+    font-weight: bold;
+    src: local($font-name +' '+ Bold + ' '+ Italic), local($font-name +'-'+ Bold + Italic), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.svg) format('svg');
+    unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
+  }
 }
 
 // headline
@@ -74,19 +76,21 @@ $minus: '';
     unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
   }
 
-  @font-face {
-    font-family: $headline-font-name;
-    font-style: normal;
-    font-weight: bold;
-    src: local($headline-font-name +' '+ Bold), local($headline-font-name +'-'+ Bold), url(https://api.chayns-static.space/font/#{$url}/Bold.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/Bold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/Bold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/Bold.svg) format('svg');
-    unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
-  }
+  @if ($headline-font-bold) {
+    @font-face {
+      font-family: $headline-font-name;
+      font-style: normal;
+      font-weight: bold;
+      src: local($headline-font-name +' '+ Bold), local($headline-font-name +'-'+ Bold), url(https://api.chayns-static.space/font/#{$url}/Bold.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/Bold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/Bold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/Bold.svg) format('svg');
+      unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
+    }
 
-  @font-face {
-    font-family: $headline-font-name;
-    font-style: italic;
-    font-weight: bold;
-    src: local($headline-font-name +' '+ Bold + ' '+ Italic), local($headline-font-name +'-'+ Bold + Italic), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.svg) format('svg');
-    unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
+    @font-face {
+      font-family: $headline-font-name;
+      font-style: italic;
+      font-weight: bold;
+      src: local($headline-font-name +' '+ Bold + ' '+ Italic), local($headline-font-name +'-'+ Bold + Italic), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.svg) format('svg');
+      unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
+    }
   }
 }
