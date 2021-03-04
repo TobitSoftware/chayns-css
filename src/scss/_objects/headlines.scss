@@ -1,6 +1,7 @@
 @import '../config';
 @import '../_color';
 @import '../_generic/mixins';
+@import '../_generic/dynamic-fontsize';
 
 $headline-sizes: (
         1: 1.7,
@@ -10,20 +11,21 @@ $headline-sizes: (
         5: 0.8
 ) !default;
 
-// all heading styles
-@mixin headline($font-size, $bottom-margin:10px) {
-  margin: 0 0 $bottom-margin 0;
-  font-weight: normal;
-  font-size: $font-size;
-  font-family: $headline-font-family;
-  @include chayns-color(color, 'headline');
-}
-
 @for $i from 1 through 5 {
   h#{$i},
   .h#{$i} {
-    $size: #{map_get($headline-sizes, $i)}rem;
-    @include headline($size);
+    $size: #{map_get($headline-sizes, $i)};
+
+    margin: 0 0 10px 0;
+    font-weight: normal;
+    font-family: $headline-font-family;
+
+    @if $dynamic-font-size==1 {
+      @include dynamic-fontsize($base-font-size * map_get($headline-sizes, $i));
+    } @else {
+      font-size: #{$size}rem;
+    }
+    @include chayns-color(color, 'headline');
   }
 }
 
