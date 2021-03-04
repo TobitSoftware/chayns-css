@@ -2,10 +2,10 @@
   "name": "chayns.css",
   "version": "4.1.0",
   "devDependencies": {
-    "browser-sync": "^2.26.13",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-sass": "^4.0.1",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^4.1.0",
     "natives": "^1.1.6"
   },
   "scripts": {
