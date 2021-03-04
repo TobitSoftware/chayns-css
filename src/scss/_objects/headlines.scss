@@ -3,11 +3,11 @@
 @import '../_generic/mixins';
 
 $headline-sizes: (
-        1: 1.7rem,
-        2: 1.4rem,
-        3: 1.1rem,
-        4: 1rem,
-        5: 0.8rem
+        1: 1.7,
+        2: 1.4,
+        3: 1.1,
+        4: 1,
+        5: 0.8
 ) !default;
 
 // all heading styles
@@ -22,7 +22,7 @@ $headline-sizes: (
 @for $i from 1 through 5 {
   h#{$i},
   .h#{$i} {
-    $size: map_get($headline-sizes, $i);
+    $size: #{map_get($headline-sizes, $i)}rem;
     @include headline($size);
   }
 }
