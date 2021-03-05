@@ -26,7 +26,7 @@
     @if $dynamic-font-size==1 {
       @include dynamic-fontsize($size);
     } @else {
-      font-size: #{$size}px;
+      font-size: #{$size};
     }
   }
 }
