@@ -11,9 +11,12 @@ $headline-font-bold: $font-bold;
 $headline-font-backup: $font-backup !default;
 
 $icon-style: 0 !default;
+
+$dynamic-font-size: 0 !default;
 // -------------------------------------------------
 
 $base-font-size: $font-size * $font-factor !default;
+
 $base-line-height: 1.65 !default;
 $base-font-family: $font-name, $font-backup !default;
 

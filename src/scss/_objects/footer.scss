@@ -1,8 +1,14 @@
 @import '../_color';
 @import '../_generic/mixins';
+@import '../_generic/dynamic-fontsize';
 
 footer {
-  font-size: 0.85rem;
+  @if ($dynamic-font-size==1) {
+    @include dynamic-fontsize($base-font-size * 0.85);
+  } @else {
+    font-size: 0.85rem;
+  }
+
   @include chayns-color(color, '005');
   margin: 10px 0 0;
 

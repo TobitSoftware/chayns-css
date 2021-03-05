@@ -1,18 +1,34 @@
 @import '../config';
+@import '../_generic/dynamic-fontsize';
 
 // Font styles
 :root {
   font-family: $base-font-family;
   line-height: $base-line-height;
-  // IE
-  font-size: $base-font-size;
-  // Other browsers
-  --base-font-size:  calc(#{$base-font-size} - 2px + (0.2 * var(--width) / 100));
-  font-size: var(--base-font-size, $base-font-size);
+
+  @if ($dynamic-font-size==1) {
+    @include dynamic-fontsize($base-font-size, 1);
+  } @else {
+    // IE
+    font-size: $base-font-size;
+    // Other browsers
+    --base-font-size: #{$base-font-size};
+    font-size: var(--base-font-size, $base-font-size);
+  }
 }
 
-.default-font-size{
+.default-font-size {
   font-size: 15px * $font-factor;
+}
+
+@for $size from 1px through 96px {
+  .chayns__font-size--#{$size} {
+    @if $dynamic-font-size==1 {
+      @include dynamic-fontsize($size);
+    } @else {
+      font-size: #{$size};
+    }
+  }
 }
 
 // Main Styles
