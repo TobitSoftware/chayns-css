@@ -21,8 +21,8 @@
   font-size: 15px * $font-factor;
 }
 
-@for $size from 1 through 96 {
-  .chayns__font-size--#{$size}px {
+@for $size from 1px through 96px {
+  .chayns__font-size--#{$size} {
     @if $dynamic-font-size==1 {
       @include dynamic-fontsize($size);
     } @else {
