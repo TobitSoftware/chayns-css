@@ -16,13 +16,13 @@
   }
   $min-size: $size-number / $factor;
   @if $variable == 1 {
-    $base-font-size: calc(#{$min-size}px + #{$size-number - $min-size} * ((100vw - 320px) / #{2560 - 320}));
+    $base-font-size: calc(#{$min-size}px + #{$size-number - $min-size} * ((var(--width, 100vw) - 320px) / #{2560 - 320}));
     // IE
     font-size: $base-font-size;
     // Other browsers
     --base-font-size: #{$base-font-size};
     font-size: var(--base-font-size, #{$base-font-size});
   } @else {
-    font-size: calc(#{$min-size}px + #{$size-number - $min-size} * ((100vw - 320px) / #{2560 - 320})) !important;
+    font-size: calc(#{$min-size}px + #{$size-number - $min-size} * ((var(--width, 100vw) - 320px) / #{2560 - 320})) !important;
   }
 }
