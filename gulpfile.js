@@ -16,21 +16,10 @@ try {
 }
 
 /**
- * Default task
- *
- * Runs dev server.
- */
-gulp.task('default', ['bundle'], function () {
-    gulp.start('server');
-    gulp.watch('./src/scss/**/*.scss', ['bundle'], browserSync.reload);
-    gulp.watch('./*.html', browserSync.reload);
-});
-
-/**
  * Starts browserSync server.
  */
 gulp.task('server', function () {
-    browserSync({
+    return browserSync({
         server: {
             baseDir: './'
         },
@@ -48,7 +37,7 @@ gulp.task('server', function () {
  * Bundles sass files to css
  */
 gulp.task('bundle', function () {
-    gulp.src('./src/scss/chayns.scss')
+    return gulp.src('./src/scss/chayns.scss')
         .pipe(sass({
             outFile: './build/chayns.css',
             sourceComments: false,
@@ -61,3 +50,28 @@ gulp.task('bundle', function () {
             stream: true
         }));
 });
+
+/**
+ * Default task
+ *
+ * Runs dev server.
+ */
+gulp.task('default',
+    gulp.series([
+        'bundle',
+        gulp.parallel([
+            'server',
+            () => gulp.watch('./src/scss/**/*.scss', gulp.series([
+                'bundle',
+                (done) => {
+                    browserSync.reload();
+                    done();
+                }
+            ])),
+            () => gulp.watch('./*.html', (done) => {
+                browserSync.reload();
+                done();
+            }),
+        ]),
+    ]),
+);
