@@ -1,5 +1,6 @@
 @import '../../_color';
 @import '../../_generic/mixins';
+@import '../../_generic/dynamic-fontsize';
 
 .accordion {
   margin-top: 10px;
@@ -228,7 +229,11 @@
     & > .accordion__head {
       height: 38px;
       .accordion__head__title {
-        font-size: 1.3rem;
+        @if ($dynamic-font-size==1) {
+          @include dynamic-fontsize($base-font-size * 1.3);
+        } @else {
+          font-size: 1.3rem;
+        }
       }
     }
   }
