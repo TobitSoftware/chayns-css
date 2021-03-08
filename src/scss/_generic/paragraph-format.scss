@@ -1,0 +1,15 @@
+@import "../_config";
+@import "../_generic/font";
+
+@each $name in map-keys($paragraphStyles) {
+  $styles: map-get($paragraphStyles, $name);
+  #{$name} {
+    font-size: #{map-get($styles, "fontSizePx")}px;
+    line-height: #{map-get($styles, "lineHeight")};
+    margin-top: #{map-get($styles, "marginBeforePx")}px;
+    margin-bottom: #{map-get($styles, "marginAfterPx")}px;
+    color: #{map-get($styles, "color")};
+    font-family: #{map-get($styles, "fontName")};
+  }
+  @include loadFont(map-get($styles, "fontName"), map-get($styles, "fontBold"));
+}

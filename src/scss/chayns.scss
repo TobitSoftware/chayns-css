@@ -34,6 +34,7 @@
 @import './_objects/footer';
 @import './_objects/wait-cursor';
 @import './_objects/editor';
+@import './_generic/paragraph-format'; // must be after headlines, footer and main
 
 //chayns components
 @import './_objects/_components/receiverinput';
