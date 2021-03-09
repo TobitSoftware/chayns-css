@@ -1,15 +1,27 @@
 @import "../_config";
 @import "../_generic/font";
 
-@each $name in map-keys($paragraphStyles) {
-  $styles: map-get($paragraphStyles, $name);
+@each $name in map-keys($paragraph-styles) {
+  $styles: map-get($paragraph-styles, $name);
   #{$name} {
-    font-size: #{map-get($styles, "fontSizePx")}px;
-    line-height: #{map-get($styles, "lineHeight")};
-    margin-top: #{map-get($styles, "marginBeforePx")}px;
-    margin-bottom: #{map-get($styles, "marginAfterPx")}px;
-    color: #{map-get($styles, "color")};
-    font-family: #{map-get($styles, "fontName")};
+    @if map-has-key($styles, "fontSizePx"){
+      font-size: #{map-get($styles, "fontSizePx")}px;
+    }
+    @if map-has-key($styles, "lineHeight"){
+      line-height: #{map-get($styles, "lineHeight")};
+    }
+    @if map-has-key($styles, "marginBeforePx"){
+      margin-top: #{map-get($styles, "marginBeforePx")}px;
+    }
+    @if map-has-key($styles, "marginAfterPx"){
+      margin-bottom: #{map-get($styles, "marginAfterPx")}px;
+    }
+    @if map-has-key($styles, "color"){
+      color: #{map-get($styles, "color")};
+    }
+    @if map-has-key($styles, "fontName"){
+      font-family: #{map-get($styles, "fontName")};
+    }
   }
-  @include loadFont(map-get($styles, "fontName"), map-get($styles, "fontBold"));
+  @include loadFont(map-get($styles, "fontName"), map-get($styles, "fontHasBold"));
 }
