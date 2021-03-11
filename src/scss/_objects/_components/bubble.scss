@@ -127,6 +127,7 @@
     width: auto;
     height: auto;
     @include chayns-color(background-color, '001');
+    @include chayns-color(color, 'text');
     box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 2px;
