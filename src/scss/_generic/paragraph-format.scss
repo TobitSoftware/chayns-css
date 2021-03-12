@@ -21,7 +21,9 @@
     }
     @if map-has-key($styles, "fontName"){
       font-family: #{map-get($styles, "fontName")};
-      @include loadFont(map-get($styles, "fontName"), map-get($styles, "fontHasBold"));
     }
+  }
+  @if map-has-key($styles, "fontName"){
+    @include loadFont(map-get($styles, "fontName"), map-get($styles, "fontHasBold"));
   }
 }
