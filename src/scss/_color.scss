@@ -117,7 +117,7 @@ $colors: (
         'secondary-409': mix($secondaryBase400Color, #FFFFFF, 90%),
         'primary': $color,
         'secondary': $secondaryColor,
-        'headline': getParagraphColor("h1",$secondaryColor),
+        'headline': $secondaryColor,
         'headline-1': getParagraphColor("h1",$secondaryColor),
         'headline-2': getParagraphColor("h2",$secondaryColor),
         'headline-3': getParagraphColor("h3",$secondaryColor),
