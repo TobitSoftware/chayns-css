@@ -1,0 +1,32 @@
+@import "../_config";
+@import "../_generic/font";
+@import "../_generic/dynamic-fontsize";
+
+@each $name in map-keys($paragraph-styles) {
+  $styles: map-get($paragraph-styles, $name);
+  #{$name} {
+    @if map-has-key($styles, "fontSizePx") {
+      @if $dynamic-font-size==1 {
+        @include dynamic-fontsize(map-get($styles, "fontSizePx") * $font-factor * 1px);
+      } @else {
+        font-size: map-get($styles, "fontSizePx") * $font-factor * 1px;
+      }
+    }
+    @if map-has-key($styles, "lineHeight") {
+      line-height: #{map-get($styles, "lineHeight")};
+    }
+    @if map-has-key($styles, "marginBeforePx") {
+      margin-top: #{map-get($styles, "marginBeforePx")}px;
+    }
+    @if map-has-key($styles, "marginAfterPx") {
+      margin-bottom: #{map-get($styles, "marginAfterPx")}px;
+    }
+    // Colors are coming from color-schemes.scss
+    @if map-has-key($styles, "fontName") {
+      font-family: #{map-get($styles, "fontName")};
+    }
+  }
+  @if map-has-key($styles, "fontName") {
+    @include loadFont(map-get($styles, "fontName"), map-get($styles, "fontHasBold"));
+  }
+}
