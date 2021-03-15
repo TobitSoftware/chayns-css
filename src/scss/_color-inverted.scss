@@ -29,6 +29,16 @@ $secondaryAccent400Color: #2F2F2F;
   $secondaryBase400Color: #a8a8a8;
 }
 
+@function getParagraphColor($selector, $fallback) {
+  @if map-has-key($paragraph-styles, $selector) {
+    $styles: map-get($paragraph-styles, $selector);
+    @if map-has-key($styles, "color") {
+      @return map-get($styles, "color");
+    }
+  }
+  @return $fallback;
+}
+
 $colors: (
         '000': mix(#000000, #FFFFFF, 100%),
         '001': mix(#000000, #FFFFFF, 97%),

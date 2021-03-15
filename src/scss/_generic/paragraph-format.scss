@@ -30,13 +30,3 @@
     @include loadFont(map-get($styles, "fontName"), map-get($styles, "fontHasBold"));
   }
 }
-
-@function getParagraphColor($selector, $fallback) {
-  @if map-has-key($paragraph-styles, $selector) {
-    $styles: map-get($paragraph-styles, $selector);
-    @if map-has-key($styles, "color") {
-      @return map-get($styles, "color");
-    }
-  }
-  @return $fallback;
-}
