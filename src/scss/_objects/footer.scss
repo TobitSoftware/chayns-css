@@ -9,11 +9,11 @@ footer {
     font-size: 0.85rem;
   }
 
-  @include chayns-color(color, '005');
+  @include chayns-color(color, 'footer');
   margin: 10px 0 0;
 
   & a {
-    @include chayns-color(color, '005');
+    @include chayns-color(color, 'footer');
     letter-spacing: -0.3px;
   }
 }

@@ -44,7 +44,7 @@
 }
 
 @mixin chayns-color-opacity($property-name, $color-name, $opacity) {
-  #{$property-name}: rgba(map_get($colors, #{$color-name}), $opacity);
+  #{$property-name}: rgba(map_get($colors, $color-name), $opacity);
   #{$property-name}: rgba(var(--chayns-color-rgb--#{$color-name}), #{$opacity});
 }
 
