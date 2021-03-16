@@ -14,7 +14,7 @@ $icon-style: 0 !default;
 
 $dynamic-font-size: false !default;
 
-$paragraph-styles: ("h4":("fontSizePx": 30, "lineHeight": 2, "marginBeforePx": 10, "marginAfterPx": 10, "color": #ea6106, "fontName": "Waiting for the Sunrise", "fontHasBold": false)) !default;
+$paragraph-styles: () !default;
 // -------------------------------------------------
 
 $base-font-size: $font-size * $font-factor !default;
