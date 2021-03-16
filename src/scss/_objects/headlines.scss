@@ -25,7 +25,7 @@ $headline-sizes: (
     } @else {
       font-size: #{$size}rem;
     }
-    @include chayns-color(color, 'headline');
+    @include chayns-color(color, 'headline-#{$i}');
   }
 }
 
