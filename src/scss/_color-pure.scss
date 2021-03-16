@@ -129,6 +129,7 @@ $colors: (
         'headline-2': getParagraphColor("h2",$secondaryColor),
         'headline-3': getParagraphColor("h3",$secondaryColor),
         'headline-4': getParagraphColor("h4",$secondaryColor),
+        'headline-5': $secondaryColor,
         'text': getParagraphColor(":root, .tapp, p",#222222),
         'footer': getParagraphColor("footer", mix(#000000, #FFFFFF, 50%)),
         'header-bar': $headerBarColor,
