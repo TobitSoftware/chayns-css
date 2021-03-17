@@ -14,6 +14,7 @@ input[type=number] {
 input.input:-webkit-autofill {
   -webkit-text-fill-color: var(--chayns-color--text);
   -webkit-background-clip: text;
+  caret-color: var(--chayns-color--text);
 }
 
 .input {
@@ -263,6 +264,7 @@ input.input:-webkit-autofill {
       &:-webkit-autofill {
         -webkit-text-fill-color: var(--chayns-color--text);
         -webkit-background-clip: text;
+        caret-color: var(--chayns-color--text);
       }
     }
 
