@@ -15,6 +15,9 @@ $icon-style: 0 !default;
 $dynamic-font-size: false !default;
 
 $paragraph-styles: () !default;
+
+$design: 1; // 0=classic (default), 1=modern, 2=minimal
+$design__checkbox: $design;
 // -------------------------------------------------
 
 $base-font-size: $font-size * $font-factor !default;

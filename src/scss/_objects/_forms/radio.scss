@@ -1,9 +1,29 @@
 @import '../../_color';
+@import '../../_config';
 
 .radio {
   @extend .checkbox;
 
   & + label:before {
     border-radius: 100%;
+  }
+
+  @if ($design__checkbox == 1 or $design__checkbox == 2) {
+    & + label:after, &:checked + label:after {
+      border-radius: 100%;
+      height: 13px;
+      width: 13px;
+      @include chayns-color(background-color, 'secondary-309');
+      border: none;
+      left: 1px;
+      top: 6px;
+      transform-origin: center;
+      transform: scale(0);
+      transition: transform 0.2s ease;
+      animation: none !important;
+    }
+    &:checked + label:after {
+      transform: scale(0.7);
+    }
   }
 }
