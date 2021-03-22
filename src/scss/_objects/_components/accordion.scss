@@ -1,4 +1,5 @@
 @import '../../_color';
+@import '../../_config';
 @import '../../_generic/mixins';
 @import '../../_generic/dynamic-fontsize';
 
@@ -6,21 +7,31 @@
   margin-top: 10px;
   border-bottom: 1px solid transparent;
 
-  transition:
-    border 200ms ease-in-out 150ms,
-    background-color 100ms ease,
-    margin-bottom 200ms linear,
-    border-radius 200ms,
-    box-shadow 200ms;
+  transition: border 200ms ease-in-out 150ms,
+  background-color 100ms ease,
+  margin-bottom 200ms linear,
+  border-radius 200ms,
+  box-shadow 200ms;
 
   will-change: border, background-color, margin-bottom;
+
+  @if ($design__accordion==1) {
+    border: none;
+    border-radius: 20px;
+    @include chayns-color(background-color, 'secondary-100');
+  } @else if ($design__accordion==2) {
+    border: none;
+    background-color: transparent;
+  }
 
   &:not(.accordion--wrapped) {
     @include chayns-color(border-bottom-color, 'headline');
   }
 
-  &:hover {
-    @include chayns-color(background-color, 'secondary-100');
+  @if ($design__accordion==0) {
+    &:hover {
+      @include chayns-color(background-color, 'secondary-100');
+    }
   }
 }
 
@@ -42,22 +53,22 @@
   max-height: 32px;
   align-self: flex-start;
 
-  .accordion.accordion--open>&>.accordion__head__right {
+  .accordion.accordion--open > & > .accordion__head__right {
     align-self: flex-start;
   }
 
-  .accordion.accordion--open>& {
+  .accordion.accordion--open > & {
     min-height: 38px;
     max-height: 160px;
     overflow: hidden;
 
-    &>.accordion__head__title {
+    & > .accordion__head__title {
       word-break: break-word;
       white-space: normal;
     }
   }
 
-  .accordion.accordion--wrapped>& {
+  .accordion.accordion--wrapped > & {
     min-height: 40px;
   }
 
@@ -86,6 +97,7 @@
     transition: font-size 300ms, transform 300ms, font-weight 300ms;
     will-change: font-size, font-weight;
   }
+
   .accordion__head__icon {
     @include chayns-color(color, 'headline');
     width: 25px;
@@ -95,6 +107,7 @@
     justify-content: center;
     position: relative;
     transition: transform 250ms ease-in-out;
+
     i {
       position: absolute;
       top: 0;
@@ -104,6 +117,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       &:before {
         vertical-align: middle;
       }
@@ -116,22 +130,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     .right--search {
       position: absolute;
       right: 0;
       transition: opacity 0.25s ease;
       will-change: opacity;
     }
+
     &__search {
       // transition: transform 0.5s ease, opacity 0.5s ease, width 0.5s ease;
       transition: transform 200ms ease, opacity 200ms ease, width 200ms ease;
       will-change: transfrom, opacity, width;
       transform: translateX(150%);
       opacity: 0;
+
       &--active {
         transform: translateX(0);
         opacity: 1;
       }
+
       .input {
         line-height: 1;
       }
@@ -167,9 +185,11 @@
   padding: 8px 9px;
   min-height: 38px;
   height: inherit;
-  border-top-width: 1px;
-  border-top-style: solid;
-  @include chayns-color-opacity(border-top-color, 'headline', 0.5);
+  @if($design__accordion!=1){
+    border-top-width: 1px;
+    border-top-style: solid;
+    @include chayns-color-opacity(border-top-color, 'headline', 0.5);
+  }
 
   &:before {
     display: none;
@@ -183,9 +203,11 @@
 // if this accordion is in another accordion
 .accordion--wrapped {
   margin: 0;
-  border-top-width: 1px;
-  border-top-style: solid;
-  @include chayns-color-opacity(border-top-color, 'headline', 0.5);
+  @if($design__accordion!=1){
+    border-top-width: 1px;
+    border-top-style: solid;
+    @include chayns-color-opacity(border-top-color, 'headline', 0.5);
+  }
 
   & > .accordion__head {
     height: 40px;
@@ -224,10 +246,14 @@
 .accordion--open {
   &.accordion:not(.accordion--wrapped) {
     margin-bottom: 30px;
-    @include chayns-color(background-color, 'secondary-100');
+    @if ($design__accordion!=2) {
+      @include chayns-color(background-color, 'secondary-100');
+    }
     border-color: transparent;
+
     & > .accordion__head {
       height: 38px;
+
       .accordion__head__title {
         @if ($dynamic-font-size==1) {
           @include dynamic-fontsize($base-font-size * 1.3);
