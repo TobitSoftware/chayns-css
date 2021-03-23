@@ -16,11 +16,12 @@ $dynamic-font-size: false !default;
 
 $paragraph-styles: () !default;
 
-$design: 0; // 0=classic (default), 1=modern, 2=minimal
+$design: 2; // 0=classic (default), 1=modern, 2=minimal
 $design__checkbox: $design;
 $design__switch: $design;
 $design__button: $design;
 $design__accordion: $design;
+$design__input: $design;
 // -------------------------------------------------
 
 $base-font-size: $font-size * $font-factor !default;
