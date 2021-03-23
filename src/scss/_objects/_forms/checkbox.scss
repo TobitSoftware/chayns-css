@@ -34,10 +34,10 @@
         transition: box-shadow 100ms ease-in-out, background-color 50ms 50ms cubic-bezier(1, 0, 0, 1);
         will-change: background-color;
       } @else if ($design__checkbox==1) {
-        @include chayns-color(background-color, '000');
-        @include chayns-color-opacity(border-color, '409', 0.7);
+        @include chayns-color(background-color, '101');
+        @include chayns-color-opacity(border-color, 'headline', 0.7);
       } @else if ($design__checkbox==2) {
-        @include chayns-color-opacity(border-color, '409', 0.5);
+        @include chayns-color-opacity(border-color, 'headline', 0.5);
       }
       top: 5px;
       z-index: 0;
@@ -53,7 +53,7 @@
 
   @if ($design__checkbox!=0) {
     &:not(:disabled) + label:hover:before, &:checked + label:before {
-      @include chayns-color(border-color, 'secondary-309');
+      @include chayns-color(border-color, 'headline');
     }
   }
 
@@ -103,8 +103,8 @@
       left: 3px;
       width: 16px;
       height: 7.5px;
-      border-bottom: 2px solid var(--chayns-color--secondary-309);
-      border-left: 2px solid var(--chayns-color--secondary-309);
+      border-bottom: 2px solid var(--chayns-color--headline);
+      border-left: 2px solid var(--chayns-color--headline);
       transform: rotateZ(-45deg);
     } @else if ($design__checkbox==2) {
       transform-origin: top left;
@@ -114,8 +114,8 @@
       left: 3px;
       width: 10px;
       height: 5px;
-      border-bottom: 1px solid var(--chayns-color--secondary-309);
-      border-left: 1px solid var(--chayns-color--secondary-309);
+      border-bottom: 1px solid var(--chayns-color--headline);
+      border-left: 1px solid var(--chayns-color--headline);
       transform: rotateZ(-50deg);
     }
   }
