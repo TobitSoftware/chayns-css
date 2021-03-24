@@ -16,14 +16,14 @@ $dynamic-font-size: false !default;
 
 $paragraph-styles: () !default;
 
-$design: 0; // 0=classic (default), 1=modern, 2=minimal
-$design__checkbox: $design;
-$design__switch: $design;
-$design__button: $design;
-$design__accordion: $design;
-$design__input: $design;
-$design__file_input: $design;
-$design__amount_control: $design;
+$design: 0 !default; // 0=classic (default), 1=modern, 2=minimal
+$design__checkbox: $design !default;
+$design__switch: $design !default;
+$design__button: $design !default;
+$design__accordion: $design !default;
+$design__input: $design !default;
+$design__file_input: $design !default;
+$design__amount_control: $design !default;
 // -------------------------------------------------
 
 $base-font-size: $font-size * $font-factor !default;
