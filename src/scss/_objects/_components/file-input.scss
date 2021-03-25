@@ -1,17 +1,25 @@
 @import '../../_color';
+@import '../../_config';
 @import '../../_generic/mixins';
 
 $file-input-color: 'headline';
 $file-input-border-color: '005';
 $file-input-border-hover-color: 'headline';
+$file-input-border-style: dashed;
+@if ($design__file_input==2) {
+  $file-input-border-style: solid;
+}
 
 .cc__file-input {
   border-width: 1px;
-  border-style: dashed;
+  border-style: $file-input-border-style;
   @include chayns-color(border-color, $file-input-border-color);
   @include chayns-color(color, $file-input-color);
   overflow: hidden;
   transition: border .1s;
+  @if ($design__file_input==1) {
+    border-radius: 100px;
+  }
 
   &--custom {
     display: flex;
@@ -71,13 +79,13 @@ $file-input-border-hover-color: 'headline';
 
   &:hover, &--hover {
     border-width: 1px;
-    border-style: dashed;
+    border-style: $file-input-border-style;
     @include chayns-color(border-color, $file-input-border-hover-color);
 
     .cc__file-input__split {
       &:not(:last-child) {
         border-right-width: 1px;
-        border-right-style: dashed;
+        border-right-style: $file-input-border-style;
         @include chayns-color(border-right-color, $file-input-border-hover-color);
       }
 
@@ -100,7 +108,7 @@ $file-input-border-hover-color: 'headline';
 
     &:not(:last-child) {
       border-right-width: 1px;
-      border-right-style: dashed;
+      border-right-style: $file-input-border-style;
       @include chayns-color(border-right-color, $file-input-border-color);
     }
   }
