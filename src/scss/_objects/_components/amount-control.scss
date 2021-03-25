@@ -40,10 +40,8 @@
     line-height: 28px;
     transition: all 0.2s ease-out;
     overflow: hidden;
-    @if ($design__amount_control==2) {
+    @if ($design__amount_control!=2) {
       background-color: rgba(255, 255, 255, 0.2);
-    } @else {
-      @include chayns-color(background-color, '101')
     }
   }
 
