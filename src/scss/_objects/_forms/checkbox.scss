@@ -98,7 +98,7 @@
       }
       transform-origin: top left;
       border: 0;
-      animation: checkbox 0.5s ease;
+      animation: checkbox 0.2s ease;
       top: 12px;
       left: 3px;
       width: 16px;
@@ -109,7 +109,6 @@
     } @else if ($design__checkbox==2) {
       transform-origin: top left;
       border: 0;
-      animation: checkbox 1s ease;
       top: 13px;
       left: 3px;
       width: 10px;
