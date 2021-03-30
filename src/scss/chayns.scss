@@ -1,6 +1,9 @@
 // Main App Styles
 // only import files here
 
+@import './_config';
+@import './_color';
+
 // generic
 @import './_generic/mixins';
 @import './_generic/normalize';
@@ -34,7 +37,8 @@
 @import './_objects/footer';
 @import './_objects/wait-cursor';
 @import './_objects/editor';
-@import './_generic/paragraph-format'; // must be after headlines, footer and main
+@import './_generic/paragraph-format';
+// must be after headlines, footer and main
 
 //chayns components
 @import './_objects/_components/receiverinput';
