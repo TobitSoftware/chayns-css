@@ -1,5 +1,3 @@
-@import '../_color';
-
 html {
   --chayns-color-rgb: #{red($color), green($color), blue($color)};
   --chayns-bg-rgb: #{red(map_get($colors, '100')), green(map_get($colors, '100')), blue(map_get($colors, '100'))};

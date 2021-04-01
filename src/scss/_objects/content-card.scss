@@ -1,6 +1,3 @@
-@import '../_color';
-@import '../_generic/mixins';
-
 .content__card {
   padding: 8px 12px;
   @include chayns-color(background-color, 'secondary-100');
