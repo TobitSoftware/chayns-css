@@ -8,11 +8,11 @@
 
   &::-webkit-scrollbar-thumb {
     width: 5px;
-    background: rgba(0,0,0,.2);
+    background-color: rgba(0,0,0,.2);
     border-radius: 20px;
   }
 
   &::-webkit-scrollbar-track {
-    background: transparent;
+    background-color: transparent;
   }
 }

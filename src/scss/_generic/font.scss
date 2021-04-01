@@ -1,5 +1,3 @@
-@import './replace';
-
 $loaded-fonts: [];
 @mixin loadFont($font-name, $font-bold) {
   @if index($loaded-fonts, $font-name) == null {

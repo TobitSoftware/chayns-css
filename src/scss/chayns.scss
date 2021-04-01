@@ -5,6 +5,7 @@
 @import './_color';
 
 // generic
+@import './_generic/replace';
 @import './_generic/mixins';
 @import './_generic/normalize';
 @import './_generic/reset';
@@ -14,7 +15,6 @@
 @import './_generic/font-ts';
 @import './_generic/font-vcid';
 @import './_generic/ios';
-@import './_generic/android';
 @import './_generic/web';
 @import './_generic/color-schemes';
 @import './_generic/dynamic-fontsize';

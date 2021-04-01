@@ -1,5 +1,3 @@
-@import '../_generic/mixins';
-
 @mixin selection{
   color: #FFFFFF;
   @include chayns-color(background-color, 'depend-on-brightness')

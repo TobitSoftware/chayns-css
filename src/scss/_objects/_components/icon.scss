@@ -1,6 +1,3 @@
-@import '../../_generic/mixins';
-
-// @deprecated
 .react-chayns-icon {
   font-size: round($base-font-size);
   @include chayns-color(color, 'headline');
