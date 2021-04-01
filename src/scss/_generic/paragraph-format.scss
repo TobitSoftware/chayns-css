@@ -1,7 +1,3 @@
-@import "../_config";
-@import "../_generic/font";
-@import "../_generic/dynamic-fontsize";
-
 @each $name in map-keys($paragraph-styles) {
   $styles: map-get($paragraph-styles, $name);
   #{$name} {
