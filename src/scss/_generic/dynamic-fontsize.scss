@@ -1,4 +1,5 @@
-@mixin dynamic-fontsize($size, $variable: 0) {
+$important: ''; // has to be declared on top of the file to allow usage of !global
+@mixin dynamic-fontsize($size, $variable: 0, $isImportant: 0) {
   $size-number: $size / 1px;
   $factor: 1;
   @if $size-number < 16 {
@@ -15,14 +16,17 @@
     $factor: 1.5;
   }
   $min-size: $size-number / $factor;
+  @if $isImportant == 1 {
+    $important: '!important' !global;
+  }
   @if $variable == 1 {
     $base-font-size: calc(#{$min-size}px + #{$size-number - $min-size} * ((var(--browser-width, 100vw) - 320px) / #{2560 - 320}));
     // IE
-    font-size: $base-font-size;
+    font-size: $base-font-size #{$important};
     // Other browsers
     --base-font-size: #{$base-font-size};
-    font-size: var(--base-font-size, #{$base-font-size});
+    font-size: var(--base-font-size, #{$base-font-size}) #{$important};
   } @else {
-    font-size: calc(#{$min-size}px + #{$size-number - $min-size} * ((var(--browser-width, 100vw) - 320px) / #{2560 - 320}));
+    font-size: calc(#{$min-size}px + #{$size-number - $min-size} * ((var(--browser-width, 100vw) - 320px) / #{2560 - 320})) #{$important};
   }
 }
