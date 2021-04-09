@@ -147,6 +147,18 @@ $colors: (
         'red': #723F3F,
         'green': #198B2C,
         'wrong': #CA8181,
+        'red-1': #5a0303,
+        'red-2': #96060b,
+        'red-3': #ca8181,
+        'red-4': #e9cccc,
+        'yellow-1': #9F5F00,
+        'yellow-2': #FF9800,
+        'yellow-3': #FFB74D,
+        'yellow-4': #FFF3E0,
+        'green-1': #074709,
+        'green-2': #0e7710,
+        'green-3': #85ba87,
+        'green-4': #cde3ce,
 );
 
 $colors1: (
@@ -185,38 +197,6 @@ $shades: (
         7: #222222,
         8: #000000,
 );
-
-$red: (
-        1: #5a0303,
-        2: #96060b,
-        3: #ca8181,
-        4: #e9cccc,
-);
-
-$yellow: (
-        1: #9F5F00,
-        2: #FF9800,
-        3: #FFB74D,
-        4: #FFF3E0,
-);
-
-$green: (
-        1: #074709,
-        2: #0e7710,
-        3: #85ba87,
-        4: #cde3ce,
-);
-
-//content_card
-$content-card-success-border-color: map_get($green, 1);
-$content-card-success-background-color: map_get($green, 4);
-$content-card-success-color: #222222;
-$content-card-warning-border-color: map_get($yellow, 1);
-$content-card-warning-background-color: map_get($yellow, 4);
-$content-card-warning-color: #222222;
-$content-card-danger-border-color: map_get($red, 1);
-$content-card-danger-background-color: map_get($red, 4);
-$content-card-danger-color: #222222;
 
 // @deprecated: will be removed in next minor version
 //receiver input

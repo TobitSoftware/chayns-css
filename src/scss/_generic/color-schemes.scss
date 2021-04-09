@@ -22,9 +22,7 @@
   .chayns__border-color--#{$key} {
     @include chayns-color(border-color, #{$key});
   }
-}
 
-@each $key, $color in $colors {
   .chayns__background-color--#{$key}i {
     @include chayns-color-important(background-color, #{$key});
   }
@@ -110,89 +108,5 @@
 
   .chayns__border-color--shade-#{$key} {
     border-color: $color;
-  }
-}
-
-@each $key, $color in $red {
-  .chayns__background-color--red-#{$key} {
-    background-color: $color;
-  }
-
-  .chayns__color--red-#{$key} {
-    color: $color;
-  }
-
-  .chayns__border-color--red-#{$key} {
-    border-color: $color;
-  }
-}
-
-@each $key, $color in $yellow {
-  .chayns__background-color--yellow-#{$key} {
-    background-color: $color;
-  }
-
-  .chayns__color--yellow-#{$key} {
-    color: $color;
-  }
-
-  .chayns__border-color--yellow-#{$key} {
-    border-color: $color;
-  }
-}
-
-@each $key, $color in $green {
-  .chayns__background-color--green-#{$key} {
-    background-color: $color;
-  }
-
-  .chayns__color--green-#{$key} {
-    color: $color;
-  }
-
-  .chayns__border-color--green-#{$key} {
-    border-color: $color;
-  }
-}
-
-@each $key, $color in $red {
-  .chayns__background-color--red-#{$key}i {
-    background-color: $color !important;
-  }
-
-  .chayns__color--red-#{$key}i {
-    color: $color !important;
-  }
-
-  .chayns__border-color--red-#{$key}i {
-    border-color: $color !important;
-  }
-}
-
-@each $key, $color in $yellow {
-  .chayns__background-color--yellow-#{$key}i {
-    background-color: $color !important;
-  }
-
-  .chayns__color--yellow-#{$key}i {
-    color: $color !important;
-  }
-
-  .chayns__border-color--yellow-#{$key}i {
-    border-color: $color !important;
-  }
-}
-
-@each $key, $color in $green {
-  .chayns__background-color--green-#{$key}i {
-    background-color: $color !important;
-  }
-
-  .chayns__color--green-#{$key}i {
-    color: $color !important;
-  }
-
-  .chayns__border-color--green-#{$key}i {
-    border-color: $color !important;
   }
 }

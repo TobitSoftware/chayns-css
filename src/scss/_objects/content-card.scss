@@ -1,3 +1,13 @@
+$content-card-success-border-color: map_get($colors, 'green-1');
+$content-card-success-background-color: map_get($colors, 'green-4');
+$content-card-success-color: #222222;
+$content-card-warning-border-color: map_get($colors, 'yellow-1');
+$content-card-warning-background-color: map_get($colors, 'yellow-4');
+$content-card-warning-color: #222222;
+$content-card-danger-border-color: map_get($colors, 'red-1');
+$content-card-danger-background-color: map_get($colors, 'red-4');
+$content-card-danger-color: #222222;
+
 .content__card {
   padding: 8px 12px;
   @include chayns-color(background-color, 'secondary-100');
