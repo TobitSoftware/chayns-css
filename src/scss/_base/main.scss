@@ -3,6 +3,7 @@
   font-family: $base-font-family;
   line-height: $base-line-height;
 
+  --static-base-font-size: #{$base-font-size};
   @if ($dynamic-font-size==1) {
     @include dynamic-fontsize($base-font-size, 1);
   } @else {
