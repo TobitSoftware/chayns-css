@@ -3,6 +3,7 @@ footer {
     @include dynamic-fontsize($base-font-size * 0.85);
   } @else {
     font-size: 0.85rem;
+    --font-size: 0.85rem; //Needed in pagemaker
   }
 
   @include chayns-color(color, 'footer');
