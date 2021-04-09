@@ -19,6 +19,7 @@ $headline-sizes: (
       @include dynamic-fontsize($base-font-size * map_get($headline-sizes, $i));
     } @else {
       font-size: #{$size}rem;
+      --font-size: #{$size}rem;//Needed in pagemaker
     }
     @include chayns-color(color, 'headline-#{$i}');
   }

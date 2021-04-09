@@ -26,7 +26,10 @@ $important: ''; // has to be declared on top of the file to allow usage of !glob
     // Other browsers
     --base-font-size: #{$base-font-size};
     font-size: var(--base-font-size, #{$base-font-size}) #{$important};
+    --font-size: #{$base-font-size}; //Needed in pagemaker
   } @else {
-    font-size: calc(#{$min-size}px + #{$size-number - $min-size} * ((var(--browser-width, 100vw) - 320px) / #{2560 - 320})) #{$important};
+    $fontsize: calc(#{$min-size}px + #{$size-number - $min-size} * ((var(--browser-width, 100vw) - 320px) / #{2560 - 320})) #{$important};
+    font-size: $fontsize;
+    --font-size: #{$fontsize}; //Needed in pagemaker
   }
 }
