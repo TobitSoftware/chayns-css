@@ -10,6 +10,10 @@
   &__children {
     display: inline;
 
+    button[disabled] {
+      pointer-events: none;
+    }
+
     p, span {
       display: inline-block;
     }
