@@ -1,6 +1,3 @@
-@import '../../_color';
-@import '../../_generic/mixins';
-
 input[type=number] {
   -moz-appearance: textfield;
 
@@ -9,6 +6,12 @@ input[type=number] {
     -webkit-appearance: none;
     margin: 0;
   }
+}
+
+input.input:-webkit-autofill {
+  -webkit-text-fill-color: var(--chayns-color--text);
+  -webkit-background-clip: text;
+  caret-color: var(--chayns-color--text);
 }
 
 .input {
@@ -47,7 +50,7 @@ input[type=number] {
   }
 
   &--dynamic {
-    &.input--label-right label, input:focus + label {
+    &.input--label-right label, input:focus + label, input:-webkit-autofill + label {
       //right: 0 !important;
       //left: 0 !important;
       visibility: visible;
@@ -70,13 +73,17 @@ input[type=number] {
   }
 
   &--bottom-dynamic {
-    &.input--label-right label {
+    &.input--label-right label, input:-webkit-autofill + label {
       visibility: visible;
       overflow: hidden;
       // required for the animation, results in fixed height of 14px
       top: calc(100% - 7px);
       bottom: -7px;
-      right: -6px;
+      @if ($design__input==1) {
+        right: 3px;
+      } @else {
+        right: -6px;
+      }
       font-size: 9px;
 
       &:after {
@@ -109,8 +116,82 @@ input[type=number] {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    border-radius: 3px;
     min-height: 42px;
+    @if ($design__input==0) {
+      border-radius: 3px;
+    } @else if ($design__input==1) {
+      border-radius: 100px;
+      background-color: transparent;
+      border: none;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        @include chayns-color(background-color, '304');
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 100px;
+        height: 0;
+        width: 0;
+        transition: height 0.3s, width 0.3s 0.1s;
+      }
+
+      &:focus-within:before {
+        height: 100%;
+        width: 100%;
+      }
+
+      & > div:before {
+        content: '';
+        background-color: rgba(160, 160, 160, 0.3);
+        position: absolute;
+        top: -20px;
+        bottom: -20px;
+        right: -100px;
+        left: -100px;
+        z-index: -2;
+        border-radius: 100px;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        @include chayns-color(background-color, $input-border-design-background-color-name);
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        right: 1px;
+        left: 1px;
+        z-index: -1;
+        border-radius: 100px;
+      }
+
+    } @else if ($design__input==2) {
+      border-radius: 3px;
+      background-color: transparent;
+      @include chayns-color(border-color, '203');
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 1px;
+        @include chayns-color(background-color, '304');
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+      }
+
+      &:focus-within:after {
+        transform: scaleX(1);
+      }
+    }
 
     &.input--border_has-icon {
       padding: 0 0 0 10px;
@@ -178,7 +259,7 @@ input[type=number] {
     }
 
     &:not(.input--dynamic):not(.input--bottom-dynamic) {
-      &.input--label-right label, input:focus + label {
+      &.input--label-right label, input:focus + label, input:-webkit-autofill + label {
         visibility: hidden;
       }
     }
@@ -254,6 +335,12 @@ input[type=number] {
       @include chayns-color(color, 'text');
       line-height: 1;
       padding: 0;
+
+      &:-webkit-autofill {
+        -webkit-text-fill-color: var(--chayns-color--text);
+        -webkit-background-clip: text;
+        caret-color: var(--chayns-color--text);
+      }
     }
 
     i {

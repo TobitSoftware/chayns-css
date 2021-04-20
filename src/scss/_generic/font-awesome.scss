@@ -1,5 +1,3 @@
-@import '../config';
-
 // font awesome icons
 @if ($icon-style == 3) { // 3 = duotone
   @import url('https://api.chayns-static.space/font-awesome/v5/css/all-duotone.min.css');

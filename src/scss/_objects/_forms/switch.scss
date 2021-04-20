@@ -1,38 +1,87 @@
-@import '../../_color';
-@import '../../_generic/mixins';
-
 .switch {
   display: none;
 
   & + label {
-    @include chayns-color(background-color, 'red');
-    width: 28px;
-    height: 13px;
-    border-radius: 8px;
-    display: inline-block;
+    @if ($design__switch==0) {
+      width: 28px;
+      height: 13px;
+      @include chayns-color(background-color, 'red');
+      display: inline-block;
+    } @else if ($design__switch==1) {
+      width: 34px;
+      height: 18px;
+      @include chayns-color(background-color, 'red');
+      display: block;
+    } @else if ($design__switch==2) {
+      box-sizing: border-box;
+      width: 34px;
+      height: 18px;
+      border-style: solid;
+      border-width: 2px;
+      @include chayns-color(border-color, 'red');
+      display: block;
+
+    }
+    user-select: none;
+    border-radius: 100px;
     margin: 0 10px;
 
     &:before {
       display: block;
       position: absolute;
-      width: 16px;
-      height: 16px;
-      margin-top: -1.5px;
-      margin-left: -3px;
-      background-color: #FFFFFF;
       border-radius: 50%;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
-      content: ' ';
       transition: transform 100ms linear;
+      @if ($design__switch==0) {
+        margin-top: -1.5px;
+        margin-left: -3px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+        content: '';
+        background-color: #FFFFFF;
+        width: 16px;
+        height: 16px;
+      } @else if ($design__switch==1) {
+        font-family: "Font Awesome 5 Pro";
+        content: '\f00d';
+        font-size: 10px;
+        text-align: center;
+        line-height: 16px;
+        margin: 1px;
+        background-color: #FFFFFF;
+        width: 16px;
+        height: 16px;
+        @include chayns-color(color, 'red');
+      } @else if ($design__switch==2) {
+        content: '';
+        font-size: 10px;
+        text-align: center;
+        line-height: 16px;
+        margin: 1px;
+        width: 12px;
+        height: 12px;
+        @include chayns-color(background-color, 'red');
+      }
     }
   }
 
   &:checked + label:before {
-    transform: translateX(22px);
+    @if ($design__switch==0) {
+      transform: translateX(22px);
+    } @else if ($design__switch==1) {
+      content: '\f00c';
+      transform: translateX(16px);
+      @include chayns-color(color, 'green');
+    } @else if ($design__switch==2) {
+      transform: translateX(16px);
+      @include chayns-color(background-color, 'green');
+    }
   }
 
   &:checked + label {
-    @include chayns-color(background-color, 'green');
+    @if ($design__switch==0 or $design__switch==1) {
+      @include chayns-color(background-color, 'green');
+    } @else if ($design__switch==2) {
+      @include chayns-color(border-color, 'green');
+    }
   }
 
   &:disabled + label {

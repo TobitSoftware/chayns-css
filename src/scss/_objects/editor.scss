@@ -1,6 +1,3 @@
-@import '../_color';
-@import '../_generic/mixins';
-
 // chayns editor colors
 .chayns-editor--enabled [chayns-editor] {
   @include chayns-color(border-color, 'secondary-104');

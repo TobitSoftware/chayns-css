@@ -23,6 +23,16 @@ $secondaryBase400Color: $secondaryColor;
   $secondaryBase400Color: #a8a8a8;
 }
 
+@function getParagraphColor($selector, $fallback) {
+  @if map-has-key($paragraph-styles, $selector) {
+    $styles: map-get($paragraph-styles, $selector);
+    @if map-has-key($styles, "color") {
+      @return map-get($styles, "color");
+    }
+  }
+  @return $fallback;
+}
+
 // main color palette
 $colors: (
         '000': mix(#000000, #FFFFFF, 0%),
@@ -118,7 +128,13 @@ $colors: (
         'primary': $color,
         'secondary': $secondaryColor,
         'headline': $secondaryColor,
-        'text': #222222,
+        'headline-1': getParagraphColor("h1", $secondaryColor),
+        'headline-2': getParagraphColor("h2", $secondaryColor),
+        'headline-3': getParagraphColor("h3", $secondaryColor),
+        'headline-4': getParagraphColor("h4", $secondaryColor),
+        'headline-5': $secondaryColor,
+        'text': getParagraphColor(":root, .tapp, p", #222222),
+        'footer': getParagraphColor("footer", mix(#000000, #FFFFFF, 50%)),
         'header-bar': $headerBarColor,
         'cw-background': $cwBackgroundColor,
         'cw-body-background': $cwBodyBackgroundColor,
@@ -126,6 +142,18 @@ $colors: (
         'red': #976464,
         'green': #349044,
         'wrong': #96060B,
+        'red-1': #5a0303,
+        'red-2': #96060b,
+        'red-3': #ca8181,
+        'red-4': #e9cccc,
+        'yellow-1': #9F5F00,
+        'yellow-2': #FF9800,
+        'yellow-3': #FFB74D,
+        'yellow-4': #FFF3E0,
+        'green-1': #074709,
+        'green-2': #0e7710,
+        'green-3': #85ba87,
+        'green-4': #cde3ce,
 );
 
 // @deprecated: deprecated color palettes will be removed in next minor or major version
@@ -164,37 +192,6 @@ $shades: (
         7: #222222,
         8: #000000,
 );
-
-//special color palettes
-$red: (
-        1: #5a0303,
-        2: #96060b,
-        3: #ca8181,
-        4: #e9cccc,
-);
-$yellow: (
-        1: #9F5F00,
-        2: #FF9800,
-        3: #FFB74D,
-        4: #FFF3E0,
-);
-$green: (
-        1: #074709,
-        2: #0e7710,
-        3: #85ba87,
-        4: #cde3ce,
-);
-
-//content_card
-$content-card-success-border-color: map_get($green, 1);
-$content-card-success-background-color: map_get($green, 4);
-$content-card-success-color: #222222;
-$content-card-warning-border-color: map_get($yellow, 1);
-$content-card-warning-background-color: map_get($yellow, 4);
-$content-card-warning-color: #222222;
-$content-card-danger-border-color: map_get($red, 1);
-$content-card-danger-background-color: map_get($red, 4);
-$content-card-danger-color: #222222;
 
 // @deprecated: will be removed in next minor version
 //receiver input

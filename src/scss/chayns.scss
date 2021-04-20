@@ -1,7 +1,11 @@
 // Main App Styles
 // only import files here
 
+@import './_config';
+@import './_color';
+
 // generic
+@import './_generic/replace';
 @import './_generic/mixins';
 @import './_generic/normalize';
 @import './_generic/reset';
@@ -11,9 +15,9 @@
 @import './_generic/font-ts';
 @import './_generic/font-vcid';
 @import './_generic/ios';
-@import './_generic/android';
 @import './_generic/web';
 @import './_generic/color-schemes';
+@import './_generic/dynamic-fontsize';
 
 // base: html, body, headings, forms, lists, tables, code, paragraph and other high level elements
 @import './_base/main';
@@ -33,6 +37,8 @@
 @import './_objects/footer';
 @import './_objects/wait-cursor';
 @import './_objects/editor';
+@import './_generic/paragraph-format';
+// must be after headlines, footer and main
 
 //chayns components
 @import './_objects/_components/receiverinput';

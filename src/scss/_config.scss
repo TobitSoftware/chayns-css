@@ -1,17 +1,33 @@
 // -- This values will be replaced by the css api --
 $font-name: 'Roboto' !default;
+$font-bold: true;
 $font-factor: 1 !default;
 $font-backup: 'Tahoma' !default;
 
 $font-size: 15px !default;
 
 $headline-font-name: $font-name !default;
+$headline-font-bold: $font-bold;
 $headline-font-backup: $font-backup !default;
 
 $icon-style: 0 !default;
+
+$dynamic-font-size: false !default;
+
+$paragraph-styles: () !default;
+
+$design: 0 !default; // 0=classic (default), 1=modern, 2=minimal
+$design__checkbox: $design !default;
+$design__switch: $design !default;
+$design__button: $design !default;
+$design__accordion: $design !default;
+$design__input: $design !default;
+$design__file_input: $design !default;
+$design__amount_control: $design !default;
 // -------------------------------------------------
 
 $base-font-size: $font-size * $font-factor !default;
+
 $base-line-height: 1.65 !default;
 $base-font-family: $font-name, $font-backup !default;
 

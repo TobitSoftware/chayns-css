@@ -1,4 +1,3 @@
-// @deprecated
 .cc__scroll-view {
   display: inline-block;
 
@@ -30,7 +29,7 @@
 
   &__scrollbar {
     position: relative;
-    background: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     width: 5px;
     border-radius: 3px;
     top: 0;
@@ -41,7 +40,7 @@
   }
 
   &__scrollbar:hover, &--grabbed .cc__scroll-view__scrollbar {
-    background: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &--grabbed, &--grabbed .cc__scroll-view__content {

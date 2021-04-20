@@ -1,8 +1,7 @@
-@import '../../_color';
-@import '../../_generic/mixins';
-
 .input-group {
   position: relative;
+  display: flex;
+  align-items: center;
 
   &--disabled {
     opacity: 0.6;
@@ -16,7 +15,6 @@
   &__icon {
     position: absolute;
     right: 0;
-    top: 0;
     height: 100%;
     display: flex;
     align-items: center;
@@ -64,7 +62,6 @@
       & + label {
         position: absolute;
         text-align: right;
-        top: 0;
         margin: 6px 1px;
         left: 0;
         right: 0;

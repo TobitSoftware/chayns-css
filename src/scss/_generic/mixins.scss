@@ -1,9 +1,4 @@
-@import '../_config';
-
 // Media Queries
-//
-// $media-query - Query name (phone, tablet, desktop)
-//
 // Compatible in IE8+, Firefox 2, Safari 4+
 @mixin media-query($mq) {
 
@@ -44,7 +39,7 @@
 }
 
 @mixin chayns-color-opacity($property-name, $color-name, $opacity) {
-  #{$property-name}: rgba(map_get($colors, #{$color-name}), $opacity);
+  #{$property-name}: rgba(map_get($colors, $color-name), $opacity);
   #{$property-name}: rgba(var(--chayns-color-rgb--#{$color-name}), #{$opacity});
 }
 
