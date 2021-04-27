@@ -39,6 +39,18 @@ $image-size-small: 40px;
     scrollbar-width: thin;
   }
 
+  &__no-results {
+    align-items: center;
+    display: flex;
+    font-size: 85%;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    opacity: 0.85
+  }
+
   &__results {
     .divider {
       padding: 3px 10px 3px 8px;
