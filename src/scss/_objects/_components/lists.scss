@@ -34,7 +34,7 @@
 
       background-size: cover;
       background-position: center;
-      @include chayns-color(background-color, 'secondary-102');
+      @include chayns-color-opacity(background-color, 'text', 0.1);
 
       margin-right: 10px;
 
@@ -43,7 +43,7 @@
       &--circle {
         border-radius: 100px;
         outline: none;
-        @include chayns-color(background-color, 'secondary-102');
+        @include chayns-color-opacity(background-color, 'text', 0.1);
       }
     }
 
