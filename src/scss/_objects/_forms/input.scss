@@ -26,7 +26,7 @@ input.input:-webkit-autofill {
   @include chayns-color(color, 'text');
   transition: border-color 0.4s, color 0.4s, font-weight 0.4s;
 
-  &:focus {
+  &:not(.input--border-design):focus {
     @include chayns-color-opacity(border-bottom-color, 'headline', 0.9);
   }
 
