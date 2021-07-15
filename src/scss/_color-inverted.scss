@@ -1,5 +1,6 @@
 // -- This colors will be replaced by the css api --
 $color: #AC0000 !default;
+$textColor: #FFFFFF !default;
 $secondaryColor: $color !default;
 $headerBarColor: #AC0000 !default;
 $cwBackgroundColor: mix($color, #2F2F2F, 20%) !default; // 101
@@ -132,13 +133,13 @@ $colors: (
         'secondary-409': mix($secondaryBase400Color, $secondaryAccent400Color, 100%),
         'primary': $color,
         'secondary': $secondaryColor,
-        'headline': #FFFFFF,
-        'headline-1': getParagraphColor("h1", #FFFFFF),
-        'headline-2': getParagraphColor("h2", #FFFFFF),
-        'headline-3': getParagraphColor("h3", #FFFFFF),
-        'headline-4': getParagraphColor("h4", #FFFFFF),
-        'headline-5': #FFFFFF,
-        'text': getParagraphColor(":root, .tapp, p", #FFFFFF),
+        'headline': $textColor,
+        'headline-1': getParagraphColor("h1", $textColor),
+        'headline-2': getParagraphColor("h2", $textColor),
+        'headline-3': getParagraphColor("h3", $textColor),
+        'headline-4': getParagraphColor("h4", $textColor),
+        'headline-5': $textColor,
+        'text': getParagraphColor(":root, .tapp, p", $textColor),
         'footer': getParagraphColor("footer", mix(#000000, #FFFFFF, 50%)),
         'header-bar': $headerBarColor,
         'cw-background': $cwBackgroundColor,

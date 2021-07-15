@@ -96,6 +96,9 @@ $image-size-small: 40px;
         text-align: center;
         vertical-align: middle;
 
+        background-color: rgba(var(--chayns-color-rgb--text), 0.1);
+        box-shadow: 0 0 0 1px rgba(var(--chayns-color-rgb--009), 0.08) inset;
+
         &.circle {
           border-radius: 50%;
         }
