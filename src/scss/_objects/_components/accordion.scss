@@ -288,6 +288,10 @@
   & > .accordion__head {
     padding-left: 9px;
 
+    &.accordion__head--no-padding {
+      padding-left: 0;
+    }
+
     &:hover {
       cursor: default;
     }
