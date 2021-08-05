@@ -7,6 +7,26 @@ $tag-height: 24px;
   -webkit-appearance: none;
   align-items: baseline;
 
+  &#{&}--border-design {
+    border: 1px solid rgba(160,160,160,0.3);
+    background-color: var(--chayns-color--000);
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 42px;
+    border-radius: 3px;
+
+    .cc__tag {
+      margin: 3px 5px 3px 0;
+    }
+
+    .cc__tag-input__input {
+      margin: 0;
+      height: 27px;
+    }
+  }
+
   .cc__tag-input__input {
     margin: 5px 0 0;
     height: $tag-height;
