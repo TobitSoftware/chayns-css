@@ -178,6 +178,7 @@
       opacity: 0;
       transition: opacity 0.2s ease, max-width 0.3s ease-out;
       display: flex;
+      overflow: hidden;
 
       &:focus {
         max-width: 100px;
