@@ -4,7 +4,6 @@ select::-ms-expand {
 
 .select {
   display: inline-flex;
-  height: 30px;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -20,7 +19,6 @@ select::-ms-expand {
   } @else {
     @include chayns-color(color, 'text');
     @include chayns-color(background-color, '202');
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
   }
 
   @if ($design__button==1) {
@@ -29,12 +27,16 @@ select::-ms-expand {
     border-radius: 3px;
   }
 
-  &:after {
+  &:before, &:after {
     position: absolute;
-    right: 8px;
+    right: 10px;
     top: 0;
     content: "\e936";
-    font-family: 'FontTS' !important;
+    @if ($icon-style == 3) { // 3 = duotone
+      font-family: 'Font Awesome 5 Duotone';
+    } @else {
+      font-family: 'Font Awesome 5 Pro';
+    }
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -48,17 +50,36 @@ select::-ms-expand {
     height: 100%;
     display: flex;
     align-items: center;
+    z-index: 1;
+  }
+
+  &:before {
+    content: "\f078";
+  }
+
+  @if ($icon-style == 3) { // 3 = duotone
+    &:after {
+      content: "\10f078";
+      opacity: .4;
+    }
   }
 
   select {
-    @include chayns-color(color, 'text');
     appearance: none;
-    border: none;
     background-color: transparent;
     width: 100%;
-    padding: 2px 24px 2px 12px;
-    line-height: 20px;
     cursor: pointer;
+
+    border: 1px solid rgba(160, 160, 160, 0.3);
+    @include chayns-color-opacity(color, '006', 1);
+    @include chayns-color(background-color, $input-border-design-background-color-name);
+    padding: 8px 32px 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 42px;
+    -webkit-appearance: none;
 
     option {
       @include chayns-color(background-color, '202');
@@ -78,6 +99,29 @@ select::-ms-expand {
       @include chayns-color-opacity(background-color, '102', 0.5);
     } @else {
       @include chayns-color(background-color, '203');
+    }
+  }
+}
+
+
+button.button.cc__combo-box {
+  border: 1px solid rgba(160, 160, 160, 0.3);
+  @include chayns-color-opacity(color, '006', 1);
+  @include chayns-color(background-color, $input-border-design-background-color-name);
+  padding: 8px 10px 8px 10px;
+  box-shadow: none;
+  position: relative;
+  min-height: 42px;
+  -webkit-appearance: none;
+
+  .cc__combo-box__icon.fa-caret-down {
+    &:before {
+      content: "\f078";
+    }
+    @if ($icon-style == 3) { // 3 = duotone
+      &:after {
+        content: "\10f078";
+      }
     }
   }
 }
