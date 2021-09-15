@@ -29,7 +29,7 @@ select::-ms-expand {
 
   &:before, &:after {
     position: absolute;
-    right: 8px;
+    right: 10px;
     top: 0;
     content: "\e936";
     @if ($icon-style == 3) { // 3 = duotone
@@ -73,7 +73,7 @@ select::-ms-expand {
     border: 1px solid rgba(160, 160, 160, 0.3);
     @include chayns-color-opacity(color, '006', 1);
     @include chayns-color(background-color, $input-border-design-background-color-name);
-    padding: 8px 22px 8px 10px;
+    padding: 8px 32px 8px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
