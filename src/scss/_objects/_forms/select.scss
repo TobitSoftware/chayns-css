@@ -4,7 +4,6 @@ select::-ms-expand {
 
 .select {
   display: inline-flex;
-  height: 30px;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -20,7 +19,6 @@ select::-ms-expand {
   } @else {
     @include chayns-color(color, 'text');
     @include chayns-color(background-color, '202');
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
   }
 
   @if ($design__button==1) {
@@ -51,14 +49,21 @@ select::-ms-expand {
   }
 
   select {
-    @include chayns-color(color, 'text');
     appearance: none;
-    border: none;
     background-color: transparent;
     width: 100%;
-    padding: 2px 24px 2px 12px;
-    line-height: 20px;
     cursor: pointer;
+
+    border: 1px solid rgba(160, 160, 160, 0.3);
+    @include chayns-color-opacity(color, '006', 1);
+    @include chayns-color(background-color, $input-border-design-background-color-name);
+    padding: 8px 22px 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 42px;
+    -webkit-appearance: none;
 
     option {
       @include chayns-color(background-color, '202');
@@ -80,4 +85,16 @@ select::-ms-expand {
       @include chayns-color(background-color, '203');
     }
   }
+}
+
+
+button.button.cc__combo-box {
+  border: 1px solid rgba(160, 160, 160, 0.3);
+  @include chayns-color-opacity(color, '006', 1);
+  @include chayns-color(background-color, $input-border-design-background-color-name);
+  padding: 8px 10px 8px 10px;
+  box-shadow: none;
+  position: relative;
+  min-height: 42px;
+  -webkit-appearance: none;
 }
