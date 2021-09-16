@@ -31,7 +31,6 @@ select::-ms-expand {
     position: absolute;
     right: 10px;
     top: 0;
-    content: "\e936";
     @if ($icon-style == 3) { // 3 = duotone
       font-family: 'Font Awesome 5 Duotone';
     } @else {
