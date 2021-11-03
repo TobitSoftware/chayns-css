@@ -3,9 +3,9 @@
   #{$name} {
     @if map-has-key($styles, "fontSizePx") {
       @if $dynamic-font-size==1 {
-        @include dynamic-fontsize(map-get($styles, "fontSizePx") * $font-factor * 1px);
+        @include dynamic-fontsize(map-get($styles, "fontSizePx") * if(map-has-key($styles, "fontFactor"), map-get($styles, "fontFactor"), $font-factor) * 1px);
       } @else {
-        font-size: map-get($styles, "fontSizePx") * $font-factor * 1px;
+        font-size: map-get($styles, "fontSizePx") * if(map-has-key($styles, "fontFactor"), map-get($styles, "fontFactor"), $font-factor) * 1px;
       }
     }
     @if map-has-key($styles, "lineHeight") {
@@ -16,6 +16,12 @@
     }
     @if map-has-key($styles, "marginAfterPx") {
       margin-bottom: #{map-get($styles, "marginAfterPx")}px;
+    }
+    @if map-has-key($styles, "letterSpacing") {
+      letter-spacing: #{map-get($styles, "letterSpacing")}em;
+    }
+    @if map-has-key($styles, "wordSpacing") {
+      word-spacing: #{map-get($styles, "wordSpacing")}em;
     }
     // Colors are coming from color-schemes.scss
     @if map-has-key($styles, "fontName") {

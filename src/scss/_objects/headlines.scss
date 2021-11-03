@@ -14,12 +14,15 @@ $headline-sizes: (
     margin: 0 0 10px 0;
     font-weight: normal;
     font-family: $headline-font-family;
+    word-spacing: $headline-word-spacing;
+    letter-spacing: $headline-letter-spacing;
 
     @if $dynamic-font-size==1 {
       @include dynamic-fontsize($base-font-size * map_get($headline-sizes, $i));
     } @else {
-      font-size: #{$size}rem;
-      --font-size: #{$size}rem;//Needed in pagemaker
+      $s: map_get($headline-sizes, $i) * $headline-font-factor;
+      font-size: #{$s}rem;
+      --font-size: #{$s}rem;//Needed in pagemaker
     }
     @include chayns-color(color, 'headline-#{$i}');
   }
@@ -28,31 +31,31 @@ $headline-sizes: (
 h1,
 .h1 {
   margin: 1.2rem 0 5px 0;
-  line-height: 1.35;
+  line-height: 1.35 * $headline-line-height-factor;
 }
 
 h2,
 .h2 {
   margin: 1.2rem 0 5px 0;
-  line-height: 1.35;
+  line-height: 1.35 * $headline-line-height-factor;
 }
 
 h3,
 .h3 {
   margin: 1.2rem 0 5px 0;
-  line-height: 1.5;
+  line-height: 1.35 * $headline-line-height-factor;
 }
 
 h4,
 .h4 {
   margin: 1.1rem 0 5px 0;
-  line-height: 1.5;
+  line-height: 1.35 * $headline-line-height-factor;
 }
 
 h5,
 .h5 {
   margin: 1.1rem 0 5px 0;
-  line-height: 1.5;
+  line-height: 1.35 * $headline-line-height-factor;
 }
 
 .tapp {
