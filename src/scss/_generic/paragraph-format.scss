@@ -17,6 +17,12 @@
     @if map-has-key($styles, "marginAfterPx") {
       margin-bottom: #{map-get($styles, "marginAfterPx")}px;
     }
+    @if map-has-key($styles, "letterSpacing") {
+      letter-spacing: #{map-get($styles, "letterSpacing")}em;
+    }
+    @if map-has-key($styles, "wordSpacing") {
+      word-spacing: #{map-get($styles, "wordSpacing")}em;
+    }
     // Colors are coming from color-schemes.scss
     @if map-has-key($styles, "fontName") {
       font-family: #{map-get($styles, "fontName")};
