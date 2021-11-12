@@ -4,10 +4,6 @@
     border-bottom-style: solid;
     @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
 
-    &:last-child {
-      border-bottom: none;
-    }
-
     .accordion &, .list-item & {
       @include chayns-color-opacity(border-bottom-color, 'headline', 0.45);
     }
@@ -239,5 +235,8 @@
         }
       }
     }
+  }
+  &>.list-item:last-child, &>:last-child>.list-item {
+    border-bottom: none;
   }
 }
