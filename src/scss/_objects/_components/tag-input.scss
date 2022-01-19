@@ -23,7 +23,7 @@ $tag-height: 24px;
 
     .cc__tag-input__input {
       margin: 0;
-      height: 27px;
+      height: 30px;
     }
   }
 
@@ -40,7 +40,8 @@ $tag-height: 24px;
 }
 
 .cc__tag {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   @include chayns-color(background-color, '203');
   padding-left: 10px;
   margin: 5px 5px 0 0;
@@ -55,7 +56,6 @@ $tag-height: 24px;
 
   &--selected {
     @include chayns-color(background-color, '206');
-
   }
 
   .icon {
@@ -68,5 +68,11 @@ $tag-height: 24px;
     &:hover {
       opacity: 0.8;
     }
+  }
+
+  &__children {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
   }
 }
