@@ -1,12 +1,15 @@
 $content-card-success-border-color: map_get($colors, 'green-1');
 $content-card-success-background-color: map_get($colors, 'green-4');
 $content-card-success-color: #222222;
+$content-card-success-color-rgb: 34, 34, 34;
 $content-card-warning-border-color: map_get($colors, 'yellow-1');
 $content-card-warning-background-color: map_get($colors, 'yellow-4');
 $content-card-warning-color: #222222;
+$content-card-warning-color-rgb: 34, 34, 34;
 $content-card-danger-border-color: map_get($colors, 'red-1');
 $content-card-danger-background-color: map_get($colors, 'red-4');
 $content-card-danger-color: #222222;
+$content-card-danger-color-rgb: 34, 34, 34;
 
 .content__card {
   padding: 8px 12px;
@@ -22,6 +25,8 @@ $content-card-danger-color: #222222;
     border-color: $content-card-success-border-color;
     background-color: $content-card-success-background-color;
     color: $content-card-success-color;
+    --chayns-color--text: #{$content-card-success-color};
+    --chayns-color-rgb--text: #{$content-card-success-color-rgb};
 
     h1,
     h2,
@@ -42,6 +47,8 @@ $content-card-danger-color: #222222;
     border-color: $content-card-warning-border-color;
     background-color: $content-card-warning-background-color;
     color: $content-card-warning-color;
+    --chayns-color--text: #{$content-card-warning-color};
+    --chayns-color-rgb--text: #{$content-card-warning-color-rgb};
 
     h1,
     h2,
@@ -62,6 +69,8 @@ $content-card-danger-color: #222222;
     border-color: $content-card-danger-border-color;
     background-color: $content-card-danger-background-color;
     color: $content-card-danger-color;
+    --chayns-color--text: #{$content-card-danger-color};
+    --chayns-color-rgb--text: #{$content-card-danger-color-rgb};
 
     h1,
     h2,
