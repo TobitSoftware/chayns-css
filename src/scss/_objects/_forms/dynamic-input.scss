@@ -52,6 +52,22 @@
     white-space: pre;
   }
 
+  input {
+    &.input {
+      & + label {
+        line-height: 1.15;
+      }
+    }
+  }
+
+  textarea {
+    &.input {
+      & + label {
+        line-height: 1.65;
+      }
+    }
+  }
+
   input,
   textarea {
     display: inline-block;
@@ -74,7 +90,6 @@
         opacity: 1;
         font-family: inherit;
         font-size: 100%;
-        line-height: 1.15;
         display: inline-flex;
         justify-content: flex-end;
 
