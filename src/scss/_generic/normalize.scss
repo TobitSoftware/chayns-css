@@ -152,11 +152,17 @@ img {
 button,
 input,
 optgroup,
-select,
-textarea {
+select {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.65; /* 1 */
   margin: 0; /* 2 */
 }
 
