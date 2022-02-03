@@ -19,7 +19,7 @@ $loaded-fonts: [];
       font-style: normal;
       font-weight: normal;
       src: local($font-name+$space+$light), local($font-name+$minus+$light), url(https://api.chayns-static.space/font/#{$url}/Regular.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/Regular.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/Regular.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/Regular.svg) format('svg');
-      unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
+      unicode-range: U+0020-00FF, U+20A0-20CF, U+2122, U+2000-206F;
     }
 
     @font-face {
@@ -27,7 +27,7 @@ $loaded-fonts: [];
       font-style: italic;
       font-weight: normal;
       src: local($font-name+$space+$light+' ' + Italic), local($font-name+'-'+$light + Italic), url(https://api.chayns-static.space/font/#{$url}/Italic.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/Italic.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/Italic.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/Italic.svg) format('svg');
-      unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
+      unicode-range: U+0020-00FF, U+20A0-20CF, U+2122, U+2000-206F;
     }
 
     @if ($font-bold) {
@@ -36,7 +36,7 @@ $loaded-fonts: [];
         font-style: normal;
         font-weight: bold;
         src: local($font-name +' '+ Bold), local($font-name +'-'+ Bold), url(https://api.chayns-static.space/font/#{$url}/Bold.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/Bold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/Bold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/Bold.svg) format('svg');
-        unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
+        unicode-range: U+0020-00FF, U+20A0-20CF, U+2122, U+2000-206F;
       }
 
       @font-face {
@@ -44,7 +44,7 @@ $loaded-fonts: [];
         font-style: italic;
         font-weight: bold;
         src: local($font-name +' '+ Bold + ' '+ Italic), local($font-name +'-'+ Bold + Italic), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff2) format('woff2'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.woff) format('woff'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.ttf) format('truetype'), url(https://api.chayns-static.space/font/#{$url}/ItalicBold.svg) format('svg');
-        unicode-range: U+0020-00FF, U+20A0-20CF, U+2122;
+        unicode-range: U+0020-00FF, U+20A0-20CF, U+2122, U+2000-206F;
       }
     }
   }
