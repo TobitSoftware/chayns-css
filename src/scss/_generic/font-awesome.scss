@@ -1,6 +1,6 @@
 // font awesome icons
 @if ($icon-style == 3) { // 3 = duotone
-  @import url('https://api.chayns-static.space/font-awesome/v5/css/all-duotone.min.css');
+  @import url('https://api.chayns-static.space/font-awesome/v6/css/all-duotone.min.css');
 
   // fix for font ts and font awesome 4.7 -o icons
   .fa[class$='-o'], [class*='ts-'] {
@@ -9,7 +9,7 @@
     }
 
     &::after{
-      font-family: "Font Awesome 5 Duotone";
+      font-family: "Font Awesome 6 Duotone";
     }
   }
 
@@ -35,5 +35,5 @@
     }
   }
 } @else {
-  @import url('https://api.chayns-static.space/font-awesome/v5/css/all.min.css');
+  @import url('https://api.chayns-static.space/font-awesome/v6/css/all.min.css');
 }

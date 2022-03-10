@@ -41,7 +41,11 @@ html {
 }
 
 // Base Style
-p:not(:last-child),
+p,
 .paragraph {
   margin-bottom: 8px;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
