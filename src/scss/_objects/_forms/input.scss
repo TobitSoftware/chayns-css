@@ -357,6 +357,21 @@ textarea.input {
 
 textarea.input--border-design {
   @include chayns-color(color, 'text');
+  &::-webkit-input-placeholder {
+    @include chayns-placeholder('006', 1);
+  }
+
+  &:-ms-input-placeholder {
+    @include chayns-placeholder('006', 1);
+  }
+
+  &:-moz-placeholder {
+    @include chayns-placeholder('006', 1);
+  }
+
+  &::-moz-placeholder {
+    @include chayns-placeholder('006', 1);
+  }
 }
 
 //checkbox/radio/switch preparation
