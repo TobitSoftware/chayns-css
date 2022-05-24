@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // grid system based on inuit.css
 .grid {
   margin: 0;
@@ -25,7 +27,7 @@
       @for $widths-numerator from 1 to $widths-denominator {
 
         .col-#{$widths-numerator}-#{$widths-denominator}#{$widths-breakpoint} {
-          width: ($widths-numerator / $widths-denominator) * 100% !important;
+          width: math.div($widths-numerator, $widths-denominator) * 100% !important;
         }
 
       }
