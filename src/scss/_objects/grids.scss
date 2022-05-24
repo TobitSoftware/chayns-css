@@ -27,7 +27,7 @@
       @for $widths-numerator from 1 to $widths-denominator {
 
         .col-#{$widths-numerator}-#{$widths-denominator}#{$widths-breakpoint} {
-          width: math.div($widths-numerator, $widths-denominator) * 100% !important;
+          width: ($widths-numerator / $widths-denominator) * 100% !important;
         }
 
       }
