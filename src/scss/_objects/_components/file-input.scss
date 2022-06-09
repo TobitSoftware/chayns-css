@@ -2,9 +2,6 @@ $file-input-color: 'headline';
 $file-input-border-color: '005';
 $file-input-border-hover-color: 'headline';
 $file-input-border-style: dashed;
-@if ($design__file_input==2) {
-  $file-input-border-style: solid;
-}
 
 .cc__file-input {
   border-width: 1px;
@@ -13,9 +10,6 @@ $file-input-border-style: dashed;
   @include chayns-color(color, $file-input-color);
   overflow: hidden;
   transition: border .1s;
-  @if ($design__file_input==1) {
-    border-radius: 100px;
-  }
 
   &--custom {
     display: flex;

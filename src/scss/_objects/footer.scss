@@ -1,10 +1,6 @@
 footer {
-  @if ($dynamic-font-size==1) {
-    @include dynamic-fontsize($base-font-size * 0.85);
-  } @else {
-    font-size: 0.85rem;
-    --font-size: 0.85rem; //Needed in pagemaker
-  }
+  font-size: 0.85rem;
+  --font-size: 0.85rem; //Needed in pagemaker
 
   @include chayns-color(color, 'footer');
   margin: 10px 0 0;

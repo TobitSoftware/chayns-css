@@ -9,12 +9,7 @@
   transition: background-color 150ms ease;
   overflow: hidden;
   line-height: 1.15;
-
-  @if ($design__button==1) {
-    border-radius: 100px;
-  } @else {
-    border-radius: 3px;
-  }
+  border-radius: 3px;
 
   &:not(.button--show-focus) {
     outline: none;
@@ -31,11 +26,7 @@
       bottom: 0;
       opacity: 0;
       transition: opacity 500ms;
-      @if ($design__button==2) {
-        @include chayns-color-opacity(background-color, '408', .25);
-      } @else {
-        background-color: rgba(255, 255, 255, 0.5);
-      }
+      background-color: rgba(255, 255, 255, 0.5);
     }
 
     &:active:after {
@@ -66,37 +57,14 @@
 .button {
   min-height: 30px;
   padding: 7px 12px;
-  @if ($design__button==2) {
-    border-width: 1px;
-    border-style: solid;
-    @include chayns-color(border-color, '408');
-    @include chayns-color(color, 'text');
-    background-color: transparent;
-  } @else {
-    color: #FFFFFF;
-    @include chayns-color(background-color, '408');
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, .2);
-  }
+  color: #FFFFFF;
+  @include chayns-color(background-color, '408');
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, .2);
 
   &.button--secondary {
-    @if ($design__button==2) {
-      border-width: 1px;
-      border-style: solid;
-      @include chayns-color(border-color, '203');
-      background-color: transparent;
-    } @else {
-      @include chayns-color(background-color, '202');
-      box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
-    }
+    @include chayns-color(background-color, '202');
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
     @include chayns-color(color, 'text');
-
-    &:not(.button--disabled) {
-      &:after {
-        @if ($design__button==2) {
-          @include chayns-color-opacity(background-color, '203', .7);
-        }
-      }
-    }
   }
 
   &__icon {
@@ -114,25 +82,9 @@
   padding: 6px 10px;
   font-size: 0.95rem;
   font-weight: normal;
-
-  @if ($design__button==2) {
-    border-width: 1px;
-    border-style: solid;
-    @include chayns-color(border-color, '203');
-    background-color: transparent;
-  } @else {
-    @include chayns-color(background-color, '202');
-    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.09);
-  }
+  @include chayns-color(background-color, '202');
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.09);
   @include chayns-color(color, 'text');
-
-  &:not(.button--disabled) {
-    &:after {
-      @if ($design__button==2) {
-        @include chayns-color-opacity(background-color, '203', .7);
-      }
-    }
-  }
 
   &__icon {
     width: 27px;
@@ -147,22 +99,14 @@
 .chayns--desktop {
   .button {
     &:not(.button--disabled):hover, &--show-focus:focus {
-      @if ($design__button==2) {
-        @include chayns-color-opacity(background-color, '102', 0.5);
-      } @else {
-        @include chayns-color(background-color, '409');
-      }
+      @include chayns-color(background-color, '409');
     }
   }
 
   .button.button--secondary {
     &:not(.button--disabled) {
       &:hover {
-        @if ($design__button==2) {
-          @include chayns-color-opacity(background-color, '102', 0.5);
-        } @else {
-          @include chayns-color(background-color, '203');
-        }
+        @include chayns-color(background-color, '203');
       }
     }
   }
@@ -170,11 +114,7 @@
   .choosebutton {
     &:not(.button--disabled) {
       &:hover {
-        @if ($design__button==2) {
-          @include chayns-color-opacity(background-color, '102', 0.3);
-        } @else {
-          @include chayns-color(background-color, '203');
-        }
+        @include chayns-color(background-color, '203');
       }
     }
   }

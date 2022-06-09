@@ -17,7 +17,6 @@
 @import './_generic/ios';
 @import './_generic/web';
 @import './_generic/color-schemes';
-@import './_generic/dynamic-fontsize';
 
 // base: html, body, headings, forms, lists, tables, code, paragraph and other high level elements
 @import './_base/main';
@@ -37,7 +36,6 @@
 @import './_objects/footer';
 @import './_objects/wait-cursor';
 @import './_objects/editor';
-@import './_generic/paragraph-format';
 // must be after headlines, footer and main
 
 //chayns components
@@ -67,3 +65,5 @@
 @import './_objects/_components/bubble';
 @import './_objects/_components/image-accordion';
 @import './_objects/_components/progress-bar';
+
+@import './_generic/paragraph-format';

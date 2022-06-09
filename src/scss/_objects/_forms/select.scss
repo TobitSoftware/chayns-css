@@ -10,22 +10,9 @@ select::-ms-expand {
   transition: box-shadow .12s ease;
   overflow: hidden;
   border: 0;
-
-  @if ($design__button==2) {
-    border-width: 1px;
-    border-style: solid;
-    @include chayns-color(border-color, '203');
-    background-color: transparent;
-  } @else {
-    @include chayns-color(color, 'text');
-    @include chayns-color(background-color, '202');
-  }
-
-  @if ($design__button==1) {
-    border-radius: 100px;
-  } @else {
-    border-radius: 3px;
-  }
+  @include chayns-color(color, 'text');
+  @include chayns-color(background-color, '202');
+  border-radius: 3px;
 
   &:before, &:after {
     position: absolute;
@@ -94,11 +81,7 @@ select::-ms-expand {
 // prevents hover on mobile/in app since hover on mobile is triggered by a tap
 .chayns--desktop {
   .select:not(.select--disabled):hover {
-    @if ($design__button==2) {
-      @include chayns-color-opacity(background-color, '102', 0.5);
-    } @else {
-      @include chayns-color(background-color, '203');
-    }
+    @include chayns-color(background-color, '203');
   }
 }
 

@@ -2,11 +2,7 @@
   $styles: map-get($paragraph-styles, $name);
   #{$name} {
     @if map-has-key($styles, "fontSizePx") {
-      @if $dynamic-font-size==1 {
-        @include dynamic-fontsize(map-get($styles, "fontSizePx") * $font-factor * 1px);
-      } @else {
-        font-size: map-get($styles, "fontSizePx") * $font-factor * 1px;
-      }
+      font-size: map-get($styles, "fontSizePx") * $font-factor * 1px;
     }
     @if map-has-key($styles, "lineHeight") {
       line-height: #{map-get($styles, "lineHeight")};

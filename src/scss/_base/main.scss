@@ -3,16 +3,12 @@
   font-family: $base-font-family;
   line-height: $base-line-height;
 
-  @if ($dynamic-font-size==1) {
-    @include dynamic-fontsize($base-font-size, 1);
-  } @else {
-    // IE
-    font-size: $base-font-size;
-    // Other browsers
-    --font-size: #{$base-font-size}; //Needed in pagemaker
-    --base-font-size: #{$base-font-size};
-    font-size: var(--base-font-size, $base-font-size);
-  }
+  // IE
+  font-size: $base-font-size;
+  // Other browsers
+  --font-size: #{$base-font-size}; //Needed in pagemaker
+  --base-font-size: #{$base-font-size};
+  font-size: var(--base-font-size, $base-font-size);
 }
 
 .default-font-size {
@@ -22,12 +18,8 @@
 
 @for $size from 1px through 96px {
   .chayns__font-size--#{$size} {
-    @if $dynamic-font-size==1 {
-      @include dynamic-fontsize($size * $font-factor, 0, 1);
-    } @else {
-      font-size: #{$size * $font-factor} !important;
-      --font-size: #{$size * $font-factor}; //Needed in pagemaker
-    }
+    font-size: #{$size * $font-factor} !important;
+    --font-size: #{$size * $font-factor}; //Needed in pagemaker
   }
 }
 

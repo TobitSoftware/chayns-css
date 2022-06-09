@@ -24,17 +24,10 @@
     }
 
     &:before {
-      @if ($design__checkbox == 0) {
-        @include chayns-color(background-color, '403');
-        @include chayns-color-opacity(border-color, '409', 0.5);
-        transition: box-shadow 100ms ease-in-out, background-color 50ms 50ms cubic-bezier(1, 0, 0, 1);
-        will-change: background-color;
-      } @else if ($design__checkbox==1) {
-        @include chayns-color(background-color, '101');
-        @include chayns-color-opacity(border-color, 'headline', 0.7);
-      } @else if ($design__checkbox==2) {
-        @include chayns-color-opacity(border-color, 'headline', 0.5);
-      }
+      @include chayns-color(background-color, '403');
+      @include chayns-color-opacity(border-color, '409', 0.5);
+      transition: box-shadow 100ms ease-in-out, background-color 50ms 50ms cubic-bezier(1, 0, 0, 1);
+      will-change: background-color;
       top: 5px;
       z-index: 0;
       border-width: 1px;
@@ -47,81 +40,34 @@
     cursor: default;
   }
 
-  @if ($design__checkbox!=0) {
-    &:not(:disabled) + label:hover:before, &:checked + label:before {
-      @include chayns-color(border-color, 'headline');
-    }
-  }
-
   &:not(:disabled):not(:checked) + label:hover:after {
-    @if ($design__checkbox==0) {
-      transform-origin: 100% 100%;
-      top: 7px;
-      left: 1px;
-      width: 5.5px;
-      height: 10px;
-      border-right: 2px solid #fff;
-      border-bottom: 2px solid #fff;
-      transform: rotateZ(37deg);
-      opacity: 0.5;
-    }
+    transform-origin: 100% 100%;
+    top: 7px;
+    left: 1px;
+    width: 5.5px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotateZ(37deg);
+    opacity: 0.5;
   }
 
   &:checked + label:after {
-    @if ($design__checkbox==0) {
-      transform-origin: 100% 100%;
-      top: 7px;
-      left: 1px;
-      width: 5.5px;
-      height: 10px;
-      border-right: 2px solid #fff;
-      border-bottom: 2px solid #fff;
-      transform: rotateZ(37deg);
-    } @else if ($design__checkbox==1) {
-      @keyframes checkbox {
-        0% {
-          height: 0;
-          width: 0;
-        }
-        32% {
-          width: 0px;
-          height: 7.5px;
-        }
-        100% {
-          width: 16px;
-          height: 7.5px;
-        }
-      }
-      transform-origin: top left;
-      border: 0;
-      animation: checkbox 0.2s ease;
-      top: 12px;
-      left: 3px;
-      width: 16px;
-      height: 7.5px;
-      border-bottom: 2px solid var(--chayns-color--headline);
-      border-left: 2px solid var(--chayns-color--headline);
-      transform: rotateZ(-45deg);
-    } @else if ($design__checkbox==2) {
-      transform-origin: top left;
-      border: 0;
-      top: 13px;
-      left: 3px;
-      width: 10px;
-      height: 5px;
-      border-bottom: 1px solid var(--chayns-color--headline);
-      border-left: 1px solid var(--chayns-color--headline);
-      transform: rotateZ(-50deg);
-    }
+    transform-origin: 100% 100%;
+    top: 7px;
+    left: 1px;
+    width: 5.5px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotateZ(37deg);
   }
 
-  @if ($design__checkbox==0) {
-    &:checked:not(:disabled) + label {
-      &:before {
-        box-shadow: inset 0 0 0 10px map_get($colors, '408');
-        box-shadow: inset 0 0 0 10px var(--chayns-color--408);
-        @include chayns-color(background-color, '408');
-      }
+  &:checked:not(:disabled) + label {
+    &:before {
+      box-shadow: inset 0 0 0 10px map_get($colors, '408');
+      box-shadow: inset 0 0 0 10px var(--chayns-color--408);
+      @include chayns-color(background-color, '408');
     }
   }
 }
