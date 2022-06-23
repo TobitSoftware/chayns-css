@@ -30,6 +30,13 @@ $design__file_input: $design !default;
 $design__amount_control: $design !default;
 // -------------------------------------------------
 
+@if (map-has-key($paragraph-styles, '.button')) {
+        $button-styles: map-get($paragraph-styles, '.button');
+        @if (map-has-key($button-styles, 'design')) {
+                $design__button: map-get($button-styles, 'design');
+        }
+}
+
 $base-font-size: $font-size * $font-factor !default;
 
 $base-line-height: 1.65 !default;

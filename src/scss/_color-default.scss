@@ -22,14 +22,18 @@ $secondaryBase400Color: $secondaryColor;
   $secondaryBase400Color: #a8a8a8;
 }
 
-@function getParagraphColor($selector, $fallback) {
+@function getParagraphValue($selector, $property, $fallback) {
   @if map-has-key($paragraph-styles, $selector) {
     $styles: map-get($paragraph-styles, $selector);
-    @if map-has-key($styles, "color") {
-      @return map-get($styles, "color");
+    @if map-has-key($styles, $property) {
+      @return map-get($styles, $property);
     }
   }
   @return $fallback;
+}
+
+@function getParagraphColor($selector, $fallback) {
+  @return getParagraphValue($selector, "color", $fallback);
 }
 
 // main color palette
