@@ -152,7 +152,8 @@
       @if ($design__button==2) {
         @include chayns-color-opacity(background-color, '102', 0.5);
       } @else {
-        @include chayns-color(background-color, '409');
+        background-color: map_get($colors, '409');
+        background-color: getParagraphValue(".button", "backgroundColor", var(--chayns-color--409));
       }
     }
   }
