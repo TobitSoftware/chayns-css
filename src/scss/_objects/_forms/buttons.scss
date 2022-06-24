@@ -74,8 +74,9 @@
     color: getParagraphValue(".button", "color", var(--chayns-color--text));
     background-color: transparent;
   } @else {
-    color: #FFFFFF;
-    @include chayns-color(background-color, '408');
+    color: getParagraphValue(".button", "color", #FFFFFF);
+    background-color: map_get($colors, '408');
+    background-color: getParagraphValue(".button", "backgroundColor", var(--chayns-color--408));
     box-shadow: 1px 2px 3px rgba(0, 0, 0, .2);
   }
 
