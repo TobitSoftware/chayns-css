@@ -5,7 +5,11 @@
       @if $dynamic-font-size==1 {
         @include dynamic-fontsize(map-get($styles, "fontSizePx") * $font-factor * 1px);
       } @else {
-        font-size: map-get($styles, "fontSizePx") * $font-factor * 1px;
+        $factor: $font-factor;
+        @if (map-has-key($styles, "fontFactor")) {
+          $factor: map-get($styles, "fontFactor");
+        }
+        font-size: map-get($styles, "fontSizePx") * $factor * 1px;
       }
     }
     @if map-has-key($styles, "lineHeight") {

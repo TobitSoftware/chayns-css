@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const browserSync = require("browser-sync");
-const sass = require("gulp-sass");
+const nodeSass = require('node-sass');
+const gulpSass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 
 const path = require('path');
@@ -38,7 +39,7 @@ gulp.task('server', function () {
  */
 gulp.task('bundle', function () {
     return gulp.src('./src/scss/chayns.scss')
-        .pipe(sass({
+        .pipe(gulpSass(nodeSass)({
             outFile: './build/chayns.css',
             sourceComments: false,
             errLogToConsole: true,
