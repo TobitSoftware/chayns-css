@@ -71,7 +71,11 @@
     border-style: solid;
     border-color: getParagraphValue(".button", "backgroundColor", var(--chayns-color--408));
 
-    color: getParagraphValue(".button", "color", var(--chayns-color--text));
+    $buttonColor: getParagraphValue(".button", "color", '');
+    @if ($buttonColor == '') {
+      $buttonColor: getParagraphValue(".button", "backgroundColor", var(--chayns-color--408));
+    }
+    color: $buttonColor;
     background-color: transparent;
   } @else {
     color: getParagraphValue(".button", "color", #FFFFFF);
