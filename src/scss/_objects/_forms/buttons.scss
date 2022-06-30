@@ -32,7 +32,7 @@
       opacity: 0;
       transition: opacity 500ms;
       @if ($design__button==2) {
-        @include chayns-color-opacity(background-color, '408', .25);
+        background-color: if("" == getParagraphValue(".button", "backgroundColor", ""), rgba(var(--chayns-color-rgb--408), .25), change-color(getParagraphValue(".button", "backgroundColor", ""), $alpha: 0.25));
       } @else {
         background-color: rgba(255, 255, 255, 0.5);
       }
@@ -69,12 +69,18 @@
   @if ($design__button==2) {
     border-width: 1px;
     border-style: solid;
-    @include chayns-color(border-color, '408');
-    @include chayns-color(color, 'text');
+    border-color: getParagraphValue(".button", "backgroundColor", var(--chayns-color--408));
+
+    $buttonColor: getParagraphValue(".button", "color", '');
+    @if ($buttonColor == '') {
+      $buttonColor: getParagraphValue(".button", "backgroundColor", var(--chayns-color--408));
+    }
+    color: $buttonColor;
     background-color: transparent;
   } @else {
-    color: #FFFFFF;
-    @include chayns-color(background-color, '408');
+    color: getParagraphValue(".button", "color", #FFFFFF);
+    background-color: map_get($colors, '408');
+    background-color: getParagraphValue(".button", "backgroundColor", var(--chayns-color--408));
     box-shadow: 1px 2px 3px rgba(0, 0, 0, .2);
   }
 
@@ -150,7 +156,8 @@
       @if ($design__button==2) {
         @include chayns-color-opacity(background-color, '102', 0.5);
       } @else {
-        @include chayns-color(background-color, '409');
+        background-color: map_get($colors, '409');
+        background-color: getParagraphValue(".button", "backgroundColor", var(--chayns-color--409));
       }
     }
   }

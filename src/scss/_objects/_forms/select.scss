@@ -32,9 +32,9 @@ select::-ms-expand {
     right: 10px;
     top: 0;
     @if ($icon-style == 3) { // 3 = duotone
-      font-family: 'Font Awesome 5 Duotone';
+      font-family: 'Font Awesome 6 Duotone';
     } @else {
-      font-family: 'Font Awesome 5 Pro';
+      font-family: 'Font Awesome 6 Pro';
     }
     speak: none;
     font-style: normal;
