@@ -3,6 +3,6 @@
   border-radius: 15px;
   font-size: .8rem;
   text-align: center;
-  @include chayns-color(color, '007');
+  @include chayns-color(color, $badge-color-name);
   @include chayns-color(background-color, 'secondary-202')
 }
