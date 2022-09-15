@@ -78,11 +78,18 @@
 
     .day__item__content {
       position: absolute;
+      inset: 10%;
 
-      top: 50%;
-      left: 50%;
-
-      transform: translate(-50%, -50%);
+      &.is-selected {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 80%;
+        height: 80%;
+        color: #FFFFFF;
+        background-color: var(--chayns-color--primary);
+      }
     }
   }
 }
@@ -128,6 +135,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    vertical-align: middle;
   }
 
   &-text {
