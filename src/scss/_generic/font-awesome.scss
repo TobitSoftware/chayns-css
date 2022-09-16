@@ -13,6 +13,10 @@
     }
   }
 
+  :root {
+    --fa-style-family: "Font Awesome 6 Duotone";
+  }
+
   // styles for default accordion icon
   .accordion__head > .accordion__head__icon > .ts-angle-right {
     -webkit-font-smoothing: antialiased;
