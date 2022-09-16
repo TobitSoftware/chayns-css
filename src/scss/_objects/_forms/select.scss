@@ -33,6 +33,8 @@ select::-ms-expand {
     top: 0;
     @if ($icon-style == 3) { // 3 = duotone
       font-family: 'Font Awesome 6 Duotone';
+    } @else if ($icon-style == 4) {
+      font-family: "Font Awesome 6 Sharp";
     } @else {
       font-family: 'Font Awesome 6 Pro';
     }
