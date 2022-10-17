@@ -9,8 +9,7 @@
     cursor: pointer;
     padding-left: 20px;
 
-    line-height: calc(15px * #{$base-line-height});
-    min-height: calc(15px * #{$base-line-height});
+    line-height: #{$base-line-height};
     vertical-align: middle;
 
     &:before,
@@ -35,7 +34,8 @@
       } @else if ($design__checkbox==2) {
         @include chayns-color-opacity(border-color, 'headline', 0.5);
       }
-      top: 5px;
+      top: 50%;
+      transform: translateY(-50%);
       z-index: 0;
       border-width: 1px;
       border-style: solid;
@@ -56,13 +56,13 @@
   &:not(:disabled):not(:checked) + label:hover:after {
     @if ($design__checkbox==0) {
       transform-origin: 100% 100%;
-      top: 7px;
+      top: 50%;
       left: 1px;
       width: 5.5px;
       height: 10px;
       border-right: 2px solid #fff;
       border-bottom: 2px solid #fff;
-      transform: rotateZ(37deg);
+      transform:  translateY(-50%) rotateZ(37deg);
       opacity: 0.5;
     }
   }
@@ -70,13 +70,13 @@
   &:checked + label:after {
     @if ($design__checkbox==0) {
       transform-origin: 100% 100%;
-      top: 7px;
+      top: 50%;
       left: 1px;
       width: 5.5px;
       height: 10px;
       border-right: 2px solid #fff;
       border-bottom: 2px solid #fff;
-      transform: rotateZ(37deg);
+      transform:  translateY(-50%) rotateZ(37deg);
     } @else if ($design__checkbox==1) {
       @keyframes checkbox {
         0% {
@@ -84,7 +84,7 @@
           width: 0;
         }
         32% {
-          width: 0px;
+          width: 0;
           height: 7.5px;
         }
         100% {

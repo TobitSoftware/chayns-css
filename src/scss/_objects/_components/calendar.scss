@@ -79,11 +79,11 @@
     .day__item__content {
       position: absolute;
       inset: 10%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
 
       &.is-selected {
-        display:flex;
-        align-items: center;
-        justify-content: center;
         border-radius: 50%;
         width: 80%;
         height: 80%;
