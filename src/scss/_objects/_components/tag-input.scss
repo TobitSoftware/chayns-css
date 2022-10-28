@@ -24,6 +24,10 @@ $tag-height: 24px;
     .cc__tag-input__input {
       margin: 0;
       height: 30px;
+
+      .input::-webkit-input-placeholder {
+        @include chayns-color(color, '006');
+      }
     }
   }
 
