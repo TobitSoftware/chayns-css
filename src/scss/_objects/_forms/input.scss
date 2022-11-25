@@ -253,7 +253,7 @@ input.input:-webkit-autofill {
       justify-content: center;
       min-width: 24px;
 
-      &[class*="ts-"] {
+      &[class^="ts-"], &[class*=" ts-"] {
         font-size: 1.8em;
       }
     }

@@ -3,7 +3,7 @@
   @import url('https://api.chayns-static.space/font-awesome/v6/css/all-duotone.min.css');
 
   // fix for font ts and font awesome 4.7 -o icons
-  .fa[class$='-o'], [class*='ts-'] {
+  .fa[class$='-o'], [class^="ts-"], [class*=' ts-'] {
     &::before{
       position: initial;
     }
