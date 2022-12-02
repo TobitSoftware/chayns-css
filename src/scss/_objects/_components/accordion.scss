@@ -231,13 +231,17 @@
 .accordion__body > .accordion__content + * > .accordion__item,
 .accordion__body > .accordion__intro + * > .accordion__item,
 .accordion__body > .accordion__item:first-child,
-.accordion__body > *:first-child > .accordion__item,
+.accordion__body > :first-child > .accordion__item:first-child,
+.accordion__body > :empty + * > .accordion__item:first-child,
+.accordion__body > .module-css + * > .accordion__item:first-child,
 .accordion__body > .accordion__content + .accordion--wrapped,
 .accordion__body > .accordion__intro + .accordion--wrapped,
 .accordion__body > .accordion__content + * > .accordion--wrapped,
 .accordion__body > .accordion__intro + * > .accordion--wrapped,
 .accordion__body > .accordion--wrapped:first-child,
-.accordion__body > *:first-child > .accordion--wrapped {
+.accordion__body > :first-child > .accordion--wrapped:first-child,
+.accordion__body > :empty + * > .accordion--wrapped:first-child,
+.accordion__body > .module-css + * > .accordion--wrapped:first-child {
   border-top: none;
 }
 
