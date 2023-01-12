@@ -10,7 +10,7 @@ $tag-height: 24px;
   &#{&}--border-design {
     border: 1px solid rgba(160,160,160,0.3);
     @include chayns-color(background-color, $input-border-design-background-color-name);
-    padding: 8px 10px;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     position: relative;
@@ -22,6 +22,7 @@ $tag-height: 24px;
     }
 
     .cc__tag-input__input {
+      display: flex;
       margin: 0;
       height: 30px;
 
