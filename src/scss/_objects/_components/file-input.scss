@@ -42,6 +42,11 @@ $file-input-border-style: dashed;
     justify-content: center;
   }
 
+  & &__wait-cursor {
+    display: flex;
+    align-self: center;
+  }
+
   &--hover {
     height: 70px;
     @include chayns-color-opacity(background-color, 'secondary', 0.1);
