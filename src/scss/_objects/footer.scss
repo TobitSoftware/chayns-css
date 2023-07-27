@@ -10,7 +10,7 @@ footer {
   margin: 10px 0 0;
 
   & a {
-    @include chayns-color(color, 'footer');
+    color: inherit;
     letter-spacing: -0.3px;
   }
 }
