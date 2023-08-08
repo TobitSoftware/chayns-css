@@ -83,6 +83,9 @@
         border-radius: 50%;
         aspect-ratio: 1;
         height: 80%;
+        /* width and max-width are only required for browsers that do not support aspect-ratio */
+        width: 80%;
+        max-width: 32px;
         color: #FFFFFF;
         background-color: var(--chayns-color--primary);
       }
