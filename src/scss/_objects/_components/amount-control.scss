@@ -49,10 +49,7 @@
     height: 28px !important;
     text-align: center;
     padding: 0;
-
-    @if ($design__amount_control!=0) {
-      border: none;
-    }
+    border: none;
 
     @if ($design__amount_control==2) {
       @include chayns-color(background-color, '102')
