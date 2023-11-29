@@ -84,4 +84,11 @@ $content-card-danger-color-rgb: 34, 34, 34;
       color: $content-card-danger-color;
     }
   }
+
+  &.content__card--success, &.content__card--warning, &.content__card--danger {
+    .input--border-design {
+      background-color: #fff;
+      color: #666
+    }
+  }
 }
