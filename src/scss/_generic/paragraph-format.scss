@@ -29,7 +29,7 @@
     }
     // Colors are coming from color-schemes.scss
     @if map-has-key($styles, "fontName") {
-      font-family: #{map-get($styles, "fontName")};
+      font-family: "#{map-get($styles, "fontName")}", #{map-get($styles, "fontBackup")};
     }
   }
   @if map-has-key($styles, "fontName") {
