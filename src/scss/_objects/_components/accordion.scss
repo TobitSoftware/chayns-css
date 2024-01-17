@@ -41,8 +41,8 @@
 
 .accordion__head.accordion__head__multiline {
   padding: 4px 0;
-  transition: max-height 300ms;
-  will-change: max-height;
+  transition: min-height 300ms, max-height 300ms;
+  will-change: min-height, max-height;
   height: unset !important;
   min-height: 32px;
   max-height: 32px;
