@@ -2,13 +2,18 @@
   scrollbar-color: #80808080 transparent;
   scrollbar-width: thin;
 
+  @supports #{'selector(::-webkit-scrollbar)'} {
+    scrollbar-color: unset !important;
+    scrollbar-width: unset !important;
+  }
+
   &::-webkit-scrollbar {
     width: 5px;
   }
 
   &::-webkit-scrollbar-thumb {
     width: 5px;
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, .2);
     border-radius: 20px;
   }
 
