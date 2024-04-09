@@ -20,6 +20,8 @@
       width: 15px;
       height: 15px;
       z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     &:before {
@@ -34,8 +36,6 @@
       } @else if ($design__checkbox==2) {
         @include chayns-color-opacity(border-color, 'headline', 0.5);
       }
-      top: 50%;
-      transform: translateY(-50%);
       z-index: 0;
       border-width: 1px;
       border-style: solid;
