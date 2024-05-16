@@ -115,6 +115,8 @@ button.button.cc__combo-box {
   min-height: 42px;
   -webkit-appearance: none;
   align-items: center;
+  font-family: inherit;
+  font-size: inherit;
 
   .cc__combo-box__icon.fa-caret-down {
     &:before {
