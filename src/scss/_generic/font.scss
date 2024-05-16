@@ -52,3 +52,4 @@ $loaded-fonts: [];
 
 @include loadFont($font-name, $font-bold);
 @include loadFont($headline-font-name, $headline-font-bold);
+@include loadFont('Roboto Medium', true);
