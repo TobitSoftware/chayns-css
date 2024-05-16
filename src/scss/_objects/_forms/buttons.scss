@@ -9,7 +9,7 @@
   transition: background-color 150ms ease;
   overflow: hidden;
   line-height: 1.15;
-  font-family: Roboto-Medium, Tahoma, Arial;
+  font-family: "Roboto Medium", Tahoma, Arial;
 
   @if ($design__button==1) {
     border-radius: 100px;
