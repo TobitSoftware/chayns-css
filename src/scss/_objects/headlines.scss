@@ -17,13 +17,9 @@ $headline-sizes: (
     word-spacing: $headline-word-spacing;
     letter-spacing: $headline-letter-spacing;
 
-    @if $dynamic-font-size==1 {
-      @include dynamic-fontsize($base-font-size * map_get($headline-sizes, $i));
-    } @else {
-      $s: map_get($headline-sizes, $i) * $headline-font-factor;
-      font-size: #{$s}rem;
-      --font-size: #{$s}rem;//Needed in pagemaker
-    }
+    $s: map_get($headline-sizes, $i) * $headline-font-factor;
+    font-size: #{$s}rem;
+    --font-size: #{$s}rem;//Needed in pagemaker
     @include chayns-color(color, 'headline-#{$i}');
   }
 }
@@ -56,18 +52,4 @@ h5,
 .h5 {
   margin: 1.1rem 0 5px 0;
   line-height: 1.35 * $headline-line-height-factor;
-}
-
-.tapp {
-  &, :first-child:not(td) {
-    & > h1, & > .h1,
-    & > h2, & > .h2,
-    & > h3, & > .h3,
-    & > h4, & > .h4,
-    & > h5, & > .h5 {
-      &:first-of-type:first-child {
-        margin-top: 0;
-      }
-    }
-  }
 }

@@ -13,57 +13,15 @@
 @import './_generic/font';
 @import './_generic/font-awesome';
 @import './_generic/font-ts';
-@import './_generic/font-vcid';
-@import './_generic/ios';
-@import './_generic/web';
-@import './_generic/color-schemes';
-@import './_generic/dynamic-fontsize';
 
 // base: html, body, headings, forms, lists, tables, code, paragraph and other high level elements
 @import './_base/main';
 @import './_base/links';
 @import './_base/selection';
-@import './_base/vars';
 
 // objects
-@import './_objects/_forms/forms';
 @import './_objects/scrollbar';
 @import './_objects/headlines';
-@import './_objects/tapps';
-@import './_objects/grids';
-@import './_objects/content-card';
 @import './_objects/lists';
 @import './_objects/table';
-@import './_objects/footer';
-@import './_objects/wait-cursor';
-@import './_objects/editor';
 @import './_generic/paragraph-format';
-// must be after headlines, footer and main
-
-//chayns components
-@import './_objects/_components/receiverinput';
-@import './_objects/_components/icon';
-@import './_objects/_components/badge';
-@import './_objects/_components/openingTimes';
-@import './_objects/_components/map';
-@import '_objects/_forms/buttons';
-@import './_objects/_components/accordion';
-@import './_objects/_components/input-box';
-@import './_objects/_components/person-finder';
-@import './_objects/_components/lists';
-@import './_objects/_components/setup-wizard';
-@import './_objects/_components/sharing-bar';
-@import './_objects/_components/tooltip';
-@import './_objects/_components/file-input';
-@import './_objects/_components/scroll-view';
-@import './_objects/_components/gallery';
-@import './_objects/_components/grid-calendar';
-@import './_objects/_components/modeswitch';
-@import './_objects/_components/amount-control';
-@import './_objects/_components/calendar';
-@import './_objects/_components/contextmenu';
-@import './_objects/_components/tag-input';
-@import './_objects/_components/slider';
-@import './_objects/_components/bubble';
-@import './_objects/_components/image-accordion';
-@import './_objects/_components/progress-bar';

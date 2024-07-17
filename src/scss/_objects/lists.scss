@@ -2,16 +2,6 @@ ul {
   list-style: disc;
 }
 
-//@deprecated - remove following styles in next minor or major version
-.list {
-  margin-bottom: 15px;
-  padding-left: 30px;
-
-  & > li:not(:last-child) {
-    margin-bottom: 5px;
-  }
-}
-
 .list--square {
   list-style: square;
 }
