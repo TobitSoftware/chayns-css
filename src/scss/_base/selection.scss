@@ -1,7 +1,6 @@
 @mixin selection{
   color: #FFFFFF;
   background-color: mix($color, #808080, 50%);
-  background-color: color-mix(in lch, var(--chayns-color--100), #808080);
 }
 
 ::selection {
