@@ -1,6 +1,6 @@
 @mixin selection{
   color: #FFFFFF;
-  @include chayns-color(background-color, 'depend-on-brightness')
+  background-color: mix($color, #808080, 50%);
 }
 
 ::selection {
