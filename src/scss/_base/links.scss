@@ -8,6 +8,7 @@ a {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     @include chayns-color-opacity(border-bottom-color, 'text', 0.4);
+    border-bottom-color: color-mix(in lch, currentColor 40%, transparent);
   }
 
   &:hover,
